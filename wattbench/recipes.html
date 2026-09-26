@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WattBench test recipes</title>
+<meta name="description" content="Step-by-step real-world tests with WattBench and the FNIRSI FNB58: cable shootout, charger lineup, power bank capacity, phone charge curve, heat watch and more.">
+<link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="styles.css"></head><body><div class="wrap">
+<header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="">WattBench</a><nav><a href="./">Home</a><a href="guide.html">User guide</a><a href="recipes.html">Test recipes</a><a href="privacy.html">Privacy</a><a href="https://github.com/RedThoroughbred/FNB58-MacOS/issues">Support</a></nav></header>
+
+<section class="guide" style="border-top:0">
+<h2>Test recipes</h2>
+<p class="meta">Real-world measurements you can run with an FNB58, WattBench 1.2 and, for some, a USB electronic load such as a DROK. Each recipe lists what you need, the steps, and how to read the result. New to the numbers? Start with <a href="guide.html#numbers">Understanding the numbers</a>.</p>
+<div class="toc">
+<a href="#cables">1 · Cable shootout</a><a href="#chargers">2 · Charger lineup</a><a href="#bank">3 · Power bank truth test</a><a href="#phone">4 · Phone charge curve</a><a href="#device-battery">5 · Is a device's battery healthy?</a><a href="#heat">6 · Heat watch</a><a href="#fast">7 · Fast charge drop-off</a><a href="#endurance">8 · Locked endurance</a><a href="#idle">9 · Idle drain hunt</a><a href="#packs">10 · Bare battery packs</a><a href="#demo">Two-minute demo</a>
+</div>
+
+<div class="tip"><strong>Safety first.</strong> Stay within your load's wattage limit (volts × amps): at 5 V a 25 W load handles 5 A, but at 20 V only 1.25 A. WattBench warns you in the test setup. Loads get hot — keep the fan clear. Never leave lithium batteries charging unattended if they are damaged, swollen or warm.</div>
+
+<h2 id="cables">1 · Cable shootout</h2>
+<p><strong>You need:</strong> all your USB cables, one good charger, a USB load. <strong>Time:</strong> about 3 minutes per cable.</p>
+<ol class="steps">
+<li>Tests tab → <strong>Cable &amp; Charger Check</strong>. Name the subject after the cable ("Blue 1 m USB-C").</li>
+<li>Connect <strong>charger → cable → FNB58 → load</strong>, load off. Tap <strong>Start</strong>.</li>
+<li>Turn the load's dial to each current WattBench asks for. It captures each step by itself once the current is steady.</li>
+<li>Tap <strong>Done</strong>. Repeat for every cable with the same charger.</li>
+<li>Sessions → <strong>Edit</strong> → select the checks → <strong>Compare</strong>.</li>
+</ol>
+<p><strong>Reading it:</strong> lower resistance is better. Excellent is up to 150 mΩ, Good up to 300, Fair up to 500, Poor above that. A Poor cable wastes charging speed as heat and can make fast charging fall back to slow. Keep the best cables for fast chargers; retire the Poor ones.</p>
+
+<h2 id="chargers">2 · Charger lineup</h2>
+<p><strong>You need:</strong> your chargers, one short good cable (the winner from recipe 1), a USB load.</p>
+<ol class="steps">
+<li>For each charger, run a <strong>Cable &amp; Charger Check</strong> named after the charger, using the same cable.</li>
+<li>Note the <strong>charger badge</strong> on the Live tab before you start (Quick Charge, Apple, USB PD, USB charger BC 1.2, Standard USB).</li>
+<li>Open each session's <strong>Insights → Voltage vs current</strong>.</li>
+</ol>
+<p><strong>Reading it:</strong> with the cable the same, differences in resistance now come from the charger. A flat voltage line means a stiff, good supply; a line that drops steeply means the charger sags under load. A charger that shuts off before reaching the rated current is overstating its rating.</p>
+
+<h2 id="bank">3 · Power bank truth test</h2>
+<p><strong>You need:</strong> a fully charged power bank, a USB load. <strong>Time:</strong> 1–8 hours (run it overnight).</p>
+<ol class="steps">
+<li>Tests tab → <strong>Power Bank Capacity</strong>. Enter the bank's name and the <strong>rated capacity</strong> from its label (mAh), cell voltage 3.7 V.</li>
+<li>Set the load current (1 A is a good standard; note it in the setup). Connect <strong>power bank → FNB58 → load</strong>, load off.</li>
+<li>Tap <strong>Start</strong>, then switch the load on. Lock the phone; the Lock Screen and your Watch show progress.</li>
+<li>It stops by itself 30 s after the bank shuts off.</li>
+</ol>
+<p><strong>Reading it:</strong> compare <strong>cell-equivalent capacity</strong> with the rating. 60–75 % of the label is normal for a healthy bank (voltage conversion loses energy). Well below 60 % means a worn or overstated bank. Export the <strong>PDF report</strong> to keep a record or share it.</p>
+
+<h2 id="phone">4 · Phone charge curve</h2>
+<p><strong>You need:</strong> your phone at about 20 %, a fast charger, a slow charger (a 5 W cube). <strong>Time:</strong> 1–2 hours each.</p>
+<ol class="steps">
+<li>Tests tab → <strong>Device Charge</strong>, subject "iPhone – fast charger". Connect <strong>charger → FNB58 → cable → phone</strong>.</li>
+<li>Watch the phase: <em>Fast</em>, then <em>Tapering</em> (the battery is past roughly 80 %), then <em>Trickle</em>.</li>
+<li>Repeat another day with the slow charger. Then <strong>Compare</strong> the two sessions.</li>
+</ol>
+<p><strong>Reading it:</strong> the fast charger's curve starts high and tapers earlier; the energy total is similar for both (the battery needs the same energy), but the time differs. Charger markers show when the phone switched voltage.</p>
+
+<h2 id="device-battery">5 · Is a device's battery healthy?</h2>
+<p><strong>You need:</strong> the device, switched off, and its charger. Good for gadgets like a NanoVNA, a flashlight, a speaker.</p>
+<ol class="steps">
+<li>Tests tab → <strong>Device Charge</strong>, named after the device. Connect <strong>charger → FNB58 → device</strong>, device off.</li>
+<li>Let it run until it finishes or for an hour.</li>
+</ol>
+<p><strong>Reading it:</strong> a healthy battery charges at a few hundred mA, then tapers. A current stuck around 20–50 mA for hours means the charger is in trickle mode (deeply drained battery) or thinks it's finished (worn battery that drops quickly under use). Either way the battery is due for replacement.</p>
+
+<h2 id="heat">6 · Heat watch</h2>
+<p><strong>You need:</strong> a charger and a USB load. <strong>Time:</strong> 20 minutes.</p>
+<ol class="steps">
+<li>Gear menu → <strong>Alert Rules</strong> → <strong>Add preset</strong> → <strong>Heat &amp; fast-charge watch</strong>. For a demo, edit the Over-temperature rule to a few degrees above the current reading.</li>
+<li>Set the load to 2 A (within its wattage limit) and start a recording.</li>
+<li>Open the session afterwards: <strong>Chart → Temp</strong> and <strong>Insights → Temperature</strong>.</li>
+</ol>
+<p><strong>Reading it:</strong> the meter's temperature rises with current and levels off. The alert fires as a banner (and a notification when locked) and leaves a red marker in the recording.</p>
+
+<h2 id="fast">7 · Fast charge drop-off</h2>
+<p><strong>You need:</strong> a phone and a Quick Charge or USB PD charger.</p>
+<ol class="steps">
+<li>Add the <strong>Heat &amp; fast-charge watch</strong> preset if you haven't.</li>
+<li>Record a charge. Watch for purple markers like "Switched to 9 V" or "Charger: Quick Charge 9 V" when fast charging starts.</li>
+<li>When the phone is nearly full it steps back down; the <strong>Fast charge lost</strong> alert fires and marks the moment.</li>
+</ol>
+
+<h2 id="endurance">8 · Locked endurance</h2>
+<p>Start a recording with any steady load, lock the phone and leave it for 30 minutes without touching it. The session should show one continuous line with no gap markers. If the meter drops out, the gap is shown honestly and not counted in energy.</p>
+
+<h2 id="idle">9 · Idle drain hunt</h2>
+<p><strong>You need:</strong> things that sit plugged in: earbud cases, watch chargers, smart plugs, a cable with nothing on the far end.</p>
+<ol class="steps">
+<li>Plug each into the FNB58 on a charger with nothing attached at the far end (or the device fully charged).</li>
+<li>Read the current on the Live tab (it switches to mA automatically) and the power in mW.</li>
+</ol>
+<p><strong>Reading it:</strong> a plain cable with nothing attached should draw essentially 0 mA. A few mA from a charging case is normal standby. Anything drawing steady current when it has no reason to deserves a closer look.</p>
+
+<h2 id="packs">10 · Bare battery packs</h2>
+<p>Lithium packs with small JST plugs have no USB, so the FNB58 can't measure them directly. Use a small USB lithium charger board (sold as a "TP4056 module", with protection): <strong>charger → FNB58 → module → pack</strong>, then run <strong>Device Charge</strong>. You'll see the charge curve and the energy it takes. Check the pack's polarity against the module before connecting — JST packs are not wired consistently.</p>
+
+<h2 id="demo">Two-minute demo</h2>
+<ol class="steps">
+<li>Live tab: tap the chart, turn the phone sideways, choose <strong>All</strong>. Pinch to zoom.</li>
+<li>Point out the <strong>USB data lines</strong> card and the charger badge.</li>
+<li>Tests tab: show the three tests and a finished result.</li>
+<li>Open a cable-check session → <strong>…</strong> → <strong>Export PDF Report</strong>.</li>
+<li>Start a recording, lock the phone: show the Lock Screen, the Dynamic Island and your Apple Watch.</li>
+</ol>
+</section>
+<footer><p><a href="./">Home</a> · <a href="guide.html">User guide</a> · <a href="https://apps.apple.com/us/app/id6816404264">App Store</a> · <a href="privacy.html">Privacy policy</a></p>
+<p>WattBench is an independent project and is not affiliated with or endorsed by FNIRSI.</p><p>© 2026 Seth Egger</p></footer>
+</div></body></html>
