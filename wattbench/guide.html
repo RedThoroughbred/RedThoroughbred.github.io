@@ -6,7 +6,7 @@
 
 <section class="guide" style="border-top:0">
 <h2>WattBench user guide</h2>
-<p class="meta">Looking for step-by-step experiments? See the <a href="recipes.html">test recipes</a>. For WattBench 1.2 on iPhone (iOS 17 or later). Button and screen names are quoted exactly as they appear in the app. Features new in 1.2 are marked <span class="badge-new">NEW</span>.</p>
+<p class="meta">Looking for step-by-step experiments? See the <a href="recipes.html">test recipes</a>. For WattBench 1.2 on iPhone (iOS 17 or later). Button and screen names are quoted exactly as they appear in the app.</p>
 <div class="toc">
 <a href="#numbers">Understanding the numbers</a><a href="#connect">Connecting</a><a href="#live">Live tab</a><a href="#lines">USB data lines</a><a href="#record">Recording</a><a href="#tests">Tests</a><a href="#sessions">Sessions &amp; reports</a><a href="#insights">Insights charts</a><a href="#compare">Compare &amp; PDF</a><a href="#export">CSV export</a><a href="#alerts">Alerts</a><a href="#lock">Lock Screen, Watch &amp; Siri</a><a href="#menus">Menus &amp; settings</a><a href="#trouble">Troubleshooting</a>
 </div>
@@ -31,21 +31,21 @@
 </ol>
 <div class="shots-row"><figure><img src="assets/guide/live.jpg" alt="Connected: the pill shows your meter" loading="lazy"><figcaption>Connected: the pill shows your meter</figcaption></figure></div>
 <p>The <strong>status pill</strong> tells you where things stand: <em>Not connected</em>, <em>Scanning</em>, <em>Connecting</em>, the meter's name in green when data flows, <em>No data</em> when nothing has arrived for two seconds, <em>Reconnecting</em> with a timer after a drop, <em>Unreachable</em> after two minutes, and <em>Demo</em> for simulated readings.</p>
-<p>While connecting, a <strong>Cancel</strong> button stops the attempt; after 25 seconds without an answer WattBench gives up and says so. <span class="badge-new">NEW</span> The Connect sheet now also shows your meter's <strong>Firmware</strong>, <strong>Serial number</strong> and <strong>Data group</strong>.</p>
+<p>While connecting, a <strong>Cancel</strong> button stops the attempt; after 25 seconds without an answer WattBench gives up and says so. The Connect sheet also shows your meter's <strong>Firmware</strong>, <strong>Serial number</strong> and <strong>Data group</strong>.</p>
 
 <h2 id="live">The Live tab</h2>
 <div>
 <ul>
 <li><strong>Large readout:</strong> one metric (Power by default). <strong>Tap</strong> either tile below to make it the large one.</li>
 <li><strong>Tiles:</strong> voltage shows its lowest–highest range since connecting; current and power show their <strong>PEAK</strong> and when it happened. Long-press for <strong>Reset Peaks</strong> and <strong>Copy Value</strong>.</li>
-<li><strong>USB DATA LINES</strong> <span class="badge-new">NEW</span> — see the next section.</li>
+<li><strong>USB DATA LINES</strong> — see the next section.</li>
 <li><strong>TRIP:</strong> energy, capacity and active time since you last tapped <strong>Reset</strong>, with peak and average power. It keeps counting across reconnects and app launches, with no recording needed. A pause icon means no data for five seconds.</li>
 <li><strong>Chart:</strong> pick <strong>V</strong>, <strong>A</strong>, <strong>W</strong> or <strong>All</strong> and a window of 10 s to 2 min. Touch and hold to read a value; drag back through the last two minutes and tap <strong>Live</strong> to return. Gray bands are dropouts; the dashed line is the peak.</li>
 </ul>
 </div>
 <div class="shots-row"><figure><img src="assets/guide/fullscreen-all.jpg" alt="Full-screen chart, All" loading="lazy"><figcaption>Full-screen chart, All</figcaption></figure><figure><img src="assets/guide/fullscreen-current.jpg" alt="Current, last 88 s" loading="lazy"><figcaption>Current, last 88 s</figcaption></figure><figure><img src="assets/guide/fullscreen-10min.jpg" alt="10 minutes with a charger marker" loading="lazy"><figcaption>10 minutes with a charger marker</figcaption></figure></div>
 
-<h2 id="lines">USB data lines <span class="badge-new">NEW</span></h2>
+<h2 id="lines">USB data lines</h2>
 <p>Besides power, the FNB58 reports the voltage on the two USB data wires, <strong>D+</strong> and <strong>D−</strong>, and its own <strong>temperature</strong>. The card appears on the Live tab as soon as your meter sends them.</p>
 <img class="shot-wide" src="assets/guide/lines-card.jpg" alt="USB data lines card: D+, D−, temperature and the Apple 2.4 A badge">
 <p>Chargers use D+ and D− to announce what they can do. WattBench recognises the well-known patterns and shows a badge; when the pattern isn't a known one it shows no badge rather than guessing.</p>
@@ -69,10 +69,10 @@
 <li>Tap <strong>Stop</strong>. The session is saved; the toast offers <strong>Undo</strong> for five seconds.</li>
 </ol>
 <div class="shots-row"><figure><img src="assets/guide/insights-lines-markers.jpg" alt="A charger marker added automatically" loading="lazy"><figcaption>A charger marker added automatically</figcaption></figure></div>
-<p><span class="badge-new">NEW</span> While recording, WattBench also adds <strong>charger markers</strong> by itself (purple): when the charger changes mode ("Charger: Quick Charge 9 V"), when the voltage steps between 5, 9, 12, 15 and 20 V ("Switched to 9 V"), and when it spots a PPS charger adjusting in fine steps. Turn this off with <strong>Mark charger changes automatically</strong> in Settings. D+/D− and temperature are saved with every recording too.</p>
+<p>While recording, WattBench also adds <strong>charger markers</strong> by itself (purple): when the charger changes mode ("Charger: Quick Charge 9 V"), when the voltage steps between 5, 9, 12, 15 and 20 V ("Switched to 9 V"), and when it spots a PPS charger adjusting in fine steps. Turn this off with <strong>Mark charger changes automatically</strong> in Settings. D+/D− and temperature are saved with every recording too.</p>
 <p>If WattBench is closed mid-recording, the next launch offers <strong>Keep Recording</strong> or <strong>Discard</strong> for the samples written so far.</p>
 
-<h2 id="tests">Tests <span class="badge-new">NEW</span></h2>
+<h2 id="tests">Tests</h2>
 <p>The <strong>Tests</strong> tab runs guided measurements that end in a report. You can also start one from the title menu on the Live tab (tap "WattBench": <strong>Test a Power Bank…</strong>, <strong>Analyze a Charge…</strong>, <strong>Check a Cable or Charger…</strong>). A USB electronic load such as a DROK — a small board with a current dial, a fan and SET and ON/OFF buttons — makes the power bank and cable tests precise.</p>
 <div class="shots-row"><figure><img src="assets/guide/tests.jpg" alt="The Tests tab" loading="lazy"><figcaption>The Tests tab</figcaption></figure></div>
 
@@ -114,15 +114,15 @@
 <div>
 <ul>
 <li>The list groups sessions by day with a power sparkline. <strong>Search</strong> by name, device, tag or note; <strong>Sort</strong> by Newest, Longest or Most energy. Swipe for <strong>Rename</strong>, <strong>Share</strong> or <strong>Delete</strong>.</li>
-<li>A session opens as a report: <strong>ENERGY</strong>, <strong>CAPACITY</strong> and <strong>DURATION</strong> tiles (active time excludes dropouts), the test report when the session came from the Tests tab <span class="badge-new">NEW</span>, and <strong>Highlights</strong> (time-weighted average power, peak, voltage and current ranges, gaps).</li>
-<li><strong>Chart:</strong> V, A or W at full resolution, plus <strong>Temp</strong> and <strong>D±</strong> for sessions recorded with 1.2 <span class="badge-new">NEW</span>. Pinch to zoom, drag to scroll, touch and hold to read. The shaded band around the line shows the lowest and highest value inside each zoomed-out point.</li>
+<li>A session opens as a report: <strong>ENERGY</strong>, <strong>CAPACITY</strong> and <strong>DURATION</strong> tiles (active time excludes dropouts), the test report when the session came from the Tests tab, and <strong>Highlights</strong> (time-weighted average power, peak, voltage and current ranges, gaps).</li>
+<li><strong>Chart:</strong> V, A or W at full resolution, plus <strong>Temp</strong> and <strong>D±</strong>. Pinch to zoom, drag to scroll, touch and hold to read. The shaded band around the line shows the lowest and highest value inside each zoomed-out point.</li>
 <li><strong>Range:</strong> tap it, then drag across the chart to get the selection's duration, energy, capacity and averages; <strong>Save as Marker Pair</strong> keeps it.</li>
 <li><strong>Markers</strong> list every marker with the energy delivered until the next one. Icons: flag = yours, broken bolt = dropout, stop = auto-stop, bell = alert, purple bolt = charger change.</li>
 </ul>
 </div>
 <div class="shots-row"><figure><img src="assets/guide/sessions.jpg" alt="Sessions" loading="lazy"><figcaption>Sessions</figcaption></figure><figure><img src="assets/guide/session-chart.jpg" alt="Session chart" loading="lazy"><figcaption>Session chart</figcaption></figure><figure><img src="assets/guide/range.jpg" alt="Range selection" loading="lazy"><figcaption>Range selection</figcaption></figure></div>
 
-<h2 id="insights">Insights charts <span class="badge-new">NEW</span></h2>
+<h2 id="insights">Insights charts</h2>
 <p>Under the main chart of every session:</p>
 <ul>
 <li><strong>Power distribution:</strong> how much time was spent at each power level. One tall bar means steady charging; a spread means the load or charger kept changing. The busiest level and the median are marked.</li>
@@ -132,7 +132,7 @@
 </ul>
 <div class="shots-row"><figure><img src="assets/guide/insights-histogram.jpg" alt="Power distribution" loading="lazy"><figcaption>Power distribution</figcaption></figure><figure><img src="assets/guide/insights-vi.jpg" alt="Voltage vs current: 161 mΩ" loading="lazy"><figcaption>Voltage vs current: 161 mΩ</figcaption></figure><figure><img src="assets/guide/insights-energy-temp.jpg" alt="Cumulative energy and temperature" loading="lazy"><figcaption>Cumulative energy and temperature</figcaption></figure></div>
 
-<h2 id="compare">Compare &amp; PDF <span class="badge-new">NEW</span></h2>
+<h2 id="compare">Compare &amp; PDF</h2>
 <ul>
 <li><strong>Compare:</strong> in Sessions tap <strong>Edit</strong>, select 2–4 sessions and tap <strong>Compare</strong>, or long-press a session and choose <strong>Compare With…</strong>. Curves are aligned to each session's own start, so "Charger A vs Charger B" lines up even if you recorded them hours apart. Pick V, A, W, energy or temperature. The table below stars the best value in each row: energy, capacity, average and peak power, time to 80 % of the energy, maximum temperature.</li>
 <li><strong>PDF report:</strong> in a session, tap <strong>…</strong> then <strong>Export PDF Report</strong>. You get a clean printable report with the statistics, charts, markers, notes and test details, ready to share.</li>
@@ -140,14 +140,14 @@
 <div class="shots-row"><figure><img src="assets/guide/compare.jpg" alt="Compare two sessions" loading="lazy"><figcaption>Compare two sessions</figcaption></figure><figure><img src="assets/guide/more-menu.jpg" alt="Export PDF Report in the … menu" loading="lazy"><figcaption>Export PDF Report in the … menu</figcaption></figure><figure><img src="assets/guide/pdf.jpg" alt="The PDF report" loading="lazy"><figcaption>The PDF report</figcaption></figure></div>
 
 <h2 id="export">CSV export</h2>
-<p>Tap <strong>Share</strong> in a session for a CSV: <code>timestamp</code> (UTC), <code>voltage_v</code>, <code>current_a</code>, <code>power_w</code>, <code>elapsed_s</code>, <code>marker_label</code>, and for 1.2 recordings <code>dplus_v</code>, <code>dminus_v</code>, <code>temp_c</code> <span class="badge-new">NEW</span>. It opens in Numbers, Excel or Python.</p>
+<p>Tap <strong>Share</strong> in a session for a CSV: <code>timestamp</code> (UTC), <code>voltage_v</code>, <code>current_a</code>, <code>power_w</code>, <code>elapsed_s</code>, <code>marker_label</code>, <code>dplus_v</code>, <code>dminus_v</code>, and <code>temp_c</code>. It opens in Numbers, Excel or Python.</p>
 
 <h2 id="alerts">Alerts</h2>
-<p>Open the gear menu → <strong>Alert Rules</strong>. Rules: <strong>Over-voltage</strong>, <strong>Under-voltage</strong>, <strong>Over-current</strong>, <strong>Over-power</strong>, <strong>Current below</strong>, <strong>Voltage drop</strong>, <strong>Disconnected</strong>, and new in 1.2 <strong>Over-temperature</strong> (default 45 °C) and <strong>Fast charge lost</strong> (the charger falls back from fast charging for 3 seconds) <span class="badge-new">NEW</span>. Presets: <strong>USB-C 65 W</strong>, <strong>5 V device</strong>, <strong>Power bank drain</strong>, <strong>Heat &amp; fast-charge watch</strong>.</p>
+<p>Open the gear menu → <strong>Alert Rules</strong>. Rules: <strong>Over-voltage</strong>, <strong>Under-voltage</strong>, <strong>Over-current</strong>, <strong>Over-power</strong>, <strong>Current below</strong>, <strong>Voltage drop</strong>, <strong>Disconnected</strong>, <strong>Over-temperature</strong> (default 45 °C) and <strong>Fast charge lost</strong> (the charger falls back from fast charging for 3 seconds). Presets: <strong>USB-C 65 W</strong>, <strong>5 V device</strong>, <strong>Power bank drain</strong>, <strong>Heat &amp; fast-charge watch</strong>.</p>
 <p>In the app an alert shows as a red banner with a haptic; in the background it arrives as a notification, which during a recording offers <strong>Stop &amp; save</strong>. Each rule fires at most once a minute and adds a marker to the recording.</p>
 <div class="shots-row"><figure><img src="assets/guide/alert-presets.jpg" alt="Presets" loading="lazy"><figcaption>Presets</figcaption></figure><figure><img src="assets/guide/alert-rules.jpg" alt="Rules with temperature and fast-charge alerts" loading="lazy"><figcaption>Rules with temperature and fast-charge alerts</figcaption></figure></div>
 
-<h2 id="lock">Lock Screen, Dynamic Island, Apple Watch &amp; Siri <span class="badge-new">NEW</span></h2>
+<h2 id="lock">Lock Screen, Dynamic Island, Apple Watch &amp; Siri</h2>
 <ul>
 <li><strong>Lock Screen and Dynamic Island:</strong> while a recording runs, they show live watts, volts and amps, energy so far and the elapsed time, updating every few seconds even with the phone locked; "Saved" appears when you stop. Tap it to open the Live tab.</li>
 <li><strong>Apple Watch:</strong> the same readings appear in your watch's Smart Stack — a power gauge with the watts, plus volts, amps and the recording timer. Requires iOS 18 and watchOS 11 or later; no separate watch app is needed.</li>
