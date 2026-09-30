@@ -1,0 +1,466 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wildcat Mesh user guide</title>
+<meta name="description" content="How to use Wildcat Mesh with Meshtastic® and MeshCore radios: connecting, every tab, the bridge, Fox Hunt, Geo Gifts, My Mesh, repeater admin, safety, Practice mode and troubleshooting.">
+<meta name="theme-color" content="#09090b">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Wildcat Mesh">
+<meta property="og:title" content="Wildcat Mesh user guide">
+<meta property="og:description" content="Connecting your radios, every tab, the bridge, Fox Hunt, Geo Gifts, repeater admin, safety and troubleshooting.">
+<meta property="og:url" content="https://redthoroughbred.github.io/wildcat/guide.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/wildcat/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Wildcat Mesh app icon with the line: One iPhone app for Meshtastic and MeshCore radios">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Wildcat Mesh user guide"><meta name="twitter:description" content="Connecting your radios, every tab, the bridge, Fox Hunt, Geo Gifts, repeater admin, safety and troubleshooting."><meta name="twitter:image" content="https://redthoroughbred.github.io/wildcat/assets/og-image.png">
+<link rel="canonical" href="https://redthoroughbred.github.io/wildcat/guide.html">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top" id="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32"><span>Wildcat Mesh</span></a><nav aria-label="Site"><a href="./">Home</a><a href="guide.html" aria-current="page">Guide</a><a href="privacy.html">Privacy</a></nav></header>
+
+<main id="main">
+<div class="doc">
+<p class="label">User guide</p>
+<h1>Wildcat Mesh user guide</h1>
+<p class="lede" style="max-width:720px">Everything about Wildcat Mesh for iPhone (iOS 17 or later). Button and screen names are written as they appear in the app. The same guide is built into the app and works offline, out in the field: tap <strong>?</strong> on the Play tab, or open <strong>Meshtastic → Guide</strong>.</p>
+<nav aria-label="Chapters"><ul class="toc">
+<li><a href="#start">Start here</a></li><li><a href="#tabs">The five tabs</a></li><li><a href="#connect">Connecting</a></li><li><a href="#play">Play</a></li><li><a href="#messages">Messages</a></li><li><a href="#explore">Explore</a></li><li><a href="#meshtastic">Meshtastic</a></li><li><a href="#meshcore">MeshCore</a></li><li><a href="#bridge">Bridge</a></li><li><a href="#foxhunt">Fox Hunt</a></li><li><a href="#gifts">Geo Gifts</a></li><li><a href="#mymesh">My Mesh</a></li><li><a href="#repeater">Repeater admin</a></li><li><a href="#safety">Safety</a></li><li><a href="#den">Den</a></li><li><a href="#practice">Practice mode</a></li><li><a href="#manners">Airtime manners</a></li><li><a href="#trouble">Troubleshooting</a></li>
+</ul></nav>
+</div>
+
+<section class="chapter" id="start"><div class="body">
+<p class="label"><span class="no">01</span>Start here</p>
+<h2>What Wildcat is and what you need</h2>
+<p>Wildcat Mesh is one app for both LoRa mesh networks, <span class="mtc">Meshtastic</span> and <span class="mcc">MeshCore</span>. Your phone talks to <strong>your own node</strong> over Bluetooth; the node does the radio work. You can connect one Meshtastic node and one MeshCore node at the same time.</p>
+<ul>
+<li>An iPhone with <strong>iOS 17 or later</strong>.</li>
+<li>A <strong>Meshtastic</strong> node with Bluetooth (Heltec, RAK, Seeed, LilyGO and others), and/or a <strong>MeshCore</strong> node running the <strong>Companion (Bluetooth)</strong> firmware.</li>
+<li>No account. Wildcat has no servers and collects no data.</li>
+</ul>
+<ol class="steps">
+<li>Charge your node and <strong>close the official Meshtastic or MeshCore app</strong>.</li>
+<li>Open the <strong>Meshtastic</strong> tab and tap <strong>Find my node</strong>, or the <strong>MeshCore</strong> tab and tap <strong>Find MeshCore nodes</strong>.</li>
+<li>Brand-new Meshtastic node? Tap <strong>Set up this node</strong> and pick your region.</li>
+<li>Say hi on <strong>Messages</strong>, then try <strong>Play → Daily Fox</strong>.</li>
+</ol>
+<p class="tip">No radio yet? Tap <strong>Play → Practice</strong>. Pretend radios on your phone let you try every screen. See <a href="#practice">Practice mode</a>.</p>
+</div></section>
+
+<section class="chapter" id="tabs"><div class="body">
+<p class="label"><span class="no">02</span>The five tabs</p>
+<h2>Where everything lives</h2>
+<dl class="terms">
+<div><dt>Play</dt><dd>Every game: Fox Hunt, Geo Gifts, Daily Fox, your My Mesh card, and Practice when no radio is connected.</dd></div>
+<div><dt>Messages</dt><dd>Channel and direct chats on both networks, grouped by the radio they travel through, plus People.</dd></div>
+<div><dt>Explore</dt><dd>Your collection: Nodedex, achievements, Territory, coverage walks and today's Daily Fox.</dd></div>
+<div><dt>Meshtastic</dt><dd>Connect your Meshtastic node: its status, nodes, map, channels and settings, plus the More menu (Bridge, Den, Guide, Safety, About, Radio log).</dd></div>
+<div><dt>MeshCore</dt><dd>Connect a MeshCore node: chats, contacts, maps, channels, settings, repeater admin and the bridge.</dd></div>
+</dl>
+<p>The <strong>radio pill</strong> at the top left shows both radios at a glance: an LED in each network's colour (grey when that radio isn't connected) that blinks when a packet is heard, and each node's name. Tap it to see both radios and jump to either tab.</p>
+</div></section>
+
+<section class="chapter" id="connect"><div class="body">
+<p class="label"><span class="no">03</span>Connecting</p>
+<h2>Connect your radios</h2>
+<p class="sum">Bluetooth, PINs, reconnecting</p>
+<h3><span class="dot mt" aria-hidden="true"></span>Meshtastic</h3>
+<ol class="steps">
+<li><strong>Close the Meshtastic app</strong> (swipe it away): a node talks to one phone app at a time.</li>
+<li>On the <strong>Meshtastic</strong> tab, tap <strong>Find my node</strong> and pick yours from the list.</li>
+<li>If iOS asks for a PIN, use the one on the node's screen. Nodes without a screen usually use <code>123456</code>.</li>
+<li>When the status shows your node's name, you're connected. Next time, tap <strong>Reconnect</strong>.</li>
+</ol>
+<h3><span class="dot mc" aria-hidden="true"></span>MeshCore</h3>
+<ol class="steps">
+<li>Make sure the node runs MeshCore's <strong>Companion (Bluetooth)</strong> firmware.</li>
+<li><strong>Close the MeshCore app</strong>, on your phone and on your Mac: a node talks to one app at a time.</li>
+<li>On the <strong>MeshCore</strong> tab, tap <strong>Find MeshCore nodes</strong> and tap yours under <strong>Found nearby</strong>. Wildcat syncs its contacts and channels.</li>
+<li>If iOS asks for a PIN, it's usually <code>123456</code> on nodes without a screen.</li>
+</ol>
+<p>Repeaters and room servers don't appear in that list: they have no phone Bluetooth. They show up in <strong>Contacts</strong> once your node hears their advert.</p>
+<div class="shots-row">
+<figure><img src="assets/guide/meshtastic-connect.jpg" alt="The Meshtastic tab with no node connected and a Find my node button" width="540" height="1174" loading="lazy"><figcaption>Meshtastic: Find my node</figcaption></figure>
+<figure><img src="assets/guide/meshcore-connect.jpg" alt="The MeshCore tab with no radio connected, a Find MeshCore nodes button and a practice option" width="540" height="1174" loading="lazy"><figcaption>MeshCore: Find MeshCore nodes</figcaption></figure>
+</div>
+<p class="tip">Disconnecting only stops Wildcat listening: your node keeps running. Its chats stay on your phone.</p>
+<p>Wildcat asks for permission to send notifications once a real node connects, so new messages can reach you while the app is in the background.</p>
+</div></section>
+
+<section class="chapter" id="play"><div class="body">
+<p class="label"><span class="no">04</span>Play tab</p>
+<h2>Every game in one place</h2>
+<p>Nothing on Play needs a Den or any server.</p>
+<dl class="terms">
+<div><dt>Practice</dt><dd>Shown while no radio is connected. Starts pretend radios and opens a practice Fox Hunt. See <a href="#practice">Practice mode</a>.</dd></div>
+<div><dt>My Mesh</dt><dd>Your radios on both networks, and what each one does. See <a href="#mymesh">My Mesh</a>.</dd></div>
+<div><dt>Fox Hunt</dt><dd>Hide a node, then find it by its signal alone. Solo, or with friends on the mesh. See <a href="#foxhunt">Fox Hunt</a>.</dd></div>
+<div><dt>Geo Gifts</dt><dd>Leave a message that only opens at a place. See <a href="#gifts">Geo Gifts</a>.</dd></div>
+<div><dt>Daily Fox</dt><dd>Today's fox, a real node near you. See <a href="#dailyfox">Daily Fox</a>.</dd></div>
+</dl>
+<p>While a hunt is running, a <strong>Hunt in progress: back to it</strong> button takes you straight back.</p>
+<div class="shots-row"><figure><img src="assets/guide/play.jpg" alt="The Play tab: My Mesh, Fox Hunt, Geo Gifts and Daily Fox" width="540" height="1174" loading="lazy"><figcaption>The Play tab</figcaption></figure></div>
+</div></section>
+
+<section class="chapter" id="messages"><div class="body">
+<p class="label"><span class="no">05</span>Messages tab</p>
+<h2>Chats on both networks</h2>
+<p class="sum">Grouping, ticks, replies, the details under every message</p>
+<p>Chats are grouped by the radio they travel through: <span class="mcc">blue</span> is MeshCore, <span class="mtc">amber</span> is Meshtastic. Filter with <strong>All</strong>, <strong>MeshCore</strong>, <strong>Meshtastic</strong> or <strong>Direct</strong>, search with <strong>Search chats</strong>, and start a new direct chat with <strong>+</strong>. Chats you saved stay readable while a node is disconnected.</p>
+<div class="shots-row">
+<figure><img src="assets/03-messages.jpg" alt="Messages grouped under MeshCore and Meshtastic, each chat with its last message, hops and signal" width="600" height="1304" loading="lazy"><figcaption>Grouped by radio</figcaption></figure>
+<figure><img src="assets/06-chat.jpg" alt="A chat with signal, hops and path under each message and a message bridged from Meshtastic" width="600" height="1304" loading="lazy"><figcaption>Signal under every message</figcaption></figure>
+<figure><img src="assets/guide/people.jpg" alt="People: each person with the networks they're on, one person on both networks" width="540" height="1174" loading="lazy"><figcaption>People</figcaption></figure>
+</div>
+<h3>Delivery</h3>
+<dl class="terms">
+<div><dt>Clock</dt><dd>Sending.</dd></div>
+<div><dt>Tick</dt><dd>A neighbour repeated it: it's out on the mesh.</dd></div>
+<div><dt>Green tick</dt><dd>The person you messaged confirmed it (direct messages).</dd></div>
+<div><dt>Red mark</dt><dd>Not delivered, with the reason. Long-press and choose <strong>Send again</strong>.</dd></div>
+</dl>
+<p>On MeshCore, your own messages also show how many repeaters were heard passing them on.</p>
+<h3>The line under each message</h3>
+<p>Every received message shows how it arrived: signal bars, hops ("direct", "2 hops"), SNR and RSSI, and the path of repeaters where the network reports it. A cloud icon or "MQTT" means it came over the internet rather than by radio. The strip at the top of a chat shows the channel's recent traffic and radio settings.</p>
+<h3>Long-press a message</h3>
+<ul>
+<li><strong>Reply</strong> and <strong>React</strong> (Meshtastic), <strong>Copy</strong>.</li>
+<li><strong>Show raw packet</strong>: the packet fields (type, hops, SNR, RSSI, relay, hash, round trip). To see the bytes themselves, turn on <strong>Meshtastic → Keep raw packets</strong>; it applies to messages that arrive from then on.</li>
+<li><strong>Report…</strong> and <strong>Block</strong>: see <a href="#safety">Safety</a>.</li>
+</ul>
+<p class="tip">Each message is one radio packet: at most 200 bytes on Meshtastic and 133 bytes on MeshCore. Short and sweet travels furthest.</p>
+<h3>People</h3>
+<p>Tap <strong>People</strong> for everyone your radios know on Meshtastic and MeshCore, with the same person merged across networks. Message them on either network, or block them from the <strong>…</strong> menu.</p>
+</div></section>
+
+<section class="chapter" id="explore"><div class="body">
+<p class="label"><span class="no">06</span>Explore tab</p>
+<h2>Your collection and your ground</h2>
+<p>The top of Explore counts your walked tiles, Nodedex, foxes found and your Daily Fox streak.</p>
+<dl class="terms">
+<div><dt>Nodedex</dt><dd>Every node your radio hears directly. Rarity is the longest distance you heard it from directly: 1 km uncommon, 5 km rare, 15 km legendary (it needs the node's position).</dd></div>
+<div><dt>Achievements</dt><dd>Firsts and milestones.</dd></div>
+<div><dt>Territory</dt><dd>Hexagons you've covered on coverage walks, coloured by how well your Den heard you. Fog hides the rest. The <strong>Frontier</strong> is your farthest reach from the Den in 16 directions. Needs a <a href="#den">Den</a>.</dd></div>
+<div><dt>Coverage walk / drive</dt><dd>Map where your mesh reaches. Needs a <a href="#den">Den</a>, see below.</dd></div>
+<div><dt>Daily Fox</dt><dd>Today's fox. See <a href="#dailyfox">Daily Fox</a>.</dd></div>
+</dl>
+<div class="shots-row">
+<figure><img src="assets/guide/explore.jpg" alt="Explore: tiles, Nodedex, foxes and streak counters, Territory, coverage walk, Nodedex, Achievements and Daily Fox" width="540" height="1174" loading="lazy"><figcaption>Explore</figcaption></figure>
+<figure><img src="assets/guide/nodedex.jpg" alt="Nodedex: counts by rarity and a list of caught nodes" width="540" height="1174" loading="lazy"><figcaption>Nodedex</figcaption></figure>
+</div>
+<h3>Coverage walks and drives</h3>
+<ol class="steps">
+<li>Connect your Meshtastic node and your Den.</li>
+<li><strong>Explore → Coverage walk / drive</strong>, and pick a private channel the Den also has.</li>
+<li>Walk or drive. Every 30 seconds your node sends a beacon <strong>with no location in it</strong>; your phone pins it to where you stood.</li>
+<li>Dots: the Den heard you (green strong, amber ok, red weak). Triangles: you heard the Den. Black rings: <strong>dead spots</strong>.</li>
+</ol>
+<p class="tip">Keep Wildcat open while you walk or drive: logging pauses when the phone locks.</p>
+</div></section>
+
+<section class="chapter" id="meshtastic"><div class="body">
+<p class="label"><span class="no">07</span>Meshtastic tab</p>
+<h2><span class="dot mt" aria-hidden="true"></span>Your Meshtastic node</h2>
+<p class="sum">Status, nodes, map, channels, settings</p>
+<ul>
+<li><strong>This radio</strong>: battery, channel use (how busy the air is), best SNR, uptime and how many nodes it hears. <strong>Disconnect</strong> stops Wildcat listening; your node keeps running.</li>
+<li><strong>Radio</strong>: frequency band, preset, frequency slot, hop limit and transmit power, and whether transmit is off. <strong>What's this?</strong> explains channels and keys.</li>
+<li><strong>Heard nearby</strong>: the latest nodes, with <strong>All nodes</strong> and the <strong>Mesh map</strong>.</li>
+<li><strong>Channels</strong>: up to 8. Wildcat warns you if the node has no <code>WGHUNT</code> hunt channel.</li>
+<li><strong>More</strong>: My Mesh, Node settings, Bridge, Den (base station), Guide, Safety, About Wildcat Mesh, Keep raw packets and the Radio log.</li>
+</ul>
+<div class="shots-row">
+<figure><img src="assets/07-meshtastic.jpg" alt="The Meshtastic tab: this radio's readouts and the nodes heard nearby" width="600" height="1304" loading="lazy"><figcaption>The Meshtastic tab</figcaption></figure>
+<figure><img src="assets/guide/nodes.jpg" alt="The Nodes list with All, Direct and Favorites filters and signal for direct nodes" width="540" height="1174" loading="lazy"><figcaption>All nodes</figcaption></figure>
+<figure><img src="assets/guide/node-detail.jpg" alt="A node's page: role explainer, link readouts and a Trace the route button" width="540" height="1174" loading="lazy"><figcaption>A node's page</figcaption></figure>
+</div>
+<h3>Nodes and traceroute</h3>
+<ol class="steps">
+<li><strong>All nodes</strong> lists every node your radio knows, filtered by <strong>All</strong>, <strong>Direct</strong> or <strong>Favorites</strong> and searchable by name, ID or hardware. Signal bars mean heard directly; relayed nodes show their hop count.</li>
+<li>Tap a node for its battery, voltage, channel use, path and position, and its raw fields (<strong>Copy all</strong>).</li>
+<li><strong>Trace the route</strong> shows every hop out and back with the signal at each (once per 30 seconds: it costs airtime).</li>
+<li><strong>Star</strong> keeps it at the top; <strong>My Mesh</strong> marks it as yours; <strong>Block</strong> hides it; <strong>Remove from node database</strong> makes your node forget it until it's heard again.</li>
+</ol>
+<h3>Channels and keys</h3>
+<p>A <strong>channel</strong> is a name plus an encryption key. Only nodes with the same key can read it. Slot 0 is the <strong>primary</strong>: where the node's automatic broadcasts go, and what sets its frequency.</p>
+<ul>
+<li><strong>Create:</strong> Node settings → Channels → <strong>New private channel</strong> (a random 256-bit key).</li>
+<li><strong>Share:</strong> tap the channel, then show the QR code, <strong>Copy link</strong> or <strong>Share link</strong>. <strong>Share all channels as QR</strong> shares the whole set.</li>
+<li><strong>Import:</strong> <strong>Import a Meshtastic channel link or QR</strong> → Scan or Paste → Apply.</li>
+</ul>
+<p class="warn"><strong>Frequency rule:</strong> a node's frequency comes from its primary channel's name. Rename the primary and the node moves to a different frequency and stops hearing everyone, unless its <strong>frequency slot</strong> is pinned. Node settings shows the slot; Wildcat's fox links pin it for you.</p>
+<p class="tip">Links and QR codes use the same format as the Meshtastic app, so friends can scan them in either app.</p>
+<h3>Set up a new node</h3>
+<p>A new node <strong>won't transmit until it has a region</strong>, the legal frequency band for your country.</p>
+<ol class="steps">
+<li>Connect it, then <strong>Meshtastic → Set up this node</strong>.</li>
+<li>Pick your <strong>region</strong> (United States is 915 MHz), a <strong>long name</strong> and a <strong>short name</strong> (4 characters).</li>
+<li>Leave the role on <strong>Client</strong> unless you know you want something else.</li>
+<li>Tap <strong>Set up node</strong>. It restarts to apply the region: reconnect after about 20 seconds.</li>
+</ol>
+<dl class="terms">
+<div><dt>Client</dt><dd>The normal choice for a node you carry.</dd></div>
+<div><dt>Client (mute)</dt><dd>Talks but never relays: for a second node right next to another.</dd></div>
+<div><dt>Router</dt><dd>Fixed, high infrastructure only. Not for handhelds.</dd></div>
+<div><dt>Tracker</dt><dd>Sends its position often, sleeps otherwise.</dd></div>
+</dl>
+<h3>Node settings</h3>
+<p><strong>Node settings</strong> covers the node's name, radio (region, preset, frequency slot), role, position and channels, plus two one-tap setups: <strong>Make this node the fox</strong> (see <a href="#makefox">Make a fox</a>) and <strong>Make this node my Den</strong> (see <a href="#den">Den</a>). Region and role changes restart the node.</p>
+<div class="shots-row"><figure><img src="assets/guide/node-settings.jpg" alt="Node settings: one-tap fox and Den setups, name and radio region" width="540" height="1174" loading="lazy"><figcaption>Node settings</figcaption></figure></div>
+</div></section>
+
+<section class="chapter" id="meshcore"><div class="body">
+<p class="label"><span class="no">08</span>MeshCore tab</p>
+<h2><span class="dot mc" aria-hidden="true"></span>Your MeshCore node</h2>
+<p class="sum">Status, radio, chats, contacts, maps, channels, settings</p>
+<ul>
+<li><strong>This radio</strong>: battery, packets heard (and whether the channel is quiet or busy), nodes heard in the last day, best SNR and when it last heard something. <strong>Switch</strong> disconnects to find another node.</li>
+<li>Status keys: <strong>Link</strong>, <strong>Bridge</strong>, <strong>GPS</strong> (shared, private or off) and <strong>Advert</strong>: tap Advert to announce your node so others can add you.</li>
+<li><strong>Radio</strong>: frequency, bandwidth (BW), spreading factor (SF), coding rate (CR) and transmit power. Every radio you want to hear must match all four.</li>
+<li><strong>Heard nearby</strong>, sortable, and your <strong>Chats</strong>.</li>
+<li><strong>Play</strong>: <a href="#mcfox">Fox hunt a repeater</a>.</li>
+<li><strong>Manage</strong>: My Mesh, Contacts, Map, Map (both networks), Channels, Node settings and Bridge to Meshtastic.</li>
+</ul>
+<div class="shots-row">
+<figure><img src="assets/02-meshcore.jpg" alt="The MeshCore tab: this radio's readouts, status keys, radio preset and nodes heard nearby" width="600" height="1304" loading="lazy"><figcaption>The MeshCore tab</figcaption></figure>
+<figure><img src="assets/04-map.jpg" alt="Map with both networks, a selected repeater showing bearing, distance, hops and SNR" width="600" height="1304" loading="lazy"><figcaption>Map (both networks)</figcaption></figure>
+<figure><img src="assets/guide/trace.jpg" alt="A trace to a repeater: hops, weakest link and round trip, with the signal at each stop" width="540" height="1174" loading="lazy"><figcaption>Trace route</figcaption></figure>
+</div>
+<h3>How MeshCore differs</h3>
+<p>MeshCore splits the jobs: companions (the radios you carry) never repeat. Only repeaters and room servers forward messages. The first message to someone floods out through every repeater; once it arrives, the route is learned and later messages take just that path. <strong>Reset route</strong> on a contact forgets the path and finds a new one.</p>
+<h3>Contacts and maps</h3>
+<ul>
+<li>A node becomes a contact when your node hears its advert (if auto-add is on in Node settings). <strong>Remove</strong> a contact and it comes back the next time its advert is heard.</li>
+<li>The <strong>Map</strong> shows contacts that share a position; tap one for bearing, distance, hops and SNR, then <strong>Message</strong> or <strong>Trace</strong>. <strong>Map (both networks)</strong> adds your Meshtastic nodes.</li>
+<li><strong>Trace</strong> sends a small packet along the route and back; every repeater notes how well it heard it. Above 0 dB is comfortable; below −10 dB is at the edge.</li>
+</ul>
+<h3>Channels</h3>
+<p><strong>Channels → Add a channel</strong> creates a private channel with a random 128-bit key, or joins someone's with their name and key (32 hex digits: paste it or <strong>Scan QR</strong>). A channel's page shows its QR code to share, and works with the MeshCore app too.</p>
+<h3>Node settings</h3>
+<p>Name, radio (with a one-tap <strong>USA/Canada preset</strong>, 910.525 MHz · 62.5 kHz · SF7 · CR5), transmit power, position sharing, auto-add contacts, the Bluetooth <strong>PIN</strong>, <strong>Send advert now</strong> and <strong>Reboot node</strong> (reconnect after about 20 seconds). Shared positions put your node on other people's maps.</p>
+</div></section>
+
+<section class="chapter" id="bridge"><div class="body">
+<p class="label"><span class="no">09</span>Bridge</p>
+<h2>Relay a channel between the two networks</h2>
+<p>Meshtastic and MeshCore can't hear each other. The bridge makes your phone relay messages between one Meshtastic channel and one MeshCore channel. Open it from <strong>Meshtastic → Bridge</strong> or <strong>MeshCore → Bridge to Meshtastic</strong>.</p>
+<ol class="steps">
+<li>Make a <strong>private</strong> channel on each network, for example <code>WGBRIDGE</code>, and have your friends on each side join it.</li>
+<li>Connect your Meshtastic node and your MeshCore node.</li>
+<li>In <strong>Bridge</strong>, choose the Meshtastic channel and the MeshCore channel, then turn on <strong>Bridge on</strong>.</li>
+<li>Keep Wildcat open. Status shows <strong>⇄ Live</strong> while both nodes are connected, and the <strong>Relayed</strong> list shows what crossed.</li>
+</ol>
+<div class="shots-row"><figure><img src="assets/guide/bridge.jpg" alt="The Bridge screen: Meshtastic, MeshCore and Bridge status, a channel picker for each side and the Bridge on switch" width="540" height="1174" loading="lazy"><figcaption>The Bridge screen</figcaption></figure></div>
+<ul>
+<li>Bridged messages carry the sender's name and network, and show in Wildcat as "Bridged from Meshtastic" or "Bridged from MeshCore".</li>
+<li>To message one person privately on the other network, start with <code>@name</code> on the bridged channel ("@MAYA hello"). Their direct reply comes back to you.</li>
+<li>Geo Gifts, and their "opened" receipts, cross the bridge too.</li>
+<li>Blocked people never cross, either way.</li>
+</ul>
+<p class="warn"><strong>Public channels can't be bridged.</strong> A public channel belongs to everyone nearby, and bridging it would push your traffic onto their mesh. If a chosen channel disappears or becomes public, the bridge turns itself off and says why.</p>
+</div></section>
+
+<section class="chapter" id="foxhunt"><div class="body">
+<p class="label"><span class="no">10</span>Fox Hunt</p>
+<h2>Find a hidden node by its signal</h2>
+<p class="sum">Join, host, solo, Daily Fox, MeshCore fox hunt</p>
+<p>One node is hidden: the <strong>fox</strong>, with a 4-digit code written on it. <strong>Hunters</strong> walk with their own Meshtastic nodes and phones. A <strong>referee</strong> (the host's phone, over the radio) scores the hunt. Hunt messages travel on the <code>WGHUNT</code> channel.</p>
+<h3>The fox screen</h3>
+<ul>
+<li><strong>Signal</strong>: how loud your own radio hears the fox right now, with <strong>Warmer</strong> or <strong>Colder</strong> and a meter. Only direct radio counts; relayed or internet readings never do.</li>
+<li><strong>Trend</strong> over the last two minutes, and a <strong>radar</strong> that shows a bearing once you've walked around a little.</li>
+<li>Keys along the bottom: <strong>Ping now</strong> (ask for a fresh reading), <strong>Found it</strong>, <strong>Ticks</strong> (haptic Geiger-counter taps that speed up as you get closer) and <strong>Leave</strong>.</li>
+</ul>
+<div class="shots-row">
+<figure><img src="assets/01-foxhunt.jpg" alt="The fox screen: SNR readout, Warmer, trend, bearing radar and the Ping, Found it, Ticks and Leave keys" width="600" height="1304" loading="lazy"><figcaption>Hunting</figcaption></figure>
+<figure><img src="assets/guide/host-lobby.jpg" alt="Host a hunt: the lobby with hunt code, hunters and found counts, a Start the hunt button and the invite QR code" width="540" height="1174" loading="lazy"><figcaption>Hosting: the invite QR</figcaption></figure>
+<figure><img src="assets/guide/foxhunt-claim.jpg" alt="Found it? A keypad to type the 4-digit code on the fox and a Claim the find button" width="540" height="1174" loading="lazy"><figcaption>Claiming the find</figcaption></figure>
+</div>
+<h3>Join a hunt</h3>
+<ol class="steps">
+<li>Scan the host's QR code with the iPhone Camera, or with <strong>Play → Fox Hunt → Scan a host's QR</strong>. Wildcat adds the hunt channel to your node if needed and joins. (Or type the <strong>Hunt code</strong> and <strong>Your name</strong> and tap <strong>Join</strong>.)</li>
+<li>Walk. The gauge rises as your radio hears the fox louder, and your phone taps faster.</li>
+<li>After the host taps <strong>Start</strong>, the referee answers with warmer/colder and, after enough readings, a bearing.</li>
+<li>Find the box, tap <strong>Found it</strong>, type the code and <strong>Claim the find</strong>.</li>
+</ol>
+<h3>Host from this phone</h3>
+<ol class="steps">
+<li>Connect your node (it needs the <code>WGHUNT</code> channel; making a fox creates one).</li>
+<li><strong>Play → Fox Hunt → Host from this phone</strong>. Pick the fox node, enter the code written on it, choose how a find counts, and <strong>Open the lobby</strong>.</li>
+<li>Hunters scan the QR code (or you <strong>Share invite link</strong>). Want to play too? Tap <strong>Hunt too, on this phone</strong>.</li>
+<li>Tap <strong>Start the hunt</strong>. Your phone referees through your node; <strong>End hunt</strong> finishes it for everyone.</li>
+</ol>
+<dl class="terms">
+<div><dt>Code</dt><dd>Hunters must type the 4-digit code written on the fox.</dd></div>
+<div><dt>Signal</dt><dd>Getting very close by radio is a find. Good for kids.</dd></div>
+<div><dt>Either</dt><dd>The code, or a very strong signal.</dd></div>
+</dl>
+<h3>Scoring</h3>
+<dl class="terms">
+<div><dt>Place points</dt><dd>100 / 70 / 50 / 30 for 1st to 4th and later.</dd></div>
+<div><dt>+50 RF witnessed</dt><dd>The fox's own radio relayed your claim: you were right there.</dd></div>
+<div><dt>+25 RF attested</dt><dd>Your node heard the fox strongly in the last 5 minutes.</dd></div>
+</dl>
+<p class="warn">Five wrong codes lock you out of the hunt.</p>
+<h3 id="solo">Solo hunt</h3>
+<p><strong>Play → Fox Hunt → Solo hunt</strong> hunts any node by its signal alone, with no referee. Have someone hide your fox, or hide it yourself and walk away for a few minutes first. The fox beacons about once a minute; <strong>Ping</strong> for a fresh reading.</p>
+<div class="shots-row"><figure><img src="assets/guide/solo.jpg" alt="Solo hunt: pick which node is the fox from the nodes your radio hears" width="540" height="1174" loading="lazy"><figcaption>Solo hunt: pick the fox</figcaption></figure></div>
+<h3 id="makefox">Make a fox</h3>
+<p>Any small node on a battery makes a great fox. Use a spare node, not the one you carry.</p>
+<ol class="steps">
+<li>Connect <strong>your everyday node</strong> once (the one with <code>WGHUNT</code>). Wildcat remembers the hunt channel and your mesh's frequency.</li>
+<li>Connect the <strong>spare node</strong> → <strong>Meshtastic → Node settings → Make this node the fox</strong> → <strong>Make it the fox</strong>.</li>
+<li>It restarts once. Hunters scan the QR code shown afterwards to add the hunt channel.</li>
+<li>Write a 4-digit code on it and hide it.</li>
+</ol>
+<dl class="terms">
+<div><dt>Hunt channel only</dt><dd>Its only channel, pinned to your mesh's frequency so everyone hears it.</dd></div>
+<div><dt>Low power</dt><dd>10 dBm: walking closer really changes the signal.</dd></div>
+<div><dt>Location hidden</dt><dd>GPS off and no fixed position: hunters can't just read it off the map.</dd></div>
+<div><dt>Heartbeat</dt><dd>Battery and uptime every minute, no location. That's what your radio hears.</dd></div>
+</dl>
+<div class="shots-row"><figure><img src="assets/guide/make-fox.jpg" alt="Make this node the fox: the list of what changes and the hunt channel" width="540" height="1174" loading="lazy"><figcaption>Make this node the fox</figcaption></figure></div>
+<p class="tip">No hunt channel yet? The fox screen can make a new one; share its QR code with hunters.</p>
+<p class="warn">Put the fox somewhere public and safe, never on private property.</p>
+<h3 id="dailyfox">Daily Fox</h3>
+<p>Each day a real node near you is the fox: one your radio has heard in the last few days, with a known position, picked from where you are within the distance you choose. Find it by its signal, including traffic it relays. You've found it when you stand within 100 m; its location stays hidden until then.</p>
+<dl class="terms">
+<div><dt>Ping</dt><dd>Asks the fox for a fresh reading (a traceroute). Once per 30 seconds: it costs airtime.</dd></div>
+<div><dt>Hint</dt><dd>−150 points each: first how far, then which way.</dd></div>
+<div><dt>Give up</dt><dd>Reveals where it was. A new fox appears tomorrow.</dd></div>
+<div><dt>Streak</dt><dd>Days in a row with a found fox.</dd></div>
+</dl>
+<div class="shots-row"><figure><img src="assets/guide/dailyfox.jpg" alt="Daily Fox: listening for the fox, a distance hint, and the Ping, Hint and Give up keys" width="540" height="1174" loading="lazy"><figcaption>Daily Fox with a hint</figcaption></figure></div>
+<p class="warn">Daily foxes are other people's nodes, often on private property. Finding it within 100 m means you can do it from the street.</p>
+<h3 id="mcfox">MeshCore fox hunt</h3>
+<p><strong>MeshCore → Fox hunt a repeater</strong>: pick a repeater and find it by its signal alone. Every packet it transmits (its adverts, the traffic it relays and answers to your pings) moves the scope. If the repeater shares its position, the distance shows once you're within 150 m.</p>
+<p class="warn">Only hunt repeaters you're allowed to walk up to: many sit on private property. Hide your own somewhere public and let friends hunt it.</p>
+</div></section>
+
+<section class="chapter" id="gifts"><div class="body">
+<p class="label"><span class="no">11</span>Geo Gifts</p>
+<h2>Messages that only open at a place</h2>
+<p>Leave a message that <strong>only opens when someone stands on the spot</strong>. There's no server: the message is locked with the place itself, so even the app can't read it anywhere else.</p>
+<ol class="steps">
+<li><strong>Play → Geo Gifts → Leave a gift</strong>.</li>
+<li>Tap the map to drop the spot, or <strong>Use where I'm standing</strong>.</li>
+<li>Write the message (up to 140 bytes) and an optional <strong>teaser</strong> they see before it opens.</li>
+<li>Pick how close they must be (<strong>Tight</strong> about 30 m, <strong>Easy</strong> about 100 m, <strong>Loose</strong> about 300 m) and a <strong>hint area</strong>: the exact spot, or a 300 m, 1 km or 3 km circle to search.</li>
+<li>Send it over the mesh to everyone on a Meshtastic channel, to one person, to a MeshCore channel, or as a <strong>link or QR code</strong> (no radio needed).</li>
+</ol>
+<p>A gift you receive waits locked in <strong>Geo Gifts → For me</strong>, with the hint area on a map, the distance and the direction. Walk there with Wildcat open: it opens by itself, and the sender gets an <strong>opened</strong> receipt over the mesh. <strong>I left</strong> lists your gifts and who opened them. Got a gift link? <strong>Open a gift link from the clipboard</strong>.</p>
+<div class="shots-row"><figure><img src="assets/guide/leave-gift.jpg" alt="Leave a gift: a map with the spot, your message, a teaser and how close they must be" width="540" height="1174" loading="lazy"><figcaption>Leave a gift</figcaption></figure></div>
+<p class="tip">Scavenger hunt: leave several gifts, and put the clue to the next spot inside each message.</p>
+<p class="warn">Phone GPS is usually within 5–15 m. Use <strong>Easy (about 100 m)</strong> for places under trees or between buildings.</p>
+</div></section>
+
+<section class="chapter" id="mymesh"><div class="body">
+<p class="label"><span class="no">12</span>My Mesh</p>
+<h2>Every radio you own</h2>
+<p>My Mesh (on Play, and under More/Manage on both radio tabs) lists your radios on both networks: how many are online, and for each one its role in plain English, its battery and when it was last heard.</p>
+<ul>
+<li>A radio joins when this phone connects to it, or when you log in to a repeater as admin. You can also mark a node you hear as yours from its page.</li>
+<li>Tap a radio for what it does, its latest status (for repeaters: battery, relayed and heard packets, noise), its radio settings, and a shortcut to connect, trace, open settings or log in as admin.</li>
+<li><strong>Remove from My Mesh</strong> changes nothing on the radio.</li>
+<li><strong>How your mesh works</strong> explains why each Meshtastic radio stretches the mesh, why MeshCore leaves repeating to repeaters, and why one repeater up high can link people who could never hear each other.</li>
+</ul>
+<div class="shots-row"><figure><img src="assets/08-mymesh.jpg" alt="My Mesh: three radios across two networks with roles and battery, and How your mesh works" width="600" height="1304" loading="lazy"><figcaption>My Mesh</figcaption></figure></div>
+<p class="tip">Add the <strong>Wildcat Mesh</strong> widget to your Home Screen for both nodes, the bridge and the latest messages at a glance.</p>
+</div></section>
+
+<section class="chapter" id="repeater"><div class="body">
+<p class="label"><span class="no">13</span>Repeater admin</p>
+<h2>Manage a MeshCore repeater over the air</h2>
+<p>A repeater is a radio on a hill or roof that passes messages along so they travel farther. It doesn't chat, but you can trace through it or manage it with its password.</p>
+<ol class="steps">
+<li>Open the repeater from <strong>Contacts</strong>, the map or <strong>Heard nearby</strong>, and tap <strong>Admin</strong>.</li>
+<li>Enter the <strong>Admin password</strong>. It travels encrypted to the repeater and only works when your node can reach it. Turn on <strong>Remember on this phone (Keychain)</strong> if you like.</li>
+<li>Tap <strong>Log in</strong>. Or <strong>Check status as a guest</strong> without a password.</li>
+</ol>
+<ul>
+<li><strong>Status</strong>: a one-line health summary, uptime, battery, noise floor, packets relayed and heard, and airtime, with <strong>Refresh</strong> and <strong>Log out</strong>.</li>
+<li><strong>Console</strong>: send commands (quick buttons for <code>ver</code>, <code>get radio</code>, <code>get tx</code>, <code>neighbors</code>, <code>clock</code>, <code>advert</code>, <code>powersaving</code>). Commands are the same as over USB; see the MeshCore CLI reference.</li>
+</ul>
+<div class="shots-row">
+<figure><img src="assets/05-repeater.jpg" alt="A repeater's page with Message, Trace, Admin and My Mesh actions, link readouts and raw fields" width="600" height="1304" loading="lazy"><figcaption>A repeater's page</figcaption></figure>
+<figure><img src="assets/guide/repeater-admin.jpg" alt="Repeater admin: status with uptime, battery, noise, relayed and airtime, and the console" width="540" height="1174" loading="lazy"><figcaption>Status and console</figcaption></figure>
+</div>
+<p class="tip">MeshCore only sends the first 15 characters of a password, so a longer one can't log in from a phone.</p>
+</div></section>
+
+<section class="chapter" id="safety"><div class="body">
+<p class="label"><span class="no">14</span>Safety</p>
+<h2>Block, report and filter</h2>
+<p>Messages travel radio to radio with no server, so moderation lives on your phone. Find it all in <strong>Meshtastic → Safety</strong>.</p>
+<dl class="terms">
+<div><dt>Block</dt><dd>Long-press a message and choose <strong>Block</strong> (or block from People, or a node's page). Their messages disappear from Wildcat on both networks, you get no notifications from them, and the bridge won't relay them. Blocking a Meshtastic node also makes your connected node ignore it.</dd></div>
+<div><dt>Report…</dt><dd>Long-press a message and choose <strong>Report…</strong> (or <strong>Report and block</strong>). Wildcat opens an email to <a href="mailto:redthoroughbreds@gmail.com">redthoroughbreds@gmail.com</a> with the message filled in. Nothing is sent unless you send it. No mail app? Copy the report instead.</dd></div>
+<div><dt>Word filter</dt><dd><strong>Hide strong language</strong> is on by default: slurs and strong swearing in messages you receive show as •••• until you tap. Notifications never show them.</dd></div>
+<div><dt>Unblock</dt><dd>In <strong>Meshtastic → Safety</strong>, tap <strong>Unblock</strong> next to the person.</dd></div>
+</dl>
+<div class="shots-row"><figure><img src="assets/guide/safety.jpg" alt="Safety: the Hide strong language switch, the blocked list and how to report" width="540" height="1174" loading="lazy"><figcaption>Safety</figcaption></figure></div>
+</div></section>
+
+<section class="chapter" id="den"><div class="body">
+<p class="label"><span class="no">15</span>Den (optional)</p>
+<h2>An always-on base station</h2>
+<p>A Den is <strong>optional</strong>: every game works with just phones and nodes. There are two kinds.</p>
+<dl class="terms">
+<div><dt>Den Lite</dt><dd>No computer: <strong>Meshtastic → Node settings → Make this node my Den</strong>, for a node that stays plugged in at home or up high. It relays for everyone, holds its position (where your phone is now), sends a heartbeat and, on ESP32 boards with PSRAM, stores messages for nodes that were away. It restarts once.</dd></div>
+<div><dt>Full Den</dt><dd>A Raspberry Pi or computer with a node plugged in, running the Wildcat Den software. It hears the mesh day and night and adds history, coverage maps, Territory and refereed hunts (<strong>Host on the Den</strong>).</dd></div>
+</dl>
+<ol class="steps">
+<li>Put the Den and your phone on the same Wi-Fi, or on the same Tailscale network.</li>
+<li><strong>Meshtastic → Den (base station) → Enter Den address</strong>, for example <code>100.x.y.z:5050</code>. iOS may ask to allow local network access.</li>
+<li>To send through the Den, add its <strong>operator password</strong> in Den settings.</li>
+</ol>
+<p>Wildcat connects only to the address you enter. Nothing goes to us.</p>
+</div></section>
+
+<section class="chapter" id="practice"><div class="body">
+<p class="label"><span class="no">16</span>Practice mode</p>
+<h2>Try everything without a radio</h2>
+<p>Tap <strong>Play → Practice</strong>. Wildcat starts a pretend Meshtastic radio and a pretend MeshCore radio on your phone, with made-up nodes, chats, repeaters, a Den and a fox, and opens Fox Hunt. <strong>Nothing is transmitted.</strong></p>
+<ul>
+<li>Tap <strong>Join</strong> and hunt the practice fox. Its code is <code>4821</code>.</li>
+<li>Try Messages, both radio tabs, the maps (tap a pin), My Mesh, Geo Gifts and Explore.</li>
+<li>Repeater admin works too: any password works and nothing is sent.</li>
+<li>Pretend radios in My Mesh aren't saved. Tap <strong>End practice</strong> on the Meshtastic tab to finish; the pretend nodes and fox go away.</li>
+</ul>
+<p>You can also start each network's practice radio on its own tab: <strong>Practice</strong> on the Meshtastic tab, or <strong>Practice with a pretend node</strong> on the MeshCore tab.</p>
+</div></section>
+
+<section class="chapter" id="manners"><div class="body">
+<p class="label"><span class="no">17</span>Airtime manners</p>
+<h2>Be a good mesh neighbour</h2>
+<p>Everyone shares the same slow radio channel. Every packet you send is airtime others can't use.</p>
+<ol class="steps">
+<li>Keep chats short; don't flood the public channel.</li>
+<li>Use pings and traceroutes sparingly (the app limits them).</li>
+<li>Run games, bridges and coverage beacons on a <strong>private</strong> channel.</li>
+<li>Use your correct <strong>region</strong>. It's the law.</li>
+</ol>
+</div></section>
+
+<section class="chapter" id="trouble"><div class="body">
+<p class="label"><span class="no">18</span>Troubleshooting</p>
+<h2>When something doesn't work</h2>
+<dl class="terms">
+<div><dt>Can't connect</dt><dd><strong>Close the official Meshtastic or MeshCore app first</strong> (on your Mac too, for MeshCore): a node talks to one phone app at a time. Then turn Bluetooth off and on, or restart the node. On Meshtastic, <strong>Meshtastic → Radio log</strong> shows every connection step.</dd></div>
+<div><dt>MeshCore node not found</dt><dd>It must run the <strong>Companion (Bluetooth)</strong> firmware. Repeater and room-server firmware has no phone Bluetooth.</dd></div>
+<div><dt>PIN prompt</dt><dd>The first connection may ask for the node's PIN: the one on its screen, or usually <code>123456</code> on nodes without a screen. On MeshCore you can change it in Node settings.</dd></div>
+<div><dt>Bluetooth not allowed</dt><dd>If you tapped Don't Allow, Wildcat can't reach your node. Tap <strong>Open Settings</strong> in the app, or go to <strong>Settings → Wildcat Mesh</strong> and turn on <strong>Bluetooth</strong>. If Bluetooth is simply off, turn it on in Control Center.</dd></div>
+<div><dt>Location off</dt><dd>Fox Hunt, Daily Fox, Territory, Geo Gifts and coverage walks need your location while using the app. Go to <strong>Settings → Wildcat Mesh → Location</strong> and choose <strong>While Using the App</strong>.</dd></div>
+<div><dt>No notifications</dt><dd><strong>Settings → Wildcat Mesh → Notifications</strong>. Wildcat asks once a real node connects.</dd></div>
+<div><dt>Nobody hears me</dt><dd>Meshtastic: is the region set, is transmit enabled, and is the node on the same preset and frequency slot as your mesh (Node settings → Radio)? MeshCore: do frequency, BW, SF and CR match the radios around you?</dd></div>
+<div><dt>Settings didn't save</dt><dd>"The node didn't answer": reconnect and try again. Region and role changes restart the node.</dd></div>
+<div><dt>Can't hear the fox</dt><dd>Is <code>WGHUNT</code> on your node? Is the fox beaconing (a heartbeat every minute)? Is it on the same frequency slot?</dd></div>
+<div><dt>Bridge not live</dt><dd>Both nodes must be connected, Wildcat must be open, and both chosen channels must be private.</dd></div>
+<div><dt>Den offline</dt><dd>Is Tailscale connected on your phone? Is the Den running?</dd></div>
+</dl>
+<p>Still stuck? Email <a href="mailto:redthoroughbreds@gmail.com?subject=Wildcat%20Mesh%20support">redthoroughbreds@gmail.com</a> with your iPhone model, iOS version, and which radio and firmware you use.</p>
+<a class="top-link" href="#top">↑ Back to top</a>
+</div></section>
+</main>
+
+<footer>
+<nav class="links" aria-label="Footer"><a href="./">Home</a><a href="guide.html">User guide</a><a href="privacy.html">Privacy policy</a><a href="./#support">Support</a></nav>
+<p>Meshtastic® is a registered trademark of Meshtastic LLC. Wildcat Mesh is an independent app and is not affiliated with or endorsed by Meshtastic LLC or the MeshCore project.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>
