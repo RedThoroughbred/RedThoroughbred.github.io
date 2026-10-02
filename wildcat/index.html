@@ -77,7 +77,20 @@
 <video class="phone" src="assets/bridge-demo.mp4" poster="assets/bridge-demo-poster.jpg" width="600" height="1300" autoplay muted loop playsinline controls preload="metadata" aria-label="Screen recording on an iPhone: a Meshtastic handheld and a MeshCore node are shown on camera and connected in Wildcat Mesh. A message typed on the MeshCore WGBRIDGE channel is heard by a repeater, arrives on the Meshtastic WGBRIDGE channel marked Bridged from MeshCore, and a reply from Meshtastic crosses back to MeshCore."></video>
 <figcaption>Real radios, one take. Other people's node names are blurred.</figcaption>
 </figure>
-<script>if(matchMedia('(prefers-reduced-motion: reduce)').matches){const v=document.querySelector('figure.demo video');v.removeAttribute('autoplay');v.pause()}</script>
+<script>
+(()=>{const v=document.querySelector('figure.demo video');if(!v)return;
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();return}
+let ours=false,userPaused=false;
+const onScreen=()=>{const r=v.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight};
+v.addEventListener('pause',()=>{if(!ours&&!document.hidden&&onScreen())userPaused=true;ours=false});
+v.addEventListener('play',()=>{userPaused=false});
+new IntersectionObserver(es=>es.forEach(e=>{
+if(e.isIntersecting){if(!userPaused)v.play().catch(()=>{})}
+else if(!v.paused){ours=true;v.pause()}
+}),{threshold:.25}).observe(v);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaused&&onScreen())v.play().catch(()=>{})});
+})();
+</script>
 </div>
 </section>
 
