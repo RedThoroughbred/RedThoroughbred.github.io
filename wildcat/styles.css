@@ -73,7 +73,7 @@ section.first{border-top:0}
 .feature{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-items:center}
 .feature .copy{max-width:560px}
 .feature figure{margin:0;display:flex;justify-content:center;align-items:flex-start;gap:14px;flex-wrap:wrap}
-.feature figure img{width:min(64%,280px)}
+.feature figure img,.feature figure video{width:min(64%,280px);height:auto}
 .feature figure.pair img{width:min(47%,250px);height:auto}
 .feature figcaption,.cap{flex-basis:100%;font:500 12px/1.4 var(--mono);color:var(--t3);text-align:center;margin-top:4px}
 ul.ticks{list-style:none;padding:0;margin:0 0 14px}
@@ -179,7 +179,7 @@ footer .links a{color:var(--t2);text-decoration:none}footer .links a:hover{color
   .hero .tag{font-size:24px}
   .feature{grid-template-columns:1.05fr 1fr;gap:56px}
   .feature.flip .copy{order:2}
-  .feature figure img{width:min(72%,290px)}
+  .feature figure img,.feature figure video{width:min(72%,290px)}
   .feature figure.pair img{width:min(48%,250px)}
   section{padding:72px 0}
   h2{font-size:32px}

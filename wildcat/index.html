@@ -73,9 +73,11 @@
 <li>Public channels can't be bridged: they belong to everyone nearby, so Wildcat won't push your traffic onto their mesh.</li>
 </ul>
 </div>
-<figure>
-<img class="phone" src="assets/06-chat.jpg" alt="A MeshCore Public chat where one message is marked Bridged from Meshtastic, relayed by a bridge node, alongside signal and hop details under every message" width="600" height="1304" loading="lazy">
+<figure class="demo">
+<video class="phone" src="assets/bridge-demo.mp4" poster="assets/bridge-demo-poster.jpg" width="600" height="1300" autoplay muted loop playsinline controls preload="metadata" aria-label="Screen recording on an iPhone: a Meshtastic handheld and a MeshCore node are shown on camera and connected in Wildcat Mesh. A message typed on the MeshCore WGBRIDGE channel is heard by a repeater, arrives on the Meshtastic WGBRIDGE channel marked Bridged from MeshCore, and a reply from Meshtastic crosses back to MeshCore."></video>
+<figcaption>Real radios, one take. Other people's node names are blurred.</figcaption>
 </figure>
+<script>if(matchMedia('(prefers-reduced-motion: reduce)').matches){const v=document.querySelector('figure.demo video');v.removeAttribute('autoplay');v.pause()}</script>
 </div>
 </section>
 
