@@ -50,3 +50,6 @@ footer p{margin:6px 0}
 .shots-row figcaption{font-size:13px;color:var(--grey);margin-top:6px;line-height:1.35}
 .shot-wide{display:block;max-width:520px;width:100%;border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.14);margin:12px 0 16px}
 @media (max-width:760px){.shots-row figure{width:calc(50% - 7px)}}
+.demo{margin:6px 0 0;text-align:center}
+.demo video{display:block;width:100%;max-width:760px;height:auto;margin:0 auto;border-radius:18px;background:#000;box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.demo figcaption{font-size:14px;color:var(--grey);margin-top:10px;line-height:1.4}
