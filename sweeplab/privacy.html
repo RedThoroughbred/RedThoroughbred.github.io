@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SweepLab: Privacy Policy</title>
+<meta name="description" content="SweepLab collects no data. Camera frames are analysed on your iPhone, nothing is uploaded, and the SweepLab Puck only listens: it never joins or transmits on Wi-Fi and scrambles every address it hears.">
+<meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website"><meta property="og:site_name" content="SweepLab">
+<meta property="og:title" content="SweepLab: Privacy Policy">
+<meta property="og:description" content="SweepLab collects no data. Everything happens on your iPhone, and the puck only listens.">
+<meta property="og:url" content="https://redthoroughbred.github.io/sweeplab/privacy.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/sweeplab/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="SweepLab app icon, a lens reticle with a cyan glint, and the line: A room check for hidden cameras, on your iPhone">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="SweepLab: Privacy Policy"><meta name="twitter:description" content="SweepLab collects no data. Everything happens on your iPhone, and the puck only listens."><meta name="twitter:image" content="https://redthoroughbred.github.io/sweeplab/assets/og-image.png">
+<link rel="canonical" href="https://redthoroughbred.github.io/sweeplab/privacy.html">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=1"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32"><span>SweepLab</span></a><nav aria-label="Site"><a href="./">Home</a><a href="guide.html">Guide</a><a href="puck.html">Puck</a><a href="privacy.html" aria-current="page">Privacy</a></nav></header>
+
+<main id="main" class="prose">
+<p class="label">Privacy</p>
+<h1>Privacy Policy</h1><p class="meta">Last updated: October 10, 2026</p>
+<p>This policy covers the SweepLab iPhone app and the optional SweepLab Puck.</p>
+<p class="callout"><strong>We do not collect any data.</strong> SweepLab has no account, no analytics, no advertising and no tracking. The app makes no internet connections, and there are no servers of ours to send anything to.</p>
+
+<h2>The camera</h2>
+<ul>
+<li>The lens and infrared checks use your iPhone's camera and flashlight. Video is analysed on your iPhone as you scan. It is never uploaded.</li>
+<li>Each spot SweepLab finds keeps a small snapshot of where it was, so you can recognise the place. Snapshots are kept in the app's memory only, and are gone when you close the app, start a new room, or tap <strong>Clear</strong>.</li>
+<li>Nothing from the camera is saved unless you tap a <strong>Save</strong> button, which only the app's optional debug tools and its experimental LiDAR test have. Saved files go to SweepLab's own folder on your iPhone (you can see it in the Files app) and stay there until you delete them.</li>
+</ul>
+
+<h2>Motion</h2>
+<p>SweepLab uses the iPhone's motion sensors to tell you when you're sweeping too fast to catch a lens reflection. Motion data stays on your iPhone.</p>
+
+<h2>Bluetooth and the puck</h2>
+<ul>
+<li>SweepLab uses Bluetooth only to talk to the SweepLab Puck. It doesn't start Bluetooth until you open the Wi-Fi radar or have used a puck before, and it doesn't connect to anything else.</li>
+<li>The app remembers your puck's Bluetooth identifier so it can reconnect to it.</li>
+</ul>
+<p>The puck itself is a <strong>passive, receive-only listener</strong>:</p>
+<ul>
+<li>It never joins a Wi-Fi network and never transmits on Wi-Fi. Its only radio transmissions are Bluetooth, to your iPhone.</li>
+<li>It never reads, stores or passes on the contents of anything it hears, and it decrypts nothing. From each Wi-Fi frame it notes only its size, time, signal strength, type, channel and transmitter.</li>
+<li>It scrambles every transmitter address the moment it hears it, with a random key it makes fresh each session and keeps only in memory. Raw addresses are never stored or sent.</li>
+<li>Only the scrambled ID, the 3-byte maker prefix of the address (the publicly registered part that identifies the manufacturer), and the numbers (band, channel, signal, upload rate and score) reach your iPhone. SweepLab turns the prefix into a maker name on your iPhone, from a list built into the app.</li>
+<li>It keeps about the last minute of counts, in memory only, writes nothing it hears to its storage, and ignores transmitters too faint to be in or next to your room.</li>
+</ul>
+<p>More detail is in the <a href="puck.html#privacy">puck guide</a>.</p>
+
+<h2>What stays on your iPhone</h2>
+<ul>
+<li><strong>Kept only while the app is open:</strong> the spots and lights found, their snapshots, the Wi-Fi devices the puck heard, which ones you marked as yours, the motion test, and your progress through the room check. Closing the app clears them.</li>
+<li><strong>Kept between launches</strong>, in the app's settings on your iPhone: which places you've ticked off by hand, which of your cameras can see infrared, your light choice and scan settings, whether you've seen the flashing-light warning and the puck introduction, whether the debug tools are on, and your puck's Bluetooth identifier.</li>
+<li>A short technical log of the puck connection (when it connected or dropped, and which commands the app sent) is kept in SweepLab's own folder on your iPhone to help with troubleshooting. It contains no list of the devices the puck heard, and it isn't sent anywhere.</li>
+<li>Deleting the app deletes all of it.</li>
+</ul>
+
+<h2>Children</h2><p>The app does not knowingly collect information from anyone, including children.</p>
+<h2>Changes</h2><p>If this policy changes, the new version will be published at this address with a new date.</p>
+<h2>Contact</h2><p><a href="mailto:redthoroughbreds@gmail.com?subject=SweepLab%20privacy">redthoroughbreds@gmail.com</a></p>
+</main>
+
+<footer>
+<nav class="links" aria-label="Footer"><a href="./">Home</a><a href="guide.html">User guide</a><a href="puck.html">The puck</a><a href="privacy.html">Privacy policy</a><a href="./#support">Support</a></nav>
+<p>SweepLab helps you check a room you're staying in. It can't guarantee that a room is free of cameras.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>
