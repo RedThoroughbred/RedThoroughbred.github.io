@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Wildcat Mesh — one iPhone app for Meshtastic® and MeshCore radios</title>
-<meta name="description" content="Wildcat Mesh is one iPhone app for Meshtastic® and MeshCore LoRa radios: chat on both networks, bridge them together, play outdoor games like Fox Hunt and Geo Gifts, and see signal, hops and raw packets. No account, no data collected.">
+<meta name="description" content="Wildcat Mesh for iPhone: chat on Meshtastic® and MeshCore LoRa radios, bridge the two networks, and play Fox Hunt and Geo Gifts outside. Free, no account.">
 <meta name="theme-color" content="#09090b">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Wildcat Mesh">
 <meta property="og:title" content="Wildcat Mesh — one iPhone app for Meshtastic® and MeshCore radios">
@@ -10,7 +10,7 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Wildcat Mesh — one iPhone app for Meshtastic® and MeshCore radios"><meta name="twitter:description" content="Chat on both LoRa mesh networks, bridge them together, and play outdoor games like Fox Hunt and Geo Gifts."><meta name="twitter:image" content="https://redthoroughbred.github.io/wildcat/assets/og-image.png">
 <meta name="apple-itunes-app" content="app-id=6816781840">
 <link rel="canonical" href="https://redthoroughbred.github.io/wildcat/">
-<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css"></head><body>
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=2"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32"><span>Wildcat Mesh</span></a><nav aria-label="Site"><a href="./" aria-current="page">Home</a><a href="guide.html">Guide</a><a href="privacy.html">Privacy</a></nav></header>
@@ -29,7 +29,7 @@
 </ul>
 <div class="store" id="get">
 <a class="badge" href="https://apps.apple.com/app/id6816781840"><img src="assets/badge-black.svg" alt="Download on the App Store" width="156" height="52"></a>
-<p class="meta">iPhone · iOS 17 or later · Free</p>
+<p class="meta">iPhone · iOS 17 or later · Free<br>Needs a Meshtastic or MeshCore radio, or try Practice mode without one</p>
 </div>
 </div>
 <div class="shots">
@@ -208,7 +208,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 <details><summary>Can I keep using the official Meshtastic or MeshCore app?</summary><p>Yes, just not at the same moment. A node talks to one phone app at a time, so close the other app (on your phone, and on your Mac for MeshCore) before connecting in Wildcat.</p></details>
 <details><summary>How does the bridge work?</summary><p>Your phone relays one private Meshtastic channel and one private MeshCore channel to each other while Wildcat is open and both radios are connected. No internet is involved. Public channels can't be bridged. Start a message with <code>@name</code> to reach someone privately on the other network.</p></details>
 <details><summary>Why can't I see other people's channels?</summary><p>A channel is a name plus a shared key. Your radio can only read channels you've added; everyone shares Public. Friends can share a channel with you as a QR code or link.</p></details>
-<details><summary>Do I need a Den or any server?</summary><p>No. Every game works with just phones and nodes. The Den is an optional base station you can run yourself for always-on history, coverage maps and refereed hunts.</p></details>
+<details><summary>Do I need a Den or any server?</summary><p>No. Every game works with just phones and nodes. The Den is an optional base station. Den Lite turns a node that stays at home into one, right in the app. The full Den software for a Raspberry Pi, with always-on history, coverage maps and refereed hunts, isn't public yet.</p></details>
 <details><summary>Does it work in the background?</summary><p>Bluetooth stays active in the background only to keep your radios connected, so messages keep arriving and notify you. The bridge and coverage walks need Wildcat open.</p></details>
 <details><summary>Is the app free?</summary><p>Yes. There is no account, no subscription and no advertising.</p></details>
 <details><summary>What does Wildcat do with my location?</summary><p>It uses it on your iPhone, only while you're using the app, for Fox Hunt, Daily Fox, Territory, Geo Gifts, coverage walks and, if you choose, setting your radio's position. It is never sent to us. See the <a href="privacy.html">privacy policy</a>.</p></details>
@@ -235,7 +235,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 
 <footer>
 <nav class="links" aria-label="Footer"><a href="./">Home</a><a href="https://apps.apple.com/app/id6816781840">App Store</a><a href="guide.html">User guide</a><a href="privacy.html">Privacy policy</a><a href="mailto:redthoroughbreds@gmail.com?subject=Wildcat%20Mesh%20support">Support</a></nav>
-<p>Meshtastic® is a registered trademark of Meshtastic LLC. Wildcat Mesh is an independent app and is not affiliated with or endorsed by Meshtastic LLC or the MeshCore project. Apple, iPhone and App Store are trademarks of Apple Inc.</p>
+<p>Meshtastic® is a registered trademark of Meshtastic LLC. Wildcat Mesh is an independent app and is not affiliated with or endorsed by Meshtastic LLC or the MeshCore project. Apple, the Apple logo and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
 <p>© 2026 Seth Egger</p>
 </footer>
 </div></body></html>
