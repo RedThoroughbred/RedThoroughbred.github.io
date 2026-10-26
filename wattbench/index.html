@@ -8,9 +8,11 @@
 <div class="hero hero-v">
 <div class="hero-head"><img class="icon" src="assets/icon.png" alt="WattBench app icon"><div>
 <h1>WattBench</h1><p class="tag">Live power meter for the FNIRSI FNB58, on your iPhone.</p>
-<p class="meta">iPhone · iOS 17 or later · $2.99, no subscription · Requires an FNB58 with Bluetooth (<a href="https://www.fnirsi.com/products/fnb58">FNB58 BT</a>)</p>
+<p class="meta">Version 1.3 · iPhone · iOS 17 or later · $2.99, no subscription · Requires an FNB58 with Bluetooth (<a href="https://www.fnirsi.com/products/fnb58">FNB58 BT</a>)</p>
+<p class="meta"><strong>DO NOT PURCHASE THE APP IF YOU DO NOT ALREADY HAVE THE FNB58 DEVICE.</strong></p>
 <a class="badge" href="https://apps.apple.com/us/app/id6816404264"><picture><source srcset="assets/badge-white.svg" media="(prefers-color-scheme: dark)"><img src="assets/badge-black.svg" alt="Download on the App Store"></picture></a>
 </div></div>
+<!-- TODO video: the promo is built from the 1.2 screenshots (its full-screen chart is the old single-axis All view). Re-cut with 1.3 frames (stacked charts, two meters, widgets) when they exist. -->
 <figure class="promo"><div class="promo-frame">
 <video id="promo" src="assets/wattbench-promo.mp4" poster="assets/wattbench-promo-poster.jpg" width="1920" height="1080" autoplay muted loop playsinline controls preload="metadata" aria-label="A 40-second tour of WattBench built from real app screenshots: live voltage, current and power with charger detection, the full-screen chart, recording with the Lock Screen Live Activity, guided tests, session insights and PDF reports."></video>
 <button class="sound" id="promo-sound" type="button">&#x1F50A; Turn sound on</button>
@@ -22,23 +24,31 @@ b.addEventListener('click',()=>{v.muted=false;v.currentTime=0;v.play();});
 v.addEventListener('volumechange',()=>{b.hidden=!v.muted;});})();</script>
 </div>
 <p>WattBench turns your iPhone into a wireless display, data logger and test bench for the FNIRSI FNB58 USB power meter. Connect over Bluetooth and watch voltage, current and power update in real time, start a recording to capture a whole charge cycle, and review or export every sample later. No account, no ads, no analytics, no network access — everything stays on your phone.</p>
+<p class="note"><strong>New in 1.3:</strong> use <a href="guide.html#dual">two meters at once</a> to measure efficiency or a cable's resistance, check whether a cable carries data with the <a href="guide.html#datacheck">Data Cable Check</a>, read V, A and W as three stacked charts, and see your latest recording in widgets and Control Center.</p>
 <div class="strip">
+<!-- TODO screenshot: Live tab with the chart card on All (three stacked charts), 554 × 1200 PNG; replaces 12-01-live.png, caption "Live with stacked charts" -->
 <figure><img src="assets/12-01-live.png" alt=""><figcaption>Live with USB data lines</figcaption></figure>
+<!-- TODO screenshot: two meters on the Live tab in Efficiency mode (power in, power out, efficiency, loss), 554 × 1200 PNG, e.g. 13-01-two-meters.png, caption "Two meters" -->
 <figure><img src="assets/12-03-tests.png" alt=""><figcaption>Guided tests</figcaption></figure>
 <figure><img src="assets/12-06-insights.png" alt=""><figcaption>Session insights</figcaption></figure>
+<!-- TODO screenshot: full-screen chart on All (three stacked charts, V, A and W), 554 × 1200 PNG, e.g. 13-02-full-screen-all.png. The current 12-08 frame shows the 1.2 All view (three lines on one axis), which 1.3 replaced. -->
 <figure><img src="assets/12-08-full-screen-chart.png" alt=""><figcaption>Full-screen chart</figcaption></figure>
+<!-- TODO screenshot: Home Screen widgets (small, medium, large), 554 × 1200 PNG, e.g. 13-03-widgets.png, caption "Home Screen widgets" -->
 </div>
 <section id="demo"><h2>See it work</h2>
 <p>A real FNB58 and a real iPhone in one take. On the left, a second phone films the desk; on the right is the iPhone's own screen recording of the same moments. Watch the meter's screen and the app show the same numbers.</p>
 <figure class="demo"><video src="assets/wattbench-demo.mp4" poster="assets/wattbench-demo-poster.jpg" width="1240" height="1304" controls muted playsinline preload="metadata" aria-label="Side-by-side video. Left: a second phone filming an FNB58 USB meter, a power bank and an iPhone. Right: the iPhone's screen recording. WattBench pairs with the meter over Bluetooth, shows live voltage, current and power matching the meter's display, records a session with its Live Activity on Apple Watch, then shows the saved session, guided tests, the full-screen live chart and diagnostics."></video>
-<figcaption>Pairing, live readings, recording (with the Live Activity on Apple Watch), sessions, guided tests, the live chart and diagnostics · 1:28, no sound</figcaption></figure>
+<figcaption>Pairing, live readings, recording (with the Live Activity on Apple Watch), sessions, guided tests, the live chart and diagnostics · 1:28, no sound · Filmed before 1.3: the All chart now shows three stacked charts.</figcaption></figure>
 </section>
 <section id="features"><h2>Built for the bench</h2><div class="grid">
-<div class="card"><h3>Live readouts</h3><p>Big, glanceable voltage, current and power with peak hold, and a full-screen chart of V, A, W or all three — up to the last 60 minutes, in portrait or landscape.</p></div>
+<div class="card"><h3>Live readouts</h3><p>Big, glanceable voltage, current and power with peak hold, and a full-screen chart of V, A or W, or all three as stacked charts on one time axis, up to the last 60 minutes, in portrait or landscape.</p></div>
 <div class="card"><h3>USB data lines &amp; chargers</h3><p>D+ and D− voltages and the meter's temperature, with the charger's signalling named for you: Quick Charge, USB PD, Apple, Samsung or BC 1.2.</p></div>
 <div class="card"><h3>Guided tests</h3><p>Power bank capacity against its label, a phone's charge phases, and a cable &amp; charger check that grades resistance with a USB load.</p></div>
+<div class="card"><h3>Data Cable Check</h3><p>Find out in about a minute whether a USB cable carries data or only charges. No load needed, just a charger that signals on its data wires. <a href="guide.html#datacheck">How it works</a>.</p></div>
+<div class="card"><h3>Two meters</h3><p>Connect a second FNB58 and put one before and one after an adapter, hub or cable. See the efficiency and the energy lost, a cable's resistance, or two ports side by side, and record both. <a href="guide.html#dual">How it works</a>.</p></div>
 <div class="card"><h3>Recordings you can trust</h3><p>Every sample is written to disk as it arrives. Recordings keep running with the screen locked and survive a crash or a Bluetooth drop; dropouts show up as gaps, never hidden.</p></div>
 <div class="card"><h3>Lock Screen &amp; Apple Watch</h3><p>Watts, volts and amps on the Lock Screen, in the Dynamic Island and in your Apple Watch's Smart Stack while you record.</p></div>
+<div class="card"><h3>Widgets &amp; Control Center</h3><p>Your latest recording on the Home Screen, the Lock Screen and in StandBy, one-tap shortcuts, and Start Recording and Live Readings buttons in Control Center (iOS 18 and later).</p></div>
 <div class="card"><h3>Reports, compare &amp; PDF</h3><p>Zoomable session charts, range statistics, power histogram, voltage-vs-current, cumulative energy, temperature — compare up to four sessions and export PDF or CSV.</p></div>
 <div class="card"><h3>Smart alerts &amp; markers</h3><p>Voltage, current, power, temperature and "fast charge lost" alerts, plus automatic markers when the charger changes mode or voltage.</p></div>
 <div class="card"><h3>Trip counter</h3><p>Energy (Wh) and capacity (mAh) accumulate from the moment you plug in — no recording needed.</p></div>
@@ -53,6 +63,7 @@ v.addEventListener('volumechange',()=>{b.hidden=!v.muted;});})();</script>
 <p class="note">No meter yet? Tap <strong>Connect</strong>, then <strong>Try Demo Data</strong> to explore every screen with simulated readings. The full <a href="guide.html">user guide</a> walks through every screen and setting.</p></section>
 <section id="faq" class="faq"><h2>FAQ</h2>
 <details><summary>Which meters work?</summary><p>The FNIRSI FNB58 over Bluetooth Low Energy. Other FNIRSI meters may share the protocol, but only the FNB58 has been verified. The free desktop web monitor (<a href="https://github.com/RedThoroughbred/FNB58-MacOS">FNB58-MacOS on GitHub</a>) also supports the FNB48, FNB48S and C1 over USB.</p></details>
+<details><summary>Can I use two meters at once?</summary><p>Yes, from version 1.3. Turn on <strong>Use two meters</strong> in Settings, connect your first FNB58, then tap <strong>Add a Second Meter…</strong> in the Connect sheet. Widgets, the Lock Screen live readings, alerts, auto-stop and the Tests tab follow the first meter. No second meter yet? <strong>Try Two-Meter Demo</strong> in the title menu shows how it works. See <a href="guide.html#dual">Two meters</a> in the guide.</p></details>
 <details><summary>What does the "USB data lines" card show?</summary><p>D+ and D− are the USB data wires chargers use to announce fast charging; WattBench reads their voltages and the meter's temperature over Bluetooth and names the charger's signalling when it recognises it. USB PD is negotiated on a separate wire the meter doesn't report, so WattBench infers it from a raised voltage. See <a href="guide.html#lines">USB data lines</a> in the guide.</p></details>
 <details><summary>Does recording drain my battery?</summary><p>Bluetooth stays active in the background only while WattBench is connected to a meter, so a recording continues with the screen locked. Disconnect when you are done to save battery. WattBench never scans for meters in the background.</p></details>
 <details><summary>What happens if the app crashes mid-recording?</summary><p>Samples are written to disk as they arrive. On the next launch you are offered the samples recorded so far — keep them as a session or discard them.</p></details>
