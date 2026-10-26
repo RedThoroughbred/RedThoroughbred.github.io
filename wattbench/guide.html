@@ -1,14 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WattBench user guide</title>
-<meta name="description" content="How to use and read WattBench, the iPhone companion for the FNIRSI FNB58 USB power meter: live readings, USB data lines, recordings, tests, session reports, compare, PDF, alerts, Lock Screen and Siri.">
+<meta name="description" content="How to use and read WattBench, the iPhone companion for the FNIRSI FNB58 USB power meter: live readings, USB data lines, recordings, tests, the Data Cable Check, two meters, session reports, compare, PDF, alerts, widgets, Lock Screen and Siri.">
 <link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="styles.css?v=2"></head><body><div class="wrap">
 <header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="">WattBench</a><nav><a href="./">Home</a><a href="guide.html">User guide</a><a href="recipes.html">Test recipes</a><a href="privacy.html">Privacy</a><a href="https://github.com/RedThoroughbred/FNB58-MacOS/issues">Support</a></nav></header>
 
 <section class="guide" style="border-top:0">
 <h2>WattBench user guide</h2>
-<p class="meta">Looking for step-by-step experiments? See the <a href="recipes.html">test recipes</a>. For WattBench 1.2 on iPhone (iOS 17 or later). Button and screen names are quoted exactly as they appear in the app.</p>
+<p class="meta">Looking for step-by-step experiments? See the <a href="recipes.html">test recipes</a>. For WattBench 1.3 on iPhone (iOS 17 or later). Button and screen names are quoted exactly as they appear in the app.</p>
 <div class="toc">
-<a href="#numbers">Understanding the numbers</a><a href="#connect">Connecting</a><a href="#live">Live tab</a><a href="#lines">USB data lines</a><a href="#record">Recording</a><a href="#tests">Tests</a><a href="#sessions">Sessions &amp; reports</a><a href="#insights">Insights charts</a><a href="#compare">Compare &amp; PDF</a><a href="#export">CSV export</a><a href="#alerts">Alerts</a><a href="#lock">Lock Screen, Watch &amp; Siri</a><a href="#menus">Menus &amp; settings</a><a href="#trouble">Troubleshooting</a>
+<a href="#numbers">Understanding the numbers</a><a href="#connect">Connecting</a><a href="#live">Live tab</a><a href="#lines">USB data lines</a><a href="#record">Recording</a><a href="#tests">Tests</a><a href="#dual">Two meters</a><a href="#sessions">Sessions &amp; reports</a><a href="#insights">Insights charts</a><a href="#compare">Compare &amp; PDF</a><a href="#export">CSV export</a><a href="#alerts">Alerts</a><a href="#lock">Widgets, Lock Screen, Watch &amp; Siri</a><a href="#menus">Menus &amp; settings</a><a href="#trouble">Troubleshooting</a>
 </div>
 
 <h2 id="numbers">Understanding the numbers</h2>
@@ -40,10 +40,14 @@
 <li><strong>Tiles:</strong> voltage shows its lowest–highest range since connecting; current and power show their <strong>PEAK</strong> and when it happened. Long-press for <strong>Reset Peaks</strong> and <strong>Copy Value</strong>.</li>
 <li><strong>USB DATA LINES</strong> — see the next section.</li>
 <li><strong>TRIP:</strong> energy, capacity and active time since you last tapped <strong>Reset</strong>, with peak and average power. It keeps counting across reconnects and app launches, with no recording needed. A pause icon means no data for five seconds.</li>
-<li><strong>Chart:</strong> pick <strong>V</strong>, <strong>A</strong>, <strong>W</strong> or <strong>All</strong> and a window of 10 s to 2 min. Touch and hold to read a value; drag back through the last two minutes and tap <strong>Live</strong> to return. Gray bands are dropouts; the dashed line is the peak.</li>
+<li><strong>Chart:</strong> pick <strong>V</strong>, <strong>A</strong>, <strong>W</strong> or <strong>All</strong> and a window of 10 s to 2 min. <strong>All</strong> shows voltage, current and power as three stacked charts on one time axis, each with its own scale and unit. Touch and hold to read a value (with All, one cursor runs across all three); drag back through the last two minutes and tap <strong>Live</strong> to return. Gray bands are dropouts; the dashed line is the peak. A steady supply stays flat: a chart's height never spans less than 2 % of the value, so millivolt ripple on a 5 V line isn't blown up to fill the chart.</li>
+<li><strong>Full-screen chart:</strong> tap the chart. It shows up to the last 60 minutes, in portrait or landscape; pinch to zoom. With <strong>All</strong>, tap a metric chip to hide its row; the other rows share the space.</li>
 </ul>
 </div>
-<div class="shots-row"><figure><img src="assets/guide/fullscreen-all.jpg" alt="Full-screen chart, All" loading="lazy"><figcaption>Full-screen chart, All</figcaption></figure><figure><img src="assets/guide/fullscreen-current.jpg" alt="Current, last 88 s" loading="lazy"><figcaption>Current, last 88 s</figcaption></figure><figure><img src="assets/guide/fullscreen-10min.jpg" alt="10 minutes with a charger marker" loading="lazy"><figcaption>10 minutes with a charger marker</figcaption></figure></div>
+<!-- TODO screenshot: full-screen chart on All, three stacked charts (V, A, W), 600 × 1298 JPEG, saved over assets/guide/fullscreen-all.jpg. The old frame shows the 1.2 All view (three lines on one axis), so its figure is out until then. Restore as the first figure of the row below:
+<figure><img src="assets/guide/fullscreen-all.jpg" alt="Full-screen chart, All: three stacked charts" loading="lazy"><figcaption>Full-screen chart, All</figcaption></figure>
+-->
+<div class="shots-row"><figure><img src="assets/guide/fullscreen-current.jpg" alt="Current, last 88 s" loading="lazy"><figcaption>Current, last 88 s</figcaption></figure><figure><img src="assets/guide/fullscreen-10min.jpg" alt="10 minutes with a charger marker" loading="lazy"><figcaption>10 minutes with a charger marker</figcaption></figure></div>
 
 <h2 id="lines">USB data lines</h2>
 <p>Besides power, the FNB58 reports the voltage on the two USB data wires, <strong>D+</strong> and <strong>D−</strong>, and its own <strong>temperature</strong>. The card appears on the Live tab as soon as your meter sends them.</p>
@@ -115,11 +119,12 @@
 <ul>
 <li>The list groups sessions by day with a power sparkline. <strong>Search</strong> by name, device, tag or note; <strong>Sort</strong> by Newest, Longest or Most energy. Swipe for <strong>Rename</strong>, <strong>Share</strong> or <strong>Delete</strong>.</li>
 <li>A session opens as a report: <strong>ENERGY</strong>, <strong>CAPACITY</strong> and <strong>DURATION</strong> tiles (active time excludes dropouts), the test report when the session came from the Tests tab, and <strong>Highlights</strong> (time-weighted average power, peak, voltage and current ranges, gaps).</li>
-<li><strong>Chart:</strong> V, A or W at full resolution, plus <strong>Temp</strong> and <strong>D±</strong>. Pinch to zoom, drag to scroll, touch and hold to read. The shaded band around the line shows the lowest and highest value inside each zoomed-out point.</li>
+<li><strong>Chart:</strong> V, A, W or <strong>All</strong> (the three stacked charts) at full resolution, plus <strong>Temp</strong> and <strong>D±</strong>. The span button <strong>Full</strong> shows the whole recording; the others zoom to a shorter stretch. Pinch to zoom, drag to scroll, touch and hold to read. The shaded band around the line shows the lowest and highest value inside each zoomed-out point.</li>
 <li><strong>Range:</strong> tap it, then drag across the chart to get the selection's duration, energy, capacity and averages; <strong>Save as Marker Pair</strong> keeps it.</li>
 <li><strong>Markers</strong> list every marker with the energy delivered until the next one. Icons: flag = yours, broken bolt = dropout, stop = auto-stop, bell = alert, purple bolt = charger change.</li>
 </ul>
 </div>
+<!-- TODO screenshot: a session's chart on All (three stacked charts) with the span buttons showing "Full", 600 × 1298 JPEG, saved over assets/guide/session-chart.jpg. The current frame is from 1.2 (W chart, span button still called "All"); its caption stays true until then. -->
 <div class="shots-row"><figure><img src="assets/guide/sessions.jpg" alt="Sessions" loading="lazy"><figcaption>Sessions</figcaption></figure><figure><img src="assets/guide/session-chart.jpg" alt="Session chart" loading="lazy"><figcaption>Session chart</figcaption></figure><figure><img src="assets/guide/range.jpg" alt="Range selection" loading="lazy"><figcaption>Range selection</figcaption></figure></div>
 
 <h2 id="insights">Insights charts</h2>
