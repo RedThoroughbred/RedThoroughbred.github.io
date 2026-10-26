@@ -77,7 +77,8 @@
 <p>If WattBench is closed mid-recording, the next launch offers <strong>Keep Recording</strong> or <strong>Discard</strong> for the samples written so far.</p>
 
 <h2 id="tests">Tests</h2>
-<p>The <strong>Tests</strong> tab runs guided measurements that end in a report. You can also start one from the title menu on the Live tab (tap "WattBench": <strong>Test a Power Bank…</strong>, <strong>Analyze a Charge…</strong>, <strong>Check a Cable or Charger…</strong>). A USB electronic load such as a DROK — a small board with a current dial, a fan and SET and ON/OFF buttons — makes the power bank and cable tests precise.</p>
+<p>The <strong>Tests</strong> tab runs guided measurements that end in a report. You can also start one from the title menu on the Live tab (tap "WattBench": <strong>Test a Power Bank…</strong>, <strong>Analyze a Charge…</strong>, <strong>Check a Cable or Charger…</strong>, <strong>Check a Cable for Data…</strong>). A USB electronic load such as a DROK — a small board with a current dial, a fan and SET and ON/OFF buttons — makes the power bank test and the Cable &amp; Charger Check precise. The Data Cable Check needs no load.</p>
+<!-- TODO screenshot: the 1.3 Tests tab with four tests, including the Data Cable Check card, 600 × 1298 JPEG, saved over assets/guide/tests.jpg. The current frame is from 1.2 (three tests); its caption stays true until then. -->
 <div class="shots-row"><figure><img src="assets/guide/tests.jpg" alt="The Tests tab" loading="lazy"><figcaption>The Tests tab</figcaption></figure></div>
 
 <h3>Power Bank Capacity</h3>
@@ -113,6 +114,26 @@
 <tr><td>300–500 mΩ</td><td>Fair</td><td>0.6–1.0 V — fine for slow charging</td></tr>
 <tr><td>over 500 mΩ</td><td>Poor</td><td>over 1 V — replace the cable or try another charger</td></tr>
 </table>
+
+<h3 id="datacheck">Data Cable Check</h3>
+<p>Finds out in about a minute whether a USB cable can carry data or only charge. Charge-only cables leave out the two data wires, D+ and D−. Some chargers put a small voltage on those wires to announce themselves. WattBench reads that voltage with the meter plugged straight into the charger, then again through the cable. If it comes through, the cable has data wires.</p>
+<ol class="steps">
+<li>Tests tab → <strong>Data Cable Check</strong>, or the title menu → <strong>Check a Cable for Data…</strong>. Name the cable and tap <strong>Start</strong>.</li>
+<li><strong>Step 1, Charger:</strong> plug the FNB58 straight into the charger, with nothing on the meter's output. WattBench reads the charger's signature (its D+ and D− voltages). If the charger shows no signature, step 1 says it can't be used; try another one.</li>
+<li><strong>Step 2, Cable:</strong> unplug the meter, then connect <strong>charger → cable → FNB58</strong>, still with nothing on its output. The meter turns off while you swap; WattBench reconnects by itself and reads the data wires again.</li>
+<li>The result appears. <strong>Test Again</strong> reads the cable again; <strong>Finish</strong> saves the check as a recording.</li>
+</ol>
+<table>
+<tr><th>Result</th><th>What it means</th></tr>
+<tr><td>Data cable</td><td>The charger's signature comes through on the data wires. The cable can carry data.</td></tr>
+<tr><td>Charge-only</td><td>Power gets through, but the data wires read about 0 V. It can charge, but it can't sync or transfer files.</td></tr>
+<tr><td>One data wire missing or broken</td><td>One wire matches the charger and the other reads about 0 V. Data won't work through this cable.</td></tr>
+<tr><td>Data wires present, signal off</td><td>The wires carry a voltage, but well off the charger's. The cable may be poor or damaged, or its data wires crossed or shorted together.</td></tr>
+<tr><td>No power through this cable</td><td>The meter stayed off. Push both ends all the way in and test again.</td></tr>
+</table>
+<div class="tip"><strong>What works.</strong> Chargers: Apple and Samsung chargers and most multi-port USB-A chargers. Cables: USB-A to USB-C and USB-A to micro-USB. A USB-C to USB-C cable needs a USB-C charger that signals; read the charger first through a cable you know carries data. Lightning cables can't be tested, because the meter has no Lightning port. The check covers the USB 2.0 data wires only, not the USB 3 high-speed wires, CC or a USB-C cable's e-marker. With a charger whose D+ and D− read the same, such as Apple 2.4 A or Samsung 2 A, a cable that shorts its data wires together looks the same as a good one.</div>
+<p>The result is saved with the recording and shows in its report and PDF.</p>
+<!-- TODO screenshot: Data Cable Check, the result screen (e.g. "Data cable" or "Charge-only" with the D+/D− readings), 600 × 1298 JPEG, e.g. assets/guide/data-check-result.jpg; optionally the setup sheet as a second figure. -->
 
 <h2 id="sessions">Sessions &amp; reports</h2>
 <div>
