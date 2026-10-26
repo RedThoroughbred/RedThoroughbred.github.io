@@ -135,6 +135,46 @@
 <p>The result is saved with the recording and shows in its report and PDF.</p>
 <!-- TODO screenshot: Data Cable Check, the result screen (e.g. "Data cable" or "Charge-only" with the D+/D− readings), 600 × 1298 JPEG, e.g. assets/guide/data-check-result.jpg; optionally the setup sheet as a second figure. -->
 
+<h2 id="dual">Two meters</h2>
+<p>New in 1.3: WattBench can read two FNB58s at once. Put one before and one after an adapter, a hub or a cable, and WattBench shows what happens in between. It's off until you turn it on.</p>
+<ol class="steps">
+<li>Gear menu → <strong>Settings</strong> → turn on <strong>Use two meters</strong>.</li>
+<li>Connect your first meter as usual. Then open the Connect sheet again (tap the status pill) and tap <strong>Add a Second Meter…</strong>. WattBench looks for another FNB58 while the first keeps streaming; tap it. If only one is found, it connects by itself.</li>
+<li>The Live tab now shows both meters. Pick a mode at the top: <strong>Efficiency</strong>, <strong>Cable</strong> or <strong>Compare</strong>.</li>
+<li>Run <strong>Match Meters…</strong> from the title menu before you measure (see below).</li>
+<li>Tap <strong>Record</strong>. Under <strong>Record</strong>, choose <strong>Both meters</strong> or one meter only.</li>
+</ol>
+<!-- TODO screenshot: the Connect sheet with one meter connected and "Add a Second Meter…" below it, 600 × 1298 JPEG, e.g. assets/guide/dual-connect.jpg -->
+<table>
+<tr><th>Mode</th><th>Connect</th><th>What you see</th></tr>
+<tr><td><strong>Efficiency</strong></td><td>charger → meter A → the thing you're testing (an adapter, a hub, a power bank's pass-through) → meter B → device or load</td><td>Power in and power out, the efficiency (out ÷ in), the power lost, and the energy in, out and lost since you last reset.</td></tr>
+<tr><td><strong>Cable</strong></td><td>charger → meter A → cable → meter B → load</td><td>The cable's resistance from the voltage drop between the two meters, with a grade, the drop and the power lost in the cable. It needs at least 0.2 A flowing.</td></tr>
+<tr><td><strong>Compare</strong></td><td>one meter on each of two ports or devices</td><td>Both side by side: the combined power, each one's share, and A, B and the difference for every reading.</td></tr>
+</table>
+<p>In Efficiency and Cable, meter A is <em>In</em> (before) and meter B is <em>Out</em> (after). If you wired them the other way round, use <strong>Swap In and Out</strong> in the title menu; an efficiency above 100 % is the usual sign. <strong>Name Meters…</strong> gives each meter your own name.</p>
+<!-- TODO screenshot: the Live tab with two meters in Efficiency mode (both meter cards, efficiency, loss, energy in/out/lost), 600 × 1298 JPEG, e.g. assets/guide/dual-efficiency.jpg; a second figure in Cable mode (resistance with its grade), e.g. assets/guide/dual-cable.jpg -->
+
+<h3>Match Meters</h3>
+<p>Two meters never read exactly alike. Without matching, their small offset shows up in the result as a resistance or a loss that isn't there. Matching measures it once and takes it out.</p>
+<ol class="steps">
+<li>Title menu → <strong>Match Meters…</strong>.</li>
+<li>Plug meter B straight into meter A, with no cable between them. Keep the charger and the load connected and draw at least 0.2 A.</li>
+<li>Tap <strong>Start</strong> and hold steady for about 10 seconds, then tap <strong>Save Match</strong>.</li>
+<li>Now put the cable or the device you're testing between the meters.</li>
+</ol>
+<p>Until you match them, the panel says "Meters not matched. Results include the meters' own offset."</p>
+<!-- TODO screenshot: the Match Meters sheet (step 1 of 3, the hook-up with meter B plugged straight into meter A), 600 × 1298 JPEG, e.g. assets/guide/dual-match.jpg -->
+
+<h3>One meter, recordings and reports</h3>
+<ul>
+<li><strong>One meter on its own:</strong> tap a meter's card to see it with the full single-meter view. The picker at the top switches between <strong>Meter A</strong>, <strong>Meter B</strong> and <strong>Both</strong> (or the names you gave them).</li>
+<li><strong>Both meters</strong> records one session with meter B as a second track. Stop rules and alerts watch meter A.</li>
+<li><strong>One meter only</strong> records an ordinary one-meter session. If you record meter B on its own, stop rules, alerts and the Lock Screen follow meter B while it records.</li>
+<li>A two-meter session's report shows both meters and the mode's result: the efficiency, the cable's resistance, or the combined energy. Its CSV and PDF report include both meters.</li>
+<li>Otherwise the first meter leads: widgets, the Lock Screen live readings, alerts, auto-stop and the Tests tab use meter A.</li>
+</ul>
+<div class="tip"><strong>No second meter yet?</strong> With <strong>Use two meters</strong> on, tap <strong>Try Two-Meter Demo</strong> in the title menu. A simulated meter B joins the demo meter, so you can try every mode, Match Meters and a two-meter recording. During demo data the Connect sheet offers <strong>Add Demo Meter B</strong> instead of Add a Second Meter….</div>
+
 <h2 id="sessions">Sessions &amp; reports</h2>
 <div>
 <ul>
