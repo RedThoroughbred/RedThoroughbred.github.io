@@ -6,9 +6,9 @@
 
 <section class="guide" style="border-top:0">
 <h2>Test recipes</h2>
-<p class="meta">Real-world measurements you can run with an FNB58, WattBench 1.2 and, for some, a USB electronic load such as a DROK. Each recipe lists what you need, the steps, and how to read the result. New to the numbers? Start with <a href="guide.html#numbers">Understanding the numbers</a>.</p>
+<p class="meta">Real-world measurements you can run with an FNB58, WattBench 1.3 and, for some, a USB electronic load such as a DROK. Each recipe lists what you need, the steps, and how to read the result. New to the numbers? Start with <a href="guide.html#numbers">Understanding the numbers</a>.</p>
 <div class="toc">
-<a href="#cables">1 · Cable shootout</a><a href="#chargers">2 · Charger lineup</a><a href="#bank">3 · Power bank truth test</a><a href="#phone">4 · Phone charge curve</a><a href="#device-battery">5 · Is a device's battery healthy?</a><a href="#heat">6 · Heat watch</a><a href="#fast">7 · Fast charge drop-off</a><a href="#endurance">8 · Locked endurance</a><a href="#idle">9 · Idle drain hunt</a><a href="#packs">10 · Bare battery packs</a><a href="#demo">Two-minute demo</a>
+<a href="#cables">1 · Cable shootout</a><a href="#chargers">2 · Charger lineup</a><a href="#bank">3 · Power bank truth test</a><a href="#phone">4 · Phone charge curve</a><a href="#device-battery">5 · Is a device's battery healthy?</a><a href="#heat">6 · Heat watch</a><a href="#fast">7 · Fast charge drop-off</a><a href="#endurance">8 · Locked endurance</a><a href="#idle">9 · Idle drain hunt</a><a href="#packs">10 · Bare battery packs</a><a href="#efficiency">11 · Efficiency with two meters</a><a href="#demo">Two-minute demo</a>
 </div>
 
 <div class="tip"><strong>Safety first.</strong> Stay within your load's wattage limit (volts × amps): at 5 V a 25 W load handles 5 A, but at 20 V only 1.25 A. WattBench warns you in the test setup. Loads get hot — keep the fan clear. Never leave lithium batteries charging unattended if they are damaged, swollen or warm.</div>
@@ -91,11 +91,22 @@
 <h2 id="packs">10 · Bare battery packs</h2>
 <p>Lithium packs with small JST plugs have no USB, so the FNB58 can't measure them directly. Use a small USB lithium charger board (sold as a "TP4056 module", with protection): <strong>charger → FNB58 → module → pack</strong>, then run <strong>Device Charge</strong>. You'll see the charge curve and the energy it takes. Check the pack's polarity against the module before connecting — JST packs are not wired consistently.</p>
 
+<h2 id="efficiency">11 · Efficiency with two meters</h2>
+<p><strong>You need:</strong> two FNB58s, a charger, the thing in the middle (a USB hub, an adapter, a power bank's pass-through), a USB load. <strong>Time:</strong> about 10 minutes.</p>
+<ol class="steps">
+<li>Settings → turn on <strong>Use two meters</strong>. Connect meter A, then in the Connect sheet tap <strong>Add a Second Meter…</strong>.</li>
+<li>Match them first. Plug meter B straight into meter A: <strong>charger → meter A → meter B → load</strong>, drawing at least 0.2 A. Title menu → <strong>Match Meters…</strong> → <strong>Start</strong>, hold steady for about 10 seconds, then <strong>Save Match</strong>.</li>
+<li>Put the thing between them: <strong>charger → meter A → the thing → meter B → load</strong>. Choose <strong>Efficiency</strong> at the top of the Live tab.</li>
+<li>Set a steady current on the load and let it settle. Try two or three load steps.</li>
+<li>To keep it, tap <strong>Record</strong> with <strong>Both meters</strong>. The report, CSV and PDF include both meters.</li>
+</ol>
+<p><strong>Reading it:</strong> efficiency is power out ÷ power in, and the loss is what turns into heat in the middle. Good converters land around 85–95 %; cheap ones run hot and lower. Efficiency changes with the load, so compare at the same current. Above 100 % means the meters are the wrong way round: title menu → <strong>Swap In and Out</strong>. More in the guide: <a href="guide.html#dual">Two meters</a>.</p>
+
 <h2 id="demo">Two-minute demo</h2>
 <ol class="steps">
 <li>Live tab: tap the chart, turn the phone sideways, choose <strong>All</strong>. Pinch to zoom.</li>
 <li>Point out the <strong>USB data lines</strong> card and the charger badge.</li>
-<li>Tests tab: show the three tests and a finished result.</li>
+<li>Tests tab: show the four tests and a finished result.</li>
 <li>Open a cable-check session → <strong>…</strong> → <strong>Export PDF Report</strong>.</li>
 <li>Start a recording, lock the phone: show the Lock Screen, the Dynamic Island and your Apple Watch.</li>
 </ol>
