@@ -207,14 +207,20 @@
 
 <h2 id="export">CSV export</h2>
 <p>Tap <strong>Share</strong> in a session for a CSV: <code>timestamp</code> (UTC), <code>voltage_v</code>, <code>current_a</code>, <code>power_w</code>, <code>elapsed_s</code>, <code>marker_label</code>, <code>dplus_v</code>, <code>dminus_v</code>, and <code>temp_c</code>. It opens in Numbers, Excel or Python.</p>
+<p>A two-meter session shares one CSV with both meters side by side, one row every 0.2 s: <code>timestamp</code>, <code>elapsed_s</code>, <code>in_voltage_v</code>, <code>in_current_a</code>, <code>in_power_w</code>, <code>out_voltage_v</code>, <code>out_current_a</code>, <code>out_power_w</code>, <code>efficiency_pct</code>, <code>loss_w</code>, <code>drop_v</code>, <code>resistance_mohm</code> and <code>marker_label</code>. <em>In</em> is the meter before, <em>Out</em> the one after; in Compare, In is simply the first meter shown. A cell is empty when a value doesn't apply.</p>
 
 <h2 id="alerts">Alerts</h2>
 <p>Open the gear menu → <strong>Alert Rules</strong>. Rules: <strong>Over-voltage</strong>, <strong>Under-voltage</strong>, <strong>Over-current</strong>, <strong>Over-power</strong>, <strong>Current below</strong>, <strong>Voltage drop</strong>, <strong>Disconnected</strong>, <strong>Over-temperature</strong> (default 45 °C) and <strong>Fast charge lost</strong> (the charger falls back from fast charging for 3 seconds). Presets: <strong>USB-C 65 W</strong>, <strong>5 V device</strong>, <strong>Power bank drain</strong>, <strong>Heat &amp; fast-charge watch</strong>.</p>
 <p>In the app an alert shows as a red banner with a haptic; in the background it arrives as a notification, which during a recording offers <strong>Stop &amp; save</strong>. Each rule fires at most once a minute and adds a marker to the recording.</p>
 <div class="shots-row"><figure><img src="assets/guide/alert-presets.jpg" alt="Presets" loading="lazy"><figcaption>Presets</figcaption></figure><figure><img src="assets/guide/alert-rules.jpg" alt="Rules with temperature and fast-charge alerts" loading="lazy"><figcaption>Rules with temperature and fast-charge alerts</figcaption></figure></div>
 
-<h2 id="lock">Lock Screen, Dynamic Island, Apple Watch &amp; Siri</h2>
+<h2 id="lock">Widgets, Lock Screen, Watch &amp; Siri</h2>
 <ul>
+<li><strong>Home Screen widget:</strong> touch and hold the Home Screen, add a widget and choose <strong>WattBench</strong>, in small, medium or large. It shows your latest recording with its power curve, energy, capacity and test result, or the recording in progress with a running timer.</li>
+<li><strong>Shortcuts widget:</strong> <strong>WattBench Shortcuts</strong> (medium) opens <strong>Record</strong>, <strong>Live</strong>, <strong>Power Bank</strong> or <strong>Charge</strong> in one tap.</li>
+<li><strong>Lock Screen and StandBy widgets:</strong> touch and hold the Lock Screen, tap <strong>Customize</strong> and add the WattBench widget (rectangular, circular or inline) for energy at a glance and the recording timer. The small widget also shows in StandBy.</li>
+<li><strong>Control Center</strong> (iOS 18 and later): open Control Center, tap <strong>+</strong> → <strong>Add a Control</strong> → WattBench, and pick <strong>Start Recording</strong> or <strong>Live Readings</strong>. Both open the app.</li>
+<li>Widgets update when a recording starts or is saved, not with every reading (the Lock Screen live readings below do that). With two meters, they show the first meter.</li>
 <li><strong>Lock Screen and Dynamic Island:</strong> while a recording runs, they show live watts, volts and amps, energy so far and the elapsed time, updating every few seconds even with the phone locked; "Saved" appears when you stop. Tap it to open the Live tab.</li>
 <li><strong>Apple Watch:</strong> the same readings appear in your watch's Smart Stack — a power gauge with the watts, plus volts, amps and the recording timer. Requires iOS 18 and watchOS 11 or later; no separate watch app is needed.</li>
 <li><strong>Live readings without recording:</strong> tap "WattBench" at the top of the Live tab and switch on <strong>Show Live Readings on Lock Screen</strong>, or choose in Settings → Recording → <strong>Lock Screen live readings</strong>: <em>Only while recording</em> (default), <em>Whenever connected</em> or <em>Off</em>.</li>
@@ -222,14 +228,17 @@
 <li><strong>Siri and Shortcuts:</strong> "Start a WattBench recording", "What is WattBench reading", "Show live readings in WattBench".</li>
 <li><strong>Home Screen quick actions</strong> (press and hold the icon): <strong>Start Recording</strong>, <strong>Connect to Last Meter</strong>.</li>
 </ul>
+<!-- TODO screenshot: Home Screen widgets (small, medium, large), 600 × 1298 JPEG, e.g. assets/guide/widgets.jpg, caption "Home Screen widgets"; optionally Control Center with the WattBench buttons, e.g. assets/guide/control-center.jpg. Add them as figures in the row below. -->
 <div class="shots-row"><figure><img src="assets/guide/lock-screen.jpg" alt="Lock Screen while recording" loading="lazy"><figcaption>Lock Screen while recording</figcaption></figure></div>
 
 <h2 id="menus">Menus &amp; settings</h2>
 <ul>
-<li><strong>Title menu</strong> (tap "WattBench" on the Live tab): <strong>Connect…</strong>, <strong>Reconnect to Last Meter</strong>, <strong>Disconnect</strong>, <strong>Try Demo Data</strong>, and the three tests.</li>
-<li><strong>Gear menu</strong> (top right): <strong>Settings</strong>, <strong>Alert Rules</strong>, <strong>Diagnostics</strong>, <strong>User Guide</strong>.</li>
-<li><strong>Settings:</strong> hero metric, auto-ranging units, precision, capacity unit, haptics, keep screen awake; chart window and peak line; default auto-stop, demo exclusion, Live Activity, charger markers; meter auto-connect and forget; storage; diagnostics; about.</li>
+<li><strong>Title menu</strong> (tap "WattBench" on the Live tab): <strong>Connect…</strong>, <strong>Reconnect to Last Meter</strong>, <strong>Disconnect</strong>, <strong>Try Demo Data</strong>, <strong>Try Two-Meter Demo</strong> (when Use two meters is on), <strong>Show Live Readings on Lock Screen</strong>, and the four tests. With two meters connected it adds <strong>Name Meters…</strong>, <strong>Swap In and Out</strong>, <strong>Match Meters…</strong> and <strong>Remove</strong> for the second meter (shown with its name).</li>
+<li><strong>Gear menu</strong> (top right): <strong>Settings</strong>, <strong>Alert Rules</strong>, <strong>Diagnostics</strong>, <strong>What's New</strong>, <strong>User Guide</strong>.</li>
+<li><strong>Settings:</strong> hero metric, auto-ranging units, precision, capacity unit, haptics, keep screen awake; chart window and peak line; default auto-stop, demo exclusion, Live Activity, charger markers; meter auto-connect and forget; <strong>Use two meters</strong>; storage; diagnostics; about.</li>
+<li><strong>Welcome and What's New:</strong> a new install opens with a welcome sheet about what the app does. After an update, a What's New sheet lists what changed. Open it again any time from the gear menu.</li>
 </ul>
+<!-- TODO screenshot: the 1.3 What's New sheet (Two Meters, Clearer "All" Charts, Data Cable Check, widgets), 600 × 1298 JPEG, saved over assets/guide/whats-new.jpg; also a gear menu frame with What's New in it, saved over assets/guide/gear-menu.jpg. The current frames are from 1.2; their captions stay true until then. -->
 <div class="shots-row"><figure><img src="assets/guide/gear-menu.jpg" alt="The gear menu" loading="lazy"><figcaption>The gear menu</figcaption></figure><figure><img src="assets/guide/whats-new.jpg" alt="What's New" loading="lazy"><figcaption>What's New</figcaption></figure></div>
 
 <h2 id="trouble">Troubleshooting</h2>
@@ -238,6 +247,8 @@
 <details><summary>"No Meter Found"</summary><p>Enable Bluetooth in the meter's own settings menu and keep it within a few metres. If it's connected to another phone or a computer, disconnect it there first.</p></details>
 <details><summary>No USB data lines card</summary><p>It appears once the meter sends D+/D− or temperature, a second or two after connecting. Demo data includes it, so you can see how it looks.</p></details>
 <details><summary>The cable check won't capture a step</summary><p>It waits for the current to hold within ±3 % for two seconds. If your load drifts, tap <strong>Capture Now</strong>.</p></details>
+<details><summary>I don't see Add a Second Meter</summary><p>Turn on <strong>Use two meters</strong> in Settings, and connect your first meter before you open the Connect sheet: the button appears below a connected meter. It isn't offered during demo data; use <strong>Add Demo Meter B</strong> or <strong>Try Two-Meter Demo</strong> there instead.</p></details>
+<details><summary>The widget shows an old recording</summary><p>Widgets update when a recording is saved or starts, not on every reading. After installing the update, open WattBench once so it can fill them in.</p></details>
 <details><summary>Something else</summary><p>Gear menu → <strong>Diagnostics</strong> → <strong>Share</strong>, then <a href="https://github.com/RedThoroughbred/FNB58-MacOS/issues">open an issue</a> and attach it.</p></details>
 </div>
 </section>
