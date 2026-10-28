@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Wildcat Mesh — one iPhone app for Meshtastic® and MeshCore radios</title>
-<meta name="description" content="Wildcat Mesh for iPhone: chat on Meshtastic® and MeshCore LoRa radios, bridge the two networks, and play Fox Hunt and Geo Gifts outside. Free, no account.">
-<meta name="theme-color" content="#09090b">
+<meta name="description" content="Wildcat Mesh for iPhone: chat on Meshtastic® and MeshCore LoRa radios, bridge the two networks, and play Fox Hunt and Geo Gifts outside. No cell service needed. Free, no account.">
+<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Wildcat Mesh">
 <meta property="og:title" content="Wildcat Mesh — one iPhone app for Meshtastic® and MeshCore radios">
 <meta property="og:description" content="Chat on both LoRa mesh networks, bridge them together, and play outdoor games like Fox Hunt and Geo Gifts. No account, no data collected.">
@@ -10,7 +10,7 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Wildcat Mesh — one iPhone app for Meshtastic® and MeshCore radios"><meta name="twitter:description" content="Chat on both LoRa mesh networks, bridge them together, and play outdoor games like Fox Hunt and Geo Gifts."><meta name="twitter:image" content="https://redthoroughbred.github.io/wildcat/assets/og-image.png">
 <meta name="apple-itunes-app" content="app-id=6816781840">
 <link rel="canonical" href="https://redthoroughbred.github.io/wildcat/">
-<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=2"></head><body>
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=3"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32"><span>Wildcat Mesh</span></a><nav aria-label="Site"><a href="./" aria-current="page">Home</a><a href="guide.html">Guide</a><a href="privacy.html">Privacy</a></nav></header>
@@ -19,29 +19,115 @@
 <div class="hero">
 <div>
 <img class="icon" src="assets/icon.png" alt="Wildcat Mesh app icon: a cat's face, half amber and half blue" width="112" height="112">
-<h1>Wildcat Mesh</h1>
-<p class="tag">One iPhone app for Meshtastic® and MeshCore radios.</p>
-<p class="sub">Chat on both LoRa mesh networks, bridge them together through your phone, and head outside for Fox Hunt and Geo Gifts. No account, no servers, nothing collected.</p>
-<ul class="chips" aria-label="Works with">
-<li><span class="dot mt" aria-hidden="true"></span>Meshtastic</li>
-<li><span class="dot mc" aria-hidden="true"></span>MeshCore</li>
-<li><span class="dot ok" aria-hidden="true"></span>Free · no account</li>
-</ul>
+<p class="eyebrow"><span class="live" aria-hidden="true"></span>Free on the App Store</p>
+<h1>One iPhone app for <span class="mtc">Meshtastic®</span> and <span class="mcc">MeshCore</span> radios.</h1>
+<p class="sub">Messages, nodes and maps for both networks. Games like Fox Hunt that get you outside. A bridge that carries messages between the two. No cell service, no internet, no account.</p>
 <div class="store" id="get">
 <a class="badge" href="https://apps.apple.com/app/id6816781840"><img src="assets/badge-black.svg" alt="Download on the App Store" width="156" height="52"></a>
+<a class="btn" href="#networks">New to mesh? Start here</a>
 <p class="meta">iPhone · iOS 17 or later · Free<br>Needs a Meshtastic or MeshCore radio, or try Practice mode without one</p>
 </div>
 </div>
 <div class="shots">
+<div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
 <img class="phone" src="assets/07-meshtastic.jpg" alt="The Meshtastic tab: a practice handheld node with battery, channel use, best signal, uptime and the nodes it hears nearby" width="600" height="1304">
 <img class="phone" src="assets/02-meshcore.jpg" alt="The MeshCore tab: a companion node with battery, packets heard, radio settings and nearby repeaters sorted by signal" width="600" height="1304">
 </div>
 </div>
 
+<div class="facts" aria-label="At a glance">
+<div><b class="mt">2</b><span>networks, both connected at once</span></div>
+<div><b>0</b><span>cell bars needed: radios talk to radios</span></div>
+<div><b class="ok">Free</b><span>no account, no ads, no subscription</span></div>
+<div><b class="mc">0</b><span>data collected. It stays on your iPhone</span></div>
+</div>
+
+<!-- WHAT'S NEW IN 1.1: hidden until 1.1 is live on the App Store.
+     To switch it on: delete this comment's first three lines and the closing line "END 1.1 BLOCK",
+     and change the hero meta line to "iPhone · iOS 17 or later · Free · Version 1.1".
+<section id="new">
+<p class="label"><span class="no">New</span>Version 1.1</p>
+<h2>What's new in 1.1</h2>
+<div class="grid">
+<div class="card"><span class="k"><span class="dot mt" aria-hidden="true"></span>Meshtastic</span><h3>Each radio keeps its own chats</h3><p>Switch Meshtastic nodes and Messages switches with it. Earlier radios' chats stay on your phone and stay readable, even while a node is disconnected.</p></div>
+<div class="card"><span class="k"><span class="dot mt" aria-hidden="true"></span><span class="dot mc" aria-hidden="true"></span>Both networks</span><h3>Check for firmware updates</h3><p>Tap <strong>Check for updates</strong> and Wildcat compares each node's firmware with the latest official Meshtastic and MeshCore releases, on your iPhone. It only checks when you tap, and nothing about you or your radios is sent.</p></div>
+</div>
+</section>
+END 1.1 BLOCK -->
+
+<section id="networks" class="first">
+<p class="label"><span class="no">01</span>The networks</p>
+<h2>First, what's a LoRa mesh?</h2>
+<p class="lede narrow">Small, low-power radios that pass text messages to each other, radio to radio. Every radio you add stretches the network a little further. No cell towers, no Wi-Fi, no internet and no monthly bill.</p>
+<ol class="how">
+<li><strong>You type on your phone</strong>Your phone hands the message to your own radio over Bluetooth.</li>
+<li><strong>Your radio sends it over the air</strong>LoRa trades speed for range: short, slow messages that can carry a mile or more, and much farther from a hilltop or a roof.</li>
+<li><strong>Other radios pass it along</strong>Each relay is a hop. Hop by hop, it reaches the person you wrote to, even with no signal bars anywhere.</li>
+</ol>
+
+<p>There are two big networks built on these radios. They do the same job in different ways:</p>
+<div class="nets">
+<article class="net mt">
+<h3><span class="dot mt" aria-hidden="true"></span>Meshtastic</h3>
+<p class="one">The larger, longer-running one. Every radio helps.</p>
+<p>Each node repeats what it hears, up to a hop limit (3 by default), so a few friends' radios make a mesh all by themselves. It runs on lots of boards and has a big community.</p>
+<p class="go"><a class="ext" href="https://meshtastic.org/" target="_blank" rel="noopener">meshtastic.org</a><a class="ext" href="https://meshtastic.org/docs/introduction/" target="_blank" rel="noopener">Docs</a><a class="ext" href="https://meshtastic.org/docs/hardware/devices/" target="_blank" rel="noopener">Radios</a><a class="ext" href="https://github.com/meshtastic" target="_blank" rel="noopener">GitHub</a></p>
+</article>
+<article class="net mc">
+<h3><span class="dot mc" aria-hidden="true"></span>MeshCore</h3>
+<p class="one">Newer and leaner. Repeaters do the forwarding.</p>
+<p>The radio you carry (a companion) never repeats. Repeaters, ideally up high, pass messages on. The first message to someone floods out; after that it takes the route it learned, so busy meshes stay quieter.</p>
+<p class="go"><a class="ext" href="https://meshcore.io/" target="_blank" rel="noopener">meshcore.io</a><a class="ext" href="https://docs.meshcore.io/" target="_blank" rel="noopener">Docs</a><a class="ext" href="https://meshcore.io/flasher" target="_blank" rel="noopener">Flasher</a><a class="ext" href="https://github.com/meshcore-dev/MeshCore" target="_blank" rel="noopener">GitHub</a></p>
+</article>
+</div>
+
+<div class="tablewrap compare">
+<table class="t">
+<thead><tr><th scope="col">At a glance</th><th scope="col" class="mt">Meshtastic</th><th scope="col" class="mc">MeshCore</th></tr></thead>
+<tbody>
+<tr><td>Who passes messages on</td><td>Every node, by default</td><td>Repeaters and room servers only</td></tr>
+<tr><td>How a message finds you</td><td>Rebroadcast hop by hop, up to the hop limit</td><td>Floods the first time, then follows a learned path</td></tr>
+<tr><td>Longest message</td><td>200 bytes</td><td>133 bytes</td></tr>
+<tr><td>Talks to your phone</td><td>Bluetooth</td><td>Bluetooth (Companion firmware)</td></tr>
+<tr><td>Colour in Wildcat</td><td><span class="dot mt" aria-hidden="true"></span>Amber</td><td><span class="dot mc" aria-hidden="true"></span>Blue</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Why one app for both?</h3>
+<p class="narrow muted">The two networks can't hear each other: different radio settings, different packets. Put a Meshtastic radio and a MeshCore radio side by side and they won't swap a word. Wildcat connects to one of each at the same time, and the bridge lets your phone carry a private channel across.</p>
+
+<figure class="diagram">
+<svg viewBox="24 24 680 262" role="img" aria-labelledby="dgt">
+<title id="dgt">A Meshtastic mesh on the left, where every node relays, and a MeshCore mesh on the right, where a repeater on a mast relays. Your phone sits between them, connected to one radio on each side by Bluetooth, and a message travels from one mesh, through the phone, into the other.</title>
+<g>
+<path class="lk mt" d="M70 95 L175 55 M70 95 L120 205 M175 55 L235 150 M120 205 L235 150 M70 95 L235 150"/>
+<path class="lk mc" d="M490 150 L600 70 M600 70 L655 195 M600 70 L540 235 M490 150 L540 235"/>
+<path class="bt" d="M235 150 L338 140 M382 140 L490 150"/>
+<path class="flow mt" d="M70 95 L175 55 L235 150"/>
+<path class="bt flow" d="M235 150 L338 140 M382 140 L490 150"/>
+<path class="flow mc" d="M490 150 L600 70 L655 195"/>
+</g>
+<g>
+<circle class="halo mt" cx="70" cy="95" r="14"/><circle class="halo mc" cx="655" cy="195" r="14" style="animation-delay:1.5s"/>
+<circle class="nd mt" cx="70" cy="95" r="14"/><circle class="nd mt" cx="175" cy="55" r="14"/><circle class="nd mt" cx="120" cy="205" r="14"/><circle class="nd mt" cx="235" cy="150" r="14"/>
+<path class="tower" d="M600 70 L586 108 M600 70 L614 108 M590 97 L610 97 M600 70 L600 108"/>
+<circle class="nd mc" cx="600" cy="70" r="14"/><circle class="nd mc" cx="490" cy="150" r="14"/><circle class="nd mc" cx="655" cy="195" r="14"/><circle class="nd mc" cx="540" cy="235" r="14"/>
+<rect class="ph" x="338" y="96" width="44" height="86" rx="9"/><rect class="ph-s" x="343" y="106" width="34" height="62" rx="3"/>
+<circle class="nd mt" cx="353" cy="126" r="4"/><circle class="nd mc" cx="367" cy="146" r="4"/>
+<text class="hi" x="360" y="218" text-anchor="middle">YOUR PHONE</text>
+<text class="mt" x="40" y="276">MESHTASTIC</text>
+<text class="mc" x="690" y="276" text-anchor="end">MESHCORE</text>
+</g>
+</svg>
+<figcaption>Two meshes that can't hear each other, and one phone that can. On MeshCore, the repeater on the mast does the forwarding.</figcaption>
+</figure>
+</section>
+
 <section id="both">
 <div class="feature">
 <div class="copy">
-<p class="label"><span class="no">01</span>Both networks</p>
+<p class="label"><span class="no">02</span>Both networks</p>
 <h2>Meshtastic and MeshCore, side by side</h2>
 <p class="lede">Connect a Meshtastic node and a MeshCore node at the same time. Each network keeps its own colour, <span class="mtc">amber</span> for Meshtastic and <span class="mcc">blue</span> for MeshCore, so you always know which radio a message travels through.</p>
 <ul class="ticks">
@@ -61,7 +147,7 @@
 <section id="bridge">
 <div class="feature flip">
 <div class="copy">
-<p class="label"><span class="no">02</span>The bridge</p>
+<p class="label"><span class="no">03</span>The bridge</p>
 <h2>Your phone joins the two meshes</h2>
 <p class="lede">The two networks can't hear each other. Wildcat can: pick one private Meshtastic channel and one private MeshCore channel, turn the bridge on, and your phone relays messages between them while both nodes are connected.</p>
 <ul class="ticks">
@@ -95,9 +181,9 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 <section id="games">
 <div class="feature">
 <div class="copy">
-<p class="label"><span class="no">03</span>Games outside</p>
+<p class="label"><span class="no">04</span>Games outside</p>
 <h2>Fox Hunt, and more reasons to go for a walk</h2>
-<p class="lede">Hide a node, then find it by its signal alone. The fox screen is a field instrument: a live signal meter, a two-minute trend, a bearing radar and haptic "Geiger" ticks that speed up as you get warmer.</p>
+<p class="lede">Fox Hunt is an old ham radio game: someone hides a radio, and everyone else finds it by its signal. The fox screen is a field instrument: a live signal meter, a two-minute trend, a bearing radar and haptic "Geiger" ticks that speed up as you get warmer.</p>
 <dl class="terms">
 <div><dt>Fox Hunt</dt><dd>Host from your phone: friends join by scanning one QR code, and your phone referees over the radio. No server. Or hunt solo.</dd></div>
 <div><dt>Geo Gifts</dt><dd>Messages that only open when someone stands on the spot. Send them over the mesh or as a link.</dd></div>
@@ -115,7 +201,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 <section id="mymesh">
 <div class="feature flip">
 <div class="copy">
-<p class="label"><span class="no">04</span>My Mesh</p>
+<p class="label"><span class="no">05</span>My Mesh</p>
 <h2>Every radio you own, in plain English</h2>
 <p class="lede">My Mesh lists your radios on both networks, whether each one is online, its battery, and what it actually does: "Companion · your radio, never repeats", "Repeater · forwards everyone's messages".</p>
 <ul class="ticks">
@@ -133,7 +219,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 <section id="data">
 <div class="feature">
 <div class="copy">
-<p class="label"><span class="no">05</span>Pro data</p>
+<p class="label"><span class="no">06</span>Pro data</p>
 <h2>For the radio nerds: all the numbers</h2>
 <p class="lede">Every message carries its signal (SNR and RSSI), hop count and route. Long-press for the raw packet. Every node page ends in its raw fields, ready to copy.</p>
 <div class="readouts" aria-label="Example readouts">
@@ -156,9 +242,9 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 </section>
 
 <section id="privacy">
-<p class="label"><span class="no">06</span>Private by design</p>
+<p class="label"><span class="no">07</span>Private by design</p>
 <h2>No account. No servers. No data collected.</h2>
-<p class="lede" style="max-width:720px">Wildcat talks to your radios over Bluetooth, and your radios do the talking over the air. There is nothing of ours in between.</p>
+<p class="lede narrow">Wildcat talks to your radios over Bluetooth, and your radios do the talking over the air. There is nothing of ours in between.</p>
 <div class="grid">
 <div class="card"><span class="k">Account</span><h3>None</h3><p>No sign-up, no login, no subscription, no ads.</p></div>
 <div class="card"><span class="k">Your data</span><h3>Stays on your iPhone</h3><p>Chats, contacts, gifts and settings live in the app. Secrets such as repeater passwords go in the Keychain.</p></div>
@@ -170,7 +256,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 <section id="practice">
 <div class="feature flip">
 <div class="copy">
-<p class="label"><span class="no">07</span>Practice mode</p>
+<p class="label"><span class="no">08</span>Practice mode</p>
 <h2>No radio yet? Try everything anyway.</h2>
 <p class="lede">Tap <strong>Play → Practice</strong>. Wildcat starts a pretend Meshtastic radio and a pretend MeshCore radio that live on your phone, with made-up nodes, chats, repeaters and a fox to hunt. Nothing is transmitted.</p>
 <ul class="ticks ok">
@@ -186,9 +272,9 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 </section>
 
 <section id="start">
-<p class="label"><span class="no">08</span>Quick start</p>
+<p class="label"><span class="no">09</span>Quick start</p>
 <h2>Up and running in a minute</h2>
-<div class="body" style="max-width:760px">
+<div class="body narrow">
 <ol class="steps">
 <li><strong>Close the official Meshtastic or MeshCore app</strong> first (swipe it away). A node talks to one phone app at a time.</li>
 <li><strong>Meshtastic:</strong> open the <strong>Meshtastic</strong> tab and tap <strong>Find my node</strong>. <strong>MeshCore:</strong> open the <strong>MeshCore</strong> tab and tap <strong>Find MeshCore nodes</strong>. MeshCore nodes need the <strong>Companion (Bluetooth)</strong> firmware.</li>
@@ -201,27 +287,31 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 </section>
 
 <section id="faq" class="faq">
-<p class="label"><span class="no">09</span>FAQ</p>
+<p class="label"><span class="no">10</span>FAQ</p>
 <h2>Common questions</h2>
-<div style="max-width:760px">
-<details><summary>Which radios work?</summary><p>Meshtastic nodes with Bluetooth (Heltec, RAK, Seeed, LilyGO and others), and MeshCore nodes running the Companion (Bluetooth) firmware. You can connect one of each at the same time. MeshCore repeaters and room servers have no phone Bluetooth; they appear in your contacts once your node hears them, and you manage them over the air.</p></details>
+<div class="narrow">
+<details><summary>What's the difference between Meshtastic and MeshCore?</summary><p>Both are LoRa mesh networks for text messages without cell service. On Meshtastic, every radio helps pass messages along. On MeshCore, the radio you carry never repeats; dedicated repeaters do. The two can't hear each other, which is why Wildcat speaks both. See <a href="#networks">The networks</a> above, or the official sites: <a class="ext" href="https://meshtastic.org/" target="_blank" rel="noopener">meshtastic.org</a> and <a class="ext" href="https://meshcore.io/" target="_blank" rel="noopener">meshcore.io</a>.</p></details>
+<details><summary>Which radios work?</summary><p>Meshtastic nodes with Bluetooth (Heltec, RAK, Seeed, LilyGO and others), and MeshCore nodes running the Companion (Bluetooth) firmware. You can connect one of each at the same time. MeshCore repeaters and room servers have no phone Bluetooth; they appear in your contacts once your node hears them, and you manage them over the air.</p><p>Shopping for one? Each project keeps its own list: <a class="ext" href="https://meshtastic.org/docs/hardware/devices/" target="_blank" rel="noopener">Meshtastic devices</a>, and the boards in the <a class="ext" href="https://meshcore.io/flasher" target="_blank" rel="noopener">MeshCore flasher</a>.</p></details>
+<details><summary>Do I need a ham radio license?</summary><p>Not in the US. Meshtastic and MeshCore radios there use the license-free 915 MHz band (902–928 MHz). Set your radio to your correct region; Wildcat asks for it when you set up a new Meshtastic node. Outside the US, check your own country's rules.</p></details>
+<details><summary>Is the app free?</summary><p>Yes. There is no account, no subscription and no advertising.</p></details>
+<details><summary>Does it need an account or the internet?</summary><p>No account, and no internet for messages: they go radio to radio over the air, so Wildcat works where there are no signal bars. Maps use Apple Maps, so new map areas load when you have a connection.</p></details>
+<details><summary>What data leaves my phone?</summary><p>Nothing goes to us: no analytics, no tracking, and no servers of ours. What leaves your phone is what your radio sends over the mesh: your messages (anyone on a channel can read it, and everyone nearby can read Public; private channels are encrypted by the radio), your position only if you choose to set your radio's position, and Geo Gift hints and "opened" receipts. Reports go only if you send the email. The <a href="privacy.html">privacy policy</a> has the details.</p></details>
 <details><summary>Can I keep using the official Meshtastic or MeshCore app?</summary><p>Yes, just not at the same moment. A node talks to one phone app at a time, so close the other app (on your phone, and on your Mac for MeshCore) before connecting in Wildcat.</p></details>
 <details><summary>How does the bridge work?</summary><p>Your phone relays one private Meshtastic channel and one private MeshCore channel to each other while Wildcat is open and both radios are connected. No internet is involved. Public channels can't be bridged. Start a message with <code>@name</code> to reach someone privately on the other network.</p></details>
 <details><summary>Why can't I see other people's channels?</summary><p>A channel is a name plus a shared key. Your radio can only read channels you've added; everyone shares Public. Friends can share a channel with you as a QR code or link.</p></details>
 <details><summary>Do I need a Den or any server?</summary><p>No. Every game works with just phones and nodes. The Den is an optional base station. Den Lite turns a node that stays at home into one, right in the app. The full Den software for a Raspberry Pi, with always-on history, coverage maps and refereed hunts, isn't public yet.</p></details>
 <details><summary>Does it work in the background?</summary><p>Bluetooth stays active in the background only to keep your radios connected, so messages keep arriving and notify you. The bridge and coverage walks need Wildcat open.</p></details>
-<details><summary>Is the app free?</summary><p>Yes. There is no account, no subscription and no advertising.</p></details>
 <details><summary>What does Wildcat do with my location?</summary><p>It uses it on your iPhone, only while you're using the app, for Fox Hunt, Daily Fox, Territory, Geo Gifts, coverage walks and, if you choose, setting your radio's position. It is never sent to us. See the <a href="privacy.html">privacy policy</a>.</p></details>
 </div>
 </section>
 
 <section id="support">
-<p class="label"><span class="no">10</span>Support</p>
+<p class="label"><span class="no">11</span>Support</p>
 <h2>Get help</h2>
 <div class="support">
 <div class="card">
 <h3>Contact</h3>
-<p>Questions, bugs or feedback? Email us. Please include your iPhone model, iOS version, and which radio and firmware you use.</p>
+<p>Questions, bugs or feedback? Email me. Please include your iPhone model, iOS version, and which radio and firmware you use.</p>
 <a class="mail" href="mailto:redthoroughbreds@gmail.com?subject=Wildcat%20Mesh%20support">redthoroughbreds@gmail.com</a>
 </div>
 <div class="card">
@@ -231,11 +321,23 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 </div>
 </div>
 </section>
+
+<section class="cta" aria-labelledby="cta-h">
+<img class="icon" src="assets/icon.png" alt="" width="72" height="72" loading="lazy">
+<h2 id="cta-h">Grab a radio. Head outside.</h2>
+<p>Wildcat Mesh is free on iPhone. No radio yet? Practice mode lets you try every screen first.</p>
+<div class="store">
+<a class="badge" href="https://apps.apple.com/app/id6816781840"><img src="assets/badge-black.svg" alt="Download on the App Store" width="156" height="52" loading="lazy"></a>
+<a class="btn" href="guide.html">Read the guide</a>
+</div>
+</section>
 </main>
 
 <footer>
 <nav class="links" aria-label="Footer"><a href="./">Home</a><a href="https://apps.apple.com/app/id6816781840">App Store</a><a href="guide.html">User guide</a><a href="privacy.html">Privacy policy</a><a href="mailto:redthoroughbreds@gmail.com?subject=Wildcat%20Mesh%20support">Support</a></nav>
-<p>Meshtastic® is a registered trademark of Meshtastic LLC. Wildcat Mesh is an independent app and is not affiliated with or endorsed by Meshtastic LLC or the MeshCore project. Apple, the Apple logo and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
+<p class="made">Made by Seth Egger, an independent developer. Wildcat Mesh is not affiliated with or endorsed by Meshtastic LLC or the MeshCore project.</p>
+<p class="official">Official project sites: <a class="ext" href="https://meshtastic.org/" target="_blank" rel="noopener"><span class="dot mt" aria-hidden="true"></span>Meshtastic</a> <a class="ext" href="https://meshcore.io/" target="_blank" rel="noopener"><span class="dot mc" aria-hidden="true"></span>MeshCore</a></p>
+<p>Meshtastic® is a registered trademark of Meshtastic LLC. Apple, the Apple logo and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
 <p>© 2026 Seth Egger</p>
 </footer>
 </div></body></html>
