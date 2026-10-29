@@ -1,16 +1,52 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Seth Egger · apps and writing</title>
-<meta name="description" content="iPhone apps and writing by Seth Egger: WattBench, Repot: Plant Care, Wildcat Mesh and The AI Choice.">
-<link rel="icon" href="wattbench/assets/icon.png"><link rel="stylesheet" href="wattbench/styles.css"></head><body><div class="wrap">
+<meta name="description" content="iPhone apps and writing by Seth Egger, an independent developer in Kentucky: WattBench, Repot: Plant Care, Wildcat Mesh and The AI Choice.">
+<meta property="og:title" content="Seth Egger · apps and writing"><meta property="og:description" content="iPhone apps by Seth Egger, an independent developer in Kentucky: WattBench, Repot: Plant Care and Wildcat Mesh.">
+<meta property="og:url" content="https://redthoroughbred.github.io/"><meta property="og:type" content="website">
+<link rel="icon" href="wattbench/assets/icon.png"><link rel="stylesheet" href="wattbench/styles.css?v=3">
+<style>
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;margin-top:22px}
+.app{display:flex;flex-direction:column;gap:12px;padding:18px}
+.app-head{display:flex;gap:14px;align-items:center}
+.app-head img{width:64px;height:64px;border-radius:15px;flex:none;box-shadow:0 6px 16px rgba(0,0,0,.16)}
+.app-head h3{margin:0;font-size:19px}.app-head h3 a{color:var(--ink)}
+.app-head .sub{margin:2px 0 0;color:var(--grey);font-size:14px}
+.app .desc{flex:1}
+.app .warn{font-size:12.5px;font-weight:600;color:var(--sub)}
+.app-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:15px}
+.app-links .badge img{height:40px}
+</style></head><body><div class="wrap">
 <section style="border-top:0;padding-top:48px">
 <h2 style="font-size:36px;margin-bottom:6px">Seth Egger</h2>
-<p class="tag" style="color:var(--sub);margin-top:0">Apps and writing.</p>
-<div class="grid" style="margin-top:22px">
-<a class="card" href="wattbench/" style="color:inherit"><h3>WattBench</h3><p>Live power meter for the FNIRSI FNB58 on iPhone: readings, recordings, tests and reports.</p></a>
-<a class="card" href="https://therepotapp.com" style="color:inherit"><h3>Repot: Plant Care</h3><p>The whole workbench for a home nursery, worm bins included.</p></a>
-<a class="card" href="wildcat/" style="color:inherit"><h3>Wildcat Mesh</h3><p>One iPhone app for Meshtastic® and MeshCore radios: chat on both, bridge them, play games outside.</p></a>
+<p class="tag" style="color:var(--sub);margin-top:0">iPhone apps and writing, made in Kentucky.</p>
+<div class="apps">
+
+<div class="card app">
+<div class="app-head"><img src="assets/icons/wattbench.png" alt="WattBench app icon" width="64" height="64"><div><h3><a href="wattbench/">WattBench</a></h3><p class="sub">Live power meter for FNB58</p></div></div>
+<p class="desc">Your FNIRSI FNB58 USB meter, live on your iPhone: readings, recordings, guided tests and reports. $2.99, no subscription.</p>
+<p class="warn">DO NOT PURCHASE THE APP IF YOU DO NOT ALREADY HAVE THE FNB58 DEVICE.</p>
+<div class="app-links"><a class="badge" href="https://apps.apple.com/us/app/id6816404264"><picture><source srcset="wattbench/assets/badge-white.svg" media="(prefers-color-scheme: dark)"><img src="wattbench/assets/badge-black.svg" alt="Download WattBench on the App Store"></picture></a><a href="wattbench/">Website</a><a href="wattbench/support.html">Support</a></div>
+</div>
+
+<div class="card app">
+<div class="app-head"><img src="assets/icons/repot.png" alt="Repot app icon" width="64" height="64"><div><h3><a href="https://therepotapp.com">Repot: Plant Care</a></h3><p class="sub">Plant care &amp; worm compost</p></div></div>
+<p class="desc">The whole workbench for a home nursery, worm bins included. Free to start; pay once, no subscription.</p>
+<div class="app-links"><a class="badge" href="https://apps.apple.com/us/app/id6790598058"><picture><source srcset="wattbench/assets/badge-white.svg" media="(prefers-color-scheme: dark)"><img src="wattbench/assets/badge-black.svg" alt="Download Repot on the App Store"></picture></a><a href="https://therepotapp.com">Website</a></div>
+</div>
+
+<div class="card app">
+<div class="app-head"><img src="assets/icons/wildcat.png" alt="Wildcat Mesh app icon" width="64" height="64"><div><h3><a href="wildcat/">Wildcat Mesh</a></h3><p class="sub">LoRa mesh chat, bridge &amp; games</p></div></div>
+<p class="desc">One iPhone app for Meshtastic® and MeshCore radios: chat on both, bridge them, play games outside. Free.</p>
+<div class="app-links"><a class="badge" href="https://apps.apple.com/us/app/id6816781840"><picture><source srcset="wattbench/assets/badge-white.svg" media="(prefers-color-scheme: dark)"><img src="wattbench/assets/badge-black.svg" alt="Download Wildcat Mesh on the App Store"></picture></a><a href="wildcat/">Website</a></div>
+</div>
+
+</div></section>
+<section><h2>Also</h2>
+<div class="grid">
 <a class="card" href="https://www.theaichoice.com" style="color:inherit"><h3>The AI Choice</h3><p>Into the Light, Into the Dark — a book about making conscious choices in the age of AI.</p></a>
 <a class="card" href="https://github.com/RedThoroughbred" style="color:inherit"><h3>GitHub</h3><p>Open-source projects, including the FNB58 desktop monitor.</p></a>
 </div></section>
-<footer><p>© 2026 Seth Egger</p></footer>
+<footer><p>Made by <a href="./">Seth Egger</a>, an independent developer in Kentucky.</p>
+<p>Apple, the Apple logo and App Store are trademarks of Apple Inc. Meshtastic® is a registered trademark of Meshtastic LLC. FNIRSI and FNB58 are trademarks of their respective owners.</p>
+<p>© 2026 Seth Egger</p></footer>
 </div></body></html>
