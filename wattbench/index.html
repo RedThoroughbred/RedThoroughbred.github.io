@@ -8,11 +8,11 @@
 <div class="hero hero-v">
 <div class="hero-head"><img class="icon" src="assets/icon.png" alt="WattBench app icon"><div>
 <h1>WattBench</h1><p class="tag">Live power meter for the FNIRSI FNB58, on your iPhone.</p>
-<p class="meta">Version 1.3 · iPhone · iOS 17 or later · $2.99, no subscription · Requires an FNB58 with Bluetooth (<a href="https://www.fnirsi.com/products/fnb58">FNB58 BT</a>)</p>
+<p class="meta">Version 1.4 · iPhone · iOS 17 or later · $2.99, no subscription · Requires an FNB58 with Bluetooth (<a href="https://www.fnirsi.com/products/fnb58">FNB58 BT</a>)</p>
 <p class="meta"><strong>DO NOT PURCHASE THE APP IF YOU DO NOT ALREADY HAVE THE FNB58 DEVICE.</strong></p>
 <a class="badge" href="https://apps.apple.com/us/app/id6816404264"><picture><source srcset="assets/badge-white.svg" media="(prefers-color-scheme: dark)"><img src="assets/badge-black.svg" alt="Download on the App Store"></picture></a>
 </div></div>
-<!-- TODO video: the promo is built from the 1.2 screenshots (its full-screen chart is the old single-axis All view). Re-cut with 1.3 frames (stacked charts, two meters, widgets) when they exist. -->
+<!-- TODO video: the promo is still built from the 1.2 screenshots (its full-screen chart is the old single-axis All view). Re-cut it from the 1.4 App Store screenshots and preview, keeping Seth's song. -->
 <figure class="promo"><div class="promo-frame">
 <video id="promo" src="assets/wattbench-promo.mp4" poster="assets/wattbench-promo-poster.jpg" width="1920" height="1080" autoplay muted loop playsinline controls preload="metadata" aria-label="A 40-second tour of WattBench built from real app screenshots: live voltage, current and power with charger detection, the full-screen chart, recording with the Lock Screen Live Activity, guided tests, session insights and PDF reports."></video>
 <button class="sound" id="promo-sound" type="button">&#x1F50A; Turn sound on</button>
@@ -24,16 +24,17 @@ b.addEventListener('click',()=>{v.muted=false;v.currentTime=0;v.play();});
 v.addEventListener('volumechange',()=>{b.hidden=!v.muted;});})();</script>
 </div>
 <p>WattBench turns your iPhone into a wireless display, data logger and test bench for the FNIRSI FNB58 USB power meter. Connect over Bluetooth and watch voltage, current and power update in real time, start a recording to capture a whole charge cycle, and review or export every sample later. No account, no ads, no analytics, no network access — everything stays on your phone.</p>
-<p class="note"><strong>New in 1.3:</strong> use <a href="guide.html#dual">two meters at once</a> to measure efficiency or a cable's resistance, check whether a cable carries data with the <a href="guide.html#datacheck">Data Cable Check</a>, read V, A and W as three stacked charts, and see your latest recording in widgets and Control Center.</p>
+<p class="note"><strong>New in 1.4:</strong> stop a recording after any length from 1 minute to 24 hours, choose what <a href="guide.html#compare">PDF reports</a> include and print them in landscape, see two meters' efficiency or cable resistance on the Lock Screen and Apple Watch, pick Celsius or Fahrenheit, and reconnect more gently to save battery on long recordings.</p>
 <div class="strip">
-<!-- TODO screenshot: Live tab with the chart card on All (three stacked charts), 554 × 1200 PNG; replaces 12-01-live.png, caption "Live with stacked charts" -->
-<figure><img src="assets/12-01-live.png" alt=""><figcaption>Live with USB data lines</figcaption></figure>
-<!-- TODO screenshot: two meters on the Live tab in Efficiency mode (power in, power out, efficiency, loss), 554 × 1200 PNG, e.g. 13-01-two-meters.png, caption "Two meters" -->
-<figure><img src="assets/12-03-tests.png" alt=""><figcaption>Guided tests</figcaption></figure>
-<figure><img src="assets/12-06-insights.png" alt=""><figcaption>Session insights</figcaption></figure>
-<!-- TODO screenshot: full-screen chart on All (three stacked charts, V, A and W), 554 × 1200 PNG, e.g. 13-02-full-screen-all.png. The current 12-08 frame shows the 1.2 All view (three lines on one axis), which 1.3 replaced. -->
-<figure><img src="assets/12-08-full-screen-chart.png" alt=""><figcaption>Full-screen chart</figcaption></figure>
-<!-- TODO screenshot: Home Screen widgets (small, medium, large), 554 × 1200 PNG, e.g. 13-03-widgets.png, caption "Home Screen widgets" -->
+<figure><img src="assets/14-01-live.jpg" alt="Live readings from your FNB58. DO NOT PURCHASE THE APP IF YOU DO NOT ALREADY HAVE THE FNB58 DEVICE."></figure>
+<figure><img src="assets/14-02-chart-all.jpg" alt="Volts, amps and watts on one time axis"></figure>
+<figure><img src="assets/14-03-two-meters.jpg" alt="Two meters: efficiency and cable loss"></figure>
+<figure><img src="assets/14-04-lock-screen.jpg" alt="Follow a recording from the Lock Screen"></figure>
+<figure><img src="assets/14-05-power-bank.jpg" alt="What a power bank really holds" loading="lazy"></figure>
+<figure><img src="assets/14-06-insights.jpg" alt="Insights from every recording" loading="lazy"></figure>
+<figure><img src="assets/14-07-tests.jpg" alt="Guided tests with a report at the end" loading="lazy"></figure>
+<figure><img src="assets/14-08-charge.jpg" alt="How fast a phone really charges" loading="lazy"></figure>
+<figure><img src="assets/14-09-pdf.jpg" alt="PDF reports to share" loading="lazy"></figure>
 </div>
 <section id="demo"><h2>See it work</h2>
 <p>A real FNB58 and a real iPhone in one take. On the left, a second phone films the desk; on the right is the iPhone's own screen recording of the same moments. Watch the meter's screen and the app show the same numbers.</p>
