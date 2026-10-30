@@ -67,3 +67,4 @@ footer p{margin:6px 0}
 .promo figcaption{font-size:14px;color:var(--grey);margin-top:10px;text-align:center}
 @media (max-width:760px){.hero-head{flex-direction:column;align-items:flex-start;gap:14px}.hero-head .icon{width:96px;height:96px}.promo-frame{overflow:visible;border-radius:0;box-shadow:none;background:none;aspect-ratio:auto}.promo video{border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.25);height:auto;aspect-ratio:16/9;background:#070d16}.promo .sound{position:static;display:block;margin:12px auto 0;font-size:14px;padding:10px 16px}}
 .promo .sound[hidden]{display:none}
+.clip{margin:14px 0 18px}.clip video{display:block;width:100%;max-width:300px;height:auto;border-radius:18px;background:#000;box-shadow:0 8px 22px rgba(0,0,0,.16)}.clip figcaption{font-size:13px;color:var(--grey);margin-top:6px;line-height:1.35;max-width:300px}
