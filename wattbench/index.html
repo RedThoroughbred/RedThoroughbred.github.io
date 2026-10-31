@@ -40,6 +40,16 @@ v.addEventListener('volumechange',()=>{b.hidden=!v.muted;});})();</script>
 <p>A real FNB58 and a real iPhone in one take. On the left, a second phone films the desk; on the right is the iPhone's own screen recording of the same moments. Watch the meter's screen and the app show the same numbers.</p>
 <figure class="demo"><video src="assets/wattbench-demo.mp4" poster="assets/wattbench-demo-poster.jpg" width="1240" height="1304" controls muted playsinline preload="metadata" aria-label="Side-by-side video. Left: a second phone filming an FNB58 USB meter, a power bank and an iPhone. Right: the iPhone's screen recording. WattBench pairs with the meter over Bluetooth, shows live voltage, current and power matching the meter's display, records a session with its Live Activity on Apple Watch, then shows the saved session, guided tests, the full-screen live chart and diagnostics."></video>
 <figcaption>Pairing, live readings, recording (with the Live Activity on Apple Watch), sessions, guided tests, the live chart and diagnostics · 1:28, no sound · Filmed before 1.3: the All chart now shows three stacked charts.</figcaption></figure>
+<h3>Two meters</h3>
+<p>Two FNB58s on one iPhone: match them once, see what a cable loses in milliohms, compare two devices side by side, and keep every test in one report. Filmed on real meters with WattBench 1.4.1.</p>
+<figure class="promo"><div class="promo-frame">
+<video id="two-meters" src="assets/wattbench-two-meters.mp4" poster="assets/wattbench-two-meters-poster.jpg" width="1920" height="1080" muted playsinline controls preload="metadata" aria-label="A 37-second tour of two-meter mode on real meters: the desk with two FNB58s and a load at 1.5 A, Match Meters measuring a 36.4 mV offset and 68 mA of the meter's own draw, Cable mode reading 0 milliohms, Compare with two devices, and the saved report."></video>
+<button class="sound" id="two-meters-sound" type="button">&#x1F50A; Turn sound on</button>
+</div>
+<figcaption>Two meters in 37 seconds. Music: &ldquo;Beauty Comes From Everywhere,&rdquo; written, played and recorded by Seth Egger in 2021.</figcaption></figure>
+<script>(()=>{const v=document.getElementById('two-meters'),b=document.getElementById('two-meters-sound');
+b.addEventListener('click',()=>{v.muted=false;v.currentTime=0;v.play();});
+v.addEventListener('volumechange',()=>{b.hidden=!v.muted;});})();</script>
 </section>
 <section id="features"><h2>Built for the bench</h2><div class="grid">
 <div class="card"><h3>Live readouts</h3><p>Big, glanceable voltage, current and power with peak hold, and a full-screen chart of V, A or W, or all three as stacked charts on one time axis, up to the last 60 minutes, in portrait or landscape.</p></div>
