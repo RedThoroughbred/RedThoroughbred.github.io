@@ -6,10 +6,18 @@
 
 <section class="guide" style="border-top:0">
 <h2>WattBench user guide</h2>
-<p class="meta">Looking for step-by-step experiments? See the <a href="recipes.html">test recipes</a>. For WattBench 1.4.1 on iPhone (iOS 17 or later). Button and screen names are quoted exactly as they appear in the app.</p>
+<p class="meta">Looking for step-by-step experiments? See the <a href="recipes.html">test recipes</a>. For WattBench 2.0 on iPhone and iPad (iOS 17 or later). Button and screen names are quoted exactly as they appear in the app.</p>
 <div class="toc">
-<a href="#numbers">Understanding the numbers</a><a href="#connect">Connecting</a><a href="#live">Live tab</a><a href="#lines">USB data lines</a><a href="#record">Recording</a><a href="#tests">Tests</a><a href="#dual">Two meters</a><a href="#sessions">Sessions &amp; reports</a><a href="#insights">Insights charts</a><a href="#compare">Compare &amp; PDF</a><a href="#export">CSV export</a><a href="#alerts">Alerts</a><a href="#lock">Widgets, Lock Screen, Watch &amp; Siri</a><a href="#menus">Menus &amp; settings</a><a href="#trouble">Troubleshooting</a>
+<a href="#ipad">iPad</a><a href="#numbers">Understanding the numbers</a><a href="#connect">Connecting</a><a href="#live">Live tab</a><a href="#lines">USB data lines</a><a href="#record">Recording</a><a href="#tests">Tests</a><a href="#dual">Two meters</a><a href="#sessions">Sessions &amp; reports</a><a href="#insights">Insights charts</a><a href="#compare">Compare &amp; PDF</a><a href="#export">Share menu and CSV</a><a href="#files">Recordings as Files</a><a href="#alerts">Alerts</a><a href="#lock">Widgets, Lock Screen, Watch &amp; Siri</a><a href="#menus">Menus &amp; settings</a><a href="#trouble">Troubleshooting</a>
 </div>
+
+<h2 id="ipad">iPad</h2>
+<p>WattBench 2.0 runs on iPad as well as iPhone. One purchase covers both, and it is a free update if you already own it. The app turns to every orientation.</p>
+<ul>
+<li><strong>Live:</strong> in a wide window, the readings and the chart sit in two columns. In a tall or narrow window, such as portrait or a narrow Split View, Live is one column, as on iPhone.</li>
+<li><strong>Sessions:</strong> in a wide window, the list is on the left and the open session is on the right. It says <strong>No Session Selected</strong> until you pick one. In a narrow window it folds back into one column.</li>
+</ul>
+<img class="shot-wide" src="assets/guide/ipad-sessions.jpg" alt="WattBench on an iPad: the Sessions list on the left and the open session, with its tiles, highlights and chart, on the right" loading="lazy">
 
 <h2 id="numbers">Understanding the numbers</h2>
 <p>The FNB58 sits between a power source (a charger, a power bank) and whatever it powers (a phone, a USB load). Everything WattBench shows comes from that one spot in the cable.</p>
@@ -178,7 +186,7 @@
 <h2 id="sessions">Sessions &amp; reports</h2>
 <div>
 <ul>
-<li>The list groups sessions by day with a power sparkline. <strong>Search</strong> by name, device, tag or note; <strong>Sort</strong> by Newest, Longest or Most energy. Swipe for <strong>Rename</strong>, <strong>Share</strong> or <strong>Delete</strong>.</li>
+<li>The list groups sessions by day with a power sparkline. <strong>Search</strong> by name, device, tag or note; <strong>Sort</strong> by Newest, Longest or Most energy. Swipe for <strong>Rename</strong>, <strong>Share</strong> or <strong>Delete</strong>. In an open session, <strong>Share</strong> is a menu (see <a href="#export">Share menu and CSV</a>).</li>
 <li>A session opens as a report: <strong>ENERGY</strong>, <strong>CAPACITY</strong> and <strong>DURATION</strong> tiles (active time excludes dropouts), the test report when the session came from the Tests tab, and <strong>Highlights</strong> (time-weighted average power, peak, voltage and current ranges, gaps).</li>
 <li><strong>Chart:</strong> V, A, W or <strong>All</strong> (the three stacked charts) at full resolution, plus <strong>Temp</strong> and <strong>D±</strong>. The span button <strong>Full</strong> shows the whole recording; the others zoom to a shorter stretch. Pinch to zoom, drag to scroll, touch and hold to read. The shaded band around the line shows the lowest and highest value inside each zoomed-out point.</li>
 <li><strong>Range:</strong> tap it, then drag across the chart to get the selection's duration, energy, capacity and averages; <strong>Save as Marker Pair</strong> keeps it.</li>
@@ -206,9 +214,19 @@
 </ul>
 <div class="shots-row"><figure><img src="assets/guide/compare.jpg" alt="Compare two sessions" loading="lazy"><figcaption>Compare two sessions</figcaption></figure><figure><img src="assets/guide/more-menu.jpg" alt="Export PDF Report in the … menu" loading="lazy"><figcaption>Export PDF Report in the … menu</figcaption></figure><figure><img src="assets/guide/pdf.jpg" alt="The PDF report" loading="lazy"><figcaption>The PDF report</figcaption></figure></div>
 
-<h2 id="export">CSV export</h2>
-<p>Tap <strong>Share</strong> in a session for a CSV: <code>timestamp</code> (UTC), <code>voltage_v</code>, <code>current_a</code>, <code>power_w</code>, <code>elapsed_s</code>, <code>marker_label</code>, <code>dplus_v</code>, <code>dminus_v</code>, and <code>temp_c</code>. It opens in Numbers, Excel or Python.</p>
+<h2 id="export">Share menu and CSV</h2>
+<p>In an open session, <strong>Share</strong> is a menu with three choices: <strong>PDF report</strong>, <strong>Spreadsheet (CSV)</strong> and <strong>WattBench recording</strong>. Pick one, then save it to Files or a folder, or send it by AirDrop.</p>
+<p>The spreadsheet is a CSV: <code>timestamp</code> (UTC), <code>voltage_v</code>, <code>current_a</code>, <code>power_w</code>, <code>elapsed_s</code>, <code>marker_label</code>, <code>dplus_v</code>, <code>dminus_v</code>, and <code>temp_c</code>. It opens in Numbers, Excel or Python.</p>
 <p>A two-meter session shares one CSV with both meters side by side, one row every 0.2 s: <code>timestamp</code>, <code>elapsed_s</code>, <code>in_voltage_v</code>, <code>in_current_a</code>, <code>in_power_w</code>, <code>out_voltage_v</code>, <code>out_current_a</code>, <code>out_power_w</code>, <code>efficiency_pct</code>, <code>loss_w</code>, <code>drop_v</code>, <code>resistance_mohm</code> and <code>marker_label</code>. <em>In</em> is the meter before, <em>Out</em> the one after; in Compare, In is simply the first meter shown. A cell is empty when a value doesn't apply.</p>
+
+<h2 id="files">Recordings as Files</h2>
+<p>A WattBench recording is one whole session saved as a single file, with the extension <code>.wattbench</code>. It holds every sample of both meters, the D+ and D− lines, markers, notes, tags and the test. A shared file leaves out your meters' Bluetooth IDs and serial numbers.</p>
+<ol>
+<li>Open a session and tap <strong>Share</strong>, then <strong>WattBench recording</strong>.</li>
+<li>Save it to Files or a folder, or send it by AirDrop. Mail and Messages work too.</li>
+<li>On the other device, tap the file. It opens as a session in WattBench, and a copy is added to Sessions.</li>
+</ol>
+<p>Send the same file again and WattBench says <strong>Already in Sessions</strong>. A damaged or too-large file shows a message and adds nothing. A recording leaves your device only when you share it.</p>
 
 <h2 id="alerts">Alerts</h2>
 <p>Open the gear menu → <strong>Alert Rules</strong>. Rules: <strong>Over-voltage</strong>, <strong>Under-voltage</strong>, <strong>Over-current</strong>, <strong>Over-power</strong>, <strong>Current below</strong>, <strong>Voltage drop</strong>, <strong>Disconnected</strong>, <strong>Over-temperature</strong> (default 45 °C) and <strong>Fast charge lost</strong> (the charger falls back from fast charging for 3 seconds). Presets: <strong>USB-C 65 W</strong>, <strong>5 V device</strong>, <strong>Power bank drain</strong>, <strong>Heat &amp; fast-charge watch</strong>.</p>
