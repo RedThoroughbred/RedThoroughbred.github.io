@@ -222,7 +222,7 @@
 <p>A two-meter session shares one CSV with both meters side by side, one row every 0.2 s: <code>timestamp</code>, <code>elapsed_s</code>, <code>in_voltage_v</code>, <code>in_current_a</code>, <code>in_power_w</code>, <code>out_voltage_v</code>, <code>out_current_a</code>, <code>out_power_w</code>, <code>efficiency_pct</code>, <code>loss_w</code>, <code>drop_v</code>, <code>resistance_mohm</code> and <code>marker_label</code>. <em>In</em> is the meter before, <em>Out</em> the one after; in Compare, In is simply the first meter shown. A cell is empty when a value doesn't apply.</p>
 
 <h2 id="files">Recordings as Files</h2>
-<p>A WattBench recording is one whole session saved as a single file, with the extension <code>.wattbench</code>. It holds every sample of both meters, the D+ and D− lines, markers, notes, tags and the test. A shared file leaves out your meters' Bluetooth IDs and serial numbers.</p>
+<p>A WattBench recording is one whole session saved as a single file, with the extension <code>.wattbench</code>. It holds every sample of both meters, the D+ and D− lines, markers, notes, tags and the test. A shared file leaves out your meters' Bluetooth IDs. It keeps their names, and an FNB58's name usually ends in its serial number.</p>
 <ol>
 <li>Open a session and tap <strong>Share</strong>, then <strong>WattBench recording</strong>.</li>
 <li>Save it to Files or a folder, or send it by AirDrop. Mail and Messages work too.</li>
