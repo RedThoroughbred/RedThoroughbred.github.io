@@ -31,10 +31,10 @@
 <p class="label"><span class="no">06 / 09</span>Seal guide</p>
 <h1>Sign a git commit from your phone</h1>
 <p class="lede">The key that signs your commits is in your phone, and a commit is signed only after you’ve read it.</p>
-<p>Git can sign commits with an SSH key. With Seal, that key is your iPhone’s: git asks the phone, you read the commit there, and you say yes with Face ID. The Mac side is a small tool, <code>seal-git-sign</code>. For now it comes with Seal’s source; a one-step install is coming.</p>
+<p>Git can sign commits with an SSH key. With Seal, that key is your iPhone’s: git asks the phone, you read the commit there, and you say yes with Face ID. The Mac side is a small tool, <code>seal-git-sign</code>. For now it comes with Seal’s source (<code>tools/seal-git-sign</code>); a one-step install is coming.</p>
 <h2 id="set-up-a-repository-once">Set up a repository (once)</h2>
 <ol class="steps" role="list">
-<li value="1"><span class="n">1</span><div><p>On the phone: <strong>Sign</strong> page, <code>Copy SSH key</code> under <strong>This iPhone’s signing key</strong>.</p></div></li>
+<li value="1"><span class="n">1</span><div><p>On the phone: <strong>Sign</strong> page, <code>Copy SSH key</code> under <strong>This iPhone’s signing key</strong> (the signing part of this iPhone’s key).</p></div></li>
 <li value="2"><span class="n">2</span><div><p>On the Mac, inside the repository:</p><div class="code"><pre><code>seal-git-sign --setup "$(pbpaste)"</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div></div></li>
 </ol>
 <p>That changes this repository’s own git settings and nothing else. <code>seal-git-sign --unset</code> takes them back out.</p>
@@ -47,6 +47,7 @@
 <li value="4"><span class="n">4</span><div><p>Tap <code>Sign with Face ID</code>, then <code>Copy the signature</code>.</p></div></li>
 <li value="5"><span class="n">5</span><div><p>Paste it into the terminal. The Mac checks it with ssh-keygen, and only then gives it to git.</p></div></li>
 </ol>
+<p>When an agent runs git and there is no terminal to paste into, run <code>seal-git-sign --answer</code> in a terminal of your own and paste the signature there.</p>
 <figure class="plate"><div class="device"><div class="phone"><img src="../assets/guide/sign-request.jpg" width="900" height="1948" alt="A commit waiting for your signature" decoding="async"></div></div><figcaption aria-hidden="true"><i>Picture 1</i>A commit waiting for your signature</figcaption></figure>
 <div class="tip" role="note"><span class="k">Tip</span><p>Your signature says you stand behind exactly those bytes. The phone shows the commit’s message and IDs, not the changes in the code: look at those on the Mac before you sign.</p></div>
 <h2 id="githubs-verified-mark">GitHub’s Verified mark</h2>
