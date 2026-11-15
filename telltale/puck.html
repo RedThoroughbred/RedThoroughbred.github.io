@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telltale Puck guide</title>
+<meta name="description" content="The Telltale Puck is a small, receive-only Wi-Fi listener for the Telltale iPhone app. How to power it, connect it over Bluetooth, read its light, how it handles data, and what it can't hear.">
+<meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Telltale">
+<meta property="og:title" content="Telltale Puck guide">
+<meta property="og:description" content="A small, receive-only Wi-Fi listener for the Telltale app: powering it, connecting it, its light, and how it handles data.">
+<meta property="og:url" content="https://redthoroughbred.github.io/telltale/puck.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/telltale/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Telltale app icon, a lens reticle with a cyan glint, and the line: A room check for hidden cameras, on your iPhone">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Telltale Puck guide"><meta name="twitter:description" content="A small, receive-only Wi-Fi listener for the Telltale app: powering it, connecting it, its light, and how it handles data."><meta name="twitter:image" content="https://redthoroughbred.github.io/telltale/assets/og-image.png">
+<link rel="canonical" href="https://redthoroughbred.github.io/telltale/puck.html">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=1"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top" id="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32"><span>Telltale</span></a><nav aria-label="Site"><a href="./">Home</a><a href="guide.html">Guide</a><a href="puck.html" aria-current="page">Puck</a><a href="privacy.html">Privacy</a></nav></header>
+
+<main id="main">
+<div class="doc">
+<p class="label">Telltale Puck</p>
+<h1>The Telltale Puck</h1>
+<p class="lede" style="max-width:720px">A small, receive-only Wi-Fi listener that adds the Wi-Fi radar and the motion test to Telltale. It's optional: every other check works with just your iPhone. The puck isn't on sale yet.</p>
+<nav aria-label="Sections"><ul class="toc">
+<li><a href="#what">What it is</a></li><li><a href="#power">Power</a></li><li><a href="#connect">Connecting</a></li><li><a href="#use">Using it</a></li><li><a href="#light">The light</a></li><li><a href="#privacy">How it handles data</a></li><li><a href="#limits">Limits</a></li><li><a href="#trouble">Troubleshooting</a></li>
+</ul></nav>
+</div>
+
+<section class="chapter" id="what"><div class="body">
+<p class="label"><span class="no">01</span>What it is</p>
+<h2>A listener, not a scanner</h2>
+<p>A camera streaming video uploads steadily, all the time. The puck sits in the room and listens to the Wi-Fi around it, on both the 2.4 GHz and 5 GHz bands, on every network in range, including ones you can't join. For each device it hears, it works out how much it uploads and how steadily, and gives it a score from 0 to 100 for how much that looks like a live video stream. Your iPhone shows the result on the <a href="guide.html#ladder">signal ladder</a>.</p>
+<ul class="ticks radio">
+<li><strong>It only listens.</strong> It never joins a Wi-Fi network and never transmits on Wi-Fi. Its only radio transmissions are Bluetooth, to talk to your iPhone.</li>
+<li><strong>It never reads what's sent.</strong> It counts how much each device sends, never what. There's nothing to decrypt, because it never looks inside.</li>
+<li><strong>It scrambles addresses on the spot.</strong> Only a scrambled ID and the maker prefix ever reach your iPhone. See <a href="#privacy">how it handles data</a>.</li>
+<li><strong>It doesn't decide anything.</strong> A high score means "uploads steadily", not "is a camera". You decide what to go and look at.</li>
+</ul>
+<div class="shots-row">
+<figure><img src="assets/11-puck-intro.jpg" alt="How to use the puck: 1. Power it. 2. Leave it in the room. 3. It only listens. 4. Then walk, and leave. With a Connect the puck button" width="600" height="1304" loading="lazy"><figcaption>How to use the puck, in the app</figcaption></figure>
+<figure><img src="assets/04-wifi-radar.jpg" alt="The Wi-Fi radar with the puck connected and listening, at 72% battery" width="600" height="1304" loading="lazy"><figcaption>Connected and listening (demo)</figcaption></figure>
+</div>
+</div></section>
+
+<section class="chapter" id="power"><div class="body">
+<p class="label"><span class="no">02</span>Power</p>
+<h2>Plug it into anything with USB-C</h2>
+<p>There's no button. Plug the puck in, the light comes on, and it's ready.</p>
+<dl class="terms">
+<div><dt>A charger or computer</dt><dd>Any USB-C charger, or a USB port on a computer. Best for a long check.</dd></div>
+<div><dt>A battery pack</dt><dd>Handy when there's no socket near the middle of the room.</dd></div>
+<div><dt>Your iPhone</dt><dd>The puck can run from your iPhone's USB-C port. The cable only powers it: the puck and the app always talk over Bluetooth. It runs your iPhone's battery down faster, so a charger or battery pack is better for anything but a quick check.</dd></div>
+</dl>
+<p>A version of the puck with its own battery is coming. When a puck reports its battery level, the app shows it on the puck's card and on the home screen.</p>
+</div></section>
+
+<section class="chapter" id="connect"><div class="body">
+<p class="label"><span class="no">03</span>Connecting</p>
+<h2>Pair it with the app over Bluetooth</h2>
+<p class="sum">No code, no PIN</p>
+<ol class="steps">
+<li>Power the puck and keep it within a few metres of your iPhone.</li>
+<li>In Telltale, open <strong>Wi-Fi radar</strong> (the third tile on Home, or step 3 of the room check). The first time, <strong>How to use the puck</strong> explains the four steps.</li>
+<li>Tap <strong>Connect the puck</strong>. Allow Bluetooth when iOS asks. Telltale only uses Bluetooth to talk to the puck, and doesn't start it until you open the Wi-Fi radar.</li>
+<li>The app finds the puck on its own and connects. The card shows <strong>Telltale Puck</strong> and the pill at the top reads <strong>Paused</strong> or <strong>Listening</strong>.</li>
+</ol>
+<p>Telltale remembers your puck and reconnects to it next time you open the app. If it drops out of range, the pill shows <strong>Reconnecting</strong> and the app waits for it to come back.</p>
+<p class="tip">No puck? Tap <strong>I don't have a puck yet</strong>, and in the room check, <strong>I don't have a puck, skip</strong>.</p>
+</div></section>
+
+<section class="chapter" id="use"><div class="body">
+<p class="label"><span class="no">04</span>Using it</p>
+<h2>Leave it in the room, then walk, and leave</h2>
+<ol class="steps">
+<li><strong>Put it in the middle of the room</strong>, on a table, and leave it there. It hears every Wi-Fi device around it.</li>
+<li><strong>Tap Listen</strong> and give it a minute. It visits each Wi-Fi channel in turn, then focuses on the busiest uploaders to measure them properly.</li>
+<li><strong>Run the motion test</strong>: 15 seconds walking around, 8 seconds to leave, 15 seconds outside. A camera's upload shrinks when the room it watches goes empty and still. See <a href="guide.html#motion">the motion test</a>.</li>
+<li><strong>Find what scored high.</strong> Open a device and carry the puck slowly around the room: its signal number climbs as you get close. See <a href="guide.html#device">one device</a>.</li>
+</ol>
+<p>On the Wi-Fi radar, <strong>Blink the puck</strong> flashes its light so you can find it, and <strong>More</strong> chooses the bands to listen on, starts a <strong>New session</strong> (a fresh scrambling key and an empty list), and opens the help.</p>
+</div></section>
+
+<section class="chapter" id="light"><div class="body">
+<p class="label"><span class="no">05</span>The light</p>
+<h2>What the puck's light means</h2>
+<div class="leds" role="list">
+<div role="listitem"><span class="lamp dim" aria-hidden="true"></span><b>Dim white</b><span>Starting up.</span></div>
+<div role="listitem"><span class="lamp amber" aria-hidden="true"></span><b>Slow amber breathing</b><span>Powered and ready. Not connected to the app, not listening.</span></div>
+<div role="listitem"><span class="lamp green" aria-hidden="true"></span><b>Steady green</b><span>Connected to your iPhone, paused.</span></div>
+<div role="listitem"><span class="lamp blue" aria-hidden="true"></span><b>Blue pulse, about once a second</b><span>Listening.</span></div>
+<div role="listitem"><span class="lamp red" aria-hidden="true"></span><b>Fast red blink</b><span>Listening, and something it hears scores 60 or more. Look at the app to see what.</span></div>
+<div role="listitem"><span class="lamp white strobe" aria-hidden="true"></span><b>White strobe for a few seconds</b><span>You tapped <strong>Blink the puck</strong>.</span></div>
+</div>
+<p class="muted small">The red blink is only a nudge to look at the app. In the app, anything scoring 50 or more is already <em>worth a look</em>.</p>
+</div></section>
+
+<section class="chapter" id="privacy"><div class="body">
+<p class="label"><span class="no">06</span>How it handles data</p>
+<h2>Passive, and built to forget</h2>
+<p>The puck is designed so that it can't join, disturb or read anyone's network, and so that what it does learn stays vague and short-lived.</p>
+<ul>
+<li><strong>Receive only.</strong> Its Wi-Fi radio only listens. It never joins a network, never probes for one, and never sends anything on Wi-Fi, so it can't interfere with any network. It talks to your iPhone over Bluetooth, and to nothing else.</li>
+<li><strong>Only the outside of each frame.</strong> From each Wi-Fi frame it hears, it notes how big it is, when it arrived, how strong it was, its type, the channel, and which transmitter sent it. It never reads, stores or passes on the contents, and decrypts nothing.</li>
+<li><strong>Addresses scrambled on arrival.</strong> Each transmitter's address is scrambled the moment it's heard, with a random key the puck makes fresh for each session and keeps only in memory. Raw addresses are never stored or sent, and the scrambled IDs can't be matched across sessions. <strong>New session</strong> in the app makes a new key and clears the list.</li>
+<li><strong>Only the maker prefix reaches your phone.</strong> Your iPhone receives the scrambled ID, the first three bytes of the address (the publicly registered prefix that identifies the maker), and the numbers: band, channel, signal, upload rate and score. Telltale turns the prefix into a maker name on your iPhone, from a list built into the app.</li>
+<li><strong>Short memory.</strong> The puck keeps about the last minute of counts, in memory only. Nothing it hears is written to its storage; unplug it and it's gone.</li>
+<li><strong>Range-limited.</strong> Transmitters too faint to plausibly be in or next to your room (weaker than about −80 dBm) are dropped as soon as they're heard.</li>
+</ul>
+<p>The app's side is in the <a href="privacy.html">privacy policy</a>: nothing is uploaded, and there's no account.</p>
+</div></section>
+
+<section class="chapter" id="limits"><div class="body">
+<p class="label"><span class="no">07</span>Limits</p>
+<h2>What the puck can't tell you</h2>
+<ul>
+<li><strong>A score is not a verdict.</strong> A TV streaming, a laptop backing up, a phone on a video call or a smart speaker can score as high as a camera. The motion test is how you tell them apart.</li>
+<li><strong>It can't hear every camera.</strong> Cameras that record to a memory card without streaming, cameras on a cellular SIM card, and wired cameras send nothing it can hear. A camera that's switched off isn't streaming either.</li>
+<li><strong>It can miss some that do stream</strong>: a camera whose router is out of its range (about −80 dBm), and uploads that newer Wi-Fi 6 routers schedule together with other devices'.</li>
+<li><strong>It can't always tell how close.</strong> Devices on fast 5 GHz networks may be heard only through the router's replies and show as <em>signal unknown</em>. It has one antenna, so it never knows the direction, and walls, mirrors and metal weaken signals.</li>
+<li><strong>A quiet radar isn't proof.</strong> The lens scan, the infrared check and looking by hand are the backstop. See <a href="guide.html#limits">all the limits</a>.</li>
+</ul>
+</div></section>
+
+<section class="chapter" id="trouble"><div class="body">
+<p class="label"><span class="no">08</span>Troubleshooting</p>
+<h2>When the puck won't play</h2>
+<dl class="terms">
+<div><dt>No light</dt><dd>Try another cable, port or charger. Some battery packs switch off when the draw is small; a charger avoids that.</dd></div>
+<div><dt>Looking for the puck</dt><dd>Keep it within a few metres of your iPhone and make sure Bluetooth is on. It connects on its own.</dd></div>
+<div><dt>Bluetooth isn't available</dt><dd>Tap <strong>Open Settings</strong>, or go to <strong>Settings → Telltale</strong> and allow <strong>Bluetooth</strong>.</dd></div>
+<div><dt>Puck out of range</dt><dd>The app waits and reconnects. Is it still powered?</dd></div>
+<div><dt>Nothing heard</dt><dd>Tap <strong>Listen</strong> and give it a minute. Check <strong>More → Listen on</strong> has both bands.</dd></div>
+<div><dt>Which one is it?</dt><dd>Tap <strong>Blink the puck</strong>.</dd></div>
+</dl>
+<p>Still stuck? Email <a href="mailto:redthoroughbreds@gmail.com?subject=Telltale%20Puck">redthoroughbreds@gmail.com</a>.</p>
+<a class="top-link" href="#top">↑ Back to top</a>
+</div></section>
+</main>
+
+<footer>
+<nav class="links" aria-label="Footer"><a href="./">Home</a><a href="guide.html">User guide</a><a href="puck.html">The puck</a><a href="privacy.html">Privacy policy</a><a href="./#support">Support</a></nav>
+<p>The Telltale Puck is not on sale yet. Telltale helps you check a room you're staying in; it can't guarantee that a room is free of cameras.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>
