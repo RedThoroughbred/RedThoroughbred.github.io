@@ -404,7 +404,7 @@
 
     /* ---------- 7. Signature ---------- */
     $('seed').textContent = D.seed.replace(/(.{4})(?=.)/g, '$1 ');
-    $('fp').textContent = D.fingerprint;
+    if ($('fp')) $('fp').textContent = D.fingerprint;
 
     /* ---------- 9. The space's tones ---------- */
     {
