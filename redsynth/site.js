@@ -188,3 +188,36 @@
     }
   }));
 })();
+
+/* The guide: "you are here" in the chapter list (the section in view is lit), and a Top button
+   on long pages once you are well down them. */
+(() => {
+  const subs = [...document.querySelectorAll('.toc a.sub[href^="#"]')];
+  const targets = subs.map((a) => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+  if (targets.length) {
+    const light = () => {
+      // The last section whose heading has passed the upper part of the screen.
+      let current = null;
+      for (const t of targets) { if (t.getBoundingClientRect().top < innerHeight * 0.45) current = t; }
+      subs.forEach((a) => a.classList.toggle('here', current && a.getAttribute('href') === '#' + current.id));
+    };
+    addEventListener('scroll', () => requestAnimationFrame(light), { passive: true });
+    light();
+  }
+  const main = document.querySelector('.doc main');
+  if (!main) return;
+  const top = document.createElement('a');
+  top.className = 'fab-top';
+  top.href = '#main';
+  top.textContent = '↑ Top';
+  top.setAttribute('aria-label', 'Back to the top of the page');
+  top.hidden = true;
+  document.body.appendChild(top);
+  const check = () => {
+    const long = document.documentElement.scrollHeight > innerHeight * 3;
+    top.hidden = !(long && scrollY > innerHeight * 1.5);
+  };
+  addEventListener('scroll', check, { passive: true });
+  addEventListener('resize', check);
+  check();
+})();

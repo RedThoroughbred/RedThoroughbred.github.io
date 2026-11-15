@@ -424,3 +424,98 @@ pre.copy{white-space:pre-wrap;background:var(--s1);border:1px solid var(--line);
 
 /* A wide film beside words (the home page's photo section): no gap above it in a split. */
 .split .film-wide{margin-top:0}
+
+/* ---------- The guide for newcomers (2026-11-15): first minute, ideas, modes, recipes ---------- */
+.crumbs{font-size:13.5px;color:var(--t3);margin:0 0 12px}
+.crumbs a{color:var(--t2)}
+.crumbs span[aria-current]{color:var(--t1)}
+.toc a.sub.here{color:var(--t1);background:var(--s1);border-left-color:var(--accent2)}
+.badge.iphone{color:var(--pink);border:1px solid color-mix(in srgb,var(--pink) 50%,transparent);background:color-mix(in srgb,var(--pink) 10%,transparent)}
+:root[data-theme="light"] .badge.iphone{color:#a3367c}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .badge.iphone{color:#a3367c}}
+.badge:first-child{margin-left:0}
+
+/* Your first minute: three steps, a picture each */
+ol.firstmin{list-style:none;counter-reset:fm;padding:0;margin:22px 0 10px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+ol.firstmin>li{counter-increment:fm;margin:0;background:var(--s1);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+ol.firstmin img{width:100%;aspect-ratio:9/10;object-fit:cover;object-position:top;background:var(--screen);border-bottom:1px solid var(--line)}
+ol.firstmin .in{padding:14px 16px 16px;font-size:15px;color:var(--t2)}
+ol.firstmin .in>b{display:block;font:600 19px var(--display);color:var(--t1);margin-bottom:6px}
+ol.firstmin .in>b::before{content:counter(fm);display:inline-grid;place-items:center;width:24px;height:24px;margin-right:8px;border-radius:50%;font:600 13px var(--mono);color:var(--pfg);background:var(--pbg);vertical-align:2px}
+ol.firstmin .dev{display:block;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:13.5px;color:var(--t3);line-height:1.5}
+ol.firstmin .dev>span{display:block}
+ol.firstmin .dev>span+span{margin-top:5px}
+ol.firstmin .dev .badge{margin:0 6px 0 0}
+.after{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.after a{font-size:14.5px;text-decoration:none;border:1px solid var(--line2);background:var(--s1);border-radius:999px;padding:7px 14px;color:var(--t1)}
+.after a:hover{background:var(--s2)}
+
+/* What will you make? */
+.ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:20px 0}
+.ideas a{position:relative;display:flex;flex-direction:column;text-decoration:none;background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;overflow:hidden}
+.ideas a::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad);opacity:.85}
+.ideas a:hover{border-color:var(--line2);background:var(--s2)}
+.ideas b{font:600 17.5px/1.25 var(--display);color:var(--t1);margin-bottom:6px}
+.ideas span{font-size:14.5px;color:var(--t2);flex:1}
+.ideas small{margin-top:12px;font:600 13px var(--display);color:var(--accent2)}
+
+/* Which mode do I use? */
+.modes{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:12px;margin:20px 0 8px}
+.modes a{display:flex;flex-direction:column;text-decoration:none;background:var(--s1);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.modes a:hover{border-color:var(--line2);background:var(--s2)}
+.modes img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--screen);border-bottom:1px solid var(--line)}
+.modes .in{padding:12px 14px 14px;font-size:14.5px;color:var(--t2);line-height:1.45}
+.modes b{display:block;font:600 17px var(--display);color:var(--t1);margin-bottom:4px}
+.modes i{display:block;font-style:normal;margin-top:6px;color:var(--t3);font-size:13.5px}
+
+/* Recipes */
+.recipe{padding:0}
+.recipes-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin:18px 0;padding:0;list-style:none;counter-reset:rl}
+.recipes-list li{counter-increment:rl;margin:0}
+.recipes-list a{display:flex;gap:10px;align-items:baseline;text-decoration:none;border:1px solid var(--line);background:var(--s1);border-radius:12px;padding:10px 14px;color:var(--t1);font-size:15px}
+.recipes-list a::before{content:counter(rl,decimal-leading-zero);font:600 12px var(--mono);color:var(--accent)}
+.recipes-list a:hover{border-color:var(--line2);background:var(--s2)}
+article h2 .hash{margin-left:8px;font:400 .8em var(--mono);color:var(--t4);text-decoration:none;opacity:0;transition:opacity .2s}
+article h2:hover .hash,article h2 .hash:focus-visible{opacity:1}
+@media (hover:none){article h2 .hash{opacity:.7}}
+.rmeta{font-size:14.5px;color:var(--t3);margin:-2px 0 12px}
+.rmeta b{color:var(--t2);font-weight:600}
+.recipe-body{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:28px;align-items:start}
+.recipe-body.wide{grid-template-columns:minmax(0,1fr)}
+.recipe-body>figure{margin:6px 0 0}
+.recipe-body>figure img{width:100%}
+ol.rsteps{list-style:none;counter-reset:r;padding:0;margin:8px 0 6px}
+ol.rsteps>li{counter-increment:r;position:relative;padding:0 0 16px 42px;margin:0}
+ol.rsteps>li::before{content:counter(r);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:600 13.5px var(--mono);color:var(--t1);background:var(--s2);border:1px solid var(--line2)}
+ol.rsteps>li>b:first-child{color:var(--t1)}
+.see{display:block;margin-top:5px;font-size:14.5px;color:var(--t3);line-height:1.5}
+.see>b{font-weight:600;color:var(--accent2)}
+.devs{list-style:none;padding:0;margin:4px 0 16px;border:1px solid var(--line);border-radius:12px;background:var(--s1)}
+.devs li{margin:0;padding:10px 14px;border-bottom:1px solid var(--line);font-size:14.5px}
+.devs li:last-child{border-bottom:0}
+.devs .badge{margin:0 6px 0 0}
+.nexttry{font-size:14.5px;color:var(--t3);margin:10px 0 0}
+.nexttry a{color:var(--t1)}
+.totop{font-size:14px;margin:14px 0 0}
+.totop a{color:var(--t3)}
+figure.phone img{border-radius:22px}
+figure.phone figcaption{text-align:center}
+.film.small{max-width:230px;margin:6px 0 0}
+.film.small .film-frame{border-radius:22px}
+article .film video{border:0;border-radius:0}
+.fab-top{position:fixed;z-index:15;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));font:600 13.5px var(--display);text-decoration:none;color:var(--t1);background:var(--head);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line2);border-radius:999px;padding:9px 14px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+
+@media (max-width:900px){
+  ol.firstmin{grid-template-columns:minmax(0,1fr)}
+  ol.firstmin>li{flex-direction:row}
+  ol.firstmin img{width:36%;max-width:200px;flex:none;object-position:left top;border-bottom:0;border-right:1px solid var(--line)}
+}
+@media (max-width:640px){
+  .recipe-body{grid-template-columns:minmax(0,1fr);gap:4px}
+  .recipe-body>figure{max-width:260px;margin:0 auto 16px;order:-1}
+  .film.small{margin:0 auto 16px}
+  ol.firstmin img{width:34%}
+  ol.firstmin .in{padding:12px 14px}
+  ol.firstmin .in>b{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){article h2 .hash{transition:none}}
