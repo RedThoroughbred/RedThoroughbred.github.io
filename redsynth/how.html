@@ -1,0 +1,240 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How it works · RedSynth Pad: from a photo to an instrument</title>
+<meta name="description" content="How RedSynth Pad turns a photo into an instrument, step by step: rows become waves, the photo's pattern becomes the tones of a struck object, its columns sing, its colour is a vowel, and two photos become a model block whose vibrations are solved. Every picture is drawn from the engine's own numbers.">
+<meta name="theme-color" content="#0c0d10" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f6f6f8" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('rs-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="RedSynth Pad">
+<meta property="og:title" content="How RedSynth Pad turns a photo into an instrument">
+<meta property="og:description" content="Rows become waves, a pattern becomes the tones of a struck object, columns sing, colour is a vowel. Drawn from the engine's own numbers.">
+<meta property="og:url" content="https://redthoroughbred.github.io/redsynth/how.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/redsynth/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://redthoroughbred.github.io/redsynth/how.html">
+<link rel="icon" href="assets/icon.png?v=2"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2"><link rel="stylesheet" href="styles.css?v=5"><script src="site.js?v=5" defer></script><script src="how.js?v=4" defer></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><img src="assets/icon.png?v=2" alt="" width="30" height="30"><span>RedSynth Pad</span></a><nav aria-label="Site"><a href="./">Home</a><a href="how.html" aria-current="page">How it works</a><a href="guide/">Guide</a><a href="press.html">Press</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+
+<main id="main">
+<div class="how-hero">
+<p class="eyebrow"><i aria-hidden="true"></i>How it works</p>
+<h1>From a photo to an <span class="gradtext">instrument.</span></h1>
+<p class="sub">What happens between dropping in a photo and playing it, one step at a time. Every picture on this page is drawn in your browser from the engine's own numbers for one photo: this sunset. Nothing here is a hidden sound found in the photo; it's a mapping designed for the app, and each step says which part of the instrument the picture sets.</p>
+<div class="flow">
+<figure><img src="assets/photo-sunset.jpg" alt="A sunset over the sea: a violet sky, an orange band and a bright sun on the horizon" width="240" height="160" style="width:240px"><figcaption>The photo, 800 × 534</figcaption></figure>
+<span class="arrow" aria-hidden="true">&rarr;</span>
+<figure><img class="pix" src="assets/how/sunset-picture.png" alt="The same sunset squeezed into a small wide picture of 256 by 64 pixels" width="256" height="64" style="width:256px"><figcaption>The picture the sound keeps, 256 × 64</figcaption></figure>
+<span class="arrow" aria-hidden="true">&rarr;</span>
+<figure><div class="callout" style="margin:0;max-width:300px;text-align:left" id="became-short">&ldquo;A soft gong with 23 ringing tones, a bright &lsquo;ee&rsquo; vowel singing under it, a little shimmer.&rdquo;</div><figcaption>What the app says it became</figcaption></figure>
+</div>
+<nav class="toc-row" aria-label="Steps">
+<a href="#reading">1 · Made small</a><a href="#rows">2 · Rows</a><a href="#strike">3 · The strike</a><a href="#sing">4 · The sing</a><a href="#vowel">5 · The vowel</a><a href="#shimmer">6 · Shimmer</a><a href="#signature">7 · Signature</a><a href="#roles">8 · Four instruments</a><a href="#space">9 · Space</a><a href="#sculpt">10 · Sculpt</a>
+</nav>
+</div>
+
+<section class="step" id="reading">
+<p class="label"><span class="no">01</span>Made small</p>
+<h2>First, the photo is measured.</h2>
+<div class="two">
+<div class="words">
+<p>The app squeezes the photo into a picture of <b>256 × 64</b> pixels. That small picture is kept inside the sound, so the sound can be saved, shared and opened again without the photo.</p>
+<p>It also shrinks it to 64 × 64 and takes five measures, each a plain number. They set the sound's broad strokes: how bright, how long it rings, how much shimmer.</p>
+<p>The same photo always gives the same numbers. A photo that looks a little different gives numbers a little different. That is why similar photos sound related.</p>
+</div>
+<figure class="scope" id="fig-reading">
+<span class="hint">The five measures of this sunset</span>
+<canvas id="c-reading" role="img" aria-label="Five bars: warm 0.33 on a scale from cool to warm, colourful 0.69, busy 0.31, bright 0.46, contrast 0.52"></canvas>
+<div class="bar"><span>Each from 0 to 1; warmth from cool (&minus;1) to warm (+1).</span></div>
+</figure>
+</div>
+</section>
+
+<section class="step" id="rows">
+<p class="label"><span class="no">02</span>Rows</p>
+<h2>A row of pixels is a wave.</h2>
+<div class="two flip">
+<div class="words">
+<p>Sound is air pushed back and forth. A synthesizer makes it by repeating one shape, a <b>cycle</b>, hundreds of times a second.</p>
+<p>In <b>Scan</b>, the cycle is a row of the picture. The line reads its 256 pixels across and back again: bright pixels push the wave up, dark ones pull it down. Play the A above middle C and the row goes round <b>440 times a second</b>.</p>
+<p>The picture has 64 rows, so it holds 64 waves. Moving the line picks one; between two rows the sound blends. Across and Slant read columns or diagonals instead.</p>
+<p>Each wave is kept in eight sizes, from 127 harmonics down to 1, so a high note never turns harsh.</p>
+</div>
+<div class="stack">
+<figure class="scope">
+<span class="hint">Tap or drag on the picture to choose a row</span>
+<div class="picframe" style="margin:34px 14px 0" id="pick"><img class="pix" src="assets/how/sunset-picture.png" alt="" width="256" height="64"><canvas id="c-pick" aria-hidden="true"></canvas></div>
+<canvas id="c-wave" role="img" aria-label="The chosen row of the sunset drawn as two cycles of a wave"></canvas>
+<div class="bar"><label>Row <input type="range" id="row" min="1" max="64" value="38" aria-label="Which row"><output id="row-out">38 of 64</output></label></div>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="step" id="strike">
+<p class="label"><span class="no">03</span>The strike</p>
+<h2>Its pattern is what rings.</h2>
+<div class="two">
+<div class="words">
+<p>Strike a bell or a marimba bar and it rings with several tones at once, its <b>modes</b>. The engine borrows that idea: it treats the photo's repeating stripes as if they were an object's modes.</p>
+<p>The engine measures every stripe in the picture, at every angle and spacing (a 2D Fourier transform). Strong, regular stripes stand out as bright points. Each bright point becomes one tone.</p>
+<ul class="ticks">
+<li>Its <b>distance from the centre</b> sets its pitch, with the spacing squeezed so the top tone lands between 6 and 14 times the note.</li>
+<li>The <b>lowest</b> is set to the note you play, at full level, so every key is in tune. If the photo has no octave, one is added.</li>
+<li>Its <b>brightness</b> sets how loud it is.</li>
+<li>Its <b>sharpness</b> sets how long it rings: a crisp pattern rings like glass, texture thuds like wood.</li>
+<li>Its <b>angle</b> sets where it sits, left to right.</li>
+</ul>
+</div>
+<div class="stack">
+<figure class="scope">
+<span class="hint">This sunset's pattern map, the centre is its average</span>
+<canvas id="c-spec" role="img" aria-label="A glowing map of the sunset's 2D spectrum with its 23 strongest points circled and numbered"></canvas>
+<canvas id="c-chord" role="img" aria-label="The 23 tones placed by pitch from the played note up to about 14 times its frequency, taller for louder"></canvas>
+<div class="bar"><button class="play" type="button" data-audio="assets/audio/role-struck.m4a" data-strike><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Strike it</button><span id="mode-out">Touch a point to name its tone.</span></div>
+</figure>
+</div>
+</div>
+<div class="tablewrap"><table class="t" id="t-modes"><caption class="vh">The sunset's loudest tones, played on D3</caption>
+<thead><tr><th scope="col">Tone</th><th scope="col">Times the note</th><th scope="col">On D3 it is</th><th scope="col">Loudness</th><th scope="col">Rings for</th></tr></thead><tbody></tbody></table></div>
+<p class="cap" style="text-align:left;margin-left:0">The first eight of the sunset's 23 tones. The top one lands between 6 and 14 times the note: higher for a busy photo, lower for a calm one. Each tone is then nudged by up to 3 cents by the photo's signature (step 7).</p>
+</section>
+
+<section class="step" id="sing">
+<p class="label"><span class="no">04</span>The sing</p>
+<h2>Its columns are what sings.</h2>
+<div class="two flip">
+<div class="words">
+<p>A held note needs a tone that keeps going after the strike. The engine reads the picture as <b>64 columns</b>, and each column as a chord of <b>40 harmonics</b>: the bottom pixel is the note itself, the next twice its pitch, then three times, up to 40 times at the top.</p>
+<p>Brightness is level. Red in a column favours the odd harmonics, which sound hollow; blue favours the even ones, which sound fuller. Warm columns lean to one side.</p>
+<p>While you hold a key, a line reads across the columns, left to right and back. For this sunset it takes <b id="read-s">3.1 s</b> each way, and the sing blooms in under the strike over a third of a second.</p>
+</div>
+<div class="stack">
+<figure class="scope">
+<span class="hint">64 columns &times; 40 harmonics, harmonic 1 at the bottom, level on a log scale</span>
+<canvas id="c-cols" role="img" aria-label="A heat map of the sunset's columns as harmonics, with a bright line reading across it"></canvas>
+<canvas id="c-colspec" role="img" aria-label="The harmonics of the column under the line, as bars"></canvas>
+<div class="bar"><label>Column <input type="range" id="col" min="1" max="64" value="32" aria-label="Which column"><output id="col-out">32 of 64</output></label></div>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="step" id="vowel">
+<p class="label"><span class="no">05</span>The vowel</p>
+<h2>Its colour is a vowel.</h2>
+<div class="two">
+<div class="words">
+<p>Your mouth makes vowels with a few resonances. "Ee" has one high up, near 2,300 Hz; "oo" keeps them low. The engine borrows that idea with a single resonance set by the photo's average colour: a hint of a vowel, not a voice.</p>
+<p>Going round the colour wheel, the resonance falls from about <b>2,400 Hz</b> at pink to about <b>420 Hz</b> at green, then rises again. The more colourful the photo, the stronger the vowel; a grey photo sings plain.</p>
+<p>This sunset's colours average to a pink, at 332&deg; on the wheel. Its vowel is <b>"ee" at 2,361 Hz</b>, at full strength.</p>
+</div>
+<figure class="scope">
+<span class="hint">The colour wheel, unrolled, and the vowel each colour sings</span>
+<canvas id="c-vowel" role="img" aria-label="A curve over a strip of every hue: the resonance is highest at pink and lowest at green. A marker shows the sunset at ee, 2361 hertz"></canvas>
+<div class="bar"><span id="vowel-out">Point at a colour to hear what it would sing.</span></div>
+</figure>
+</div>
+</section>
+
+<section class="step" id="shimmer">
+<p class="label"><span class="no">06</span>Shimmer</p>
+<h2>Its busy patches shimmer.</h2>
+<div class="two flip">
+<div class="words">
+<p>The picture is cut into <b>64 patches</b>, 8 by 8. Each patch, read there and back, becomes one tiny cycle: a <b>grain</b>, a short flicker of sound at the note's pitch.</p>
+<p>The grains start where your eye goes first (the engine finds it by spectral residual, a measure of what stands out) and wander from patch to patch.</p>
+<p>How much shimmer you hear follows how busy the photo is. A calm photo has none. This sunset is fairly calm: <b>14 %</b>.</p>
+</div>
+<figure class="scope">
+<span class="hint">Brighter cells: busier patches. The glow: where the eye goes</span>
+<div class="picframe" style="margin:34px 14px 14px"><img src="assets/photo-sunset.jpg" alt="" width="800" height="534" loading="lazy"><canvas id="c-grains" role="img" aria-label="The sunset with an 8 by 8 grid over it, the busier cells outlined brighter, and a warm glow where the eye goes first"></canvas></div>
+</figure>
+</div>
+</section>
+
+<section class="step" id="signature">
+<p class="label"><span class="no">07</span>Signature</p>
+<h2>Every photo leaves a signature.</h2>
+<div class="two">
+<div class="words">
+<p>Two photos can look almost the same. The engine takes a <b>SHA-256</b> of every pixel, a fingerprint that changes completely if a single pixel changes.</p>
+<p>That fingerprint seeds the small details: each tone tuned within &plusmn;3 cents (mostly too little to hear on its own) and placed within &plusmn;5 %, the harmonics' phases, the exact path the line takes, where the grains wander. The character still comes from the picture; the signature guarantees that two different files never render the same audio, even when the difference is too small to hear.</p>
+<p>The sound as a whole (the photo, every knob, every touch) has a fingerprint too, shown as a short code.</p>
+</div>
+<div class="stack">
+<div class="card"><span class="k">The sunset's signature</span><div class="hexcode" id="seed">c967 5933 ad06 88f1</div><p style="margin:8px 0 0">The first 8 bytes of the pixels' SHA-256, as the engine uses it.</p></div>
+<div class="card"><span class="k">The sound's fingerprint <span class="badge coming">coming</span></span><div class="hexcode" id="fp">A06E-2C5F-A078</div><p style="margin:8px 0 0">The sunset sound as it comes in, settings and picture together. Shown in the next round of Sculpt.</p></div>
+</div>
+</div>
+</section>
+
+<section class="step" id="roles">
+<p class="label"><span class="no">08</span>Four instruments</p>
+<h2>One photo, four instruments.</h2>
+<p class="lede">The same analysis can be played four ways. Each clip is the sunset alone playing D, A, D, F&sharp;, then a low D. Same photo, same notes.</p>
+<div class="roles">
+<div class="card"><span class="k"><span class="dot r"></span>Ringing object</span><h3>Struck</h3><p>The strike, the sing and the shimmer above, together. Every photo starts as this.</p><button class="play" type="button" data-audio="assets/audio/role-struck.m4a"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Play</button></div>
+<div class="card"><span class="k"><span class="dot g"></span>Plucked string</span><h3>Pluck</h3><p>A string whose starting shape is the row the eye goes to first (row 38 here). Tuned so every key stays in tune.</p><button class="play" type="button" data-audio="assets/audio/role-pluck.m4a"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Play</button></div>
+<div class="card"><span class="k"><span class="dot e"></span>Ladder bass</span><h3>Ladder bass</h3><p>A saw wave, that row and a sub, through a ladder filter. One note at a time, sliding. Played an octave down.</p><button class="play" type="button" data-audio="assets/audio/role-ladder-bass.m4a"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Play</button></div>
+<div class="card"><span class="k"><span class="dot t"></span>Clean lead</span><h3>Clean</h3><p>The photo's six strongest harmonics and nothing else, no filter, with a vibrato that arrives late.</p><button class="play" type="button" data-audio="assets/audio/role-clean.m4a"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Play</button></div>
+</div>
+<p class="cap" style="text-align:left;margin-left:0">Rendered by the app's engine. Each clip was set to the same loudness afterwards, nothing else.</p>
+</section>
+
+<section class="step" id="space">
+<p class="label"><span class="no">09</span>Space</p>
+<h2>Two photos make a solid.</h2>
+<div class="two flip">
+<div class="words">
+<p>Give it a second photo and the first becomes the <b>front</b> of a block, the second its <b>side</b>. The engine fills in the block that looks like both, then treats it as a material: dark is heavy, colourful is stiff, busy is lossy.</p>
+<p>Then it works out how that block <b>vibrates</b>. It treats the block as a simple vibrating material (a wave equation tuned so its axes sit at 1, 2 and 3 times the note) and solves for its 96 lowest modes on a 24 &times; 16 &times; 48 grid, with maths written for the app, in a little over a second on an M4 Mac. The solve is real; the block is a model.</p>
+<p>A note strikes the block where your eye lands and plays the 40 modes that ring loudest there. A <b>loop</b> of light flies through the block; what it passes through, read 60 times a second, is the tone you hold.</p>
+</div>
+<div class="stack">
+<figure class="scope">
+<span class="hint">The space of the sunset and the aurora: its 96 solved tones</span>
+<canvas id="c-space" role="img" aria-label="The block's 96 solved tones as lines on a pitch scale, the 40 a strike plays drawn taller, with marks at 2, 3 and 4 times the note"></canvas>
+<div class="bar"><button class="play" type="button" data-audio="assets/audio/space.m4a"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Strike a chord</button><span>Its tones near 2&times;, 3&times; and 4&times; sit <b id="stems">&minus;1, &minus;12 and &minus;19</b> cents off: a bar, slightly out of tune with itself.</span></div>
+</figure>
+<figure style="margin:0"><img src="assets/space-three.webp" alt="A space made from three pictures: a sunset on one wall, an aurora on the other, dunes on the floor, and a glowing loop through the cloud between them" loading="lazy" width="1400" height="933" style="border-radius:var(--r);border:1px solid var(--line2)"><figcaption class="under">A third photo is the view from above. Drawn by the app's renderer.</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section class="step" id="sculpt">
+<p class="label"><span class="no">10</span>Sculpt</p>
+<h2>Then change what it's made of.</h2>
+<div class="two">
+<div class="words">
+<p>Sculpt opens the block. Paint it with materials (Lead is heavy and soft, Crystal light and stiff) and its tones move. While the brush is down the engine estimates them; when it lifts, it solves them exactly for its model of the block.</p>
+<p>On one photo you paint the picture instead. Stripes you paint are a pattern, and a pattern is a new tone.</p>
+<p>The next round <span class="badge coming">coming</span> counts what that means. For one set of photos: at least 10<sup>28,275</sup> different sculpts you could save, though most would sound alike. And a rough count: allowing only steps of at least 5 cents in the 8 loudest tones and 3 dB in six harmonics, a block has about 10<sup>13</sup> settings. A back-of-envelope figure, not a listening test.</p>
+</div>
+<div class="pair" style="margin:0">
+<figure><img src="assets/sculpt-space.webp" alt="A block of soft coloured points seen from above, a bar of pale blue material painted through its middle" loading="lazy" width="1200" height="800"><figcaption>Painting a material through the block.</figcaption></figure>
+<figure><img src="assets/sculpt-tone.webp" alt="The block drawn in orange and blue points: the two halves of one tone moving opposite ways" loading="lazy" width="1200" height="800"><figcaption>One of its tones as a shape: orange and blue move opposite ways.</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section class="step" id="honest">
+<p class="label"><span class="no">&ndash;</span>The fine print</p>
+<h2>What this is, and isn't.</h2>
+<ul class="ticks" style="max-width:760px">
+<li>RedSynth Pad doesn't find a hidden sound in your photo. It's a mapping designed for the app: the picture's patterns, columns and colour each set one part of an instrument.</li>
+<li>Where it uses physics, it says so: the struck tones are modal synthesis, and a space is a model block whose vibrations are solved, not guessed.</li>
+<li>The same photos, knobs and touches always make the same sound. That is a promise about the maths, not a claim that nobody could ever make a sound like it. Change the photo and the instrument changes. Small changes make small differences, sometimes too small to hear.</li>
+<li>The big numbers are counts with the maths shown, not listening tests.</li>
+<li>Every figure on this page was computed by the app's engine for this sunset (and, for step 9, the sunset with an aurora). The demo pictures were made with maths for this site, and the clips' notes were chosen by hand.</li>
+<li>The engine is written from scratch in Rust and runs on your device. Nothing is sent anywhere.</li>
+</ul>
+<div class="cta" style="justify-content:flex-start"><a class="btn primary" href="./">Back to RedSynth Pad</a><a class="btn" href="guide/photo.html">The photo, in the guide</a></div>
+</section>
+</main>
+
+<footer>
+<nav aria-label="Footer"><a href="./">Home</a><a href="how.html">How it works</a><a href="guide/">Guide</a><a href="press.html">Press kit</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="../">More apps by Seth Egger</a></nav>
+<p>Made by <a href="../">Seth Egger</a>, an independent developer in Kentucky.</p>
+<p>Apple, iPad, Mac, Apple Pencil and GarageBand are trademarks of Apple Inc. RedSynth Pad is not affiliated with or endorsed by Apple.</p>
+<p>&copy; 2026 Seth Egger</p>
+</footer>
+</div></body></html>
