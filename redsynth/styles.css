@@ -418,3 +418,6 @@ pre.copy{white-space:pre-wrap;background:var(--s1);border:1px solid var(--line);
   background:rgba(12,12,18,.62);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);cursor:pointer}
 .film-sound[aria-pressed="true"]{background:rgba(255,255,255,.92);color:#111}
 @media (max-width:760px){.films{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}}
+
+/* A row of pictures shown at one height: each fills the same 3:2 box, cropped from the middle. */
+.pair.even img{aspect-ratio:3/2;width:100%;height:auto;object-fit:cover;object-position:center}
