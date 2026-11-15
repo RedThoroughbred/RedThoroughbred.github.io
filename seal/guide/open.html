@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open a sealed file · Seal guide</title>
+<meta name="description" content="A file sealed for your key opens with Face ID, or with your Ledger’s PIN.">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f4efe7" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('seal-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="Seal">
+<meta property="og:title" content="Open a sealed file · Seal guide"><meta property="og:description" content="A file sealed for your key opens with Face ID, or with your Ledger’s PIN.">
+<meta property="og:url" content="https://redthoroughbred.github.io/seal/guide/open.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="The Seal app icon, a dark paper seal with clay-orange rings around a keyhole, and the words: Seal, the key your computer doesn’t have.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Open a sealed file · Seal guide"><meta name="twitter:description" content="A file sealed for your key opens with Face ID, or with your Ledger’s PIN."><meta name="twitter:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg">
+<link rel="canonical" href="https://redthoroughbred.github.io/seal/guide/open.html">
+<link rel="icon" href="../assets/icon.png"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><link rel="stylesheet" href="../styles.css?v=2"><script src="../site.js?v=2" defer></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="../"><img src="../assets/icon.png" alt="" width="30" height="30"><span>Seal</span></a><nav aria-label="Site"><a href="../">Home</a><a href="../how.html">How it works</a><a href="./" aria-current="true">Guides</a><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+<div class="doc">
+<nav class="toc" aria-label="Guides">
+<p>The guides</p>
+<ol role="list">
+<li><a href="start.html"><i>01</i>Start here</a></li>
+<li><a href="vaults.html"><i>02</i>Keep files in a vault</a></li>
+<li><a href="open.html" aria-current="page"><i>03</i>Open a sealed file</a><ol><li><a href="#bring-the-file-in">Bring the file in</a></li><li><a href="#open-it">Open it</a></li></ol></li>
+<li><a href="friends.html"><i>04</i>Swap keys with someone</a></li>
+<li><a href="session-lock.html"><i>05</i>Lock your Claude Code sessions</a></li>
+<li><a href="sign-commit.html"><i>06</i>Sign a git commit from your phone</a></li>
+<li><a href="ledger.html"><i>07</i>Use a Ledger</a></li>
+<li><a href="mac.html"><i>08</i>Seal and open on a Mac</a></li>
+<li><a href="questions.html"><i>09</i>Questions</a></li>
+</ol>
+</nav>
+<main id="main"><article>
+<p class="label"><span class="no">03 / 09</span>Seal guide</p>
+<h1>Open a sealed file</h1>
+<p class="lede">A file sealed for your key opens with Face ID, or with your Ledger’s PIN.</p>
+<h2 id="bring-the-file-in">Bring the file in</h2>
+<p>Any of these works:</p>
+<ul class="dots" role="list">
+<li>On the <strong>Vault</strong> page, tap <code>Choose a file</code> and pick it.</li>
+<li>In Files, Mail, Messages or AirDrop, open the <code>.gpg</code> file and pick <strong>Seal</strong>.</li>
+<li>Copied as text (it starts with <code>-----BEGIN PGP MESSAGE-----</code>)? Tap <code>Paste sealed text</code>.</li>
+<li>From a vault: tap the vault’s files, then <code>Open</code>.</li>
+</ul>
+<p>Seal reads who the file is for before anything is opened. No PIN, no Face ID yet.</p>
+<figure class="plate"><div class="device"><div class="phone"><img src="../assets/guide/vault-file.jpg" width="900" height="1948" alt="A file, and who it is sealed for" decoding="async"></div></div><figcaption aria-hidden="true"><i>Picture 1</i>A file, and who it is sealed for</figcaption></figure>
+<h2 id="open-it">Open it</h2>
+<ul class="dots" role="list">
+<li><strong>Sealed for this iPhone:</strong> tap <code>Open with Face ID</code>.</li>
+<li><strong>Sealed for your Ledger:</strong> plug it in, open its OpenPGP app, type the OpenPGP PIN and tap <code>Open with the Ledger</code>.</li>
+<li><strong>Locked with a passphrase:</strong> type the passphrase and tap <code>Open with the passphrase</code>.</li>
+</ul>
+<figure class="plate"><div class="device"><div class="phone"><img src="../assets/guide/opened.jpg" width="900" height="1948" alt="An opened note" loading="lazy" decoding="async"></div></div><figcaption aria-hidden="true"><i>Picture 2</i>An opened note</figcaption></figure>
+<p>The opened file lives in memory only. <code>Copy text</code> copies it for a short while, on this iPhone only. <code>Save an unsealed copy</code> writes it where you choose: after that, that copy is yours to look after. Closing the screen, or leaving the app, lets the opened file go.</p>
+<div class="tip" role="note"><span class="k">Tip</span><p>A file that isn’t for any key on this iPhone says so before asking for anything. Nobody gets a Face ID prompt for a file they can’t open.</p></div>
+<nav class="pager" aria-label="More guides"><a class="prev" href="vaults.html" rel="prev"><small>Previous</small><b>Keep files in a vault</b></a><a class="next" href="friends.html" rel="next"><small>Next</small><b>Swap keys with someone</b></a></nav>
+</article></main>
+</div>
+<footer>
+<nav aria-label="Footer"><a href="../">Home</a><a href="../how.html">How it works</a><a href="./">Guides</a><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a><a href="../../">More apps by Seth Egger</a></nav>
+<p>Each guide is written once and shown twice: in the app, under More, Guides, and here. The pictures are from the iOS simulator, with made-up keys and names.</p>
+<p>Made by <a href="../../">Seth Egger</a>, an independent developer in Kentucky.</p>
+<p>Apple, iPhone, Mac, Face ID, AirDrop and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Ledger is a trademark of Ledger SAS, YubiKey of Yubico, GitHub of GitHub, Inc., and Claude of Anthropic. Seal is an independent app, not affiliated with or endorsed by any of them.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>

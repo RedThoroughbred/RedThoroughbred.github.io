@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy · Seal</title>
+<meta name="description" content="Seal does not collect any data. No account, no analytics, no advertising and no network code. Your keys stay in your iPhone’s chip or your Ledger, and your files stay where you put them.">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f4efe7" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('seal-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="canonical" href="https://redthoroughbred.github.io/seal/privacy.html">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=2"><script src="site.js?v=2" defer></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="30" height="30"><span>Seal</span></a><nav aria-label="Site"><a href="./">Home</a><a href="how.html">How it works</a><a href="guide/">Guides</a><a href="support.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+<main id="main" class="plain">
+<p class="label"><span class="no">Privacy</span>Seal</p>
+<h1>Privacy</h1>
+<p class="lead"><strong>Seal does not collect any data.</strong></p>
+<p>Seal has no account, no analytics, no advertising and no network code. It never sends anything anywhere. It reads and writes only what you hand it.</p>
+
+<h2>Why it collects nothing</h2>
+<p>Seal guards secrets: the keys that open your files and sign for you, and the files themselves. An app like that should have nothing to leak. So there is no server to send to, no account to tie you to, and no record of what you sealed, opened or signed. Nothing about you ever leaves your iPhone through Seal.</p>
+
+<h2>Your keys</h2>
+<p>This iPhone’s key is made inside its security chip (the Secure Enclave). Its private half never leaves the chip, and it works only after Face ID. Face ID itself is handled by iOS: Seal never sees your face.</p>
+<p>A Ledger’s keys stay in the Ledger. Seal reads the card over USB-C and never writes to it. The card’s OpenPGP PIN goes to the card and nowhere else: it is not saved and not logged.</p>
+<p>Public keys, yours and other people’s, are made to be shared. Seal never sends one anywhere unless you share or copy it yourself.</p>
+
+<h2>Your files</h2>
+<p>Files you seal for a vault are kept on your iPhone, in Seal’s own space, still sealed. They are not in iCloud Drive or the Files app. If iCloud Backup is on, they travel in your phone’s backup, still sealed. Deleting Seal deletes them.</p>
+<p>A file you open lives in memory only. Seal never writes it to the disk; closing the screen, or leaving the app, lets it go. If you choose <strong>Save an unsealed copy</strong>, that copy goes where you choose, and from then on it is yours to look after. When Seal isn’t in front, it shows a plain cover, so the app switcher doesn’t show what was open.</p>
+
+<h2>The clipboard</h2>
+<p>Text you copy from an opened file stays on this iPhone, for a short while. The session lock and commit signing use the clipboard on purpose: a request from your Mac, a signature from your phone and your public key travel between them on the clipboard that your Apple Account shares. None of those is a secret.</p>
+
+<h2>Children</h2>
+<p>The app collects nothing from anyone, of any age.</p>
+
+<h2>This website</h2>
+<p>This site is static pages hosted on GitHub Pages. It sets no cookies and runs no analytics or trackers of its own. It remembers your choice of light or dark in your own browser, and nowhere else. GitHub, as the host, may log technical details such as IP addresses; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>.</p>
+
+<h2>Questions</h2>
+<p>Email <a href="mailto:redthoroughbreds@gmail.com?subject=Seal%20privacy">redthoroughbreds@gmail.com</a>.</p>
+<p style="color:var(--t3);font-size:14px">Last updated: November 14, 2026. This policy describes Seal’s first version, which is not yet released.</p>
+</main>
+<footer>
+<nav aria-label="Footer"><a href="./">Home</a><a href="how.html">How it works</a><a href="guide/">Guides</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="../">More apps by Seth Egger</a></nav>
+<p>Made by <a href="../">Seth Egger</a>, an independent developer in Kentucky.</p>
+<p>Apple, iPhone, Mac, Face ID, AirDrop and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Ledger is a trademark of Ledger SAS, YubiKey of Yubico, GitHub of GitHub, Inc., and Claude of Anthropic. Seal is an independent app, not affiliated with or endorsed by any of them.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>

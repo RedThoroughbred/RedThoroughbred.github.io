@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seal and open on a Mac · Seal guide</title>
+<meta name="description" content="Seal speaks OpenPGP, the same as gpg. Files cross between the phone and any computer.">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f4efe7" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('seal-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="Seal">
+<meta property="og:title" content="Seal and open on a Mac · Seal guide"><meta property="og:description" content="Seal speaks OpenPGP, the same as gpg. Files cross between the phone and any computer.">
+<meta property="og:url" content="https://redthoroughbred.github.io/seal/guide/mac.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="The Seal app icon, a dark paper seal with clay-orange rings around a keyhole, and the words: Seal, the key your computer doesn’t have.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Seal and open on a Mac · Seal guide"><meta name="twitter:description" content="Seal speaks OpenPGP, the same as gpg. Files cross between the phone and any computer."><meta name="twitter:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg">
+<link rel="canonical" href="https://redthoroughbred.github.io/seal/guide/mac.html">
+<link rel="icon" href="../assets/icon.png"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><link rel="stylesheet" href="../styles.css?v=2"><script src="../site.js?v=2" defer></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="../"><img src="../assets/icon.png" alt="" width="30" height="30"><span>Seal</span></a><nav aria-label="Site"><a href="../">Home</a><a href="../how.html">How it works</a><a href="./" aria-current="true">Guides</a><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+<div class="doc">
+<nav class="toc" aria-label="Guides">
+<p>The guides</p>
+<ol role="list">
+<li><a href="start.html"><i>01</i>Start here</a></li>
+<li><a href="vaults.html"><i>02</i>Keep files in a vault</a></li>
+<li><a href="open.html"><i>03</i>Open a sealed file</a></li>
+<li><a href="friends.html"><i>04</i>Swap keys with someone</a></li>
+<li><a href="session-lock.html"><i>05</i>Lock your Claude Code sessions</a></li>
+<li><a href="sign-commit.html"><i>06</i>Sign a git commit from your phone</a></li>
+<li><a href="ledger.html"><i>07</i>Use a Ledger</a></li>
+<li><a href="mac.html" aria-current="page"><i>08</i>Seal and open on a Mac</a><ol><li><a href="#seal-on-the-mac-open-on-the-phone">Seal on the Mac, open on the phone</a></li><li><a href="#seal-on-the-phone-open-on-the-mac">Seal on the phone, open on the Mac</a></li><li><a href="#a-file-with-a-passphrase">A file with a passphrase</a></li></ol></li>
+<li><a href="questions.html"><i>09</i>Questions</a></li>
+</ol>
+</nav>
+<main id="main"><article>
+<p class="label"><span class="no">08 / 09</span>Seal guide</p>
+<h1>Seal and open on a Mac</h1>
+<p class="lede">Seal speaks OpenPGP, the same as gpg. Files cross between the phone and any computer.</p>
+<h2 id="seal-on-the-mac-open-on-the-phone">Seal on the Mac, open on the phone</h2>
+<ol class="steps" role="list">
+<li value="1"><span class="n">1</span><div><p>Get your iPhone’s public key onto the Mac: <strong>Vault</strong> page, <code>Share public key</code>, AirDrop.</p></div></li>
+<li value="2"><span class="n">2</span><div><p>On the Mac, import it once:</p><div class="code"><pre><code>gpg --import "Seth-s-iPhone.public-key.asc"</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div></div></li>
+<li value="3"><span class="n">3</span><div><p>Seal a file for it:</p><div class="code"><pre><code>gpg --encrypt --recipient "Seth's iPhone" notes.md</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div></div></li>
+<li value="4"><span class="n">4</span><div><p>AirDrop <code>notes.md.gpg</code> to the phone, open it with Seal, <code>Open with Face ID</code>.</p></div></li>
+</ol>
+<h2 id="seal-on-the-phone-open-on-the-mac">Seal on the phone, open on the Mac</h2>
+<p>Seal the file for a key the Mac has, such as your Ledger or a backup key, and open it on the Mac:</p>
+<div class="code"><pre><code>gpg --decrypt notes.md.gpg &gt; notes.md</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
+<p>A file sealed <strong>only</strong> for the iPhone’s key opens only on that iPhone: its private half never leaves the chip.</p>
+<h2 id="a-file-with-a-passphrase">A file with a passphrase</h2>
+<p>Anyone with GnuPG 2.3 or newer opens it with:</p>
+<div class="code"><pre><code>gpg --output notes.md --decrypt notes.md.gpg</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
+<p>and types the passphrase. <code>Copy how to open it</code> gives these lines with the right file name.</p>
+<nav class="pager" aria-label="More guides"><a class="prev" href="ledger.html" rel="prev"><small>Previous</small><b>Use a Ledger</b></a><a class="next" href="questions.html" rel="next"><small>Next</small><b>Questions</b></a></nav>
+</article></main>
+</div>
+<footer>
+<nav aria-label="Footer"><a href="../">Home</a><a href="../how.html">How it works</a><a href="./">Guides</a><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a><a href="../../">More apps by Seth Egger</a></nav>
+<p>Each guide is written once and shown twice: in the app, under More, Guides, and here. The pictures are from the iOS simulator, with made-up keys and names.</p>
+<p>Made by <a href="../../">Seth Egger</a>, an independent developer in Kentucky.</p>
+<p>Apple, iPhone, Mac, Face ID, AirDrop and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Ledger is a trademark of Ledger SAS, YubiKey of Yubico, GitHub of GitHub, Inc., and Claude of Anthropic. Seal is an independent app, not affiliated with or endorsed by any of them.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>

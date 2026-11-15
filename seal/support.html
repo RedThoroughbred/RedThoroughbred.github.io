@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support · Seal</title>
+<meta name="description" content="Help for Seal: what you need, short answers to common questions, and how to reach the developer.">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f4efe7" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('seal-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="canonical" href="https://redthoroughbred.github.io/seal/support.html">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=2"><script src="site.js?v=2" defer></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="30" height="30"><span>Seal</span></a><nav aria-label="Site"><a href="./">Home</a><a href="how.html">How it works</a><a href="guide/">Guides</a><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+<main id="main" class="plain">
+<p class="label"><span class="no">Support</span>Seal</p>
+<h1>Support</h1>
+<p class="lead">Seal is made by one person. If something is wrong or unclear, he wants to know.</p>
+
+<h2>Start with the guides</h2>
+<div class="chapters">
+<a href="guide/start.html"><i>01</i><b>Start here</b><span>Two minutes to your first key.</span></a>
+<a href="guide/session-lock.html"><i>05</i><b>Lock your Claude Code sessions</b><span>Pair your phone, try one round, start a locked session.</span></a>
+<a href="guide/questions.html"><i>09</i><b>Questions</b><span>Short answers to what people ask first.</span></a>
+</div>
+
+<h2>What you need</h2>
+<ul>
+<li><strong>An iPhone with Face ID</strong>, on iOS 17 or later.</li>
+<li>For a Ledger: the Ledger with its <strong>OpenPGP</strong> app, a USB-C cable, and an iPhone with a USB-C port. You don’t need one.</li>
+<li>For the session lock and for signing commits: a Mac, with the same Apple Account as the phone so the clipboard is shared, and the Mac side (<code>seal-gate</code>, <code>seal-git-sign</code>), which comes with Seal’s source for now. A one-step install is coming.</li>
+</ul>
+
+<h2>Quick answers</h2>
+<details><summary>Where are my files?</summary><p>A file sealed for a vault is kept on this iPhone, in Seal’s own space: not in iCloud Drive and not in the Files app. It stays sealed on the disk. If iCloud Backup is on, it travels in your phone’s backup, still sealed. Deleting Seal deletes the kept files; files you shared or saved elsewhere stay where you put them. More in <a href="how.html#where">How it works</a>.</p></details>
+<details><summary>I ticked two keys. Do I need both to open the file?</summary><p>No. Each ticked key opens the file on its own. That way, losing one key doesn’t lose the file.</p></details>
+<details><summary>What if I lose my iPhone?</summary><p>The phone’s key goes with it: it can’t be copied, by design. Files sealed for another key you own, such as a Ledger or a backup key, still open with that key. That’s why Seal suggests a second key for anything you must keep.</p></details>
+<details><summary>I set up Face ID again, and my key stopped working</summary><p>iOS retires keys tied to the old Face ID, so this iPhone’s key stops working. Seal says so, and you can make a new one. Files sealed only for the old key can’t be opened.</p></details>
+<details><summary>A file didn’t ask for Face ID</summary><p>Seal reads who a file is for before anything is opened. A file that isn’t for any key on this iPhone says so before asking for anything, so nobody gets a Face ID prompt for a file they can’t open. See <a href="guide/open.html">Open a sealed file</a>.</p></details>
+<details><summary>Does someone need Seal to open what I send?</summary><p>Not always. A file sealed for their key opens with Seal or with gpg on a computer. A file locked with a passphrase opens with gpg 2.3 or newer, or with Seal. See <a href="guide/friends.html">Swap keys with someone</a>.</p></details>
+<details><summary>The Ledger’s PIN: how many tries?</summary><p>Three. The OpenPGP PIN is not the PIN that unlocks the Ledger; it goes to the card and nowhere else. Three wrong tries and the card locks. The <strong>Card</strong> page shows how many tries are left.</p></details>
+<details><summary>Which hardware keys work?</summary><p>A Ledger with its OpenPGP app works today. YubiKey and other OpenPGP cards are planned.</p></details>
+<details><summary>Does Seal send anything anywhere?</summary><p>No. Seal has no account, no analytics and no network code. See <a href="privacy.html">Privacy</a>.</p></details>
+
+<h2 id="contact">Contact</h2>
+<p>Email <a href="mailto:redthoroughbreds@gmail.com?subject=Seal%20support">redthoroughbreds@gmail.com</a>. You’ll hear back from Seth, who makes the app. It helps to include:</p>
+<ul>
+<li>your iPhone model and its iOS version, and Seal’s version (<strong>More</strong>, under <strong>About</strong>);</li>
+<li>whether a Ledger or a Mac was part of it;</li>
+<li>what you did and what you saw. A screenshot is great.</li>
+</ul>
+<div class="note"><p><b>Never send a PIN, a passphrase, or a file you’ve opened.</b> None of them is needed to help you. A screenshot of a screen with an opened file on it shows what’s in the file, so leave those out too.</p></div>
+</main>
+<footer>
+<nav aria-label="Footer"><a href="./">Home</a><a href="how.html">How it works</a><a href="guide/">Guides</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="../">More apps by Seth Egger</a></nav>
+<p>Made by <a href="../">Seth Egger</a>, an independent developer in Kentucky.</p>
+<p>Apple, iPhone, Mac, Face ID, AirDrop and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Ledger is a trademark of Ledger SAS, YubiKey of Yubico, GitHub of GitHub, Inc., and Claude of Anthropic. Seal is an independent app, not affiliated with or endorsed by any of them.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>
