@@ -402,3 +402,19 @@ pre.copy{white-space:pre-wrap;background:var(--s1);border:1px solid var(--line);
 .storebadge .l{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15;text-align:left}
 .storebadge small{font:500 12px var(--display);color:var(--t2);letter-spacing:.01em}
 .storebadge b{font:650 18px var(--display);letter-spacing:-.01em}
+
+/* See it play: the store's films, phone-shaped, autoplaying muted in view; a tap for sound. */
+.films{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.film{margin:0}
+.film-frame{position:relative;border-radius:30px;overflow:hidden;background:#0b0b10;border:1px solid var(--line2);
+  box-shadow:0 18px 60px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.02)}
+.film video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
+.film-wide{margin-top:26px}
+.film-wide .film-frame{border-radius:18px}
+.film-wide video{aspect-ratio:16/9}
+.film figcaption{margin-top:12px;color:var(--t2);font-size:15px;line-height:1.45}
+.film figcaption b{color:var(--t1)}
+.film-sound{position:absolute;left:12px;bottom:12px;font:600 13px var(--display);padding:8px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(12,12,18,.62);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);cursor:pointer}
+.film-sound[aria-pressed="true"]{background:rgba(255,255,255,.92);color:#111}
+@media (max-width:760px){.films{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}}

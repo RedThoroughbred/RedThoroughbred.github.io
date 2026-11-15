@@ -163,3 +163,28 @@
   music.addEventListener('ended', () => stop('ended'));
   setState('idle');
 })();
+
+/* See it play: films autoplay muted while on screen (not with reduced motion); one plays with sound at a time. */
+(() => {
+  const vids = [...document.querySelectorAll('.film video')];
+  if (!vids.length) return;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      const v = e.target;
+      if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else { v.pause(); }
+    }), { threshold: 0.35 });
+    vids.forEach((v) => io.observe(v));
+  }
+  document.querySelectorAll('.film-sound').forEach((b) => b.addEventListener('click', () => {
+    const v = b.parentElement.querySelector('video');
+    const on = v.muted;
+    vids.forEach((o) => { o.muted = true; const ob = o.parentElement.querySelector('.film-sound'); ob.textContent = 'Sound on'; ob.setAttribute('aria-pressed', 'false'); });
+    const opening = document.querySelector('[data-stage] audio');
+    if (on) {
+      if (opening && !opening.paused) { const sb = document.querySelector('[data-stage] .sound'); if (sb) sb.click(); else opening.pause(); }
+      v.muted = false; v.currentTime = 0; v.play().catch(() => {});
+      b.textContent = 'Sound off'; b.setAttribute('aria-pressed', 'true');
+    }
+  }));
+})();
