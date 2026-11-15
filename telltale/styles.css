@@ -6,7 +6,7 @@
   --bg:#08090b;--s1:#111216;--s2:#17191e;--s3:#20232a;
   --line:rgba(255,255,255,.07);--line2:rgba(255,255,255,.13);
   --t1:#edeef2;--t2:#a3a6b0;--t3:#8b8e99;--t4:#5d606b;
-  --glint:#6fe3ff;--ir:#c58bff;--radio:#7cf5c4;--ok:#3ecf8e;--warn:#ffb000;--alert:#ff5b50;
+  --glint:#6fe3ff;--ir:#c58bff;--radio:#7cf5c4;--ok:#3ecf8e;--warn:#ffb000;--alert:#ff5b50;--net:#8ab4ff;--tag:#ff8ac8;
   --accent:var(--glint);--on-accent:#0a0a0b;
   --glow-a:rgba(111,227,255,.16);--glow-b:rgba(197,139,255,.13);
   --shadow:0 20px 50px rgba(0,0,0,.55);--shadow-s:0 12px 30px rgba(0,0,0,.5);
@@ -19,7 +19,7 @@
     --bg:#f6f7f9;--s1:#ffffff;--s2:#eef0f3;--s3:#e4e7ec;
     --line:rgba(16,18,24,.09);--line2:rgba(16,18,24,.16);
     --t1:#15171c;--t2:#474b55;--t3:#5f636e;--t4:#9a9ea8;
-    --glint:#08739a;--ir:#7a3cc8;--radio:#0a7d5a;--ok:#0f7a50;--warn:#9a5b00;--alert:#c0392b;
+    --glint:#08739a;--ir:#7a3cc8;--radio:#0a7d5a;--ok:#0f7a50;--warn:#9a5b00;--alert:#c0392b;--net:#2f5fb8;--tag:#b0306f;
     --on-accent:#ffffff;
     --glow-a:rgba(8,115,154,.14);--glow-b:rgba(122,60,200,.10);
     --shadow:0 18px 44px rgba(16,18,24,.18);--shadow-s:0 10px 26px rgba(16,18,24,.16);
@@ -244,3 +244,10 @@ footer .links a{color:var(--t2);text-decoration:none}footer .links a:hover{color
   .hero h1{font-size:40px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Telltale 1.0: the network and tracker checks' colours, the lights-off diagram */
+.dot.net{background:var(--net)}.dot.tag{background:var(--tag)}
+ul.ticks.net li::before{border-color:var(--net)}ul.ticks.tag li::before{border-color:var(--tag)}
+.d-net{stroke:var(--net);fill:none}.d-net-f{fill:var(--net)}
+.price{display:inline-block;margin-top:10px;font:600 13px var(--mono);letter-spacing:.06em;color:var(--t2)}
+.only{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:18px}

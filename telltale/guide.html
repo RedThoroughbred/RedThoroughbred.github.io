@@ -1,243 +1,200 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SweepLab user guide</title>
-<meta name="description" content="How to use SweepLab: the guided room check, the flashlight lens scan, the infrared check with the TV-remote test, the Wi-Fi radar and signal ladder with the SweepLab Puck, the motion test, results, what to do if you find a camera, and troubleshooting.">
+<title>Telltale user guide</title>
+<meta name="description" content="How to use Telltale: the guided room check, the flashlight lens scan and the swept strip, the infrared check with the TV-remote test and the lights-off test, the listen-only network check, the tracker check, results and the PDF report, what to do if you find something, and troubleshooting.">
 <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
-<meta property="og:type" content="article"><meta property="og:site_name" content="SweepLab">
-<meta property="og:title" content="SweepLab user guide">
-<meta property="og:description" content="The room check step by step: lens scan, infrared check, Wi-Fi radar with the puck, the motion test, results and troubleshooting.">
-<meta property="og:url" content="https://redthoroughbred.github.io/sweeplab/guide.html">
-<meta property="og:image" content="https://redthoroughbred.github.io/sweeplab/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="SweepLab app icon, a lens reticle with a cyan glint, and the line: A room check for hidden cameras, on your iPhone">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="SweepLab user guide"><meta name="twitter:description" content="The room check step by step: lens scan, infrared check, Wi-Fi radar with the puck, the motion test, results and troubleshooting."><meta name="twitter:image" content="https://redthoroughbred.github.io/sweeplab/assets/og-image.png">
-<link rel="canonical" href="https://redthoroughbred.github.io/sweeplab/guide.html">
-<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=1"></head><body>
+<meta property="og:type" content="article"><meta property="og:site_name" content="Telltale">
+<meta property="og:title" content="Telltale user guide">
+<meta property="og:description" content="The room check step by step: lens scan, infrared and the lights-off test, the network check, the tracker check, results and troubleshooting.">
+<meta property="og:url" content="https://redthoroughbred.github.io/telltale/guide.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/telltale/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Telltale app icon, a camera lens inside amber arcs with a cyan glint, and the line: Check the room before you unpack">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Telltale user guide"><meta name="twitter:description" content="The room check step by step: lens scan, infrared and the lights-off test, the network check, the tracker check, results and troubleshooting."><meta name="twitter:image" content="https://redthoroughbred.github.io/telltale/assets/og-image.png">
+<link rel="canonical" href="https://redthoroughbred.github.io/telltale/guide.html">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=2"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
-<header class="top" id="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32"><span>SweepLab</span></a><nav aria-label="Site"><a href="./">Home</a><a href="guide.html" aria-current="page">Guide</a><a href="puck.html">Puck</a><a href="privacy.html">Privacy</a></nav></header>
+<header class="top" id="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32"><span>Telltale</span></a><nav aria-label="Site"><a href="./">Home</a><a href="guide.html" aria-current="page">Guide</a><a href="privacy.html">Privacy</a></nav></header>
 
 <main id="main">
 <div class="doc">
 <p class="label">User guide</p>
-<h1>SweepLab user guide</h1>
-<p class="lede" style="max-width:720px">Everything about SweepLab for iPhone (iOS 18 or later). Button and screen names are written as they appear in the app. SweepLab is coming soon to the App Store, so some details may change before it's released.</p>
+<h1>Telltale user guide</h1>
+<p class="lede" style="max-width:720px">Everything about Telltale for iPhone (iOS 18 or later). Button and screen names are written as they appear in the app. Telltale is coming soon to the App Store, so some details may change before it's released.</p>
 <nav aria-label="Chapters"><ul class="toc">
-<li><a href="#start">Start here</a></li><li><a href="#home">Home</a></li><li><a href="#room-check">The room check</a></li><li><a href="#lens">Lens glint scan</a></li><li><a href="#infrared">Infrared check</a></li><li><a href="#wifi">Wi-Fi radar</a></li><li><a href="#ladder">Signal ladder</a></li><li><a href="#device">One device</a></li><li><a href="#motion">Motion test</a></li><li><a href="#by-hand">Look by hand</a></li><li><a href="#results">Results</a></li><li><a href="#found">If you find a camera</a></li><li><a href="#limits">Limits</a></li><li><a href="#trouble">Troubleshooting</a></li>
+<li><a href="#start">Start here</a></li><li><a href="#home">Home</a></li><li><a href="#room-check">The room check</a></li><li><a href="#lens">Lens glint scan</a></li><li><a href="#infrared">Infrared check</a></li><li><a href="#lights-off">Lights-off test</a></li><li><a href="#network">Network check</a></li><li><a href="#trackers">Tracker check</a></li><li><a href="#by-hand">Look by hand</a></li><li><a href="#results">Results and the PDF</a></li><li><a href="#found">If you find something</a></li><li><a href="#limits">Limits</a></li><li><a href="#trouble">Troubleshooting</a></li>
 </ul></nav>
 </div>
 
 <section class="chapter" id="start"><div class="body">
 <p class="label"><span class="no">01</span>Start here</p>
-<h2>What SweepLab is and what you need</h2>
-<p>SweepLab helps you check a room you're staying in, such as a rental, a hotel room or a short stay, for hidden cameras. It doesn't decide whether something is a camera. It points you at the spots and devices worth a closer look, and you go and look.</p>
+<h2>What Telltale is and what you need</h2>
+<p>Telltale helps you check a room you're staying in, such as a rental, a hotel room or a short stay, for hidden cameras and trackers. It doesn't decide whether something is a camera. It points you at the spots and devices worth a closer look, and you go and look.</p>
 <ul>
 <li>An iPhone with <strong>iOS 18 or later</strong>. The lens and infrared checks use its flashlight and cameras.</li>
-<li>A dark room: lights off, curtains closed. Both light checks work far better in the dark.</li>
+<li>A dark room: lights off, curtains closed. The light checks work far better in the dark.</li>
 <li>For the infrared check's self-test, a <strong>TV remote</strong> of the classic infrared kind (many streaming remotes use Bluetooth instead).</li>
-<li>Optional: a <strong>SweepLab Puck</strong> for the Wi-Fi radar. Everything else works without one. See the <a href="puck.html">puck guide</a>.</li>
+<li>For the network check, the <strong>rental's Wi-Fi</strong>, the network the host gave you.</li>
 <li>No account. Nothing leaves your iPhone.</li>
 </ul>
 <ol class="steps">
 <li>Turn the lights off and close the curtains.</li>
-<li>Open SweepLab and tap <strong>Start the room check</strong>.</li>
+<li>Open Telltale and tap <strong>Start the room check</strong>.</li>
 <li>Follow each step. Skip any you can't do.</li>
-<li>Go through <strong>What to look at</strong> with your own flashlight.</li>
+<li>Go through <strong>Look at these, in order</strong> with your own flashlight.</li>
 </ol>
 </div></section>
 
 <section class="chapter" id="home"><div class="body">
 <p class="label"><span class="no">02</span>Home</p>
 <h2>Check this room</h2>
-<p class="sum">Four short checks, about seven minutes</p>
-<p>The home screen leads with the guided check. Its card shows the four steps (<strong>Lens</strong>, <strong>Infrared</strong>, <strong>Wi-Fi</strong>, <strong>By hand</strong>) and which are done, skipped or next. The button reads <strong>Start the room check</strong>, then <strong>Continue the room check</strong>, then <strong>See what to look at</strong> once all four are done. <strong>New room</strong> forgets this room and starts over.</p>
-<p>Below it, <strong>Or run one check</strong> has a tile for each check on its own, with its state: the light mode for the lens scan, which camera the infrared check will use and whether it has been tested, the puck's state, and how many places you've ticked off by hand. When anything has been flagged, a line such as <strong>2 things to look at so far</strong> takes you to the results.</p>
-<p>At the bottom: the puck's connection and battery (when it reports one), and <strong>What this can and can't find</strong>.</p>
+<p class="sum">Five checks, about eight minutes</p>
+<p>The home screen leads with the check ring: one coloured segment for each check, filling in as each one runs. A segment glows when its check is done, gets an amber dot when it flagged something, and shows dashes when you skipped it. Under the title, a line counts the checks and minutes, or how many have run and how many things there are to look at.</p>
+<p>The main button reads <strong>Start the room check</strong>, then <strong>Continue the room check</strong>, then <strong>See what to look at</strong> once every step is done. <strong>New room</strong> forgets this room and starts over.</p>
+<p>Below it, <strong>Or run one check</strong> lists each check on its own row with its state. At the bottom: <strong>What this can and can't find</strong>.</p>
 <div class="shots-row">
-<figure><img src="assets/01-home.jpg" alt="The home screen: Check this room, the guided check card with Start the room check, and tiles for Lens glint and Infrared" width="600" height="1304" loading="lazy"><figcaption>Home</figcaption></figure>
+<figure><img src="assets/t-home.jpg" alt="The home screen: the check ring around a lens, Start the room check, New room, and the five checks listed one per row" width="600" height="1304" loading="lazy"><figcaption>Home</figcaption></figure>
+<figure><img src="assets/t-progress.jpg" alt="The home screen part-way through, with some of the ring's segments filled in" width="600" height="1304" loading="lazy"><figcaption>Part-way through</figcaption></figure>
 </div>
 </div></section>
 
 <section class="chapter" id="room-check"><div class="body">
 <p class="label"><span class="no">03</span>The room check</p>
-<h2>Four checks, in order</h2>
-<p class="sum">Why, what to do, skip, redo</p>
-<p>The guided check opens the current step with <strong>Why</strong> (one sentence on why the check works) and <strong>What to do</strong> (three things, in order). One button at the bottom starts the step. Finished steps fold up to what they found, such as <em>nothing flagged</em> or <em>2 spots to check</em>, with a <strong>Redo</strong> button.</p>
+<h2>Five checks, in order</h2>
+<p class="sum">What to do, why it works, skip, redo</p>
+<p>The guided check shows the ring at the top and opens the current step with <strong>What to do</strong> (three or four things, in order) and a <strong>Why this works</strong> line you can open. One button at the bottom starts the step. Finished steps fold up to what they found, such as <em>nothing flagged</em> or <em>2 spots to check</em>, with a <strong>Redo</strong> button.</p>
 <dl class="terms">
-<div><dt><span class="dot glint" aria-hidden="true"></span>1 · Lens glint scan</dt><dd>About 2 minutes. Lights off, curtains closed. Sweep the room with the flashlight. See <a href="#lens">Lens glint scan</a>.</dd></div>
-<div><dt><span class="dot ir" aria-hidden="true"></span>2 · Infrared check</dt><dd>About 1 minute. Pan the room with the camera SweepLab recommends. See <a href="#infrared">Infrared check</a>.</dd></div>
-<div><dt><span class="dot radio" aria-hidden="true"></span>3 · Wi-Fi radar</dt><dd>About 2 minutes. Let the puck listen, then run the motion test. No puck? Tap <strong>I don't have a puck, skip</strong>. See <a href="#wifi">Wi-Fi radar</a>.</dd></div>
-<div><dt><span class="dot ok" aria-hidden="true"></span>4 · Look by hand</dt><dd>About 2 minutes. Tick off the usual hiding places, then tap <strong>I've looked: show the results</strong>. See <a href="#by-hand">Look by hand</a>.</dd></div>
+<div><dt><span class="dot glint" aria-hidden="true"></span>1 · Lens glint scan</dt><dd>About 2 minutes. Sweep the room with the flashlight. See <a href="#lens">Lens glint scan</a>.</dd></div>
+<div><dt><span class="dot ir" aria-hidden="true"></span>2 · Infrared check</dt><dd>About 1 minute, plus the lights-off test. See <a href="#infrared">Infrared check</a> and <a href="#lights-off">Lights-off test</a>.</dd></div>
+<div><dt><span class="dot net" aria-hidden="true"></span>3 · Network check</dt><dd>About 1 minute on the rental's Wi-Fi. See <a href="#network">Network check</a>.</dd></div>
+<div><dt><span class="dot tag" aria-hidden="true"></span>4 · Tracker check</dt><dd>About 2 minutes with your bags. See <a href="#trackers">Tracker check</a>.</dd></div>
+<div><dt><span class="dot ok" aria-hidden="true"></span>5 · Look by hand</dt><dd>About 2 minutes. Tick off the usual hiding places, then tap <strong>I've looked: show the results</strong>. See <a href="#by-hand">Look by hand</a>.</dd></div>
 </dl>
-<p><strong>Skip this check</strong> moves on without running a step; the results will show it as skipped, so a quiet result is never mistaken for a full check. <strong>Start over</strong> clears the spots found so far and the checklist.</p>
+<p><strong>Skip this check</strong> moves on without running a step; the results show it as skipped, so a quiet result is never mistaken for a full check. <strong>Start over</strong> clears the spots found so far and the checklist.</p>
 <div class="shots-row">
-<figure><img src="assets/02-room-check.jpg" alt="Step 1 of 4, Lens glint scan: why it works and what to do, with Start the lens scan and Skip this check" width="600" height="1304" loading="lazy"><figcaption>Step 1, open</figcaption></figure>
-<figure><img src="assets/03-room-check-wifi.jpg" alt="Step 3 of 4, Wi-Fi radar: the infrared step above it is done with nothing flagged; the puck is connected and listening" width="600" height="1304" loading="lazy"><figcaption>Step 3, with the puck</figcaption></figure>
+<figure><img src="assets/t-step.jpg" alt="A guided step: the ring at the top, the step's name, what to do, Why this works, and a Start button" width="600" height="1304" loading="lazy"><figcaption>A step, open</figcaption></figure>
 </div>
 </div></section>
 
 <section class="chapter" id="lens"><div class="body">
 <p class="label"><span class="no">04</span>Lens glint scan</p>
 <h2>Sweep with the flashlight</h2>
-<p class="sum">Strobe or steady light, sweep coaching, rings</p>
+<p class="sum">Strobe or steady light, sweep coaching, the swept strip, rings</p>
 <p>A camera lens bounces light straight back toward where it came from. In a dark room, the flashlight makes a lens show up as a tiny, sharp, bright point, even through a pinhole. The bounce only comes back when the phone is roughly in front of the lens (inside the camera's own view) and within about 2–3 m, which is as far as the iPhone's flashlight reaches.</p>
 <h3>Strobe or steady</h3>
-<p>The first time, SweepLab explains that the strobe scan switches the flashlight on and off several times a second, and asks you to choose:</p>
+<p>The first time, Telltale explains that the scan switches the flashlight on and off several times a second, and asks you to choose:</p>
 <ul>
-<li><strong>Use flashing light</strong>: SweepLab compares frames with and without the flash. A point that lights up only with the flash is worth a look; a lamp or an LED stays lit either way. This makes lens reflections much easier to tell apart from shiny surfaces.</li>
+<li><strong>Use flashing light</strong>: Telltale compares frames with and without the flash. A point that lights up only with the flash gets a ring; a lamp or an LED stays lit either way. This makes lens reflections much easier to tell apart from shiny surfaces.</li>
 <li><strong>Use steady light</strong>: the flashlight stays on. It works the same way, with a little less certainty.</li>
 </ul>
 <p class="warn"><strong>Flashing light.</strong> If flashing lights affect you or anyone in the room, choose <strong>Use steady light</strong>.</p>
 <h3>Doing the scan</h3>
 <ol class="steps">
 <li>Turn the lights off and close the curtains. Hold the phone at eye level.</li>
-<li>When a scan starts, SweepLab may show <strong>Measuring the flashlight</strong>: point at a wall or furniture 0.5–2 m away and hold still for two seconds.</li>
+<li>If Telltale shows <strong>Measuring the flashlight</strong>, point at a wall or furniture 0.5–2 m away and hold still for two seconds.</li>
 <li>Stand where a camera would want to look: the bed, the shower, the desk.</li>
 <li>Sweep slowly across every wall, shelf and object, about a hand-width a second, within 2–3 m of what you're checking. Then do it again from a second spot.</li>
 <li>Tap <strong>Done</strong>.</li>
 </ol>
-<p>The pill at the top coaches your pace: <strong>Sweep slowly</strong>, <strong>Good pace</strong>, or <strong>Slow down</strong> when you're moving too fast for a lens to flash back. Tips at the bottom rotate through where to stand and what to look at.</p>
-<p>A ring marks each spot. Tap a ring to zoom in on it. The bottom bar counts <strong>Spots</strong> found in this scan and how many are <strong>In view</strong>. If the puck is connected, a small Wi-Fi chip in the top bar shows how many devices are worth a look; tap it to open the radar without leaving the scan.</p>
-<h3>What the spots mean</h3>
+<p>The pill at the top coaches your pace: <strong>Sweep slowly</strong>, <strong>Good pace</strong>, or <strong>Slow down</strong> when you're moving too fast for a lens to flash back.</p>
+<h3>The swept strip</h3>
+<p><strong>Swept around you</strong> fills in as you turn and tilt: turn left and the cells on the strip's left fill; tilt up and the top row fills. It tells you which direction to try next, and says <strong>All the way round</strong> when you've covered the room.</p>
+<h3>What the rings mean</h3>
+<p>A ring marks each spot. Tap a ring to zoom in on it. The bottom bar counts <strong>Spots</strong> found in this scan and how many are <strong>In view</strong>.</p>
 <dl class="terms">
 <div><dt>Lit up only with the flash</dt><dd>Strobe light. A small point that lit up only with the flash: could be a camera lens. Look closely at that spot from where you stood, or photograph it.</dd></div>
 <div><dt>Bright pinpoint that stayed put</dt><dd>Steady light. A small, sharp point that stayed in place while you moved: could be a lens, a small light or a shiny screw. Switch your flashlight off: a lens goes dark, an LED does not.</dd></div>
 </dl>
 <p class="tip">Shiny screws, glass edges, glossy plastic, water drops and tiny indicator lights glint too. A ring is a spot to check by hand, not proof of a camera.</p>
-<figure class="diagram" aria-labelledby="g-lens-cap" style="margin:8px 0 20px">
-<span class="tagline">Diagram</span>
-<svg viewBox="0 0 400 140" role="img" aria-label="Diagram: from where the phone stands, a camera lens sends the flashlight straight back only when the phone is roughly in front of it. From off to the side, the reflection misses the phone.">
-<circle cx="330" cy="70" r="24" class="d-fill"/><circle cx="330" cy="70" r="11" class="d-ink" stroke-width="1.5"/><circle cx="330" cy="70" r="4.5" class="d-glint-f"/>
-<path d="M306 70 H 300 M306 70 L 90 120" class="d-faint" stroke-width="1.2"/>
-<rect x="40" y="52" width="26" height="40" rx="6" class="d-fill"/><path d="M300 70 L72 72" class="d-glint" stroke-width="2.4"/><path d="M84 67 L71 72 L84 77" class="d-glint" stroke-width="2.4" stroke-linejoin="round"/>
-<rect x="60" y="104" width="22" height="32" rx="5" class="d-fill" opacity=".55"/>
-<text x="22" y="40" class="d-text">IN FRONT: IT FLASHES BACK</text><text x="96" y="134" class="d-text">OFF TO THE SIDE: IT MISSES YOU</text>
-</svg>
-<figcaption id="g-lens-cap">An illustration, not a screenshot: why you sweep from where a camera would be looking.</figcaption>
-</figure>
-<p class="muted small">On iPhones with LiDAR, Home also shows an <strong>experimental LiDAR lens test</strong> under <strong>More checks</strong>. Whether a lens shows up in the iPhone's depth picture is unproven, and nothing from that test goes into your results.</p>
 </div></section>
 
 <section class="chapter" id="infrared"><div class="body">
 <p class="label"><span class="no">05</span>Infrared check</p>
 <h2>Look for night-vision lights</h2>
 <p class="sum">The TV-remote test, then a slow pan</p>
-<p>Many cameras light a dark room with infrared LEDs your eyes can't see. Some iPhone cameras can see them, as small purple or white dots, and some can't, because of the filter in front of the sensor. Front and rear cameras filter differently, which is why SweepLab tests them.</p>
+<p>Many cameras light a dark room with infrared LEDs your eyes can't see. Some iPhone cameras can see them, as small purple or white dots, and some can't, because of the filter in front of the sensor. Front and rear cameras filter differently, which is why Telltale tests them.</p>
 <h3>The TV-remote test</h3>
-<p>The first time, the check starts with a quick self-test (you can run it again from the <strong>Remote test</strong> button):</p>
+<p>The first time, the check starts with a quick self-test (run it again any time with <strong>Remote test</strong>):</p>
 <ol class="steps">
-<li><strong>Get a TV remote ready.</strong> Hold it 10–30 cm from the camera being tested (for the front camera, the top edge of the screen), pointing at it. Don't press yet.</li>
+<li><strong>Get a TV remote ready.</strong> Hold it 10–30 cm from the camera being tested, pointing at it. Don't press yet.</li>
 <li><strong>Press and hold any button now.</strong> Use a classic infrared remote: many streaming remotes use Bluetooth instead.</li>
-<li>If SweepLab says <strong>This camera sees infrared</strong>, tap <strong>Start the IR check</strong>. If it says <strong>This camera didn't see the remote</strong>, tap <strong>Try</strong> the next camera, or <strong>Test again</strong>.</li>
+<li>If Telltale says <strong>This camera sees infrared</strong>, tap <strong>Start the IR check</strong>. If it says <strong>This camera didn't see the remote</strong>, try the next camera, or <strong>Test again</strong>.</li>
 </ol>
-<p>SweepLab remembers the answer for each camera and uses one that sees infrared. The camera button at the top switches cameras by hand.</p>
+<p>Telltale remembers the answer for each camera and uses one that sees infrared.</p>
 <p class="tip">If none of your iPhone's cameras sees the remote, they filter infrared too strongly for this check. Rely on the lens glint scan instead, or try another remote.</p>
 <h3>The check</h3>
 <ol class="steps">
 <li>Keep the lights off.</li>
 <li>Pan slowly around the room. With the front camera, turn the screen toward the room.</li>
 <li>Violet rings mark small, steady lights. If you can't see one with your own eyes, it may be infrared.</li>
-<li>Tap <strong>Done</strong>.</li>
+<li>Tap <strong>Done</strong>, or go on to the <a href="#lights-off">lights-off test</a>.</li>
 </ol>
-<p>Only pinpoints alone in the dark count: highlights on paper, a wall or a shiny box are ignored, and the same light seen again as you pan is folded into one finding, marked as seen more than once. Tap the moon at the top to dim the screen so it doesn't light the room; rings still appear and you feel a tap.</p>
-<dl class="terms">
-<div><dt>Steady light the camera sees</dt><dd>A small light the camera sees in the dark. If you can't see it with your own eyes, it may be an infrared LED of the kind night-vision cameras use. Look closely at what it's part of.</dd></div>
-</dl>
-<p class="muted small">The infrared check only finds a camera that is switched on with its night-vision lights lit.</p>
+<p>Only pinpoints alone in the dark count: highlights on paper, a wall or a shiny box are ignored, and the same light seen again as you pan counts once. Tap the moon at the top to dim the screen so it doesn't light the room; rings still appear and you feel a tap.</p>
 </div></section>
 
-<section class="chapter" id="wifi"><div class="body">
-<p class="label"><span class="no">06</span>Wi-Fi radar</p>
-<h2>Let the puck listen</h2>
-<p class="sum">Needs the SweepLab Puck</p>
-<p>A camera streaming video uploads steadily, all the time. The SweepLab Puck listens to every Wi-Fi device in range, on any network, including ones you can't join. It can't see what devices send, only how much and how steadily, and the app ranks them by how much they upload like a camera. The puck only listens: it never joins a network and never transmits on Wi-Fi.</p>
+<section class="chapter" id="lights-off"><div class="body">
+<p class="label"><span class="no">06</span>Lights-off test</p>
+<h2>See what switches on in the dark</h2>
+<p class="sum">Phone still, light off, 15 seconds</p>
+<p>A night-vision camera has a light sensor. When the room goes dark, it switches its infrared LEDs on, usually within a few seconds. The lights-off test turns that into a before-and-after: it learns the lit room, waits for the dark, and rings only the lights that came on <em>after</em> it arrived.</p>
 <ol class="steps">
-<li>Power the puck from your iPhone's USB-C port, a charger or a battery pack, and put it on a table somewhere in the middle of the room. See <a href="puck.html#power">powering the puck</a>.</li>
-<li>Open <strong>Wi-Fi radar</strong> (the third tile, or step 3 of the room check). The first time, <strong>How to use the puck</strong> explains it; tap <strong>Connect the puck</strong> and allow Bluetooth.</li>
-<li>When the card says the puck is connected, tap <strong>Listen</strong> and give it a minute. The puck visits each Wi-Fi channel in turn.</li>
-<li>Run the <a href="#motion">motion test</a>.</li>
-<li>In the room check, tap <strong>Done here: continue the room check</strong>.</li>
+<li>In the infrared check, tap <strong>Lights off</strong> (or <strong>Try the lights-off test</strong>). Use the camera that passed the TV-remote test.</li>
+<li><strong>Prop the phone up</strong> facing one wall, with the room light still on. It has to stay still: lean it against something.</li>
+<li>When Telltale says <strong>Now switch the light off</strong>, switch it off. The screen goes dark too, so it doesn't light the room.</li>
+<li>For 15 seconds it watches. <strong>Watching the dark…</strong> counts what came on so far. You feel a tap when it's done.</li>
+<li>Do the same facing each wall that matters, especially the ones facing the bed and the shower.</li>
 </ol>
-<p>The pill at the top right shows the link: <strong>Listening</strong>, <strong>Paused</strong>, <strong>Searching</strong>, <strong>Connecting</strong>, <strong>Reconnecting</strong>, <strong>Bluetooth off</strong> or <strong>Off</strong>. <strong>Pause</strong> stops listening. While it listens, a line may say it's <em>focusing on</em> a few busy channels to measure their uploads properly.</p>
 <dl class="terms">
-<div><dt>Blink the puck</dt><dd>Flashes the puck's light for a few seconds, to find it.</dd></div>
-<div><dt>More → Listen on</dt><dd>2.4 GHz, 5 GHz, or both (the default).</dd></div>
-<div><dt>More → New session</dt><dd>Forget devices: the puck starts a fresh session with a new scrambling key and an empty list.</dd></div>
-<div><dt>More → help</dt><dd><strong>How to read the radar</strong> and <strong>How to use the puck</strong>.</dd></div>
+<div><dt>Came on in the dark</dt><dd>A small light that switched on after the room went dark, with how many seconds it took. Go and look at what it's part of.</dd></div>
+<div><dt>Already on: set aside</dt><dd>A standby LED that was only hidden by the room light shows up the moment the room goes dark. Those are set aside, not flagged.</dd></div>
+<div><dt>Nothing came on in the dark</dt><dd>Nothing switched on facing this wall. That lowers the odds; it doesn't rule a camera out.</dd></div>
+<div><dt>The phone moved</dt><dd>New lights only count if the phone stays still. Prop it against something and try again.</dd></div>
+<div><dt>The room didn't get dark</dt><dd>Switch off every light, close the curtains and try again. A bright window or a lamp left on keeps the test from starting.</dd></div>
 </dl>
-<div class="shots-row">
-<figure><img src="assets/04-wifi-radar.jpg" alt="The Wi-Fi radar: the puck card with Pause and How to use it, and the Heard nearby signal ladder showing 8 devices, 2 worth a look" width="600" height="1304" loading="lazy"><figcaption>Wi-Fi radar (demo room)</figcaption></figure>
-<figure><img src="assets/12-radar-help.jpg" alt="How to read it: an example ladder, then explanations of rows, left to right, dot size and bubbles" width="600" height="1304" loading="lazy"><figcaption>How to read it</figcaption></figure>
-</div>
+<p class="tip">A night light on a timer, a charger's LED that lights in the dark, or a screen waking up can come on too. A ring is a place to look, not a verdict.</p>
 </div></section>
 
-<section class="chapter" id="ladder"><div class="body">
-<p class="label"><span class="no">07</span>The signal ladder</p>
-<h2>Reading Heard nearby</h2>
-<p class="sum">Rows, left to right, dot size, scores</p>
-<p>Every device the puck hears is a dot on a ladder. The headline sums it up, for example <em>8 devices, 2 worth a look</em>, or <em>none uploading like a camera</em>.</p>
-<h3>Rows: how strong the signal is</h3>
-<p>A strong signal usually means close. The puck has one antenna, so it can't tell which direction a device is in, only roughly how far. Walls, mirrors and metal weaken signals, so a camera behind a mirror can read as "nearby".</p>
-<div class="ladder">
-<div><b>Very close <i>−50 dBm and up</i></b><span>Strong signal: probably within a few steps of the puck.</span></div>
-<div><b>In the room <i>−51 to −64</i></b><span>Good signal: probably this room.</span></div>
-<div><b>Nearby <i>−65 to −78</i></b><span>Weaker signal: the next room, or through a wall.</span></div>
-<div><b>Far <i>below −78</i></b><span>Faint signal: far away or well shielded.</span></div>
-<div class="unknown"><b>Signal unknown <i>via router</i></b><span>Heard only through the router: the puck hears the router confirming the device's data but never the device itself, which is common on fast 5 GHz networks. The upload is real; the distance isn't known. It moves onto a row as soon as the puck hears the device directly.</span></div>
-</div>
-<p class="muted small">The ranges are rough. Indoors, walls move them.</p>
-<h3>Left to right: how much it uploads like a camera</h3>
-<p>Each device gets a score from 0 to 100: 0 is quiet; 100 is a constant stream. A device scoring <strong>50 or more</strong> is <strong>Worth a look</strong>; its dot pulses and it goes into your results.</p>
-<dl class="terms">
-<div><dt>0–24 · Quiet</dt><dd>No sign of a video stream.</dd></div>
-<div><dt>25–49 · Some uplink</dt><dd>Sends a little now and then, like most connected gadgets.</dd></div>
-<div><dt>50–74 · Worth a look</dt><dd>Uploads often enough to be worth a look.</dd></div>
-<div><dt>75–100 · Streams like a camera</dt><dd>Uploads steadily and continuously, the pattern of a live video stream. Still not a verdict: a TV streaming looks the same.</dd></div>
-</dl>
-<h3>Dot size and bubbles</h3>
-<p>A bigger dot is uploading more right now; its colour follows the score. When several devices land too close together to draw apart, they fold into one bubble: <strong>×7</strong> means seven devices. Tap it to open it up.</p>
-<h3>Full screen</h3>
-<p>Tap the expand button to fill the screen. Pinch to zoom, drag to move, double-tap to zoom in and back out; names show up as you zoom in. Filter by <strong>All</strong>, <strong>Worth a look</strong>, <strong>2.4 GHz</strong> or <strong>5 GHz</strong>, and tap <strong>Fit</strong> to see everything again. The faint line behind a dot is where its score has been over the last half minute.</p>
-<p>Tap a dot to see its signal, upload, score and how long it's been heard, then <strong>Details</strong>, or <strong>This is mine</strong> for your own phone, laptop or TV: it dims the dot and leaves it out of "worth a look", for this scan only.</p>
-<div class="shots-row">
-<figure><img src="assets/05-ladder-full.jpg" alt="The ladder full screen with filter chips and one device selected, showing its signal, upload, score and heard-for time" width="600" height="1304" loading="lazy"><figcaption>Full screen, a dot selected</figcaption></figure>
-</div>
-</div></section>
-
-<section class="chapter" id="device"><div class="body">
-<p class="label"><span class="no">08</span>One device</p>
-<h2>Find it, then decide</h2>
-<p class="sum">The device sheet</p>
-<p>Tap a device, in the list under <strong>Ranked by upload</strong> or on the ladder, to open its sheet.</p>
-<ul>
-<li><strong>The name</strong> is the device's maker, read from the first part of its Wi-Fi address (the maker prefix), or <em>Private address</em> when the address is randomized, as phones, tablets and laptops do for privacy. <em>Unknown maker</em> means the prefix isn't one the app knows. The maker is a hint, never proof.</li>
-<li><strong>Tags</strong>: <em>sells cameras</em> (the maker sells Wi-Fi cameras, among other things), <em>Wi-Fi module</em> (the maker builds the Wi-Fi chips inside many cheap cameras, plugs and gadgets), <em>phone/laptop</em> (a randomized address), <em>mine</em>.</li>
-<li><strong>Find it</strong> shows the live signal in dBm with <em>warmer</em>, <em>colder</em> or <em>steady</em>. Carry the puck slowly around the room: the number climbs toward −30 as you get close. Check anything with a pinhole, a lens, or a power cable it doesn't need. For a device with an unknown signal, move the puck around until a number appears.</li>
-<li><strong>Upload, last minute</strong>: the rate now, how steady it is, how long it's been heard, and the band.</li>
-<li><strong>Motion test</strong>: its upload with you moving and with the room empty, once you've run the test.</li>
-<li><strong>What this means</strong>, in plain words, ending with the reminder that a TV streaming, a laptop backing up or a phone on a video call look the same to the puck.</li>
-</ul>
-<div class="shots-row">
-<figure><img src="assets/06-device.jpg" alt="A device sheet: score 88, Streams like a camera, Find it at −45 dBm, and upload over the last minute" width="600" height="1304" loading="lazy"><figcaption>Device sheet (demo room)</figcaption></figure>
-</div>
-</div></section>
-
-<section class="chapter" id="motion"><div class="body">
-<p class="label"><span class="no">09</span>The motion test</p>
-<h2>Does anything react to you?</h2>
-<p class="sum">15 s moving · 8 s to leave · 15 s away</p>
-<p>A camera's upload shrinks when the room it watches goes empty and still. The motion test compares each device's upload with you moving in the room and with the room empty. Tap <strong>Listen</strong> first so the puck has devices to compare, then <strong>Start the motion test</strong>.</p>
+<section class="chapter" id="network"><div class="body">
+<p class="label"><span class="no">07</span>Network check</p>
+<h2>What's on this Wi-Fi</h2>
+<p class="sum">About 25 seconds, listen only</p>
+<p>Many Wi-Fi cameras announce themselves on the network they're joined to, by name or as a video service. Telltale listens to what the devices on the Wi-Fi you've joined say about themselves and points out the camera-like ones.</p>
 <ol class="steps">
-<li><strong>Walk around the room</strong> (15 seconds, <em>Keep moving</em>). Move like you normally would: walk, wave, sit down and stand up. A camera that sees you sends more data.</li>
-<li><strong>Step out and close the door</strong> (8 seconds, <em>Leave now</em>). Take the phone or leave it on a table; either works. The room needs to be empty and still.</li>
-<li><strong>Stay outside</strong> (15 seconds, <em>Stay out</em>). The puck is measuring the empty room. Your phone buzzes when you can come back in.</li>
+<li>Join the rental's Wi-Fi, the network the host gave you.</li>
+<li>Tap <strong>Start listening</strong>. The first time, iOS asks to let Telltale find devices on your local network: allow it.</li>
+<li>Keep Telltale open for about 25 seconds. Devices answer in their own time.</li>
+<li>Look at anything camera-like first: each one says why it's on the list.</li>
 </ol>
-<p>The result lists the devices with their upload both ways, such as <em>1.2 Mbps moving → 210 kbps away, −82%</em>. Devices whose upload dropped a lot are marked <strong>reacted to you</strong> and go to the top of your results. <strong>Nothing reacted to you</strong> lowers the odds; it can't rule a camera out. <strong>Run it again</strong> any time; <strong>Reset</strong> clears it.</p>
+<dl class="terms">
+<div><dt>Camera-like</dt><dd>The device's own announcements describe it as a camera or a video stream.</dd></div>
+<div><dt>Maybe worth a look</dt><dd>Weaker hints, like a maker that also sells cameras or a smart display with a built-in camera.</dd></div>
+<div><dt>Everything else</dt><dd>Printers, TVs, speakers and the like: nothing camera-like in what they announce.</dd></div>
+</dl>
+<p>Camera-like means the device is on this Wi-Fi, not that it's in your room: doorbells and outdoor cameras are common. Telltale <strong>only listens</strong>: it never connects to a device, logs in, opens a video stream or scans its ports. The list is gone when you close the app.</p>
 <div class="shots-row">
-<figure><img src="assets/07-motion-test.jpg" alt="The motion test counting down: Keep moving, Walk around the room" width="600" height="1304" loading="lazy"><figcaption>Moving</figcaption></figure>
-<figure><img src="assets/08-motion-result.jpg" alt="Motion test result: 1 reacted to you, with each device's upload moving and away" width="600" height="1304" loading="lazy"><figcaption>Result (demo room)</figcaption></figure>
+<figure><img src="assets/t-network.jpg" alt="The network check's result: camera-like devices first, each with the reason it was listed" width="600" height="1304" loading="lazy"><figcaption>Network check (demo network)</figcaption></figure>
+</div>
+</div></section>
+
+<section class="chapter" id="trackers"><div class="body">
+<p class="label"><span class="no">08</span>Tracker check</p>
+<h2>Trackers that stay close to you</h2>
+<p class="sum">About 75 seconds, listen only</p>
+<p>Item trackers like Tile, Samsung SmartTag, Chipolo, Pebblebee and Google Find Hub tags send short Bluetooth signals all the time. Telltale listens while you walk around with your things.</p>
+<ol class="steps">
+<li>Gather your bag, coat, keys and luggage, and turn Bluetooth on.</li>
+<li>Tap <strong>Start listening</strong>. The first time, iOS asks to let Telltale use Bluetooth; it's only used while this check runs.</li>
+<li>Follow the coach: first near your things, then walk around with them. Keep Telltale open; the scan stops if you leave the app.</li>
+<li>Look at anything worth a look first: each one says why it's listed and what to do.</li>
+</ol>
+<p>A tag is <strong>worth a look</strong> when its signal says it has been away from its owner for a while, or when it stays close the whole time you move. Signal strength is a rough guide to distance: a bag, a body or a wall weakens it.</p>
+<p class="tip"><strong>AirTags:</strong> iOS doesn't let apps hear them. Your iPhone warns you on its own when an unknown AirTag travels with you: make sure <strong>Settings → Notifications → Tracking Notifications</strong> is on, with Bluetooth and Location on.</p>
+<p><strong>If you find a tracker you don't know</strong>: photograph it where you found it and note where and when. Removing or switching it off may alert whoever placed it; if that could put you at risk, make a plan first. Contact the local police: the tag's serial number can help them find its owner. For stalking or abuse in the US, the National Domestic Violence Hotline is 1-800-799-7233, or text START to 88788.</p>
+<div class="shots-row">
+<figure><img src="assets/t-trackers.jpg" alt="The tracker check's result: tags heard, with one that stayed close marked worth a look" width="600" height="1304" loading="lazy"><figcaption>Tracker check (demo tags)</figcaption></figure>
 </div>
 </div></section>
 
 <section class="chapter" id="by-hand"><div class="body">
-<p class="label"><span class="no">10</span>Look by hand</p>
+<p class="label"><span class="no">09</span>Look by hand</p>
 <h2>Nothing beats looking</h2>
 <p class="sum">The checklist</p>
 <p>The usual hiding places are the ones with a view of the bed or the shower and a reason to have power. Look closely at each with your own flashlight and tick it off. Look for pinholes, odd lenses, and gadgets facing the bed or shower, and check anything the scans flagged, up close.</p>
@@ -250,88 +207,86 @@
 <div><dt>Vents and air purifiers</dt><dd>Grilles and slots high on the wall or ceiling.</dd></div>
 <div><dt>TV area</dt><dd>The TV, set-top boxes, soundbars and anything on the shelf around them.</dd></div>
 </dl>
-<div class="shots-row">
-<figure><img src="assets/13-checklist.jpg" alt="Look by hand: seven places to check, bathroom and bedroom marked Start here" width="600" height="1304" loading="lazy"><figcaption>Look by hand</figcaption></figure>
-</div>
 </div></section>
 
 <section class="chapter" id="results"><div class="body">
-<p class="label"><span class="no">11</span>Results</p>
+<p class="label"><span class="no">10</span>Results and the PDF</p>
 <h2>What to look at</h2>
 <p class="sum">One ranked list from every check</p>
-<p>Results gather everything the checks flagged into one list of things to look at by hand, most urgent first. They never say "camera found".</p>
+<p>Results gather everything the checks flagged into one list of things to look at by hand, most urgent first. They never say "camera found" or "all clear".</p>
 <ul>
-<li><strong>The summary</strong>: <em>N things to look at</em>, or <em>Nothing was flagged</em>. Clear doesn't mean safe: it lowers the odds; it can't rule a camera out.</li>
-<li><strong>Covered so far</strong>: each check and what it found (<em>2 spots to check</em>, <em>nothing flagged</em>, <em>2 worth a look</em>, <em>4 of 7 places</em>), or <em>skipped</em> / <em>not run</em>.</li>
-<li><strong>Look at these, in order</strong>: lens spots and infrared lights with a snapshot of where they were (tap it to see it larger, with a ring where the spot was) and a strength from 0 to 100; Wi-Fi devices worth a look, tagged <em>very close</em>, <em>reacted to you</em> or <em>maker sells cameras</em>. The strongest eight show first; <strong>Show N weaker</strong> shows the rest. Tap a Wi-Fi device to open its sheet.</li>
+<li><strong>The ring</strong> with the number of things to look at in the middle, and how many checks ran.</li>
+<li><strong>Covered so far</strong>: each check and what it found (<em>2 spots to check</em>, <em>nothing flagged</em>, <em>4 of 7 places</em>), or <em>skipped</em> / <em>not run</em>.</li>
+<li><strong>Look at these, in order</strong>: lens spots and infrared lights with a snapshot of where they were (tap it to see it larger, with a ring where the spot was) and a strength from 0 to 100; lights that came on in the dark; camera-like network devices; trackers worth a look. <strong>Show N weaker</strong> shows the rest.</li>
 <li>When you've looked at a spot, tap <strong>I looked: not a camera</strong>. It moves to <strong>You checked these</strong> (tap again to undo).</li>
 <li><strong>Still to look at by hand</strong>: checklist places you haven't ticked, with <strong>Open checklist</strong>.</li>
-<li><strong>If you find a camera</strong> and <strong>What these checks can miss</strong>.</li>
 </ul>
-<p><strong>Clear</strong> (top right) clears the spots found so far. Results are kept only while the app is open: closing SweepLab clears them.</p>
+<h3>Keep a record</h3>
+<p><strong>Save a report (PDF)</strong> makes a PDF of what was checked, what was flagged (with the snapshots) and the time. It stays on your phone unless you send it, for example to the host or the booking platform.</p>
+<p>Results live in memory: closing Telltale or tapping <strong>New room</strong> clears them, so save the PDF first if you want to keep them.</p>
 <div class="shots-row">
-<figure><img src="assets/09-results.jpg" alt="What to look at: 2 things to look at, covered so far, and a ranked list of two Wi-Fi devices" width="600" height="1304" loading="lazy"><figcaption>Results (demo room, Wi-Fi only)</figcaption></figure>
+<figure><img src="assets/t-results.jpg" alt="Results: the ring with the count in the middle, covered so far, and the list of spots to look at" width="600" height="1304" loading="lazy"><figcaption>Results (demo room)</figcaption></figure>
 </div>
 </div></section>
 
 <section class="chapter" id="found"><div class="body">
-<p class="label"><span class="no">12</span>If you find a camera</p>
+<p class="label"><span class="no">11</span>If you find a camera</p>
 <h2>What to do</h2>
 <ol class="steps">
 <li><strong>Don't touch it, unplug it or take it apart.</strong> Cover it with a towel if you need privacy right now.</li>
-<li><strong>Photograph it where it is</strong>: close up, and from across the room so the position is clear.</li>
+<li><strong>Photograph it where it is</strong>: close up, and from across the room so the position is clear. Save Telltale's PDF report.</li>
 <li><strong>Report it</strong> to the booking platform or the hotel's front desk, and to the local police. Keep your booking details.</li>
 <li><strong>If you feel unsafe, leave.</strong> Ask the platform or the hotel to move you; many booking platforms have a 24-hour safety line.</li>
 </ol>
 </div></section>
 
 <section class="chapter" id="limits"><div class="body">
-<p class="label"><span class="no">13</span>What it can and can't find</p>
+<p class="label"><span class="no">12</span>What it can and can't find</p>
 <h2>Limits, honestly</h2>
-<p>None of these checks can promise a room is clear. Each catches some cameras and misses others, so run all four and look by hand. The same text is in the app under <strong>What this can and can't find</strong>.</p>
+<p>None of these checks can promise a room is clear. Each catches some cameras and misses others, so run all five and look by hand. The same text is in the app under <strong>What this can and can't find</strong>.</p>
 <h3>What it can miss</h3>
 <ul>
 <li>A lens only flashes back when you're nearly in line with it, so sweep from several spots. Pinholes behind dark glass and anything beyond the flashlight's reach (about 2–3 m) can be missed.</li>
-<li>A camera that is switched off only shows up in the lens scan. The infrared check needs it on with night-vision lights lit, and the Wi-Fi radar needs it streaming.</li>
-<li>The Wi-Fi radar can miss a camera whose router is out of the puck's range (it only counts what it hears at roughly −80 dBm or stronger), and newer Wi-Fi 6 routers that schedule several devices' uploads together can hide one device's stream inside the group.</li>
-<li>It can't hear cameras that record to a memory card without streaming, cameras on a cellular SIM card, or wired cameras. The lens and infrared checks are the backstop for those.</li>
-<li>Devices on fast 5 GHz networks may show as <em>signal unknown</em> until the puck hears them directly.</li>
+<li>A camera that is switched off only shows up in the lens scan. The infrared check and the lights-off test need it on, with night-vision lights.</li>
+<li>Some iPhone cameras can't see infrared at all; the TV-remote test tells you.</li>
+<li>The network check only hears devices on the Wi-Fi you joined that announce themselves. Cameras on another network, on a cellular SIM card, wired, recording to a memory card or staying quiet won't show up.</li>
+<li>The tracker check can't hear AirTags, and many tags change their Bluetooth address often, so "stayed close" only covers one scan.</li>
 <li><strong>A clear result does not mean a room has no cameras.</strong></li>
 </ul>
-<h3>What it can mistake for a camera</h3>
+<h3>What it can mistake for something</h3>
 <ul>
-<li><strong>Lens scan:</strong> shiny screws, glass edges, glossy plastic, water drops and tiny indicator lights. That's why results are spots to check by hand.</li>
-<li><strong>Wi-Fi radar:</strong> a TV streaming, a laptop backing up, a phone on a video call, a smart speaker: anything that uploads steadily. A high score is a device to go and find, and the motion test is how you tell them apart.</li>
+<li><strong>Lens scan:</strong> shiny screws, glass edges, glossy plastic, water drops and tiny indicator lights.</li>
+<li><strong>Infrared and lights-off:</strong> standby LEDs, night lights, chargers and screens.</li>
+<li><strong>Network check:</strong> a doorbell or outdoor camera on the same Wi-Fi, or a smart display with a built-in camera.</li>
+<li><strong>Tracker check:</strong> your own tags, or a tag in the room next door.</li>
 </ul>
 <div class="shots-row">
-<figure><img src="assets/10-limits.jpg" alt="What it can find: how the lens scan, the infrared check and the Wi-Fi radar work" width="600" height="1304" loading="lazy"><figcaption>In the app</figcaption></figure>
+<figure><img src="assets/t-limits.jpg" alt="The Limits screen in the app: what each check can find and what it can miss" width="600" height="1304" loading="lazy"><figcaption>In the app</figcaption></figure>
 </div>
 </div></section>
 
 <section class="chapter" id="trouble"><div class="body">
-<p class="label"><span class="no">14</span>Troubleshooting</p>
+<p class="label"><span class="no">13</span>Troubleshooting</p>
 <h2>When something doesn't work</h2>
 <dl class="terms">
-<div><dt>Can't use the camera</dt><dd>SweepLab needs the camera for the lens and infrared checks. Go to <strong>Settings → SweepLab</strong> and turn on <strong>Camera</strong>.</dd></div>
+<div><dt>Can't use the camera</dt><dd>Telltale needs the camera for the lens and infrared checks. Go to <strong>Settings → Telltale</strong> and turn on <strong>Camera</strong>.</dd></div>
 <div><dt>Measuring the flashlight</dt><dd>Point at a wall or furniture 0.5–2 m away and hold still for two seconds.</dd></div>
 <div><dt>Lots of rings</dt><dd>Shiny things glint. Slow down, sweep from a second spot, and check the strongest first. Switching your own flashlight off tells a lens (goes dark) from an LED (stays lit).</dd></div>
 <div><dt>Remote not seen</dt><dd>Use a classic infrared remote and hold a button down 10–30 cm from the camera being tested. Try the next camera. If none sees it, rely on the lens scan.</dd></div>
-<div><dt>Puck not found</dt><dd>Is it powered, with its light on? Keep it within a few metres of your iPhone. Check that Bluetooth is on, and that <strong>Settings → SweepLab → Bluetooth</strong> is allowed; if Bluetooth isn't available, the app offers <strong>Open Settings</strong>. See the <a href="puck.html#trouble">puck guide</a>.</dd></div>
-<div><dt>Puck out of range</dt><dd>The app waits for it and reconnects on its own. Is it still powered?</dd></div>
-<div><dt>Nothing on the radar</dt><dd>Tap <strong>Listen</strong> and give it a minute: the puck visits each channel in turn.</dd></div>
-<div><dt>Motion test greyed out</dt><dd>Tap <strong>Listen</strong> first so the puck has devices to compare.</dd></div>
-<div><dt>Signal unknown</dt><dd>The device is heard only through the router, which is common on fast 5 GHz networks. Move the puck around the room; a signal appears as soon as the puck hears the device directly.</dd></div>
-<div><dt>My own devices score high</dt><dd>Your phone, laptop or TV may upload steadily too. Tap the dot and choose <strong>This is mine</strong> to dim it for this scan.</dd></div>
-<div><dt>Results are gone</dt><dd>Results are kept only while the app is open. Run the checks again.</dd></div>
+<div><dt>The lights-off test won't start</dt><dd>The room has to get much darker than it was. Switch off every light and close the curtains; a bright window or a lamp left on keeps it waiting.</dd></div>
+<div><dt>Not on Wi-Fi</dt><dd>The network check needs the rental's Wi-Fi. No Wi-Fi here? Skip the step.</dd></div>
+<div><dt>Local Network access is off</dt><dd>Go to <strong>Settings → Telltale</strong> and turn on <strong>Local Network</strong>, then tap <strong>Listen again</strong>.</dd></div>
+<div><dt>Bluetooth access is off</dt><dd>Go to <strong>Settings → Telltale</strong> and turn on <strong>Bluetooth</strong>, then listen again.</dd></div>
+<div><dt>Results are gone</dt><dd>Results are kept only while the app is open. Run the checks again, and save the PDF next time.</dd></div>
 </dl>
-<p>Still stuck? Email <a href="mailto:redthoroughbreds@gmail.com?subject=SweepLab%20support">redthoroughbreds@gmail.com</a> with your iPhone model, iOS version, and whether you use the puck.</p>
+<p>Still stuck? Email <a href="mailto:redthoroughbreds@gmail.com?subject=Telltale%20support">redthoroughbreds@gmail.com</a> with your iPhone model and iOS version.</p>
 <a class="top-link" href="#top">↑ Back to top</a>
 </div></section>
 </main>
 
 <footer>
-<nav class="links" aria-label="Footer"><a href="./">Home</a><a href="guide.html">User guide</a><a href="puck.html">The puck</a><a href="privacy.html">Privacy policy</a><a href="./#support">Support</a></nav>
-<p>SweepLab helps you check a room you're staying in. It can't guarantee that a room is free of cameras. Maker names in the app come from the public registry of Wi-Fi address prefixes and are a hint, not proof of what a device is.</p>
+<nav class="links" aria-label="Footer"><a href="./">Home</a><a href="guide.html">User guide</a><a href="privacy.html">Privacy policy</a><a href="./#support">Support</a></nav>
+<p>Telltale helps you check a room you're staying in. It can't guarantee that a room is free of cameras or trackers. Maker names in the app are a hint, not proof of what a device is.</p>
 <p>© 2026 Seth Egger</p>
 </footer>
 </div></body></html>
