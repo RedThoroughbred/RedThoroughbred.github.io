@@ -158,11 +158,9 @@
 <div class="words">
 <p>Two photos can look almost the same. The engine takes a <b>SHA-256</b> of every pixel, a fingerprint that changes completely if a single pixel changes.</p>
 <p>That fingerprint seeds the small details: each tone tuned within &plusmn;3 cents (mostly too little to hear on its own) and placed within &plusmn;5 %, the harmonics' phases, the exact path the line takes, where the grains wander. The character still comes from the picture; the signature guarantees that two different files never render the same audio, even when the difference is too small to hear.</p>
-<p>The sound as a whole (the photo, every knob, every touch) has a fingerprint too, shown as a short code.</p>
 </div>
 <div class="stack">
 <div class="card"><span class="k">The sunset's signature</span><div class="hexcode" id="seed">c967 5933 ad06 88f1</div><p style="margin:8px 0 0">The first 8 bytes of the pixels' SHA-256, as the engine uses it.</p></div>
-<div class="card"><span class="k">The sound's fingerprint <span class="badge coming">coming</span></span><div class="hexcode" id="fp">A06E-2C5F-A078</div><p style="margin:8px 0 0">The sunset sound as it comes in, settings and picture together. Shown in the next round of Sculpt.</p></div>
 </div>
 </div>
 </section>
@@ -207,7 +205,6 @@
 <div class="words">
 <p>Sculpt opens the block. Paint it with materials (Lead is heavy and soft, Crystal light and stiff) and its tones move. While the brush is down the engine estimates them; when it lifts, it solves them exactly for its model of the block.</p>
 <p>On one photo you paint the picture instead. Stripes you paint are a pattern, and a pattern is a new tone.</p>
-<p>The next round <span class="badge coming">coming</span> counts what that means. For one set of photos: at least 10<sup>28,275</sup> different sculpts you could save, though most would sound alike. And a rough count: allowing only steps of at least 5 cents in the 8 loudest tones and 3 dB in six harmonics, a block has about 10<sup>13</sup> settings. A back-of-envelope figure, not a listening test.</p>
 </div>
 <div class="pair" style="margin:0">
 <figure><img src="assets/sculpt-space.webp" alt="A block of soft coloured points seen from above, a bar of pale blue material painted through its middle" loading="lazy" width="1200" height="800"><figcaption>Painting a material through the block.</figcaption></figure>
