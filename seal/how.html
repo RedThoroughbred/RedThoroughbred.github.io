@@ -1,0 +1,157 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Seal works: the security model in plain words</title>
+<meta name="description" content="How Seal keeps a secret: the two halves of a key, keys that each open a file on their own, what is stored where, what the session lock for Claude Code does and doesn’t do, and the standard formats underneath.">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f4efe7" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('seal-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="Seal">
+<meta property="og:title" content="How Seal works"><meta property="og:description" content="The security model in plain words: what Seal keeps, where, and what it never does.">
+<meta property="og:url" content="https://redthoroughbred.github.io/seal/how.html">
+<meta property="og:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="The Seal app icon, a dark paper seal with clay-orange rings around a keyhole, and the words: Seal, the key your computer doesn’t have.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How Seal works"><meta name="twitter:description" content="The security model in plain words: what Seal keeps, where, and what it never does."><meta name="twitter:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg">
+<link rel="canonical" href="https://redthoroughbred.github.io/seal/how.html">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=2"><script src="site.js?v=2" defer></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="30" height="30"><span>Seal</span></a><nav aria-label="Site"><a href="./">Home</a><a href="how.html" aria-current="page">How it works</a><a href="guide/">Guides</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+
+<main id="main">
+<div class="page-hero">
+<p class="label"><span class="no">How it works</span>The security model</p>
+<h1>A key that can’t be copied, and the rules around it.</h1>
+<p class="lede">Seal is built on one idea: the key that opens your files and signs for you lives in your iPhone’s security chip, and nothing can copy it out. Here is what that means, in plain words, and where its limits are.</p>
+<nav class="toc-row" aria-label="On this page"><a href="#halves"><i>01</i>Two halves</a><a href="#doors"><i>02</i>Either key opens</a><a href="#where"><i>03</i>What is stored where</a><a href="#chip"><i>04</i>Face ID and the chip</a><a href="#purpose"><i>05</i>Signatures</a><a href="#lock"><i>06</i>The session lock</a><a href="#never"><i>07</i>What Seal never does</a><a href="#formats"><i>08</i>Standard formats</a></nav>
+</div>
+
+<section class="sec" id="halves" aria-labelledby="halves-h">
+<p class="label"><span class="no">01</span>Two halves</p>
+<h2 id="halves-h">Every key has a private half and a public half.</h2>
+<p class="lede">The two halves are made together and fit only each other. What one half locks, only the other opens.</p>
+<div class="halves">
+<div>
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2.5"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2.5V5M15 2.5V5M9 19v2.5M15 19v2.5M2.5 9H5M2.5 15H5M19 9h2.5M19 15h2.5"/></svg></div>
+<h3>The private half</h3>
+<p class="k">Stays in the chip</p>
+<p>It opens files and signs. It stays in your iPhone’s chip, and nobody ever sees it.</p>
+<ul><li>Made inside the chip; it never leaves it.</li><li>Works only after Face ID.</li><li>On a Ledger, the card’s private halves stay in the Ledger.</li></ul>
+</div>
+<div>
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></div>
+<h3>The public half</h3>
+<p class="k">Safe to hand out</p>
+<p>A small file. Whoever has it can seal files that only your iPhone opens, and check that a signature came from you.</p>
+<ul><li>Send it with AirDrop, Messages or Mail, or paste it into any chat.</li><li>To be sure a key is really someone’s, read the fingerprint to each other on a call.</li></ul>
+</div>
+</div>
+<ul class="more"><li><a href="guide/friends.html">Swap keys with someone</a></li></ul>
+</section>
+
+<section class="sec" id="doors" aria-labelledby="doors-h">
+<p class="label"><span class="no">02</span>Either key opens</p>
+<h2 id="doors-h">Two keys are two doors, not two locks.</h2>
+<div class="doors">
+<div class="key"><b>This iPhone’s key</b><i>opens it alone</i></div>
+<div class="key"><b>Your Ledger</b><i>opens it alone</i></div>
+<div class="key"><b>A backup key</b><i>opens it alone</i></div>
+<div class="file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><rect x="9" y="12.5" width="6" height="5" rx="1"/><path d="M10.5 12.5v-1.2a1.5 1.5 0 0 1 3 0v1.2"/></svg>notes.md.gpg</div>
+<div class="say">
+<p>When you seal a file, you tick the keys that may open it. <strong>Each ticked key opens the file on its own.</strong> You never need two at once.</p>
+<p>That way, losing one key doesn’t lose the file. Seal suggests a second key for anything you must keep: a backup key, or a Ledger.</p>
+</div>
+</div>
+<p class="lede">A vault is a saved set of these ticks, with a name. A change to a vault counts for files sealed from then on: files sealed before keep the keys they were sealed for.</p>
+</section>
+
+<section class="sec" id="where" aria-labelledby="where-h">
+<p class="label"><span class="no">03</span>What is stored where</p>
+<h2 id="where-h">What Seal keeps, and where it keeps it.</h2>
+<div class="tablewrap"><table class="t">
+<thead><tr><th scope="col">What</th><th scope="col">Where</th><th scope="col">What that means</th></tr></thead>
+<tbody>
+<tr><td>This iPhone’s private key</td><td>The iPhone’s security chip (the Secure Enclave)</td><td>It never leaves the chip and works only after Face ID. It can’t be copied, by design.</td></tr>
+<tr><td>A Ledger’s keys</td><td>The Ledger</td><td>Seal reads the card. It never writes to it, never changes a PIN, never makes or deletes a key there.</td></tr>
+<tr><td>Files a vault keeps</td><td>This iPhone, in Seal’s own space</td><td>Sealed on the disk, and the disk keeps them unreadable while the phone is locked. Not in iCloud Drive and not in the Files app. If iCloud Backup is on, they travel in your phone’s backup, still sealed. Deleting Seal deletes them.</td></tr>
+<tr><td>A file you’ve opened</td><td>Memory only</td><td>Never written to the disk. Closing the screen, or leaving the app, lets it go.</td></tr>
+<tr><td>Text you copy from an opened file</td><td>The clipboard, for a short while</td><td>On this iPhone only.</td></tr>
+<tr><td>An unsealed copy you save</td><td>Where you choose</td><td>After that, that copy is yours to look after.</td></tr>
+<tr><td>Sealed files you share or save</td><td>Where you put them</td><td>A sealed file is safe to send anywhere: only its keys open it.</td></tr>
+<tr><td>The OpenPGP PIN</td><td>The card, and nowhere else</td><td>Not saved, not logged. Three wrong tries and the card locks.</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="sec" id="chip" aria-labelledby="chip-h">
+<p class="label"><span class="no">04</span>Face ID and the chip</p>
+<h2 id="chip-h">The key belongs to this iPhone alone.</h2>
+<div class="twocol">
+<div><h3><i></i>If you lose your iPhone</h3><ul><li>The phone’s key goes with it: it can’t be copied, by design.</li><li>Files sealed for another key you own, such as a Ledger or a backup key, still open with that key.</li></ul></div>
+<div><h3><i></i>If you set up Face ID again</h3><ul><li>iOS retires keys tied to the old Face ID, so this iPhone’s key stops working. Seal says so, and you can make a new one.</li><li>Files sealed only for the old key can’t be opened.</li></ul></div>
+</div>
+<p class="lede">That is why Seal asks you to seal anything you must keep for a second key too. A file sealed only for the iPhone’s key opens only on that iPhone.</p>
+</section>
+
+<section class="sec" id="purpose" aria-labelledby="purpose-h">
+<p class="label"><span class="no">05</span>Signatures</p>
+<h2 id="purpose-h">Every signature names its purpose.</h2>
+<div class="prose">
+<p class="lede">A signature says you stand behind exactly those bytes. Each one Seal makes names what it is for: a commit, a file, a pass. A signature made for one can’t be used as another, and never as a login.</p>
+<p>For a commit, the phone shows the commit’s message, its author and its IDs, not the changes in the code: look at those on the Mac before you sign. On the Mac, the signature is checked with ssh-keygen before git gets it.</p>
+</div>
+</section>
+
+<section class="sec" id="lock" aria-labelledby="lock-h">
+<p class="label"><span class="no">06</span>The session lock</p>
+<h2 id="lock-h">What the session lock does, and doesn’t do.</h2>
+<p class="lede">Anyone who gets into your computer, or into your account, can talk to the agents working there. The lock puts your phone in the way: a Claude Code session under it holds every message and every tool call until your iPhone signs a pass.</p>
+<div class="lockflow" aria-label="How a pass is made">
+<div><i>Mac</i><b>Held</b><span>A message arrives with no good pass. It is not taken, and the request goes on the clipboard.</span></div>
+<div><i>Clipboard</i><b>Carried</b><span>The same Apple Account on both, so the clipboard is shared.</span></div>
+<div><i>iPhone</i><b>Read</b><span>The request names your Mac and when the pass ends.</span></div>
+<div><i>Face ID</i><b>Signed</b><span>The chip signs. The signature comes back the same way.</span></div>
+<div><i>Mac</i><b>30 minutes</b><span>The Mac trusts that one key, and only it, for passes.</span></div>
+</div>
+<div class="twocol">
+<div><h3><i></i>What it does</h3><ul>
+<li>It holds <strong>messages and tools</strong> in sessions started under it. Your other sessions are not under the lock.</li>
+<li>Nothing on the computer can make a pass, because the key is in your phone.</li>
+<li>While a pass is good, the session works as usual, with Claude’s own permission questions.</li>
+<li>From the phone, a line starting with <code>!</code> arrives as a plain message, and is held.</li>
+<li><code>seal-gate pass drop</code> locks it again before the 30 minutes are up.</li>
+</ul></div>
+<div><h3><i class="no"></i>What it doesn’t do</h3><ul>
+<li>A command typed with <code>!</code> at the Mac’s own keyboard is not held. But whoever sits at your keyboard can open Terminal anyway.</li>
+<li>The lock’s files belong to your user account. A hardened version, with its rules in an admin-owned file, is planned.</li>
+<li>It can’t stop someone using a stolen login on Anthropic’s own servers. It stops them running anything on <strong>your</strong> computer.</li>
+</ul></div>
+</div>
+<div class="note"><p><b>The Mac side comes with the first release.</b> <code>seal-gate</code> is a small tool for the Mac, with a one-step install. Away from the Mac, with Remote Control, the held message shows the request as one line you copy on the phone, and you paste the signature back as your next message.</p></div>
+<ul class="more"><li><a href="guide/session-lock.html">Lock your Claude Code sessions</a></li></ul>
+</section>
+
+<section class="sec" id="never" aria-labelledby="never-h">
+<p class="label"><span class="no">07</span>What Seal never does</p>
+<h2 id="never-h">The rules that don’t bend.</h2>
+<ul class="nevers prose">
+<li><strong>It never talks to the internet.</strong> There is no account, no analytics and no network code. It reads and writes only what you hand it.</li>
+<li><strong>It never holds a private key in a file.</strong> Yours stays in the chip; a Ledger’s stays in the Ledger.</li>
+<li><strong>It never writes an opened file to the disk.</strong> Opened files live in memory, and closing the screen lets them go.</li>
+<li><strong>It never asks for Face ID for a file it can’t open.</strong> Seal reads who a file is for before anything is opened, and says so first.</li>
+<li><strong>It never shows what was open to someone glancing.</strong> When Seal isn’t in front (the app switcher, Control Center), it shows a plain cover. Leaving the app closes any opened file.</li>
+</ul>
+</section>
+
+<section class="sec" id="formats" aria-labelledby="formats-h">
+<p class="label"><span class="no">08</span>Standard formats</p>
+<h2 id="formats-h">Nothing depends on Seal.</h2>
+<div class="twocol">
+<div><h3><i></i>OpenPGP, for sealed files</h3><ul><li>What Seal seals, gpg opens. Files cross between the phone and any computer.</li><li>A file sealed for someone’s key opens with Seal or with gpg on a computer.</li><li>A file locked with a passphrase opens with GnuPG 2.3 or newer, or with Seal.</li></ul></div>
+<div><h3><i></i>OpenSSH, for signatures</h3><ul><li>What Seal signs, OpenSSH checks: <code>ssh-keygen</code> on any computer.</li><li>Git signs commits with it, and GitHub can show them as Verified.</li><li>A message you sign comes with the one line that checks it on a computer.</li></ul></div>
+</div>
+<ul class="more"><li><a href="guide/mac.html">Seal and open on a Mac</a></li><li><a href="guide/questions.html">Questions</a></li></ul>
+</section>
+</main>
+
+<footer>
+<nav aria-label="Footer"><a href="./">Home</a><a href="how.html">How it works</a><a href="guide/">Guides</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="../">More apps by Seth Egger</a></nav>
+<p>Made by <a href="../">Seth Egger</a>, an independent developer in Kentucky.</p>
+<p>Apple, iPhone, Mac, Face ID, AirDrop and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Ledger is a trademark of Ledger SAS, YubiKey of Yubico, GitHub of GitHub, Inc., and Claude of Anthropic. Seal is an independent app, not affiliated with or endorsed by any of them.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>

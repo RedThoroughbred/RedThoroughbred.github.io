@@ -1,0 +1,184 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seal: the key your computer doesn’t have</title>
+<meta name="description" content="Seal turns your iPhone into a security key: seal files, sign git commits, and approve your AI agents with Face ID. The key lives in the iPhone’s security chip and never leaves it. No account, no network, nothing collected. Coming soon for iPhone.">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f4efe7" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('seal-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta property="og:type" content="website"><meta property="og:site_name" content="Seal">
+<meta property="og:title" content="Seal: the key your computer doesn’t have">
+<meta property="og:description" content="Your iPhone becomes a security key: seal files, sign commits, and approve your AI agents with Face ID.">
+<meta property="og:url" content="https://redthoroughbred.github.io/seal/">
+<meta property="og:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="The Seal app icon, a dark paper seal with clay-orange rings around a keyhole, and the words: Seal, the key your computer doesn’t have.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Seal: the key your computer doesn’t have"><meta name="twitter:description" content="Your iPhone becomes a security key: seal files, sign commits, and approve your AI agents with Face ID."><meta name="twitter:image" content="https://redthoroughbred.github.io/seal/assets/og-image.jpg">
+<link rel="canonical" href="https://redthoroughbred.github.io/seal/">
+<link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=2"><script src="site.js?v=2" defer></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="" width="30" height="30"><span>Seal</span></a><nav aria-label="Site"><a href="./" aria-current="page">Home</a><a href="how.html">How it works</a><a href="guide/">Guides</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+
+<main id="main">
+<div class="hero">
+<div class="hero-words">
+<img class="appicon" src="assets/icon.png" alt="The Seal app icon: a dark paper seal with clay-orange rings around a bone-white keyhole" width="84" height="84">
+<p class="eyebrow"><i aria-hidden="true"></i>Coming soon · iPhone</p>
+<h1>The key your computer <em>doesn’t</em> have.</h1>
+<p class="sub">Your iPhone becomes a security key: seal files, sign commits, and approve your AI agents with Face&nbsp;ID.</p>
+<div class="cta"><a class="btn primary" href="guide/">Read the guides</a><a class="btn" href="how.html">How it works</a></div>
+<p class="meta">No account · no network · nothing collected</p>
+</div>
+<div class="hero-art">
+<svg class="rings" viewBox="0 0 680 680" aria-hidden="true" focusable="false">
+<circle cx="340" cy="340" r="326" fill="none" stroke="var(--ring)" stroke-width="5" stroke-linecap="round" stroke-dasharray="0 15.3"/>
+<circle cx="340" cy="340" r="306" fill="none" stroke="var(--ring)" stroke-width="1.2"/>
+<g class="spin"><circle cx="340" cy="340" r="284" fill="none" stroke="var(--ring)" stroke-width="1.2" stroke-dasharray="34 10 4 10"/></g>
+<circle cx="340" cy="340" r="258" fill="none" stroke="var(--ring2)" stroke-width="1"/>
+<g class="spin back"><circle cx="340" cy="340" r="232" fill="none" stroke="var(--ring)" stroke-width="1.2" stroke-dasharray="2 9"/></g>
+<circle cx="340" cy="340" r="204" fill="none" stroke="var(--ring)" stroke-width="2"/>
+<circle cx="340" cy="340" r="178" fill="none" stroke="var(--ring2)" stroke-width="1" stroke-dasharray="60 14"/>
+</svg>
+<div class="device"><div class="phone"><img src="assets/guide/vault-page.jpg" width="900" height="1948" alt="Seal’s Vault page: a button to choose a file to seal or open, and two vaults, Personal and Business, with their keys" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<div class="ledger" aria-label="At a glance">
+<div><b>0</b><span>data collected. No account, no analytics, no network code.</span></div>
+<div><b>1 <small>chip</small></b><span>Your iPhone’s key lives in its security chip and never leaves it.</span></div>
+<div><b>Face ID</b><span>before the key does anything: open, sign or say yes.</span></div>
+<div><b>OpenPGP</b><span>What Seal seals, gpg opens. Files cross to any computer.</span></div>
+<div><b>SSH</b><span>What Seal signs, OpenSSH checks. GitHub can show Verified.</span></div>
+<div><b>30 <small>min</small></b><span>One pass from your phone opens a locked Claude Code session.</span></div>
+</div>
+
+<section class="sec" id="vaults" aria-labelledby="vaults-h">
+<p class="label"><span class="no">§ 01</span>Vaults and files</p>
+<h2 id="vaults-h">Seal it once. Any one of its keys opens it.</h2>
+<p class="lede">A vault is a named set of keys, like Personal or Business. Seal a note or any file for it, and the vault keeps it on your iPhone, still sealed. Send it anywhere: only the vault’s keys open it.</p>
+<div class="trio">
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/vault-edit.jpg" width="900" height="1948" alt="A vault’s keys, each with a tick" loading="lazy"></div></div><figcaption><b>Pick its keys</b>Your own are ticked to start with.</figcaption></figure>
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/compose-vault.jpg" width="900" height="1948" alt="Sealing a note for the vault Business" loading="lazy"></div></div><figcaption><b>Seal for it</b>A note, or any file.</figcaption></figure>
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/vault-shelf.jpg" width="900" height="1948" alt="The sealed files the vault Business keeps, each with Open, Send and Delete" loading="lazy"></div></div><figcaption><b>Find it again</b>Open, Send or Delete.</figcaption></figure>
+</div>
+<div class="points">
+<div><h3>Two doors, not two locks</h3><p>Each ticked key opens the file on its own. Tick a second key you own, so losing one doesn’t lose the files.</p></div>
+<div><h3>Opened in memory only</h3><p>An opened file is never written to the disk. Closing the screen, or leaving the app, lets it go.</p></div>
+<div><h3>Kept in Seal’s own space</h3><p>Not in iCloud Drive or the Files app. If iCloud Backup is on, the files travel in it still sealed.</p></div>
+</div>
+<ul class="more"><li><a href="guide/vaults.html">Keep files in a vault</a></li><li><a href="guide/open.html">Open a sealed file</a></li><li><a href="guide/friends.html">Swap keys with someone</a></li></ul>
+</section>
+
+<section class="sec" id="lock" aria-labelledby="lock-h">
+<p class="label"><span class="no">§ 02</span>The session lock, for AI agents</p>
+<h2 id="lock-h">Your agents wait for your phone.</h2>
+<p class="lede">AI agents now work on your computer for you. Anyone who gets into your computer, or into your account, can talk to them too. Under the session lock, a Claude Code session takes no message and runs no tool until your iPhone signs a pass with Face&nbsp;ID.</p>
+<div class="split">
+<div class="words">
+<div class="term"><div class="bar"><i></i><i></i><i></i><span>On the Mac</span></div>
+<pre><span class="c"># once: trust your phone’s key (Sign page, Copy SSH key)</span>
+<span class="p">$ </span>seal-gate --setup "$(pbpaste)"
+
+<span class="c"># start a locked session</span>
+<span class="p">$ </span>claude --settings "$(seal-gate settings)"
+<span class="o">  Your message was not taken, and nothing runs.</span>
+
+<span class="c"># lock again before the 30 minutes are up</span>
+<span class="p">$ </span>seal-gate pass drop</pre></div>
+<ol class="flow">
+<li><b>Held.</b> Without a pass, a message is not taken and nothing runs. The request is put on the clipboard.</li>
+<li><b>Read.</b> On the phone, <code>Paste a signing request</code>. It names your Mac and when the pass ends.</li>
+<li><b>Signed.</b> <code>Sign with Face ID</code>, then <code>Copy the signature</code>. Nothing on the computer can make a pass: the key is in your phone.</li>
+<li><b>Thirty minutes.</b> The session works as usual, with Claude’s own permission questions.</li>
+</ol>
+</div>
+<div class="side"><figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/pass-request.jpg" width="900" height="1948" alt="What the phone shows for a pass, with Sign with Face ID" loading="lazy"></div></div><figcaption><b>A pass, asked for</b>Read it, then Face ID.</figcaption></figure></div>
+</div>
+<div class="note"><p><b>The Mac side comes with the first release.</b> The lock’s Mac half, <code>seal-gate</code>, and the commit signer, <code>seal-git-sign</code>, are small tools with a one-step install. The lock holds sessions started under it, and nothing else: read <a href="how.html#lock">what it does and doesn’t do</a>.</p></div>
+<ul class="more"><li><a href="guide/session-lock.html">Lock your Claude Code sessions</a></li><li><a href="how.html#lock">What the lock does and doesn’t do</a></li></ul>
+</section>
+
+<section class="sec" id="sign" aria-labelledby="sign-h">
+<p class="label"><span class="no">§ 03</span>Signed commits</p>
+<h2 id="sign-h">Commits signed by a key your Mac never holds.</h2>
+<p class="lede">Git can sign commits with an SSH key. With Seal, that key is your iPhone’s: git asks the phone, you read the commit there, and you say yes with Face&nbsp;ID.</p>
+<div class="split rev">
+<div class="side"><figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/sign-request.jpg" width="900" height="1948" alt="A git commit waiting for a signature on the Sign page" loading="lazy"></div></div><figcaption><b>A commit, waiting</b>Its message, author and IDs.</figcaption></figure></div>
+<div class="words">
+<div class="term"><div class="bar"><i></i><i></i><i></i><span>In a repository</span></div>
+<pre><span class="c"># once per repository: this repository’s settings only</span>
+<span class="p">$ </span>seal-git-sign --setup "$(pbpaste)"
+
+<span class="p">$ </span>git commit -S -m "Your message"</pre></div>
+<ul class="ticks">
+<li><strong>You read it first.</strong> The phone shows the commit’s message, its author and its IDs. Look at the changes on the Mac before you sign.</li>
+<li><strong>Checked before git gets it.</strong> The Mac checks the signature with ssh-keygen, and only then gives it to git.</li>
+<li><strong>Verified on GitHub.</strong> Add the same key to GitHub as a Signing Key, and commits signed this way can show as Verified.</li>
+<li><strong>Every signature names its purpose:</strong> a commit, a file, a pass. One made for one can’t be used as another, and never as a login.</li>
+</ul>
+</div>
+</div>
+<ul class="more"><li><a href="guide/sign-commit.html">Sign a git commit from your phone</a></li><li><a href="guide/mac.html">Seal and open on a Mac</a></li></ul>
+</section>
+
+<section class="sec" id="keys" aria-labelledby="keys-h">
+<p class="label"><span class="no">§ 04</span>Hardware keys</p>
+<h2 id="keys-h">Already carry a Ledger? Seal reads it.</h2>
+<p class="lede">Plug a Ledger into the iPhone with a USB-C cable, open its OpenPGP app, and its keys work in Seal: seal for it, open with it, sign with it. Seal reads the card. It never writes to it, never changes a PIN, and never makes or deletes a key there.</p>
+<div class="split">
+<div class="words">
+<div class="keys">
+<div><b>This iPhone</b><span>A key made in its security chip. Works after Face ID.</span><em class="ok">Works today</em></div>
+<div><b>Ledger, with its OpenPGP app</b><span>Over USB-C, with the card’s OpenPGP PIN.</span><em class="ok">Works today</em></div>
+<div><b>YubiKey</b><span>And other OpenPGP cards.</span><em class="plan">Planned</em></div>
+</div>
+<p style="margin-top:22px">The Ledger and your iPhone make a good pair: tick both when you seal, and either one opens the file. Lose the phone, and the Ledger still opens everything.</p>
+<p>The OpenPGP PIN goes to the card and nowhere else: not saved, not logged.</p>
+</div>
+<div class="side"><figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/card.jpg" width="900" height="1948" alt="The Card page: PIN tries left and the three keys on the card" loading="lazy"></div></div><figcaption><b>The Card page</b>PIN tries, and the card’s three keys.</figcaption></figure></div>
+</div>
+<ul class="more"><li><a href="guide/ledger.html">Use a Ledger</a></li></ul>
+</section>
+
+<section class="sec" id="looks" aria-labelledby="looks-h">
+<p class="label"><span class="no">§ 05</span>Six looks</p>
+<h2 id="looks-h">Six looks, one quiet app.</h2>
+<p class="lede">Open <strong>More</strong>, then <strong>Look</strong>, and tap one.</p>
+<div class="looks">
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/look-graphite.jpg" width="900" height="1948" alt="Seal in the look Graphite" loading="lazy"></div></div><figcaption><b>Graphite</b>Calm and plain. Colour only where it means something.</figcaption></figure>
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/look-midnight.jpg" width="900" height="1948" alt="Seal in the look Midnight" loading="lazy"></div></div><figcaption><b>Midnight</b>Deep blue, with one blue for what you tap.</figcaption></figure>
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/look-paper.jpg" width="900" height="1948" alt="Seal in the look Paper" loading="lazy"></div></div><figcaption><b>Paper</b>Light. Ink on paper, thin lines, a serif typeface.</figcaption></figure>
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/look-terminal.jpg" width="900" height="1948" alt="Seal in the look Terminal" loading="lazy"></div></div><figcaption><b>Terminal</b>Black, green and fixed-width letters.</figcaption></figure>
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/look-rose.jpg" width="900" height="1948" alt="Seal in the look Rose" loading="lazy"></div></div><figcaption><b>Rose</b>Light and soft. A pink page, plum ink, round corners.</figcaption></figure>
+<figure class="shot"><div class="device"><div class="phone"><img src="assets/guide/look-rainbow.jpg" width="900" height="1948" alt="Seal in the look Rainbow" loading="lazy"></div></div><figcaption><b>Rainbow</b>Every colour at once, on a dark page.</figcaption></figure>
+</div>
+</section>
+
+<section class="sec" id="guides" aria-labelledby="guides-h">
+<p class="label"><span class="no">§ 06</span>Guides</p>
+<h2 id="guides-h">Step by step, from your first key.</h2>
+<p class="lede">Short guides with a picture of each screen. The same guides are in the app, under <strong>More</strong>, <strong>Guides</strong>, and they work offline.</p>
+<!-- guides:begin -->
+<ol class="gindex" role="list">
+<li><a href="guide/start.html"><i>01</i><b>Start here</b><span>Seal is the key your computer doesn’t have. Two minutes to your first key.</span><small>The four pages · Make this iPhone’s key · Pick a look · What Seal never does · These guides, in the app</small></a></li>
+<li><a href="guide/vaults.html"><i>02</i><b>Keep files in a vault</b><span>A vault is a named set of keys, like Personal or Business. Seal a file for it, and the vault keeps it.</span><small>Make a vault · Seal something for it · Find it again · Change or delete a vault</small></a></li>
+<li><a href="guide/open.html"><i>03</i><b>Open a sealed file</b><span>A file sealed for your key opens with Face ID, or with your Ledger’s PIN.</span><small>Bring the file in · Open it</small></a></li>
+<li><a href="guide/friends.html"><i>04</i><b>Swap keys with someone</b><span>To seal a file for someone, you need their public key. To get files from them, they need yours.</span><small>Send your public key · Add theirs · Put them in a vault · They don’t have Seal?</small></a></li>
+<li><a href="guide/session-lock.html"><i>05</i><b>Lock your Claude Code sessions</b><span>A locked session takes no message and runs no tool until your phone says yes with Face ID.</span><small>What you need · Pair your phone (once) · Try one round, with no session · Start a locked session · Away from the Mac · What it does and doesn’t do</small></a></li>
+<li><a href="guide/sign-commit.html"><i>06</i><b>Sign a git commit from your phone</b><span>The key that signs your commits is in your phone, and a commit is signed only after you’ve read it.</span><small>Set up a repository (once) · Sign a commit · GitHub’s Verified mark · Sign a message you type</small></a></li>
+<li><a href="guide/ledger.html"><i>07</i><b>Use a Ledger</b><span>Already have OpenPGP keys on a Ledger? Seal uses them over USB-C, and never changes them.</span><small>Connect it · Use its keys · Why use both</small></a></li>
+<li><a href="guide/mac.html"><i>08</i><b>Seal and open on a Mac</b><span>Seal speaks OpenPGP, the same as gpg. Files cross between the phone and any computer.</span><small>Seal on the Mac, open on the phone · Seal on the phone, open on the Mac · A file with a passphrase</small></a></li>
+<li><a href="guide/questions.html"><i>09</i><b>Questions</b><span>Short answers to what people ask first.</span><small>Where are my files? · I ticked two keys. Do I need both to open the file? · What if I lose my iPhone? · What if I set up Face ID again? · Does Seal send anything anywhere? · Does someone need Seal to open what I send? · What can someone see when I’m not looking? · Which hardware keys work?</small></a></li>
+</ol>
+<!-- guides:end -->
+</section>
+
+<div class="closing">
+<h2>Seal is coming to the iPhone.</h2>
+<p>No account to make and nothing to sign up for. When it’s out, it will be on the App Store, and this page will say so.</p>
+<span class="storebadge" role="img" aria-label="Seal, coming soon to the App Store for iPhone"><img src="assets/apple-touch-icon.png" alt="" width="42" height="42"><span><small>Coming soon to the App Store</small><b>Seal · iPhone</b></span></span>
+</div>
+</main>
+
+<footer>
+<nav aria-label="Footer"><a href="./">Home</a><a href="how.html">How it works</a><a href="guide/">Guides</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="../">More apps by Seth Egger</a></nav>
+<p>Made by <a href="../">Seth Egger</a>, an independent developer in Kentucky. The pictures are from the iOS simulator, with made-up keys and names.</p>
+<p>Apple, iPhone, Mac, Face ID, AirDrop and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Ledger is a trademark of Ledger SAS, YubiKey of Yubico, GitHub of GitHub, Inc., and Claude of Anthropic. Seal is an independent app, not affiliated with or endorsed by any of them.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div></body></html>
