@@ -421,3 +421,6 @@ pre.copy{white-space:pre-wrap;background:var(--s1);border:1px solid var(--line);
 
 /* A row of pictures shown at one height: each fills the same 3:2 box, cropped from the middle. */
 .pair.even img{aspect-ratio:3/2;width:100%;height:auto;object-fit:cover;object-position:center}
+
+/* A wide film beside words (the home page's photo section): no gap above it in a split. */
+.split .film-wide{margin-top:0}
