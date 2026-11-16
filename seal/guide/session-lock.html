@@ -20,7 +20,7 @@
 <li><a href="vaults.html"><i>02</i>Keep files in a vault</a></li>
 <li><a href="open.html"><i>03</i>Open a sealed file</a></li>
 <li><a href="friends.html"><i>04</i>Swap keys with someone</a></li>
-<li><a href="session-lock.html" aria-current="page"><i>05</i>Lock your Claude Code sessions</a><ol><li><a href="#what-you-need">What you need</a></li><li><a href="#pair-your-phone-once">Pair your phone (once)</a></li><li><a href="#try-one-round-with-no-session">Try one round, with no session</a></li><li><a href="#start-a-locked-session">Start a locked session</a></li><li><a href="#away-from-the-mac">Away from the Mac</a></li><li><a href="#what-it-does-and-doesnt-do">What it does and doesn’t do</a></li></ol></li>
+<li><a href="session-lock.html" aria-current="page"><i>05</i>Lock your Claude Code sessions</a><ol><li><a href="#what-you-need">What you need</a></li><li><a href="#pair-your-phone-once">Pair your phone (once)</a></li><li><a href="#turn-the-lock-on">Turn the lock on</a></li><li><a href="#turn-the-lock-off">Turn the lock off</a></li><li><a href="#stuck">Stuck?</a></li><li><a href="#lost-your-phone">Lost your phone?</a></li><li><a href="#away-from-the-mac">Away from the Mac</a></li><li><a href="#what-it-does-and-doesnt-do">What it does and doesn’t do</a></li></ol></li>
 <li><a href="sign-commit.html"><i>06</i>Sign a git commit from your phone</a></li>
 <li><a href="ledger.html"><i>07</i>Use a Ledger</a></li>
 <li><a href="mac.html"><i>08</i>Seal and open on a Mac</a></li>
@@ -36,39 +36,43 @@
 <h2 id="what-you-need">What you need</h2>
 <ul class="dots" role="list">
 <li>Seal on your iPhone, with <strong>this iPhone’s key</strong> made (see <em>Start here</em>).</li>
-<li>A Mac with Claude Code. The phone and the Mac pass the request and the answer over the shared clipboard: the same Apple Account on both, Handoff on, and the phone near the Mac. iOS may ask you to allow the paste.</li>
-<li>The Mac side of the lock, a small tool called <code>seal-gate</code>. It isn’t available yet: it comes with the first release, as a one-step install. The steps below show how it works.</li>
+<li>A Mac with Claude Code 2.1.295 or later, and Python 3.</li>
+<li><strong>Handoff on, on both</strong>, so the phone and the Mac share a clipboard: the same Apple Account, Wi-Fi and Bluetooth on, the phone near the Mac. On the iPhone: Settings, General, AirPlay &amp; Continuity, Handoff. On the Mac: System Settings, General, AirDrop &amp; Handoff. To check it, copy a word on the phone and press ⌘V on the Mac: the word should appear. iOS may ask you to allow the paste.</li>
+<li>The Mac side, <strong>Seal for Mac</strong>, a Claude Code plugin. In Claude Code:</li>
 </ul>
+<div class="code"><pre><code>/plugin install seal --marketplace RedThoroughbred/seal-mac</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
+<p>In the Claude desktop app, <code>/plugin</code> opens the app’s own plugin settings instead, so run the same line in a terminal as <code>claude plugin install seal --marketplace RedThoroughbred/seal-mac</code>. Nothing is locked until you type <code>/seal:on</code>.</p>
 <h2 id="pair-your-phone-once">Pair your phone (once)</h2>
 <ol class="steps" role="list">
 <li value="1"><span class="n">1</span><div><p>On the phone: <strong>Sign</strong> page, then <code>Copy SSH key</code> under <strong>This iPhone’s signing key</strong> (the signing part of this iPhone’s key). That is the public half: safe to copy.</p></div></li>
-<li value="2"><span class="n">2</span><div><p>On the Mac, in Terminal:</p><div class="code"><pre><code>seal-gate --setup "$(pbpaste)"</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div></div></li>
+<li value="2"><span class="n">2</span><div><p>In Claude Code: <code>/seal:pair</code></p></div></li>
 </ol>
 <p>The Mac now trusts that one key, and only it, for passes.</p>
-<h2 id="try-one-round-with-no-session">Try one round, with no session</h2>
-<div class="code"><pre><code>seal-gate pass try</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
-<p>The Mac puts a request on the clipboard and waits three minutes. On the phone:</p>
+<h2 id="turn-the-lock-on">Turn the lock on</h2>
+<div class="code"><pre><code>/seal:on</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
+<p>Every Claude Code session on this Mac is now under the lock, the one you’re in too, and any other chat you have open. Send any message:</p>
 <ol class="steps" role="list">
-<li value="1"><span class="n">1</span><div><p><strong>Sign</strong> page, <code>Paste a signing request</code>.</p></div></li>
-<li value="2"><span class="n">2</span><div><p>Read it: it names your Mac and when the pass ends.</p></div></li>
+<li value="1"><span class="n">1</span><div><p>Without a pass, the message is held. Claude shows <em>“A hook blocked your prompt”</em> with the steps under it: <em>“Locked. On your phone: Seal, Sign, Paste a signing request, Sign with Face ID, Copy the signature. Then paste it here and send.”</em> The request is already on the Mac’s clipboard.</p></div></li>
+<li value="2"><span class="n">2</span><div><p>On the phone: <strong>Sign</strong> page, <code>Paste a signing request</code>. Read it: it names your Mac and when the pass ends.</p></div></li>
 <li value="3"><span class="n">3</span><div><p><code>Sign with Face ID</code>, then <code>Copy the signature</code>.</p></div></li>
+<li value="4"><span class="n">4</span><div><p>Back on the Mac: click in Claude’s message box, press ⌘V (the Mac fetches the signature from the phone right then) and send. The lock opens, and the pass is good for 30 minutes, for every session on this Mac.</p></div></li>
 </ol>
-<p>The Mac sees the signature and says the pass is good.</p>
-<h2 id="start-a-locked-session">Start a locked session</h2>
-<div class="code"><pre><code>claude --settings "$(seal-gate settings)"</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
-<p>Only that session is under the lock; your other sessions are not. Now send it any message:</p>
-<ol class="steps" role="list">
-<li value="1"><span class="n">1</span><div><p>Without a pass, the message is held: <em>“Your message was not taken, and nothing runs.”</em> The request is already on the clipboard.</p></div></li>
-<li value="2"><span class="n">2</span><div><p>On the phone: <code>Paste a signing request</code>, read it, <code>Sign with Face ID</code>, <code>Copy the signature</code>.</p></div></li>
-<li value="3"><span class="n">3</span><div><p>Send the message again. It runs, and the pass is good for 30 minutes.</p></div></li>
-</ol>
-<p>To lock again before the 30 minutes are up:</p>
-<div class="code"><pre><code>seal-gate pass drop</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
+<p>If ⌘V pastes the request instead of the signature, the phone’s copy didn’t reach the Mac: check Handoff (above), or paste it from the phone through Remote Control (below). The lock also looks for the signature on the Mac’s clipboard whenever a message comes in, so just sending your message again can work too.</p>
+<p>For a longer pass: <code>/seal:pass 120</code> (4 hours at most), while the lock is off or a pass is still good. While the lock is holding you, it waits for a pass like any message. To lock again before the time is up: <code>/seal:drop</code>. To see where things stand: <code>/seal:status</code>.</p>
+<h2 id="turn-the-lock-off">Turn the lock off</h2>
+<div class="code"><pre><code>/seal:off</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
+<p>Turning it off needs your phone too, so nothing on the Mac can do it alone. The request reads <em>Turn the Seal lock off</em>: sign it, <code>Copy the signature</code>, then paste it into a message and send. If the lock is holding you, sign a pass first: <code>/seal:off</code> waits for one like any message, so nobody who can’t sign can slip a different request in front of you.</p>
+<h2 id="stuck">Stuck?</h2>
+<p>Every held message ends with the way out, and it always works from the Mac’s own Terminal app (not from Claude Code):</p>
+<div class="code"><pre><code>rm ~/.seal-gate/lock-on</code></pre><button class="copy" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg><span>Copy</span></button></div>
+<p>That turns the lock off. Whoever sits at your Mac can always do this: the lock keeps your agents from being driven from elsewhere, not your Mac from you.</p>
+<h2 id="lost-your-phone">Lost your phone?</h2>
+<p>If the lock is on and your phone’s key is gone (a lost phone, or Face ID set up again, which ends the key on purpose), turn the lock off the same way, <code>rm ~/.seal-gate/lock-on</code> in the Terminal app, then pair the new key with <code>/seal:pair</code>.</p>
 <h2 id="away-from-the-mac">Away from the Mac</h2>
-<p>With Remote Control, the held message shows the request as one <code>seal://sign?…</code> line. Copy the whole message on the phone: <code>Paste a signing request</code> finds the line inside it. Sign, <code>Copy the signature</code>, and paste the signature back as your next message. The lock reads it there.</p>
+<p>With Remote Control, the held message shows the request as one <code>seal://sign?…</code> line. Copy the whole message on the phone: <code>Paste a signing request</code> finds the line inside it. Sign, <code>Copy the signature</code>, and paste the signature into your next message in the Claude app. The lock reads it there, for a pass and for turning the lock off. This also works at the Mac when the shared clipboard doesn’t.</p>
 <h2 id="what-it-does-and-doesnt-do">What it does and doesn’t do</h2>
 <ul class="dots" role="list">
-<li>It holds <strong>messages and tools</strong> in sessions started under it. A command typed with <code>!</code> at the Mac’s own keyboard is not held, but whoever sits at your keyboard can open Terminal anyway. From the phone, a line starting with <code>!</code> arrives as a plain message, and is held.</li>
+<li>It holds <strong>messages and tools</strong> in every Claude Code session on this Mac that loads your settings. A scheduled job started with <code>--setting-sources ""</code> stays out of it. A command typed with <code>!</code> at the Mac’s own keyboard is not held, but whoever sits at your keyboard can open Terminal anyway. From the phone, a line starting with <code>!</code> arrives as a plain message, and is held.</li>
 <li>While a pass is good, the session works as usual, with Claude’s own permission questions.</li>
 <li>The lock’s files belong to your user account. A hardened version, with its rules in an admin-owned file, is planned.</li>
 <li>It can’t stop someone using a stolen login on Anthropic’s own servers. It stops them running anything on <strong>your</strong> computer.</li>
