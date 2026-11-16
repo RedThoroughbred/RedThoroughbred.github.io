@@ -426,3 +426,8 @@ details p{color:var(--t2);margin:10px 0 0;max-width:740px}
   .rings .spin{animation:none}
   .reveal{opacity:1;transform:none;transition:none}
 }
+
+/* The App Store pictures, in a row you scroll sideways (2026-11-16) */
+.storestrip{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin:56px calc(-1 * var(--gut)) 0;padding:0 var(--gut) 14px;scrollbar-width:thin}
+.storestrip figure{margin:0;flex:none;width:clamp(190px,21vw,236px);scroll-snap-align:start}
+.storestrip img{width:100%;border-radius:18px;box-shadow:0 0 0 1px var(--line2),var(--shadow)}
