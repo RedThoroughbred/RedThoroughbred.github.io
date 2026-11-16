@@ -1,0 +1,938 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Help &amp; How-To · RedSynth Pad guide</title>
+<meta name="description" content="RedSynth Pad help: 35 short how-tos, from your first photo to loops, samples, spaces and GarageBand, plus the questions people ask and fixes when something's wrong.">
+<meta name="theme-color" content="#0c0d10" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f6f6f8" media="(prefers-color-scheme: light)"><script>try{var t=localStorage.getItem('rs-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta property="og:title" content="Help &amp; How-To · RedSynth Pad guide"><meta property="og:image" content="https://redthoroughbred.github.io/redsynth/assets/og-image.jpg">
+<link rel="canonical" href="https://redthoroughbred.github.io/redsynth/guide/howto.html">
+<link rel="icon" href="../assets/icon.png?v=2"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=2"><link rel="stylesheet" href="../styles.css?v=10"><script src="../site.js?v=7" defer></script>
+<style>
+/* Help & How-To only: the article shape (when, picture, steps, callouts, related, back to top),
+   the grouped index at the top, group names in the side list, the FAQ and the fixes. */
+section.ht{padding:0}
+.ht .when{font-size:15.5px;color:var(--t3);margin:-6px 0 14px}
+.ht figure.wide{max-width:560px}
+.ht figure.native img{width:auto;max-width:100%}
+.ht .pair.shots{grid-template-columns:minmax(0,230px) minmax(0,1fr);align-items:start}
+@media (max-width:640px){.ht .pair.shots{grid-template-columns:minmax(0,1fr)}.ht .pair.shots figure.phone{max-width:260px;margin:0 auto}}
+.ht h3{font-size:18px;margin:22px 0 8px}
+.ht table.t{min-width:0}
+@media (max-width:560px){.ht table.t{font-size:14px}.ht table.t th,.ht table.t td{padding:10px 10px}}
+.ht .note{font-size:15px}
+.toc p.grp{margin:14px 0 3px;padding-left:12px;font-size:11px}
+@media (max-width:900px){.toc p.grp{display:none}}
+.htindex{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:22px 0 8px}
+.htindex>div{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:14px 16px 12px}
+.htindex b{display:block;font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:8px}
+.htindex ul{list-style:none;padding:0;margin:0}
+.htindex li{margin:0 0 5px;font-size:15px;line-height:1.35}
+.htindex a{color:var(--t1);text-decoration:none}
+.htindex a:hover{text-decoration:underline}
+.qa{border-bottom:1px solid var(--line);padding:14px 0}
+.qa h3{font-size:17px;margin:0 0 6px;color:var(--t1)}
+.qa p{margin:0}
+.fix{border-bottom:1px solid var(--line);padding:14px 0}
+.fix h3{font-size:17px;margin:0 0 6px}
+.fix ol,.fix ul{margin-bottom:0}
+.fix p{margin:0 0 6px}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a class="brand" href="../"><img src="../assets/icon.png?v=2" alt="" width="30" height="30"><span>RedSynth Pad</span></a><nav aria-label="Site"><a href="../">Home</a><a href="../how.html">How it works</a><a href="../guide/" aria-current="page">Guide</a><a href="../press.html">Press</a><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a></nav><button class="theme" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></header>
+<div class="doc">
+<nav class="toc" aria-label="Guide chapters">
+<p>The guide</p>
+<a href="./">Start here</a>
+<a href="howto.html" aria-current="page">Help &amp; How-To</a>
+<p class="grp">Getting started</p>
+<a class="sub" href="#screen">The screen</a>
+<a class="sub" href="#first-photo">Your first photo</a>
+<a class="sub" href="#modes">The seven modes</a>
+<a class="sub" href="#knobs">The four knobs</a>
+<p class="grp">Playing</p>
+<a class="sub" href="#lanes">Lanes: melodies</a>
+<a class="sub" href="#chords">Chords</a>
+<a class="sub" href="#drums">Drums</a>
+<a class="sub" href="#photo-mode">Photo: play the picture</a>
+<a class="sub" href="#touch-fx">Touch FX</a>
+<a class="sub" href="#line">The line: patterns and direction</a>
+<a class="sub" href="#key">Key, scale and octave</a>
+<a class="sub" href="#colours">Pad colours</a>
+<a class="sub" href="#touch">Fingers, Pencil, trackpad</a>
+<a class="sub" href="#midi">MIDI keyboards and on-screen keys</a>
+<p class="grp">Photos and spaces</p>
+<a class="sub" href="#plays">Scan, Strike or Space</a>
+<a class="sub" href="#space">Two or three photos</a>
+<a class="sub" href="#turn">Turning a space</a>
+<a class="sub" href="#filters">Filters</a>
+<a class="sub" href="#your-photos">Your photos</a>
+<p class="grp">Sounds</p>
+<a class="sub" href="#library">The library</a>
+<a class="sub" href="#save">Save in My sounds</a>
+<a class="sub" href="#send">Send and open a sound file</a>
+<a class="sub" href="#edit">Every knob: Edit</a>
+<a class="sub" href="#sculpt-photo">Sculpt a photo</a>
+<a class="sub" href="#sculpt-space">Sculpt a space</a>
+<p class="grp">Loops and samples</p>
+<a class="sub" href="#beat">Record a beat</a>
+<a class="sub" href="#melody-loop">Record a melody loop</a>
+<a class="sub" href="#launch">Launch loops and scenes</a>
+<a class="sub" href="#loop-editor">The Loop Editor</a>
+<a class="sub" href="#sample">Record or import a sample</a>
+<a class="sub" href="#slices">Slices and the bank</a>
+<p class="grp">GarageBand and other apps</p>
+<a class="sub" href="#garageband">GarageBand on a Mac</a>
+<a class="sub" href="#other-apps">Other music apps</a>
+<p class="grp">Your data and devices</p>
+<a class="sub" href="#data">Where things are kept</a>
+<a class="sub" href="#devices">iPhone, iPad, Mac, new devices</a>
+<p class="grp">More</p>
+<a class="sub" href="#faq">FAQ</a>
+<a class="sub" href="#fixes">Fixes</a>
+<a class="sub" href="#contact">Contact</a>
+<a href="recipes.html">Try this</a>
+<a href="photo.html">The photo instrument</a>
+<a href="space.html">Space and Sculpt</a>
+<a href="pad.html">The pad</a>
+<a href="sounds.html">Sounds and the synth</a>
+<a href="hosts.html">GarageBand and MIDI</a>
+<a href="help.html">Fixes, questions, words</a>
+</nav>
+<main id="main"><article>
+<nav class="crumbs" aria-label="You are here"><a href="./">Guide</a> › <span aria-current="page">Help &amp; How-To</span></nav>
+<h1>Help &amp; How-To</h1>
+<p class="lede">Short answers to "how do I…?", one task each, with the real button names. The chapters go deeper; each how-to links to the right place.</p>
+<p>A quick map first. <span class="badge iphone">iPhone</span> The top bar has the sound's name (tap it for <strong>Sounds</strong>), the photo button, <strong>Play</strong> and <strong>…</strong>, a menu with everything else. The pad's seven modes run along the bottom. <span class="badge ipad">iPad</span> <span class="badge mac">Mac</span> The buttons run along the top of the window: <strong>Sounds</strong>, <strong>Save</strong>, <strong>Photo</strong>, how the photo plays, <strong>Sculpt</strong>, <strong>Pad</strong>, <strong>Edit</strong>, <strong>Help</strong>, <strong>Guide</strong> and <strong>Play</strong>. The modes sit just above the pad. This page describes RedSynth Pad 1.0.</p>
+
+<div class="htindex" id="index">
+<div><b>Getting started</b><ul>
+<li><a href="#screen">The screen on iPhone, iPad and Mac</a></li>
+<li><a href="#first-photo">Your first photo</a></li>
+<li><a href="#modes">The seven modes</a></li>
+<li><a href="#knobs">The four knobs</a></li>
+</ul></div>
+<div><b>Playing</b><ul>
+<li><a href="#lanes">Play a melody: Lanes</a></li>
+<li><a href="#chords">Play chords</a></li>
+<li><a href="#drums">Play the drums</a></li>
+<li><a href="#photo-mode">Play the picture: Photo mode</a></li>
+<li><a href="#touch-fx">Effects under a finger: Touch FX</a></li>
+<li><a href="#line">Move the line: patterns and direction</a></li>
+<li><a href="#key">Key, scale and octave</a></li>
+<li><a href="#colours">Change the pad's colours</a></li>
+<li><a href="#touch">Fingers, Pencil and the Mac trackpad</a></li>
+<li><a href="#midi">MIDI keyboards and on-screen keys</a></li>
+</ul></div>
+<div><b>Photos and spaces</b><ul>
+<li><a href="#plays">How the photo plays: Scan, Strike or Space</a></li>
+<li><a href="#space">Make a space from two or three photos</a></li>
+<li><a href="#turn">Turn and play a space</a></li>
+<li><a href="#filters">Give a photo a filter</a></li>
+<li><a href="#your-photos">Your photos: go back to one</a></li>
+</ul></div>
+<div><b>Sounds</b><ul>
+<li><a href="#library">Find a sound in the library</a></li>
+<li><a href="#save">Save a sound in My sounds</a></li>
+<li><a href="#send">Send a sound, open one you were sent</a></li>
+<li><a href="#edit">Every knob: Edit</a></li>
+<li><a href="#sculpt-photo">Sculpt one photo</a></li>
+<li><a href="#sculpt-space">Sculpt a space</a></li>
+</ul></div>
+<div><b>Loops and samples</b><ul>
+<li><a href="#beat">Record a beat</a></li>
+<li><a href="#melody-loop">Record a melody loop</a></li>
+<li><a href="#launch">Launch loops and scenes</a></li>
+<li><a href="#loop-editor">Fix notes in the Loop Editor</a></li>
+<li><a href="#sample">Record or import a sample</a></li>
+<li><a href="#slices">Slice it and fill the pads</a></li>
+</ul></div>
+<div><b>GarageBand and other apps</b><ul>
+<li><a href="#garageband">Use it in GarageBand on a Mac</a></li>
+<li><a href="#other-apps">Other music apps, iPhone and iPad</a></li>
+</ul></div>
+<div><b>Your data and devices</b><ul>
+<li><a href="#data">Where your photos and sounds are kept</a></li>
+<li><a href="#devices">iPhone, iPad, Mac and a new device</a></li>
+</ul></div>
+<div><b>More</b><ul>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#fixes">Fixes: when something's wrong</a></li>
+<li><a href="#contact">Contact and bug reports</a></li>
+</ul></div>
+</div>
+
+<!-- ============================== Getting started ============================== -->
+
+<section class="ht" id="screen" aria-labelledby="screen-h">
+<h2 id="screen-h">The screen on iPhone, iPad and Mac<a class="hash" href="#screen" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you've just opened the app and want to know what everything is.</p>
+<div class="pair shots">
+<figure class="phone"><img src="../assets/guide/howto-iphone.webp" alt="RedSynth Pad on an iPhone held upright: the sound's name, the photo button, Play and the … menu at the top, a photo with the line across it, the four knobs, the key bar, the pad in Lanes, and seven modes along the bottom" width="480" height="1046" loading="lazy"><figcaption>iPhone, upright: photo on top, pad below, modes along the bottom.</figcaption></figure>
+<figure><img src="../assets/guide/howto-mac.webp" alt="RedSynth Pad on a Mac: a row of buttons across the top, a photo of a cathedral reflected in sunglasses with the line across it, four knobs on the right and a keyboard strip naming the chord C major 9" width="1100" height="686" loading="lazy"><figcaption>Mac, with the pad hidden: buttons along the top, the knobs on the right, the strip naming the chord.</figcaption></figure>
+</div>
+<p>From top to bottom, every device has the same parts:</p>
+<ol>
+<li><strong>The sound's name</strong>, five dots in your photo's colours, and one line saying what the photo became.</li>
+<li><strong>The buttons.</strong> <span class="badge iphone">iPhone</span> The photo button, <strong>Play</strong> and <strong>…</strong>. The <strong>…</strong> menu holds <strong>Save in My sounds…</strong>, <strong>Edit the sound</strong>, <strong>Sculpt</strong>, <strong>Plays as</strong>, <strong>Hide the pad (the keyboard)</strong>, <strong>Show what each control does</strong>, <strong>The photo guide</strong> and About. <span class="badge ipad">iPad</span> <span class="badge mac">Mac</span> <strong>Sounds</strong>, <strong>Save</strong>, <strong>Photo</strong>, the <strong>Scan</strong>/<strong>Strike</strong>/<strong>Space</strong> button, <strong>Sculpt</strong>, <strong>Pad</strong>, <strong>Edit</strong>, <strong>Help</strong>, <strong>Guide</strong>, <strong>Play</strong>. On a narrow window they shrink to icons.</li>
+<li><strong>The photo</strong>, with the glowing line that shows what you're hearing, and the <strong>Line</strong> pill in its corner.</li>
+<li><strong>The four knobs</strong>: Tone, Space, Grit, Wobble.</li>
+<li><strong>The pad</strong>, with its key bar above and its modes (along the bottom on an iPhone).</li>
+<li><span class="badge ipad">iPad</span> <span class="badge mac">Mac</span> <strong>The strip</strong>: the keys you hold, lit, and the chord's name.</li>
+</ol>
+<h3>Help on any control</h3>
+<ul>
+<li><span class="badge mac">Mac</span> Rest the pointer on it. Or press <strong>Help</strong> (<kbd>⌘</kbd><kbd>/</kbd>) and every control wears a line saying what it does.</li>
+<li><span class="badge ipad">iPad</span> Hold a finger still on it, or tap <strong>Help</strong>.</li>
+<li><span class="badge iphone">iPhone</span> Hold a finger still on it, or <strong>…</strong> › <strong>Show what each control does</strong>.</li>
+</ul>
+<h3>Play view</h3>
+<p>Tap <strong>Play</strong> (or press <kbd>V</kbd> with a keyboard) and the photo, or the space, fills the screen. <strong>Leave</strong> or <kbd>Esc</kbd> goes back. Everything still plays.</p>
+<div class="note"><b>Tip:</b> <span class="badge iphone">iPhone</span> Turn the phone on its side and the pad fills the screen, with the buttons in a column on the left. The knobs are in a drawer behind the sliders button.</div>
+<p class="nexttry">Related: <a href="#modes">the seven modes</a> · <a href="index.html#differ">iPhone, iPad and Mac: what's different</a> · <a href="help.html#keys">every keyboard shortcut</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="first-photo" aria-labelledby="first-photo-h">
+<h2 id="first-photo-h">Your first photo<a class="hash" href="#first-photo" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want to hear a picture for the first time.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Tap <strong>Photo</strong>. <span class="badge iphone">iPhone</span> It's the photo button at the top, beside <strong>Play</strong>.</li>
+<li>Choose a picture. On iPhone and iPad the system's photo picker opens, and the app sees only the photo you pick. <span class="badge mac">Mac</span> A file window opens, or drag a photo from Finder onto the window.</li>
+<li>Watch the <strong>breakdown</strong>: for twenty seconds the photo is taken apart on screen while you hear it form. A tap skips it.</li>
+<li>Play the pad. The new sound is named after your photo and kept under <strong>Your photos</strong> in Sounds.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/first-photo.webp" alt="The top of RedSynth Pad on an iPhone: the sound's name Bridge, the photo button, Play and the menu, a bridge photo with the line across it, and the four knobs" width="540" height="600" loading="lazy"><figcaption>A photo in. The line shows what you hear.</figcaption></figure>
+</div>
+<div class="note"><b>Good to know:</b> PNG, JPEG and HEIC work. A new photo plays as <strong>Strike</strong>: an object you hit that rings and sings. See <a href="#plays">Scan, Strike or Space</a>.</div>
+<div class="note"><b>Tip:</b> The first time, a five-step <strong>photo guide</strong> walks you through it. <strong>Guide</strong> (on an iPhone, <strong>…</strong> › <strong>The photo guide</strong>) brings it back. With Reduce Motion on in your device's settings, the breakdown is a shorter crossfade.</div>
+<h3>Photos that work well</h3>
+<ul>
+<li>Bells and plates: a regular pattern. Fences, bricks, waves, fabric.</li>
+<li>Soft pads: smooth pictures. Sky, fog, water.</li>
+<li>Bright, buzzy sounds: busy pictures. Leaves, a crowd, text.</li>
+<li>A strong vowel: one clear colour.</li>
+</ul>
+<p class="nexttry">Related: <a href="photo.html#breakdown">what the breakdown shows</a> · <a href="photo.html#how">how a photo becomes a sound</a> · <a href="#your-photos">getting back to a photo</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="modes" aria-labelledby="modes-h">
+<h2 id="modes-h">The seven modes<a class="hash" href="#modes" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you're not sure which way to play the pad.</p>
+<div class="recipe-body">
+<div>
+<p>The mode bar switches the pad. Pick by what you want to do:</p>
+<ul>
+<li><strong>Lanes</strong>: single notes in columns. A melody or a bass line. <a href="#lanes">How</a></li>
+<li><strong>Chords</strong>: a whole chord under each finger. <a href="#chords">How</a></li>
+<li><strong>Drums</strong>: sixteen pads of a synthesized kit. <a href="#drums">How</a></li>
+<li><strong>Photo</strong>: the photo itself is the pad. <a href="#photo-mode">How</a></li>
+<li><strong>Touch FX</strong>: an effect under your finger, over something else playing. <a href="#touch-fx">How</a></li>
+<li><strong>Loops</strong>: a grid of loops that start on the next bar. <a href="#launch">How</a></li>
+<li><strong>Samples</strong>: sixteen pads of sounds you recorded or imported. <a href="#slices">How</a></li>
+</ul>
+</div>
+<figure class="phone"><img src="../assets/guide/first-play.webp" alt="The pad on an iPhone in Photo mode, two fingers glowing on the photo, with the seven modes along the bottom: Lanes, Chords, Drums, Photo, Touch FX, Loops, Samples" width="540" height="600" loading="lazy"><figcaption>The modes, along the bottom of an iPhone.</figcaption></figure>
+</div>
+<div class="note"><b>Good to know:</b> Changing mode ends any note you're holding, so nothing gets stuck. Loops keep playing whatever mode you're in.</div>
+<p class="nexttry">Related: <a href="pad.html#which">Which mode do I use?</a> (with a picture of each)</p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="knobs" aria-labelledby="knobs-h">
+<h2 id="knobs-h">The four knobs<a class="hash" href="#knobs" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want to change the sound quickly, without opening every control.</p>
+<figure class="native"><img src="../assets/guide/howto-knobs.webp" alt="Four knobs: Tone at 45, Space at 70, Grit at 12, Wobble at 30" width="600" height="154" loading="lazy"><figcaption>Tone, Space, Grit and Wobble, on every screen.</figcaption></figure>
+<ul>
+<li><strong>Tone</strong>: up is brighter, down is darker and softer.</li>
+<li><strong>Space</strong>: echoes and reverb, wider and further away.</li>
+<li><strong>Grit</strong>: drive, distortion and crunch.</li>
+<li><strong>Wobble</strong>: shimmer, sway and wobble.</li>
+</ul>
+<p>Drag a knob up or down while you hold a note. Double-tap it (double-click on a Mac) to put it back.</p>
+<div class="note"><b>Good to know:</b> At zero a knob does nothing at all: the sound is exactly as it was designed. Each one turns several controls inside the synth together.</div>
+<p class="nexttry">Related: <a href="sounds.html#macros">what moves inside each knob</a> · <a href="#edit">every control: Edit</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== Playing ============================== -->
+
+<section class="ht" id="lanes" aria-labelledby="lanes-h">
+<h2 id="lanes-h">Play a melody: Lanes<a class="hash" href="#lanes" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want single notes: a tune, a bass line, a solo.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Choose <strong>Lanes</strong> in the mode bar. The pad becomes columns of your key's notes, low on the left. The home note's lanes are lit and named.</li>
+<li>Touch a lane to play its note. Several fingers make a chord, and the strip names it.</li>
+<li>Slide up in a lane: the note gets brighter. Slide sideways: step to the next lane, or bend into it.</li>
+<li>Press harder while you hold: the note swells.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/films/film-02-bridge-lanes-poster.jpg" alt="An iPhone playing Lanes: a bridge photo at the top and glowing fingers on the columns of the pad" width="540" height="1173" loading="lazy"><figcaption>Lanes on an iPhone.</figcaption></figure>
+</div>
+<div class="note"><b>Tip:</b> Whether a sideways slide steps or bends is the <strong>Steps</strong> / <strong>Glide</strong> button in the key bar. See <a href="#key">Key, scale and octave</a>.</div>
+<p class="nexttry">Related: <a href="pad.html#lanes">Lanes in the chapter</a> · <a href="#touch">how hard a note plays</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="chords" aria-labelledby="chords-h">
+<h2 id="chords-h">Play chords<a class="hash" href="#chords" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want harmony without knowing chord shapes.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Choose <strong>Chords</strong>. Every cell is a whole chord from your key: three-note chords on top, richer seventh chords underneath. The home chord is tinted.</li>
+<li>Touch a cell: the chord plays, through your photo.</li>
+<li>Drag across a cell to strum it.</li>
+<li>Slide into the next cell: the notes the two chords share keep ringing, and only the others change.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/iphone-chords.webp" alt="Chords mode on an iPhone: two rows of chord cells named Dm, Em, F, G, Am and their sevenths, with a finger on one" width="540" height="1174" loading="lazy"><figcaption>Chords on an iPhone.</figcaption></figure>
+</div>
+<div class="note"><b>Tip:</b> Change the key's home note and scale above the pad, and the chords change with it. Every cell still fits with the others.</div>
+<p class="nexttry">Related: <a href="recipes.html#chords">Chords from a photo</a> (a recipe) · <a href="#key">key and scale</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="drums" aria-labelledby="drums-h">
+<h2 id="drums-h">Play the drums<a class="hash" href="#drums" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want a beat, or to record a drum loop.</p>
+<figure class="native"><img src="../assets/guide/mode-pad-drums.webp" alt="Drums mode on a Mac: sixteen drum pads in a grid, with the photo to the right" width="480" height="360" loading="lazy"><figcaption>Sixteen drum pads. Boom, the kick, is bottom left.</figcaption></figure>
+<ol>
+<li>Choose <strong>Drums</strong>. Sixteen pads appear, the kick (<strong>Boom</strong>) at the bottom left.</li>
+<li>Tap a pad. Touch higher on a pad to hit it harder.</li>
+<li>The kit is nine drums made from scratch, no recordings: Boom, Long Boom, Snap, Clap, Tick, Tss, Tom, Bell and Rim.</li>
+</ol>
+<div class="note"><b>Good to know:</b> The drums play alongside the synth. A MIDI keyboard on channel 10 plays them too, on the standard drum notes.</div>
+<p class="nexttry">Related: <a href="#beat">record a beat</a> · <a href="sounds.html#ref">each drum's own controls</a> (Edit › Drums)</p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="photo-mode" aria-labelledby="photo-mode-h">
+<h2 id="photo-mode-h">Play the picture: Photo mode<a class="hash" href="#photo-mode" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you've just added a photo and want to explore it with your fingers.</p>
+<figure class="native"><img src="../assets/guide/mode-pad-photo.webp" alt="Photo mode on a Mac: a tunnel photo fills the pad, with glowing finger trails on it" width="480" height="360" loading="lazy"><figcaption>The photo is the pad.</figcaption></figure>
+<ol>
+<li>Choose <strong>Photo</strong> in the mode bar.</li>
+<li>Left to right is the note, in your key. Up and down is the part of the photo you hear: the line follows your finger.</li>
+<li>Hold a note and slide slowly up through a busy part of the picture.</li>
+</ol>
+<div class="note"><b>Good to know:</b> The line changes the sound when the photo plays as <strong>Scan</strong>. Under Strike and Space your finger still plays notes, but moving up and down doesn't change the tone. See <a href="#plays">Scan, Strike or Space</a>.</div>
+<p class="nexttry">Related: <a href="pad.html#photo">Photo mode in the chapter</a> · <a href="#line">make the line move by itself</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="touch-fx" aria-labelledby="touch-fx-h">
+<h2 id="touch-fx-h">Effects under a finger: Touch FX<a class="hash" href="#touch-fx" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When something else is playing (a keyboard, a loop) and you want to bend it live.</p>
+<figure class="native"><img src="../assets/guide/mode-pad-touch-fx.webp" alt="Touch FX on a Mac: six effect tiles along the top and one big pad with a finger's trail" width="480" height="360" loading="lazy"><figcaption>Six effects along the top, one pad below.</figcaption></figure>
+<ol>
+<li>Choose <strong>Touch FX</strong>.</li>
+<li>Pick an effect: <strong>Filter</strong>, <strong>Delay</strong>, <strong>Repeat</strong>, <strong>Gate</strong>, <strong>Crush</strong> or <strong>Reverb</strong>.</li>
+<li>Play notes another way (a MIDI keyboard, a loop, your other hand) and touch the pad. The effect is on only while your finger is down. Lift, and it eases out.</li>
+</ol>
+<div class="tablewrap"><table class="t wrapfirst">
+<thead><tr><th scope="col">Effect</th><th scope="col">Left to right</th><th scope="col">Up and down</th></tr></thead>
+<tbody>
+<tr><td>Filter</td><td>Left of the middle muffles; right of it thins</td><td>How sharp the edge is</td></tr>
+<tr><td>Delay</td><td>The echo's length, in notes of the tempo</td><td>How many echoes</td></tr>
+<tr><td>Repeat</td><td>How long a slice gets caught and looped</td><td>Bends the slice's pitch</td></tr>
+<tr><td>Gate</td><td>How fast the sound is chopped</td><td>How deep the chop goes</td></tr>
+<tr><td>Crush</td><td>Lower sample rate</td><td>Fewer bits</td></tr>
+<tr><td>Reverb</td><td>The room's size</td><td>How loud the room is</td></tr>
+</tbody></table></div>
+<div class="note"><b>Tip:</b> No keyboard? Start a loop in <strong>Loops</strong> first, then switch to Touch FX and play over it.</div>
+<p class="nexttry">Related: <a href="recipes.html#touchfx">Touch FX while you play keys</a> (a recipe) · <a href="pad.html#touch-fx">the chapter</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="line" aria-labelledby="line-h">
+<h2 id="line-h">Move the line: patterns and direction<a class="hash" href="#line" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want the sound to travel through the photo by itself, or read it a different way.</p>
+<figure><img src="../assets/shots/line-slant.webp" alt="The Line panel open over a photo of a spiral bridge: Which way with Down, Across and Slant, the moves, Speed, How much of the photo and Hold here, with the line running corner to corner" width="1200" height="750" loading="lazy"><figcaption>The Line panel, with the line on a slant.</figcaption></figure>
+<ol>
+<li>Make sure the photo plays as <strong>Scan</strong>: the line only changes the sound there. A new photo starts as Strike, so the panel offers <strong>Switch to Scan</strong>. Tap it.</li>
+<li>Tap the <strong>Line</strong> pill in the photo's bottom-left corner. The panel, <strong>The line</strong>, opens (from the bottom on an iPhone).</li>
+<li>Pick a move: <strong>Hold</strong>, <strong>Sweep</strong>, <strong>Bounce</strong>, <strong>Fall</strong>, <strong>Rise</strong>, <strong>Jump</strong>, <strong>Random</strong> or <strong>Drift</strong>. The pill now says it, for example <strong>Line: Sweep</strong>.</li>
+<li>Set the speed: <strong>Free</strong> (a slider; the panel says how long one lap takes) or <strong>To the beat</strong> (a lap is a note length at the tempo).</li>
+<li>Set <strong>How much of the photo</strong> the line covers.</li>
+<li>Under <strong>Which way</strong>, choose <strong>Down</strong> (rows), <strong>Across</strong> (columns) or <strong>Slant</strong> (corner to corner).</li>
+</ol>
+<div class="note"><b>Tip:</b> <strong>Hold here</strong> stops the line where it is. To place it by hand, drag on the photo.</div>
+<div class="note"><b>Good to know:</b> A music app calls the directions Down, Across and Diagonal (the parameter Scan Direction). The same photo sounds different each way: upright stripes show it best.</div>
+<p class="nexttry">Related: <a href="recipes.html#line">Make the line move</a> (a recipe) · <a href="photo.html#line">every move explained</a> · <a href="photo.html#way">which way the line runs</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="key" aria-labelledby="key-h">
+<h2 id="key-h">Key, scale and octave<a class="hash" href="#key" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want every note on the pad to fit, or to play higher or lower.</p>
+<figure class="native"><img src="../assets/guide/howto-key.webp" alt="The key bar on an iPhone: a note button reading C, the scale Maj pent., minus C3 plus, the Steps icon and the colour dot" width="700" height="104" loading="lazy"><figcaption>The key bar on an iPhone: root, scale, octave, Steps or Glide, colours.</figcaption></figure>
+<ol>
+<li><strong>The note name</strong> (here <strong>C</strong>) sets the home note.</li>
+<li><strong>The scale</strong>: Chromatic, Major, Natural minor, Major pentatonic, Minor pentatonic, Blues or Dorian. On an iPhone its name is shortened (<strong>Maj pent.</strong>).</li>
+<li><strong>−</strong> and <strong>+</strong> move the octave at the pad's left edge.</li>
+<li><strong>Steps</strong> or <strong>Glide</strong>: whether sliding sideways lands on the next note or bends smoothly into it. On an iPhone it's an icon.</li>
+<li>The coloured dot opens <a href="#colours">Pad colours</a>.</li>
+</ol>
+<div class="note"><b>Tip:</b> New to scales? Choose Major pentatonic. Five notes, and every one sounds right with every other.</div>
+<p class="nexttry">Related: <a href="pad.html#key">the key in the chapter</a> · <a href="#chords">chords from the key</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="colours" aria-labelledby="colours-h">
+<h2 id="colours-h">Change the pad's colours<a class="hash" href="#colours" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want the pad's light to look a certain way. It never changes the sound.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Tap the coloured dot at the end of the key bar. <strong>Pad colours</strong> opens.</li>
+<li>Pick a scheme: <strong>Photo</strong> (the photo's own colours, the default), <strong>One colour</strong>, <strong>Gradient</strong> (low notes to high, two colours you pick), or a ready-made look: <strong>Mono</strong>, <strong>Amber</strong>, <strong>Phosphor</strong>, <strong>Ice</strong>, <strong>Brass</strong>, <strong>Signal</strong>.</li>
+<li><strong>Glow</strong> sets how bright the lights are; <strong>Trail</strong>, how long a finger's trail lasts.</li>
+<li><strong>Usual glow and trail</strong> puts both back.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/pad-colours-picker.webp" alt="The Pad colours panel: nine scheme swatches with Gradient chosen, Low notes and High notes colour wells, and sliders for Glow and Trail" width="660" height="1034" loading="lazy"><figcaption>Pad colours, with Gradient chosen.</figcaption></figure>
+</div>
+<div class="note warn"><b>On an iPhone held sideways,</b> the Pad colours panel can be too tall for the screen, and its bottom is cut off. Turn the phone upright while you choose, then turn it back.</div>
+<div class="note"><b>Good to know:</b> The app and the plugin each remember their own choice.</div>
+<p class="nexttry">Related: <a href="pad.html#colours">every scheme</a> · <a href="photo.html#light">the photo's light</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="touch" aria-labelledby="touch-h">
+<h2 id="touch-h">Fingers, Pencil and the Mac trackpad<a class="hash" href="#touch" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want to play softer or harder, or to play on a Mac.</p>
+<figure class="native"><img src="../assets/guide/mode-pad-lanes.webp" alt="Lanes on a Mac: the columns of the pad with three glowing touches" width="480" height="360" loading="lazy"><figcaption>On a Mac the whole trackpad becomes the pad.</figcaption></figure>
+<h3><span class="badge iphone">iPhone</span> <span class="badge ipad">iPad</span> The screen</h3>
+<ul>
+<li>Up to ten fingers at once.</li>
+<li>How hard a note plays comes from how much fingertip lands: a light fingertip is a soft note, a firm, flat landing is louder.</li>
+<li><span class="badge ipad">iPad</span> An Apple Pencil plays by its force; pushing harder while you hold swells the note.</li>
+</ul>
+<h3><span class="badge mac">Mac</span> The trackpad</h3>
+<ol>
+<li>Rest the pointer over the pad. The Mac sends trackpad touches to whatever is under the pointer.</li>
+<li>Better: press <strong>Hold the pointer</strong> (<kbd>⌘</kbd><kbd>⇧</kbd><kbd>T</kbd>). The pointer stays put while you play with several fingers. <kbd>Esc</kbd> frees it.</li>
+<li>How hard comes from where on the pad your finger lands; on a Force Touch trackpad, pressing deeper swells the note.</li>
+</ol>
+<div class="note"><b>Good to know:</b> A mouse works as one finger.</div>
+<p class="nexttry">Related: <a href="pad.html#touch">where your fingers come from</a> · <a href="#fix-trackpad">the trackpad doesn't play</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="midi" aria-labelledby="midi-h">
+<h2 id="midi-h">MIDI keyboards and on-screen keys<a class="hash" href="#midi" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you'd rather play keys than the pad.</p>
+<figure><img src="../assets/guide/howto-strip.webp" alt="The strip at the bottom of the window: C major 9 named on the left, with five keys lit on a keyboard" width="1400" height="76" loading="lazy"><figcaption>Whatever plays the notes, the strip lights the keys and names the chord.</figcaption></figure>
+<h3>A MIDI keyboard</h3>
+<ol>
+<li>Plug in a USB keyboard. There's nothing to set up in the app: any controller your device sees just plays.</li>
+<li>Keys play the sound; how hard you hit sets loudness and brightness. The pitch wheel bends, the mod wheel opens the filter, a sustain pedal holds notes.</li>
+<li>Channel 10 plays the drum kit. Channel 11, notes 36 to 51, plays the sixteen sample slots.</li>
+</ol>
+<div class="note"><b>Bluetooth MIDI:</b> <span class="badge mac">Mac</span> connect it in Audio MIDI Setup's Bluetooth window. <span class="badge iphone">iPhone</span> <span class="badge ipad">iPad</span> RedSynth Pad has no Bluetooth pairing screen of its own: connect the keyboard from an app that has one (its maker's app, or another music app), and RedSynth Pad picks it up once it's connected.</div>
+<h3>The on-screen keyboard</h3>
+<p><strong>Pad</strong> (<kbd>⌘</kbd><kbd>⇧</kbd><kbd>K</kbd>) swaps the pad for an on-screen keyboard and back. <span class="badge iphone">iPhone</span> <strong>…</strong> › <strong>Hide the pad (the keyboard)</strong>.</p>
+<p class="nexttry">Related: <a href="hosts.html#midi">what each part of a controller does</a> · <a href="#touch-fx">Touch FX with keys</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== Photos and spaces ============================== -->
+
+<section class="ht" id="plays" aria-labelledby="plays-h">
+<h2 id="plays-h">How the photo plays: Scan, Strike or Space<a class="hash" href="#plays" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When the photo doesn't sound the way you expected, or you want a different instrument from it.</p>
+<figure><img src="../assets/guide/howto-header.webp" alt="The buttons along the top of the Mac window: Sounds, Save, Photo, Strike, Sculpt, Pad, Edit, Help, Guide and Play" width="1400" height="68" loading="lazy"><figcaption>The button after <strong>Photo</strong> says how the photo plays. Here: Strike.</figcaption></figure>
+<ol>
+<li>Open the button that reads <strong>Scan</strong>, <strong>Strike</strong> or <strong>Space</strong>. <span class="badge iphone">iPhone</span> <strong>…</strong> › <strong>Plays as</strong>.</li>
+<li>Choose one. Each says in one line what it does:
+<ul>
+<li><strong>Scan</strong>: a line reads the photo as a wave. The line and the synth's controls shape it.</li>
+<li><strong>Strike</strong>: the photo is an object you hit; it rings, and sings while you hold. Every new photo starts here.</li>
+<li><strong>Space</strong>: two or three photos make a block you strike, with a loop flying through it. It's listed once a second photo is in.</li>
+</ul></li>
+<li>Under Strike, the same menu has <strong>Strike it as</strong>: <strong>Ringing object</strong>, <strong>Plucked string</strong>, <strong>Ladder bass</strong> or <strong>Clean lead</strong>. Choosing one replays part of the breakdown with that instrument.</li>
+</ol>
+<div class="note"><b>Good to know:</b> Ladder bass plays one note at a time, on purpose: overlap two and it slides. Plucked string and Clean lead answer to how hard you play.</div>
+<div class="note"><b>Good to know:</b> A music app, and Edit's Photo page, call the first two by their older names, Classic and Struck (the parameter Photo Engine).</div>
+<p class="nexttry">Related: <a href="photo.html#how">how each one reads the photo</a> · <a href="photo.html#roles">one photo, four instruments</a> · <a href="#line">the line under Scan</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="space" aria-labelledby="space-h">
+<h2 id="space-h">Make a space from two or three photos<a class="hash" href="#space" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want a sound that moves: a room built from your photos.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Add a photo the usual way. That's the front.</li>
+<li>Tap <strong>Photo</strong> again (on an iPhone, the photo button). It's a menu now. Choose <strong>Add a second photo</strong>: the side.</li>
+<li>The line says <strong>Making the space…</strong> for a few seconds. Then the photos fly to their walls, a cloud forms and a loop draws itself. A touch skips it.</li>
+<li>For a third photo, the view from above, choose <strong>Add a third photo</strong> from the same menu.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/films/film-03-space-poster.jpg" alt="A space of three photos on an iPhone: a cloud of light with a loop through it, over the pad" width="540" height="1174" loading="lazy"><figcaption>A space of three photos on an iPhone.</figcaption></figure>
+</div>
+<div class="note"><b>Tip:</b> <span class="badge mac">Mac</span> Quicker: drag two or three photos onto the window together, or pick several in the file window. The first is the front, the second the side, the third the top. On iPhone and iPad the picker takes one at a time.</div>
+<div class="note"><b>Good to know:</b> The same menu has <strong>Change the second photo</strong>, <strong>Remove the second photo</strong> and, with three, <strong>Remove the third photo</strong>. Remove the second and the first plays alone again. Two clearly different photos (smooth and busy, warm and cool) make the most interesting space.</div>
+<p class="nexttry">Related: <a href="#turn">turn and play it</a> · <a href="recipes.html#space">Stack three photos</a> (a recipe) · <a href="space.html#idea">how a space works</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="turn" aria-labelledby="turn-h">
+<h2 id="turn-h">Turn and play a space<a class="hash" href="#turn" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When a space is in and you want to move through it.</p>
+<figure><img src="../assets/shots/space-three.webp" alt="A space made from three photos on a Mac: a glowing cloud between photo walls, a loop through it and its wave below" width="1400" height="875" loading="lazy"><figcaption>A space from three photos, turned a little.</figcaption></figure>
+<div class="tablewrap"><table class="t wrapfirst">
+<thead><tr><th scope="col">You do</th><th scope="col">It does</th></tr></thead>
+<tbody>
+<tr><td>Drag empty space</td><td>Turns the room. Let go and it coasts.</td></tr>
+<tr><td>Pinch, or scroll</td><td>Comes closer or backs away.</td></tr>
+<tr><td>Drag the loop</td><td>Moves it through the block. The tone changes as it goes.</td></tr>
+<tr><td>Drag the loop's bead</td><td>Makes the loop bigger or smaller.</td></tr>
+<tr><td>Drag the mallet</td><td>Moves where the strike lands. Double-tap puts it back.</td></tr>
+<tr><td>Tap the cloud</td><td>Strikes it right there.</td></tr>
+<tr><td>Press harder</td><td>Pushes the loop deeper, into the second photo.</td></tr>
+</tbody></table></div>
+<h3>The space's controls</h3>
+<p>The slider button on the space opens <strong>Size</strong>, <strong>Body</strong>, <strong>Drift</strong>, <strong>Tilt</strong>, <strong>Depth</strong> and <strong>Shape</strong> (Ring, Circle, Eight, Knot), plus <strong>Mist</strong>, <strong>Stars</strong> and <strong>Form</strong>, which only change how the cloud is drawn.</p>
+<div class="note"><b>Tip:</b> Set <strong>Drift</strong> to 0 so the loop stays where you put it, then drag it slowly while you hold one low note. The thin wave under the space is what you hear.</div>
+<div class="note"><b>Good to know:</b> <span class="badge mac">Mac</span> Pressing harder means a Force Touch press, or Option and a drag. <span class="badge ipad">iPad</span> Push with the Pencil, or flatten a finger.</div>
+<p class="nexttry">Related: <a href="space.html#hand">playing it with your hand</a> · <a href="space.html#knobs">each control</a> · <a href="#sculpt-space">sculpt the block</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="filters" aria-labelledby="filters-h">
+<h2 id="filters-h">Give a photo a filter<a class="hash" href="#filters" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want a different instrument from the same photo.</p>
+<figure class="native"><img src="../assets/guide/howto-phone-top.webp" alt="The top bar on an iPhone: the sound's name Sunglasses, the photo button, Play and the … button" width="700" height="69" loading="lazy"><figcaption>On an iPhone the filters are in the photo button's menu.</figcaption></figure>
+<ol>
+<li>Open the <strong>Photo</strong> menu (on an iPhone, the photo button).</li>
+<li>Choose <strong>Filter</strong>. In a space it lists <strong>First photo</strong>, <strong>Second photo</strong> and <strong>Third photo</strong>, each with a filter of its own.</li>
+<li>Pick one: <strong>Original</strong>, <strong>Cartoon</strong>, <strong>Sketch</strong>, <strong>Dream</strong>, <strong>Spectrum</strong> or <strong>Thermal</strong>. Each says in a line what you'll hear. The photo is shown the way it is played.</li>
+</ol>
+<div class="note"><b>Tip:</b> Dream gives few tones and a long ring; Sketch is thin and bright; Spectrum is organ and bell, never harsh. Hold a chord and switch between them.</div>
+<p class="nexttry">Related: <a href="photo.html#filters">what each filter does to the sound</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="your-photos" aria-labelledby="your-photos-h">
+<h2 id="your-photos-h">Your photos: go back to one<a class="hash" href="#your-photos" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you played a built-in sound, or a newer photo, and want an earlier photo sound back.</p>
+<figure class="native"><img src="../assets/guide/howto-your-photos.webp" alt="Your photos in the sound list: Bridge planet, your photo, 10 minutes ago; Sunglasses, your photo, 2 hours ago; Bridge, a space of 3 photos, 1 day ago" width="600" height="241" loading="lazy"><figcaption>Your photos, the newest first.</figcaption></figure>
+<ol>
+<li>Open <strong>Sounds</strong> (on an iPhone, tap the sound's name).</li>
+<li>Under <strong>Your photos</strong>, tap the one you want. It comes back as you left it: its knobs, its line, its sculpt.</li>
+<li>The list shows the newest few. <strong>All your photos</strong> opens the rest.</li>
+</ol>
+<div class="note"><b>Good to know:</b> The app keeps your newest 24 photo sounds. When a 25th arrives, the oldest goes. To keep one for good, <a href="#save">save it in My sounds</a>.</div>
+<div class="note"><b>Good to know:</b> On a built-in sound, the photo area says <strong>This sound doesn't use a photo</strong> and offers a button back to your last photo sound. Sounds is the sure way back.</div>
+<p class="nexttry">Related: <a href="sounds.html#yours">your photo sounds</a> · <a href="#save">My sounds</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== Sounds ============================== -->
+
+<section class="ht" id="library" aria-labelledby="library-h">
+<h2 id="library-h">Find a sound in the library<a class="hash" href="#library" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want a ready-made sound, with or without a photo.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Open <strong>Sounds</strong> (on an iPhone, tap the sound's name). <span class="badge mac">Mac</span> It opens beside the button. <span class="badge iphone">iPhone</span> <span class="badge ipad">iPad</span> It slides up from the bottom.</li>
+<li>Under <strong>Library</strong>, tap a group: Pad, Pluck, Lead, Keys, Bass, Wild, Texture or Photo. Each sound has a line saying what it is.</li>
+<li>Or type in the search field. It finds sounds by name, words or group, your own included.</li>
+<li><strong>All sounds</strong> takes you back to the groups.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/howto-library.webp" alt="The library's groups in the sound list: Pad 22, Pluck 17, Lead 20, Keys 18, Bass 27, Wild 16, Texture 16 and Photo 8, each with a few names" width="560" height="555" loading="lazy"><figcaption>The 144 built-in sounds, in eight groups.</figcaption></figure>
+</div>
+<div class="note"><b>Tip:</b> The <strong>Photo</strong> group holds eight sounds that already carry a picture: the quickest way to hear the idea before adding your own.</div>
+<p class="nexttry">Related: <a href="sounds.html#library">a few to try in each group</a> · <a href="#save">save your own</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="save" aria-labelledby="save-h">
+<h2 id="save-h">Save a sound in My sounds<a class="hash" href="#save" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you like what you hear and want it by name next time.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Tap <strong>Save</strong>. <span class="badge iphone">iPhone</span> <strong>…</strong> › <strong>Save in My sounds…</strong> <span class="badge mac">Mac</span> <strong>Sound</strong> › <strong>Save Sound…</strong> or <kbd>⌘</kbd><kbd>S</kbd>.</li>
+<li><strong>Save this sound</strong> opens. Change the <strong>Name</strong> if you like, and choose where it <strong>Goes under</strong> (a photo sound goes under Photo).</li>
+<li>Tap <strong>Save to My sounds</strong>. It keeps exactly what you hear: every knob, the photos, the sculpt.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/first-save.webp" alt="The sound list on an iPhone: My sounds at the top with Pad, Bass and Photo groups, then Your photos" width="540" height="600" loading="lazy"><figcaption>My sounds, at the top of the list.</figcaption></figure>
+</div>
+<h3>Changed it later?</h3>
+<p>A saved sound you change shows <strong>Edited</strong> by its name. Open Save again: <strong>Save</strong> keeps the changes, <strong>Save as new</strong> keeps both.</p>
+<div class="note"><b>Tip:</b> In Sounds, each of your sounds has a <strong>⋯</strong> with <strong>Send…</strong>, <strong>Rename</strong> and <strong>Delete</strong>. A delete can be undone from the bar at the bottom of the list.</div>
+<p class="nexttry">Related: <a href="#send">send it to a friend</a> · <a href="sounds.html#mine">My sounds in the chapter</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="send" aria-labelledby="send-h">
+<h2 id="send-h">Send a sound, open one you were sent<a class="hash" href="#send" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When a friend should hear exactly what you made, or you want a sound on your other device.</p>
+<div class="recipe-body">
+<div>
+<h3>Send</h3>
+<ol>
+<li>Open <strong>Save</strong> and tap <strong>Send this sound…</strong>. Or, in Sounds, a saved sound's <strong>⋯</strong> › <strong>Send…</strong>.</li>
+<li>Choose AirDrop, Messages, Mail or Files. It's one file, named after the sound, ending in <code>.redsynth</code>.</li>
+</ol>
+<h3>Open</h3>
+<ol>
+<li><span class="badge iphone">iPhone</span> <span class="badge ipad">iPad</span> Tap the file. It opens in RedSynth Pad.</li>
+<li><span class="badge mac">Mac</span> Double-click it, or drop it onto the RedSynth Pad window.</li>
+<li>The sound is added to <strong>My sounds</strong> and plays.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/iphone-my-sounds.webp" alt="My sounds and Your photos in the sound list on an iPhone" width="560" height="592" loading="lazy"><figcaption>A sound you open joins My sounds.</figcaption></figure>
+</div>
+<div class="note"><b>Good to know:</b> The file carries the sound's photos inside it, so the person who opens it sees them. Send it to people you'd show the photo to.</div>
+<div class="note"><b>Tip:</b> RedSynth Pad doesn't sync between your devices. To take a sound from your iPhone to your Mac, AirDrop it to yourself.</div>
+<p class="nexttry">Related: <a href="recipes.html#send">Save and send</a> (a recipe) · <a href="#data">where things are kept</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="edit" aria-labelledby="edit-h">
+<h2 id="edit-h">Every knob: Edit<a class="hash" href="#edit" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When the four knobs aren't enough and you want the whole synthesizer.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Open Edit. <span class="badge iphone">iPhone</span> <strong>…</strong> › <strong>Edit the sound</strong>: a sheet under the pad, which still plays; drag it up for the full height. <span class="badge ipad">iPad</span> <strong>Edit</strong>: a panel beside the instrument. <span class="badge mac">Mac</span> <strong>Edit</strong>, <strong>Sound</strong> › <strong>Edit Sound</strong> or <kbd>⌘</kbd><kbd>E</kbd>: a window of its own.</li>
+<li>Pick a page: <strong>Sound</strong>, <strong>Motion</strong>, <strong>Effects</strong>, <strong>Photo</strong>, <strong>Drums</strong>, <strong>Setup</strong>. On an iPhone the pages are icons.</li>
+<li>Or type in the search field (cutoff, delay, attack…). It looks through every page.</li>
+<li>Drag a knob up or down. Double-tap it (double-click on a Mac) to put it back.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/iphone-edit.webp" alt="Edit on an iPhone: the sound's name Sunglasses, a search field, page icons, and cards of knobs for the oscillators" width="560" height="808" loading="lazy"><figcaption>Edit on an iPhone, the Sound page.</figcaption></figure>
+</div>
+<div class="note"><b>Tip:</b> <strong>Help</strong> writes a one-line explanation under every control. On an Effects card, the effect's on switch is in the card's title.</div>
+<div class="note"><b>Good to know:</b> The plugin has no Edit button: your music app's parameter list shows every control instead.</div>
+<p class="nexttry">Related: <a href="sounds.html#ref">every control in one line</a> · <a href="sounds.html#path">how the sound is made</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="sculpt-photo" aria-labelledby="sculpt-photo-h">
+<h2 id="sculpt-photo-h">Sculpt one photo<a class="hash" href="#sculpt-photo" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want to change a photo sound by hand, with a brush.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>With one photo in, tap <strong>Sculpt</strong> (the brush). <span class="badge iphone">iPhone</span> <strong>…</strong> › <strong>Sculpt</strong>.</li>
+<li>Pick a tool and paint on the photo. Hold a note while you paint to hear each stroke.
+<ul>
+<li><strong>Paint</strong> lays a colour. Enough of one colour moves the vowel.</li>
+<li><strong>Ripple</strong> lays stripes: a new ringing tone. <strong>Apart</strong> sets how close (closer is higher); <strong>Turn</strong>, which way they run.</li>
+<li><strong>Smooth</strong> blurs: a softer mallet. <strong>Restore</strong> brings the photo back under the brush.</li>
+</ul></li>
+<li>Watch the lines at the bottom: the object's tones. A ripple adds one.</li>
+<li>Tap <strong>Done</strong> and play.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/iphone-sculpt.webp" alt="Sculpt on an iPhone: a bridge photo with diagonal ripples painted on it, a row of tone lines under it and the tools at the bottom" width="480" height="1074" loading="lazy"><figcaption>Ripples painted on a photo.</figcaption></figure>
+</div>
+<div class="note"><b>Good to know:</b> Undo and redo go one stroke at a time. <strong>Back to the photo</strong> takes every touch off. A photo you never paint sounds exactly as it did. The sculpt is saved with the sound.</div>
+<div class="note"><b>Tip:</b> <span class="badge ipad">iPad</span> An Apple Pencil's pressure is the brush's strength. <span class="badge mac">Mac</span> Scroll sizes the brush.</div>
+<p class="nexttry">Related: <a href="recipes.html#sculpt">Sculpt the sound by hand</a> (a recipe) · <a href="space.html#sculpt">every brush and tool</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="sculpt-space" aria-labelledby="sculpt-space-h">
+<h2 id="sculpt-space-h">Sculpt a space<a class="hash" href="#sculpt-space" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When a space is in and you want to change what its block is made of.</p>
+<figure class="wide"><img src="../assets/sculpt-space.webp" alt="Sculpt on a space: the block as a cloud of points, turned, with a bar of brighter material painted through it" width="1200" height="800" loading="lazy"><figcaption>The block, turned, with a bar of Crystal painted through it.</figcaption></figure>
+<ol>
+<li>With two or three photos in, tap <strong>Sculpt</strong>. The cloud is the block: bright is light matter, dark is heavy.</li>
+<li>Pick a material: <strong>Lead</strong> (heavy and soft: tones fall), <strong>Crystal</strong> (light and stiff: tones rise), or <strong>Iron</strong>, <strong>Wood</strong> or <strong>Air</strong> between.</li>
+<li>Paint on the block. While the brush is down the tones are a good estimate; when it lifts, they're worked out exactly, which takes about a second on an M4 Mac.</li>
+<li>Turn the block with two fingers, with <strong>Turn</strong>, or (on a Mac) Option and a drag. Pinch, or <kbd>⌘</kbd> and scroll, to zoom.</li>
+<li><strong>Show</strong> changes what brightness means: <strong>Light</strong>, <strong>Weight</strong>, <strong>Stiff</strong> or <strong>Touched</strong> (only your strokes).</li>
+</ol>
+<div class="note"><b>Tip:</b> Touch one of the tone lines under the block to see how that tone moves the block.</div>
+<p class="nexttry">Related: <a href="space.html#sculpt">Sculpt in full</a> · <a href="#turn">turning a space</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== Loops and samples ============================== -->
+
+<section class="ht" id="beat" aria-labelledby="beat-h">
+<h2 id="beat-h">Record a beat<a class="hash" href="#beat" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want a drum loop going round while you play over it.</p>
+<figure class="wide"><img src="../assets/loop-editor-grid.jpg" alt="The Loop Editor with a drum loop: rows of drums and coloured steps across one bar" width="1600" height="1112" loading="lazy"><figcaption>A drum loop in the Loop Editor.</figcaption></figure>
+<ol>
+<li><strong>Make a drum loop first.</strong> Choose <strong>Loops</strong>, open the <strong>Loop Editor</strong> (on an iPhone, the sliders icon above the pad; on a Mac, <kbd>⌘</kbd><kbd>L</kbd>), tap <strong>New</strong> and under <strong>Drums</strong> choose <strong>1 bar</strong> or <strong>2 bars</strong>. Tap <strong>Done</strong>.</li>
+<li>Press record, the circle beside play. If nothing was playing, a count-in clicks first (it isn't recorded).</li>
+<li>Switch to <strong>Drums</strong> and play. Each time the bar comes round, what you play is added on top.</li>
+<li>Go back to <strong>Loops</strong> and press record again to end the take. The clock keeps running.</li>
+<li><strong>Put it on the grid:</strong> open the Loop Editor, tap <strong>Assign to a cell</strong> (on an iPhone, <strong>Cell</strong>), pick an empty column, then <strong>Done</strong>. Tap that cell: it starts on the next bar.</li>
+</ol>
+<div class="note warn"><b>Why New › Drums first:</b> record goes into the loop chosen in the Loop Editor, or into a new <em>notes</em> loop if none is chosen. A notes loop doesn't take the drums, so without a drum loop chosen, a beat records nothing.</div>
+<div class="note"><b>Good to know:</b> The metronome button sets the count-in (<strong>Off</strong>, <strong>1 bar</strong>, <strong>2 bars</strong>), the click and the tempo. In the editor, tap an empty step to add a hit; double-tap one to remove it.</div>
+<p class="nexttry">Related: <a href="recipes.html#beat">Record a beat and play over it</a> (every step, with what you'll see) · <a href="#launch">launching loops</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="melody-loop" aria-labelledby="melody-loop-h">
+<h2 id="melody-loop-h">Record a melody loop<a class="hash" href="#melody-loop" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want a chord part or a bass line to repeat under you.</p>
+<div class="recipe-body">
+<div>
+<ol>
+<li>Choose <strong>Loops</strong>. To record into a fresh loop, open the Loop Editor and tap <strong>New</strong> › under <strong>Notes</strong>, a length (1 to 8 bars). Tap <strong>Done</strong>.</li>
+<li>Press record. <span class="badge mac">Mac</span> <strong>Play</strong> › <strong>Record a Loop</strong> (<kbd>⌘</kbd><kbd>⇧</kbd><kbd>R</kbd>) works from any mode.</li>
+<li>Switch to <strong>Lanes</strong>, <strong>Chords</strong> or <strong>Photo</strong> and play. The on-screen keys and a MIDI keyboard go in too. Recording carries on while you switch modes.</li>
+<li>Go back to <strong>Loops</strong> and press record again to end the take.</li>
+<li>Open the Loop Editor, tap <strong>Assign to a cell</strong>, pick a column, <strong>Done</strong>, and tap the cell.</li>
+</ol>
+</div>
+<figure class="phone"><img src="../assets/guide/iphone-loops.webp" alt="Loops on an iPhone: the photo, the knobs, the bar with play, record and the tempo, then a grid of coloured loop cells and three scene buttons" width="480" height="1074" loading="lazy"><figcaption>Loops on an iPhone. Record is the circle beside play.</figcaption></figure>
+</div>
+<div class="note"><b>Good to know:</b> A finished take isn't on the grid until you assign it to a cell. Until then the clock runs but you hear nothing new: that's expected.</div>
+<div class="note"><b>Tip:</b> A starter loop is locked. Record into it and the app copies it first; <strong>Make it mine</strong> does the same in the editor.</div>
+<p class="nexttry">Related: <a href="#loop-editor">fix the notes afterwards</a> · <a href="pad.html#loops">loops in the chapter</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="launch" aria-labelledby="launch-h">
+<h2 id="launch-h">Launch loops and scenes<a class="hash" href="#launch" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you have loops on the grid and want to perform with them.</p>
+<figure class="native"><img src="../assets/guide/mode-loops-mode.webp" alt="Loops mode on a Mac: a grid of coloured loop cells named Pop chords, Bass line, Beat, Arpeggio, Beat busy and Beat 120, with scene buttons below" width="480" height="360" loading="lazy"><figcaption>The loop grid. Each column plays one loop at a time.</figcaption></figure>
+<ol>
+<li>Choose <strong>Loops</strong>.</li>
+<li>Tap a cell: it starts at the next bar line. Its ring fills while it waits.</li>
+<li>Tap it again: it stops at the bar line.</li>
+<li>The strip at the bottom (<strong>Scene 1</strong>, <strong>Scene 2</strong>, <strong>Scene 3</strong>) launches a whole row at once.</li>
+</ol>
+<div class="note"><b>Tip:</b> The metronome button's menu has <strong>Stop all loops at the bar</strong> and <strong>Stop everything now</strong>. <strong>All Notes Off</strong> (<kbd>⌘</kbd><kbd>.</kbd> on a Mac) stops everything too.</div>
+<div class="note"><b>Good to know:</b> On its own the app runs at its own tempo, set with <strong>−</strong> and <strong>+</strong> beside the readout. Inside a music app it follows the song's.</div>
+<p class="nexttry">Related: <a href="pad.html#loops">the transport and scenes</a> · <a href="#beat">record a beat</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="loop-editor" aria-labelledby="loop-editor-h">
+<h2 id="loop-editor-h">Fix notes in the Loop Editor<a class="hash" href="#loop-editor" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When a recorded loop has a wrong note, sits off the beat, or should be longer.</p>
+<figure class="wide"><img src="../assets/loop-editor.jpg" alt="The Loop Editor with a notes loop as a piano roll: notes as bars on a grid, the tools above" width="1600" height="1112" loading="lazy"><figcaption>A notes loop as a piano roll. A drum loop opens as a step grid.</figcaption></figure>
+<ul>
+<li><strong>Tap empty space</strong> to draw a note. <strong>Drag a note</strong> to move it; drag its right edge to change its length.</li>
+<li><strong>Hold a note still, or double-tap it</strong>, to delete it. Drag across empty space to select several.</li>
+<li><strong>Quantise</strong> pulls notes onto the grid, by as much as its slider says. <strong>Grid</strong> sets the grid; <strong>Snap</strong> keeps new notes on it.</li>
+<li><strong>Bars</strong> (1, 2, 4, 8) sets the length; <strong>×2</strong> doubles it.</li>
+<li><strong>Play</strong> hears just this loop (<kbd>Space</kbd> with a keyboard). <strong>Duplicate</strong> (<kbd>⌘</kbd><kbd>D</kbd>) copies the selection.</li>
+<li>The menu also has <strong>Undo the last pass</strong>, for the last time round you recorded.</li>
+</ul>
+<div class="note"><b>Good to know:</b> Undo and redo work on everything. Starter loops are locked; <strong>Make it mine</strong> copies one so you can change it.</div>
+<p class="nexttry">Related: <a href="pad.html#loops">every Loop Editor control</a> · <a href="#melody-loop">record a melody loop</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="sample" aria-labelledby="sample-h">
+<h2 id="sample-h">Record or import a sample<a class="hash" href="#sample" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want your voice, a clap or a field recording on the pads.</p>
+<figure class="wide"><img src="../assets/sample-editor.jpg" alt="The Sample Editor: a waveform cut into slices by markers, with Tempo, Slices and the bank's sixteen slots below" width="1600" height="1112" loading="lazy"><figcaption>The Sample Editor, a beat cut at every hit.</figcaption></figure>
+<ol>
+<li>Choose <strong>Samples</strong>, then <strong>Sample Editor</strong> above the pad (on an iPhone, the sliders icon).</li>
+<li>Tap <strong>Record</strong> and choose 1, 2, 4 or 8 bars at the tempo, or <strong>Until Stop</strong>. The first time, your device asks to use the microphone. A count-in comes first if nothing was playing.</li>
+<li>Or tap <strong>Import…</strong> (<kbd>⌘</kbd><kbd>I</kbd> on a Mac) and pick a WAV, AIFF, MP3 or M4A of up to 60 seconds. On a Mac you can drop a file on the editor.</li>
+<li>Drag the handles at each end of the waveform to trim it.</li>
+</ol>
+<div class="note"><b>Good to know:</b> Recordings stay on your device. The plugin can't use the microphone (Apple doesn't let plugins record), so record in the app.</div>
+<div class="note"><b>Tip:</b> In the <strong>Tempo</strong> card, <strong>Detect</strong> finds the sample's tempo; or <strong>Tap</strong> it, or type it. A loop then stays in time with the clock.</div>
+<p class="nexttry">Related: <a href="#slices">slice it onto the pads</a> · <a href="recipes.html#chops">Your first sample pad</a> (a recipe)</p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="slices" aria-labelledby="slices-h">
+<h2 id="slices-h">Slice it and fill the pads<a class="hash" href="#slices" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When a sample is in and you want its pieces on sixteen pads.</p>
+<figure class="native"><img src="../assets/guide/mode-samples-mode.webp" alt="Samples mode on a Mac: sixteen pads in a grid, each holding a slice" width="480" height="360" loading="lazy"><figcaption>The slices on the pads.</figcaption></figure>
+<ol>
+<li>In the Sample Editor's slices card, tap <strong>By onsets</strong>: a marker at every hit. The slider beside it sets how sensitive. Or <strong>Grid 8</strong> or <strong>Grid 16</strong> to cut evenly; <strong>Whole</strong> takes the cuts away.</li>
+<li>Tap a slice to hear it. Drag a marker to move it, double-tap to split, hold a marker to join.</li>
+<li>In the bank, tap <strong>Fill pads from the slices</strong>, or <strong>Whole sample → slot</strong> for one pad.</li>
+<li>Tap <strong>Done</strong>, choose <strong>Samples</strong>, and play. Land higher on a pad for louder.</li>
+</ol>
+<div class="note"><b>Good to know:</b> Each sample plays <strong>One-shot</strong> (to the end), <strong>Gate</strong> (while held) or <strong>Loop</strong>. A choke group lets one pad cut another off. <strong>Loop in a cell…</strong> puts a looping sample on the Loops grid.</div>
+<p class="nexttry">Related: <a href="pad.html#samples">every Sample Editor control</a> · <a href="#launch">the Loops grid</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== GarageBand and other apps ============================== -->
+
+<section class="ht" id="garageband" aria-labelledby="garageband-h">
+<h2 id="garageband-h">Use it in GarageBand on a Mac<a class="hash" href="#garageband" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want to record RedSynth Pad into a song.</p>
+<figure class="wide"><img src="../assets/au-panel.jpg" alt="The RedSynth Pad plugin's compact panel in a music app on a Mac: a photo with its line, a few buttons and the four knobs" width="1600" height="667" loading="lazy"><figcaption>The plugin's panel, inside a music app.</figcaption></figure>
+<ol>
+<li>Open the RedSynth Pad app once. That tells the Mac the plugin exists. If GarageBand was open, quit it and open it again.</li>
+<li>In GarageBand, make a project with a <strong>Software Instrument</strong> track.</li>
+<li>Open Smart Controls (<kbd>B</kbd>) and click the instrument slot in the plug-in area.</li>
+<li>Choose <strong>AU Instruments</strong> › <strong>RedSynth</strong> › <strong>RedSynth Pad</strong>. Click its name to open the panel.</li>
+<li>Give it a photo (<strong>Photo</strong>, or drop one on the panel) and play. <strong>Pad</strong> shows the pad.</li>
+</ol>
+<h3>What the song keeps</h3>
+<p>The sound, every control, and the photo or the photos of a space are saved inside the project, so the song opens with its instrument.</p>
+<h3>Record a knob's movement</h3>
+<p>Use the track's automation. The four knobs, <strong>Scan</strong> (the line), <strong>Scan Direction</strong> and the space's loop are all parameters.</p>
+<div class="note"><b>Good to know:</b> If <strong>AU Instruments</strong> is missing, look in GarageBand › Settings › Audio/MIDI for <strong>Enable Audio Units</strong>.</div>
+<p class="nexttry">Related: <a href="recipes.html#garageband">Use it in GarageBand</a> (a recipe) · <a href="hosts.html#automate">automation</a> · <a href="#fix-plugin">GarageBand doesn't list it</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="other-apps" aria-labelledby="other-apps-h">
+<h2 id="other-apps-h">Other music apps, iPhone and iPad<a class="hash" href="#other-apps" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you use a different music app, or GarageBand on an iPhone or iPad.</p>
+<figure class="native"><img src="../assets/guide/howto-header.webp" alt="The row of buttons RedSynth Pad shows across the top: Sounds, Save, Photo, Strike, Sculpt, Pad, Edit, Help, Guide, Play" width="1400" height="68" loading="lazy"><figcaption>In a bigger plugin window you get the app's full layout, without the Edit button.</figcaption></figure>
+<ul>
+<li>RedSynth Pad is a standard Audio Unit (AUv3) instrument. Apps that host Audio Unit instruments on iPhone, iPad and Mac list it as <strong>RedSynth Pad</strong> by <strong>RedSynth</strong>. In GarageBand on an iPhone or iPad, look under <strong>Audio Unit Extensions</strong> when you choose an instrument.</li>
+<li>So far it has been tried in GarageBand on a Mac. Other music apps, and GarageBand on iPhone and iPad, haven't been tried yet. If you try one, tell Seth how it went.</li>
+<li>Apps that only load VST or CLAP plugins can't load it.</li>
+</ul>
+<div class="note"><b>Good to know:</b> Inside a music app there's no microphone, no Edit button (the app's parameter list has every control), and the plugin can't see the samples and loops you made in the app. It follows the song's tempo.</div>
+<p class="nexttry">Related: <a href="hosts.html#other">other music apps</a> · <a href="hosts.html#limits">limits inside a music app</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== Your data and devices ============================== -->
+
+<section class="ht" id="data" aria-labelledby="data-h">
+<h2 id="data-h">Where your photos and sounds are kept<a class="hash" href="#data" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want to know what happens to your pictures.</p>
+<ul>
+<li><strong>On your device, only.</strong> Photo sounds (the newest 24), My sounds, loops and samples stay in the app's own storage. There's no account, and the app has no network access: it never sends anything anywhere, and it collects no data.</li>
+<li><strong>Photos:</strong> on iPhone and iPad the system's picker hands the app only the photo you choose, never your library.</li>
+<li><strong>In a music app</strong> the photo is saved inside that song's project, and goes wherever the project goes.</li>
+<li><strong>A sound file you send</strong> carries its photos. See <a href="#send">Send a sound</a>.</li>
+<li><strong>The microphone</strong> is used only when you record a sample, after your device asks you.</li>
+<li><strong>Deleting the app</strong> deletes what's stored in it. Send yourself anything you want to keep first.</li>
+</ul>
+<div class="note"><b>Good to know:</b> There's no AI in RedSynth Pad. A photo becomes a sound by measuring it on your device: its patterns, colours, light and edges. Nothing is uploaded or learned from.</div>
+<p class="nexttry">Related: <a href="../privacy.html">the privacy policy</a> · <a href="index.html#where">where your things are kept</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<section class="ht" id="devices" aria-labelledby="devices-h">
+<h2 id="devices-h">iPhone, iPad, Mac and a new device<a class="hash" href="#devices" aria-label="Link to this how-to">#</a></h2>
+<p class="when">When you want RedSynth Pad on another device, or you're moving to a new one.</p>
+<ul>
+<li><strong>One purchase, all three.</strong> RedSynth Pad is $9.99 once, for iPhone, iPad and Mac with the same Apple Account, Audio Unit included, with Family Sharing. No subscription, no in-app purchases.</li>
+<li><strong>A new device:</strong> sign in with the same Apple Account and download it from the App Store again, at no charge.</li>
+<li><strong>Your sounds don't sync</strong> between devices. Move one with <a href="#send">Send this sound…</a> (AirDrop it to yourself).</li>
+<li><strong>What it runs on:</strong> iOS 18 or later, iPadOS 18 or later, or a Mac with Apple silicon and macOS 15 or later.</li>
+</ul>
+<p class="nexttry">Related: <a href="index.html#need">what you need</a> · <a href="index.html#differ">what's different on each device</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+
+<section class="ht" id="faq" aria-labelledby="faq-h">
+<h2 id="faq-h">FAQ<a class="hash" href="#faq" aria-label="Link to the FAQ">#</a></h2>
+<div class="qa"><h3>Do I pay again for the iPhone, iPad or Mac?</h3><p>No. One purchase covers all three and the Audio Unit, with the same Apple Account. Family Sharing works.</p></div>
+<div class="qa"><h3>Do I pay again on a new device?</h3><p>No. Download it again from the App Store with the same Apple Account. Your sounds stay on the old device until you <a href="#send">send them over</a>.</p></div>
+<div class="qa"><h3>Is there a subscription?</h3><p>No subscription and no in-app purchases. $9.99, once.</p></div>
+<div class="qa"><h3>Does it use AI?</h3><p>No. The photo is measured on your device (its repeating patterns, its colours, its light, its edges) and those numbers set the instrument. No model, nothing uploaded, nothing learned from your photos.</p></div>
+<div class="qa"><h3>Where do my photos go?</h3><p>Nowhere. They stay on your device. In a music app a photo is saved in that song's project, and a sound file you send carries its photos. See <a href="#data">Where things are kept</a>.</p></div>
+<div class="qa"><h3>Does it need the internet?</h3><p>No. The app has no network access at all. You need the App Store only to download it.</p></div>
+<div class="qa"><h3>Why does the same photo always sound the same?</h3><p>Nothing is random. Every pixel feeds a signature that sets the fine details, so the same file always makes the same instrument. A different photo, even of the same scene, makes a different one.</p></div>
+<div class="qa"><h3>Can I use my sounds in songs I release or sell?</h3><p>Yes. What you play and record is yours. If you use a photo you didn't take, the photo's own rights still apply to it.</p></div>
+<div class="qa"><h3>Do I need to know music theory?</h3><p>No. Set the scale to Major pentatonic and every note fits; Chords mode only offers chords that belong together. The strip names what you played.</p></div>
+<div class="qa"><h3>Do I need a MIDI keyboard?</h3><p>No. Everything plays by touch, and on a Mac by the trackpad. A keyboard is welcome if you have one.</p></div>
+<div class="qa"><h3>Why does a new photo start as Strike, not Scan?</h3><p>Strike makes the most of a photo on the first try: an object that rings and sings. Scan is where the line chooses the sound, so the Line panel offers <strong>Switch to Scan</strong>. See <a href="#plays">Scan, Strike or Space</a>.</p></div>
+<div class="qa"><h3>How many photo sounds does it keep?</h3><p>Your newest 24, under Your photos. Save any you want to keep for good in My sounds.</p></div>
+<div class="qa"><h3>Can I record what I play as audio?</h3><p>In the app you record loops of notes. To record audio into a song, load RedSynth Pad in GarageBand or another music app and record there.</p></div>
+<div class="qa"><h3>Which music apps can load it?</h3><p>Apps that host Audio Unit (AUv3) instruments. It has been tried in GarageBand on a Mac; others haven't been tried yet. There's no VST, CLAP or Windows version.</p></div>
+<div class="qa"><h3>Does it run on an Intel Mac?</h3><p>No: a Mac with Apple silicon and macOS 15 or later.</p></div>
+<div class="qa"><h3>Can a friend without the app open my sound file?</h3><p>No, they need RedSynth Pad. Once they have it, a tap on the file opens the sound and adds it to their My sounds.</p></div>
+<p>More questions are answered in <a href="help.html#faq">Fixes, questions, words</a>.</p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== Fixes ============================== -->
+
+<section class="ht" id="fixes" aria-labelledby="fixes-h">
+<h2 id="fixes-h">Fixes: when something's wrong<a class="hash" href="#fixes" aria-label="Link to the fixes">#</a></h2>
+<div class="fix" id="fix-silent"><h3>No sound?</h3>
+<ol>
+<li>Is the volume up, and the iPhone or iPad's silent mode off?</li>
+<li>Are Bluetooth headphones connected but in their case? They swallow the sound.</li>
+<li>Do keys light up on the strip (or fingers glow on the pad) when you play? If they light but you hear nothing, it's the output. If nothing lights, your touches aren't arriving: on a Mac, see the trackpad below.</li>
+<li>Is it a slow-swelling sound, or Ladder bass played high? Hold the note, play lower, or pick another sound.</li>
+</ol>
+<p><a href="help.html#silent">More on silence</a></p></div>
+<div class="fix" id="fix-trackpad"><h3>The Mac trackpad doesn't play</h3><p>The pointer must be over the pad, and the window in front. Press <strong>Hold the pointer</strong> (<kbd>⌘</kbd><kbd>⇧</kbd><kbd>T</kbd>) so it stays there; <kbd>Esc</kbd> frees it. If the on-screen keyboard is showing, press <kbd>⌘</kbd><kbd>⇧</kbd><kbd>K</kbd>.</p></div>
+<div class="fix" id="fix-stuck"><h3>A note won't stop</h3><p><strong>All Notes Off</strong> (<kbd>⌘</kbd><kbd>.</kbd>, or <strong>Play</strong> › <strong>All Notes Off</strong> on a Mac) stops everything, loops included. Changing the pad's mode ends held notes too. A long echo fades by itself: turn <strong>Space</strong> down.</p></div>
+<div class="fix" id="fix-late"><h3>Notes sound late</h3><p>Bluetooth headphones add a delay you can feel. Play on the speakers or wired headphones.</p></div>
+<div class="fix" id="fix-space"><h3>The space takes a while</h3><p>After you add a second or third photo, the line says <strong>Making the space…</strong> for a few seconds while the app works out the tones of the block the photos make. Wait for the arrival. In Sculpt, the block's tones are worked out again each time you lift the brush: about a second on an M4 Mac.</p></div>
+<div class="fix" id="fix-line"><h3>Moving the line doesn't change the sound</h3><p>The line chooses the sound only when the photo plays as <strong>Scan</strong>, and a new photo starts as Strike. Open the Line panel and tap <strong>Switch to Scan</strong>, or choose Scan from the <a href="#plays">How the photo plays</a> button.</p></div>
+<div class="fix" id="fix-drumloop"><h3>My drum loop recorded nothing</h3><p>Record went into a notes loop, which doesn't take the drums. In the Loop Editor tap <strong>New</strong> › under <strong>Drums</strong>, a length, then <strong>Done</strong>, and record again. See <a href="#beat">Record a beat</a>.</p></div>
+<div class="fix" id="fix-take"><h3>I recorded a loop but can't hear it</h3><p>A finished take isn't on the grid yet. Open the Loop Editor, tap <strong>Assign to a cell</strong> (<strong>Cell</strong> on an iPhone), pick a column, <strong>Done</strong>, and tap that cell in Loops.</p></div>
+<div class="fix" id="fix-colours"><h3>The Pad colours panel is cut off</h3><p>On an iPhone held sideways the panel can be taller than the screen. Turn the phone upright while you choose.</p></div>
+<div class="fix" id="fix-plugin"><h3>GarageBand doesn't list it</h3>
+<ol>
+<li>Open the RedSynth Pad app once.</li>
+<li>Quit GarageBand completely and open it again.</li>
+<li>On a Mac, check GarageBand › Settings › Audio/MIDI › <strong>Enable Audio Units</strong>.</li>
+<li>Still missing: restart the device, then <a href="#contact">write to Seth</a>.</li>
+</ol></div>
+<div class="fix" id="fix-empty"><h3>My samples or loops aren't in the plugin</h3><p>In version 1.0 the plugin can't see the samples and loops you made in the app. Play them in the app.</p></div>
+<div class="fix" id="fix-photo"><h3>A photo won't load</h3><p>PNG, JPEG and HEIC work. RAW files, PDFs, videos and the motion of a Live Photo don't: export or screenshot the picture first.</p></div>
+<div class="fix" id="fix-slow"><h3>It stutters</h3><p>Close other heavy apps. Strike, Space and big unison sounds do the most work: fewer notes at once helps. In a music app, raise its buffer size.</p></div>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<!-- ============================== Contact ============================== -->
+
+<section class="ht" id="contact" aria-labelledby="contact-h">
+<h2 id="contact-h">Contact and bug reports<a class="hash" href="#contact" aria-label="Link to contact">#</a></h2>
+<p>Email <a href="mailto:redthoroughbreds@gmail.com">redthoroughbreds@gmail.com</a>. You'll hear back from Seth, who makes the app.</p>
+<p>A good bug report says:</p>
+<ol>
+<li><strong>What you tapped</strong>, step by step, from a place anyone could start (for example: "Loops, then record, then Drums").</li>
+<li><strong>What you expected</strong> to happen.</li>
+<li><strong>What happened</strong> instead: what you saw or heard.</li>
+<li><strong>A screenshot</strong>, or a short screen recording.</li>
+<li>Your iPhone, iPad or Mac and its system version, and the app's version (About: the <strong>…</strong> menu on an iPhone, the small "i" on an iPad, the app menu on a Mac). In a music app, say which one.</li>
+</ol>
+<div class="note"><b>Your photos are yours.</b> Don't send one unless you're happy to; a description of the picture is usually enough.</div>
+<p class="nexttry">Related: <a href="../support.html">Support</a> · <a href="help.html">Fixes, questions, words</a></p>
+<p class="totop"><a href="#index">↑ Back to top</a></p>
+</section>
+
+<div class="pager"><a href="./"><small>Before</small>Start here</a><a class="next" href="recipes.html"><small>Next</small>Try this</a></div>
+</article></main>
+</div>
+<footer>
+<nav aria-label="Footer"><a href="../">Home</a><a href="./">Guide</a><a href="../press.html">Press kit</a><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a></nav>
+<p>This guide describes RedSynth Pad 1.0 for iPhone, iPad and Mac.</p>
+<p>Apple, iPhone, iPad, Mac, Apple Pencil and GarageBand are trademarks of Apple Inc. RedSynth Pad is not affiliated with or endorsed by Apple.</p>
+<p>© 2026 Seth Egger</p>
+</footer>
+</div><script>
+/* Help & How-To only: the side list is long, so it keeps the lit article in view as you scroll
+   (wide screens, where the list is sticky). site.js lights it; this only scrolls the list. */
+(() => {
+  const toc = document.querySelector('.toc');
+  if (!toc) return;
+  let last = null;
+  const follow = () => {
+    const a = toc.querySelector('a.sub.here');
+    if (!a || a === last || getComputedStyle(toc).position !== 'sticky') return;
+    last = a;
+    const t = toc.getBoundingClientRect(), r = a.getBoundingClientRect();
+    if (r.top < t.top + 40 || r.bottom > t.bottom - 40) toc.scrollTop += (r.top - t.top) - t.height / 3;
+  };
+  addEventListener('scroll', () => requestAnimationFrame(() => requestAnimationFrame(follow)), { passive: true });
+  addEventListener('load', follow);
+})();
+</script>
+</body></html>
