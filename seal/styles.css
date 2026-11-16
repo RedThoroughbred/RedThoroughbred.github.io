@@ -156,7 +156,6 @@ section.sec h2{font-size:clamp(32px,4.6vw,52px);letter-spacing:-.02em;max-width:
 .words>p{color:var(--t2)}
 .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:44px;align-items:start}
 .trio .device{--pw:262px}
-.trio figure:nth-child(2){margin-top:-26px}
 .points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:44px;border-top:1px solid var(--line)}
 .points div{padding:20px 22px 4px 0}
 .points div+div{padding-left:22px;border-left:1px solid var(--line)}
@@ -380,7 +379,6 @@ details p{color:var(--t2);margin:10px 0 0;max-width:740px}
   .points div+div{border-top:1px solid var(--line)}
   .trio{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:20px;margin:40px calc(-1 * var(--gut)) 0;padding:0 var(--gut) 12px;scrollbar-width:thin}
   .trio figure{scroll-snap-align:center;flex:none;width:min(72vw,262px)}
-  .trio figure:nth-child(2){margin-top:0}
   ol.gindex{grid-template-columns:minmax(0,1fr);column-gap:0}
   .doc{grid-template-columns:minmax(0,1fr);gap:0;padding-top:24px}
   .doc{display:flex;flex-direction:column}
