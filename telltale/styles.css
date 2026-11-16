@@ -246,8 +246,10 @@ footer .links a{color:var(--t2);text-decoration:none}footer .links a:hover{color
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* Telltale 1.0: the network and tracker checks' colours, the lights-off diagram */
-.dot.net{background:var(--net)}.dot.tag{background:var(--tag)}
-ul.ticks.net li::before{border-color:var(--net)}ul.ticks.tag li::before{border-color:var(--tag)}
+.dot.net{background:var(--net)}.dot.trk{background:var(--tag)}
+ul.ticks.net li::before{border-color:var(--net)}ul.ticks.trk li::before{border-color:var(--tag)}
 .d-net{stroke:var(--net);fill:none}.d-net-f{fill:var(--net)}
 .price{display:inline-block;margin-top:10px;font:600 13px var(--mono);letter-spacing:.06em;color:var(--t2)}
 .only{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:18px}
+.tour{margin:0}.tour video{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line2);background:#000;box-shadow:var(--shadow-s)}
+.tour figcaption{color:var(--t3);font-size:13px;margin-top:10px}
