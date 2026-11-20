@@ -21,7 +21,7 @@
 <h1>Wildcat Mesh user guide</h1>
 <p class="lede" style="max-width:720px">Everything about Wildcat Mesh for iPhone (iOS 17 or later). Button and screen names are written as they appear in the app. The same guide is built into the app and works offline, out in the field: tap <strong>?</strong> on the Play tab, or open <strong>Meshtastic → Guide</strong>.</p>
 <nav aria-label="Chapters"><ul class="toc">
-<li><a href="#start">Start here</a></li><li><a href="#tabs">The five tabs</a></li><li><a href="#connect">Connecting</a></li><li><a href="#play">Play</a></li><li><a href="#messages">Messages</a></li><li><a href="#explore">Explore</a></li><li><a href="#meshtastic">Meshtastic</a></li><li><a href="#meshcore">MeshCore</a></li><li><a href="#bridge">Bridge</a></li><li><a href="#foxhunt">Fox Hunt</a></li><li><a href="#gifts">Geo Gifts</a></li><li><a href="#mymesh">My Mesh</a></li><li><a href="#repeater">Repeater admin</a></li><li><a href="#safety">Safety</a></li><li><a href="#den">Den</a></li><li><a href="#practice">Practice mode</a></li><li><a href="#manners">Airtime manners</a></li><li><a href="#trouble">Troubleshooting</a></li>
+<li><a href="#start">Start here</a></li><li><a href="#tabs">The five tabs</a></li><li><a href="#connect">Connecting</a></li><li><a href="#play">Play</a></li><li><a href="#messages">Messages</a></li><li><a href="#explore">Explore</a></li><li><a href="#meshtastic">Meshtastic</a></li><li><a href="#meshcore">MeshCore</a></li><li><a href="#bridge">Bridge</a></li><li><a href="#rnode">RNode and Reticulum</a></li><li><a href="#foxhunt">Fox Hunt</a></li><li><a href="#gifts">Geo Gifts</a></li><li><a href="#mymesh">My Mesh</a></li><li><a href="#repeater">Repeater admin</a></li><li><a href="#safety">Safety</a></li><li><a href="#den">Den</a></li><li><a href="#practice">Practice mode</a></li><li><a href="#manners">Airtime manners</a></li><li><a href="#trouble">Troubleshooting</a></li>
 </ul></nav>
 </div>
 
@@ -382,6 +382,39 @@
 <figure><img src="assets/guide/repeater-admin.jpg" alt="Repeater admin: status with uptime, battery, noise, relayed and airtime, and the console" width="540" height="1174" loading="lazy"><figcaption>Status and console</figcaption></figure>
 </div>
 <p class="tip">MeshCore only sends the first 15 characters of a password, so a longer one can't log in from a phone.</p>
+</div></section>
+
+<section class="chapter" id="rnode"><div class="body">
+<p class="label"><span class="no">New</span>RNode and Reticulum (beta)</p>
+<h2>A third radio, and messages on Reticulum</h2>
+<p class="sum">≡ Menu → RNode, and ≡ Menu → Reticulum. New in version 1.2.</p>
+<p>Reticulum is a third kind of mesh network. An RNode is the LoRa modem it uses: a board running the RNode firmware, version 1.52 or newer, with Bluetooth turned on. It can't hear Meshtastic or MeshCore, and the Bridge doesn't cover it.</p>
+<h3>Connect an RNode</h3>
+<ol>
+<li>Open <strong>≡ Menu → RNode</strong> and tap <strong>Scan</strong>. RNodes show up as “RNode” and four characters.</li>
+<li>The first time, put the RNode in pairing mode and type the 6-digit PIN it shows. After that it reconnects by itself.</li>
+<li>Open <strong>Radio</strong> and set the frequency, bandwidth, spreading factor, coding rate and transmit power, or tap <strong>Set all five now</strong>. Everyone you want to reach must use the same first four. Use a frequency you are allowed to use where you live.</li>
+</ol>
+<p>The console also shows the noise floor, how busy the channel is, the battery, and the Reticulum packets the modem hears.</p>
+<h3>Reticulum (beta)</h3>
+<ol>
+<li>Open <strong>≡ Menu → Reticulum</strong>. It shows the radio settings it will use. Type the name others should see, then tap <strong>Start</strong>. The first start takes a few seconds.</li>
+<li>Tap <strong>Announce</strong> so others can see you. People whose announces your RNode hears appear under <strong>People heard</strong>.</li>
+<li>Tap a person to write to them, or tap <strong>New</strong> and paste their LXMF address (32 letters and digits). Your own address is at the top; tap it to copy.</li>
+<li>Under each message: <strong>sending</strong>, <strong>sent</strong>, <strong>delivered</strong>, or <strong>not delivered</strong> with the reason. <strong>Send again</strong> retries.</li>
+<li><strong>Stop</strong> turns Reticulum off and gives the RNode back to the console.</li>
+</ol>
+<h3>What the beta can't do yet</h3>
+<ul>
+<li>People who only accept stamped messages can't be written to from the iPhone.</li>
+<li>No propagation nodes (store and forward), no files, pictures or voice.</li>
+<li>One RNode at a time, over Bluetooth.</li>
+<li>Your Reticulum name changes only after you close and reopen the app.</li>
+<li>With the phone locked, messages may arrive late.</li>
+</ul>
+<h3>Safety and privacy</h3>
+<p>Messages are encrypted from your iPhone to the other person's device by Reticulum. Your Reticulum identity is made on your iPhone and kept in its Keychain; it isn't in backups, so a new phone gets a new address. Blocking (long-press a message or a person) and the word filter work here as on the other radios.</p>
+<p>Wildcat includes the Reticulum Network Stack and LXMF by Mark Qvist, unchanged, under the Reticulum License. The licences are in the app under <strong>≡ Menu → About → Open source licences</strong>. Wildcat Mesh is not affiliated with or endorsed by the Reticulum project.</p>
 </div></section>
 
 <section class="chapter" id="safety"><div class="body">
