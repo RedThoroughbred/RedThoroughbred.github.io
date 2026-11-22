@@ -19,7 +19,7 @@
 <div class="doc">
 <p class="label">User guide</p>
 <h1>Wildcat Mesh user guide</h1>
-<p class="lede" style="max-width:720px">Everything about Wildcat Mesh for iPhone (iOS 17 or later). Button and screen names are written as they appear in the app. The same guide is built into the app and works offline, out in the field: tap <strong>?</strong> on the Play tab, or open <strong>Meshtastic → Guide</strong>.</p>
+<p class="lede" style="max-width:720px">Everything about Wildcat Mesh for iPhone (iOS 17 or later). Button and screen names are written as they appear in the app. The same guide is built into the app and works offline, out in the field: tap <strong>?</strong> on the Play tab, or open <strong>≡ Menu → Guide</strong>.</p>
 <nav aria-label="Chapters"><ul class="toc">
 <li><a href="#start">Start here</a></li><li><a href="#tabs">The five tabs</a></li><li><a href="#connect">Connecting</a></li><li><a href="#play">Play</a></li><li><a href="#messages">Messages</a></li><li><a href="#explore">Explore</a></li><li><a href="#meshtastic">Meshtastic</a></li><li><a href="#meshcore">MeshCore</a></li><li><a href="#bridge">Bridge</a></li><li><a href="#rnode">RNode and Reticulum</a></li><li><a href="#foxhunt">Fox Hunt</a></li><li><a href="#gifts">Geo Gifts</a></li><li><a href="#mymesh">My Mesh</a></li><li><a href="#repeater">Repeater admin</a></li><li><a href="#safety">Safety</a></li><li><a href="#den">Den</a></li><li><a href="#practice">Practice mode</a></li><li><a href="#manners">Airtime manners</a></li><li><a href="#trouble">Troubleshooting</a></li>
 </ul></nav>
@@ -125,7 +125,7 @@
 <h3>Long-press a message</h3>
 <ul>
 <li><strong>Reply</strong> and <strong>React</strong> (Meshtastic), <strong>Copy</strong>.</li>
-<li><strong>Show raw packet</strong>: the packet fields (type, hops, SNR, RSSI, relay, hash, round trip). To see the bytes themselves, turn on <strong>Meshtastic → Keep raw packets</strong>; it applies to messages that arrive from then on.</li>
+<li><strong>Show raw packet</strong>: the packet fields (type, hops, SNR, RSSI, relay, hash, round trip). To see the bytes themselves, turn on <strong>≡ Menu → Keep raw packets</strong>; it applies to messages that arrive from then on.</li>
 <li><strong>Report…</strong> and <strong>Block</strong>: see <a href="#safety">Safety</a>.</li>
 </ul>
 <p class="tip">Each message is one radio packet: at most 200 bytes on Meshtastic and 133 bytes on MeshCore. Short and sweet travels furthest.</p>
@@ -243,7 +243,7 @@
 <section class="chapter" id="bridge"><div class="body">
 <p class="label"><span class="no">09</span>Bridge</p>
 <h2>Relay a channel between the two networks</h2>
-<p>Meshtastic and MeshCore can't hear each other. The bridge makes your phone relay messages between one Meshtastic channel and one MeshCore channel. Open it from <strong>Meshtastic → Bridge</strong> or <strong>MeshCore → Bridge to Meshtastic</strong>.</p>
+<p>Meshtastic and MeshCore can't hear each other. The bridge makes your phone relay messages between one Meshtastic channel and one MeshCore channel. Open it from <strong>≡ Menu → Bridge</strong> or <strong>MeshCore → Bridge to Meshtastic</strong>.</p>
 <ol class="steps">
 <li>Make a <strong>private</strong> channel on each network, for example <code>WGBRIDGE</code>, and have your friends on each side join it.</li>
 <li>Connect your Meshtastic node and your MeshCore node.</li>
@@ -435,12 +435,12 @@
 <section class="chapter" id="safety"><div class="body">
 <p class="label"><span class="no">14</span>Safety</p>
 <h2>Block, report and filter</h2>
-<p>Messages travel radio to radio with no server, so moderation lives on your phone. Find it all in <strong>Meshtastic → Safety</strong>.</p>
+<p>Messages travel radio to radio with no server, so moderation lives on your phone. Find it all in <strong>≡ Menu → Safety</strong>.</p>
 <dl class="terms">
 <div><dt>Block</dt><dd>Long-press a message and choose <strong>Block</strong> (or block from People, or a node's page). Their messages disappear from Wildcat on both networks, you get no notifications from them, and the bridge won't relay them. Blocking a Meshtastic node also makes your connected node ignore it.</dd></div>
 <div><dt>Report…</dt><dd>Long-press a message and choose <strong>Report…</strong> (or <strong>Report and block</strong>). Wildcat opens an email to <a href="mailto:redthoroughbreds@gmail.com">redthoroughbreds@gmail.com</a> with the message filled in. Nothing is sent unless you send it. No mail app? Copy the report instead.</dd></div>
 <div><dt>Word filter</dt><dd><strong>Hide strong language</strong> is on by default: slurs and strong swearing in messages you receive show as •••• until you tap. Notifications never show them.</dd></div>
-<div><dt>Unblock</dt><dd>In <strong>Meshtastic → Safety</strong>, tap <strong>Unblock</strong> next to the person.</dd></div>
+<div><dt>Unblock</dt><dd>In <strong>≡ Menu → Safety</strong>, tap <strong>Unblock</strong> next to the person.</dd></div>
 </dl>
 <div class="shots-row"><figure><img src="assets/guide/safety.jpg" alt="Safety: the Hide strong language switch, the blocked list and how to report" width="540" height="1174" loading="lazy"><figcaption>Safety</figcaption></figure></div>
 </div></section>
@@ -455,7 +455,7 @@
 </dl>
 <ol class="steps">
 <li>Put the Den and your phone on the same Wi-Fi, or on the same Tailscale network.</li>
-<li><strong>Meshtastic → Den (base station) → Enter Den address</strong>, for example <code>100.x.y.z:5050</code>. iOS may ask to allow local network access.</li>
+<li><strong>≡ Menu → Den (base station) → Enter Den address</strong>, for example <code>100.x.y.z:5050</code>. iOS may ask to allow local network access.</li>
 <li>To send through the Den, add its <strong>operator password</strong> in Den settings.</li>
 </ol>
 <p>Wildcat connects only to the address you enter. Nothing goes to us.</p>
@@ -490,7 +490,7 @@
 <p class="label"><span class="no">18</span>Troubleshooting</p>
 <h2>When something doesn't work</h2>
 <dl class="terms">
-<div><dt>Can't connect</dt><dd><strong>Close the official Meshtastic or MeshCore app first</strong> (on your Mac too, for MeshCore): a node talks to one phone app at a time. Then turn Bluetooth off and on, or restart the node. On Meshtastic, <strong>Meshtastic → Radio log</strong> shows every connection step.</dd></div>
+<div><dt>Can't connect</dt><dd><strong>Close the official Meshtastic or MeshCore app first</strong> (on your Mac too, for MeshCore): a node talks to one phone app at a time. Then turn Bluetooth off and on, or restart the node. On Meshtastic, <strong>≡ Menu → Radio log</strong> shows every connection step.</dd></div>
 <div><dt>MeshCore node not found</dt><dd>It must run the <strong>Companion (Bluetooth)</strong> firmware. Repeater and room-server firmware has no phone Bluetooth.</dd></div>
 <div><dt>PIN prompt</dt><dd>The first connection may ask for the node's PIN: the one on its screen, or usually <code>123456</code> on nodes without a screen. On MeshCore you can change it in Node settings.</dd></div>
 <div><dt>Bluetooth not allowed</dt><dd>If you tapped Don't Allow, Wildcat can't reach your node, but Practice mode still works. To change it, go to <strong>Settings → Wildcat Mesh</strong> and turn on <strong>Bluetooth</strong>. If Bluetooth is simply off, turn it on in Control Center.</dd></div>
