@@ -48,12 +48,16 @@
 <h2>Where everything lives</h2>
 <dl class="terms">
 <div><dt>Play</dt><dd>Every game: Fox Hunt, Geo Gifts, Daily Fox, your My Mesh card, and Practice when no radio is connected.</dd></div>
-<div><dt>Messages</dt><dd>Channel and direct chats on both networks, grouped by the radio they travel through, plus People.</dd></div>
-<div><dt>Explore</dt><dd>Your collection: Nodedex, achievements, Territory, coverage walks and today's Daily Fox.</dd></div>
-<div><dt>Meshtastic</dt><dd>Connect your Meshtastic node: its status, nodes, map, channels and settings, plus the More menu (Bridge, Den, Guide, Safety, About, Radio log).</dd></div>
+<div><dt>Messages</dt><dd>Channel and direct chats on both networks, grouped by the radio they travel through, plus People. Reticulum chats are listed here too.</dd></div>
+<div><dt>Meshtastic</dt><dd>Connect your Meshtastic node: its status, nodes, map, channels or chats, settings, and Manage.</dd></div>
 <div><dt>MeshCore</dt><dd>Connect a MeshCore node: chats, contacts, maps, channels, settings, repeater admin and the bridge.</dd></div>
+<div><dt>Reticulum</dt><dd>A third network, in beta: encrypted messages through an RNode or an internet link you choose. See <a href="#rnode">RNode and Reticulum</a>.</dd></div>
 </dl>
-<p>The <strong>radio pill</strong> at the top left shows both radios at a glance: an LED in each network's colour (grey when that radio isn't connected) that blinks when a packet is heard, and each node's name. Tap it to see both radios and jump to either tab.</p>
+<dl class="terms">
+<div><dt>Explore</dt><dd>Not a tab since 2.0: open it from <strong>Play</strong> or the <strong>≡ Menu</strong>. Nodedex, achievements, Territory, coverage walks and today's Daily Fox.</dd></div>
+<div><dt>≡ Menu</dt><dd>Top right on every tab, for the whole app: Bridge, Map (both networks), Radio log, Firmware, Guide, Safety, About, Den (base station) and Keep raw packets.</dd></div>
+</dl>
+<p>The <strong>radio pill</strong> at the top left shows your radios at a glance (Meshtastic, MeshCore and an RNode): an LED in each network's colour (grey when that radio isn't connected) that blinks when a packet is heard, and each node's name. Tap it to see your radios and jump to their tabs.</p>
 </div></section>
 
 <section class="chapter" id="connect"><div class="body">
@@ -130,9 +134,9 @@
 </div></section>
 
 <section class="chapter" id="explore"><div class="body">
-<p class="label"><span class="no">06</span>Explore tab</p>
+<p class="label"><span class="no">06</span>Explore</p>
 <h2>Your collection and your ground</h2>
-<p>The top of Explore counts your walked tiles, Nodedex, foxes found and your Daily Fox streak.</p>
+<p>Open Explore from <strong>Play</strong> or the <strong>≡ Menu</strong>. The top counts your walked tiles, Nodedex, foxes found and your Daily Fox streak.</p>
 <dl class="terms">
 <div><dt>Nodedex</dt><dd>Every node your radio hears directly. Rarity is the longest distance you heard it from directly: 1 km uncommon, 5 km rare, 15 km legendary (it needs the node's position).</dd></div>
 <div><dt>Achievements</dt><dd>Firsts and milestones.</dd></div>
@@ -147,7 +151,7 @@
 <h3>Coverage walks and drives</h3>
 <ol class="steps">
 <li>Connect your Meshtastic node and your Den.</li>
-<li><strong>Explore → Coverage walk / drive</strong>, and pick a private channel the Den also has.</li>
+<li><strong>Play → Explore → Coverage walk / drive</strong>, and pick a private channel the Den also has.</li>
 <li>Walk or drive. Every 30 seconds (or 60 s or 2 min, your choice) your node sends a beacon <strong>with no location in it</strong>; your phone pins it to where you stood.</li>
 <li>Dots: the Den heard you (green strong, amber ok, red weak). Triangles: you heard the Den. Black rings: <strong>dead spots</strong>.</li>
 </ol>
@@ -202,7 +206,7 @@
 </dl>
 <h3>Node settings</h3>
 <p><strong>Node settings</strong> covers the node's name, radio (region, preset, frequency slot), role, position and channels, plus two one-tap setups: <strong>Make this node the fox</strong> (see <a href="#makefox">Make a fox</a>) and <strong>Make this node my Den</strong> (see <a href="#den">Den</a>). Region and role changes restart the node.</p>
-<div class="shots-row"><figure><img src="assets/guide/node-settings.jpg" alt="Node settings: one-tap fox and Den setups, name and radio region" width="540" height="1174" loading="lazy"><figcaption>Node settings</figcaption></figure></div>
+<div class="shots-row"><figure><img src="assets/guide/node-settings.jpg" alt="Node settings: one-tap fox and Den setups, name and radio region" width="540" height="1064" loading="lazy"><figcaption>Node settings</figcaption></figure></div>
 </div></section>
 
 <section class="chapter" id="meshcore"><div class="body">
@@ -315,7 +319,7 @@
 <div><dt>Location hidden</dt><dd>GPS off and no fixed position: hunters can't just read it off the map.</dd></div>
 <div><dt>Heartbeat</dt><dd>Battery and uptime every minute, no location. That's what your radio hears.</dd></div>
 </dl>
-<div class="shots-row"><figure><img src="assets/guide/make-fox.jpg" alt="Make this node the fox: the list of what changes and the hunt channel" width="540" height="1174" loading="lazy"><figcaption>Make this node the fox</figcaption></figure></div>
+<div class="shots-row"><figure><img src="assets/guide/make-fox.jpg" alt="Make this node the fox: the list of what changes and the hunt channel" width="540" height="1064" loading="lazy"><figcaption>Make this node the fox</figcaption></figure></div>
 <p class="tip">No hunt channel yet? The fox screen can make a new one; share its QR code with hunters.</p>
 <p class="warn">Put the fox somewhere public and safe, never on private property.</p>
 <h3 id="dailyfox">Daily Fox</h3>
@@ -326,7 +330,7 @@
 <div><dt>Give up</dt><dd>Reveals where it was. A new fox appears tomorrow.</dd></div>
 <div><dt>Streak</dt><dd>Days in a row with a found fox.</dd></div>
 </dl>
-<div class="shots-row"><figure><img src="assets/guide/dailyfox.jpg" alt="Daily Fox: listening for the fox, a distance hint, and the Ping, Hint and Give up keys" width="540" height="1174" loading="lazy"><figcaption>Daily Fox with a hint</figcaption></figure></div>
+<div class="shots-row"><figure><img src="assets/guide/dailyfox.jpg" alt="Daily Fox: today's fox, a note that it needs a Meshtastic node, the Listening meter, and the Ping, Hint and Give up keys" width="540" height="1174" loading="lazy"><figcaption>Daily Fox with a hint</figcaption></figure></div>
 <p class="warn">Daily foxes are other people's nodes, often on private property. Finding it within 100 m means you can do it from the street.</p>
 <h3 id="mcfox">MeshCore fox hunt</h3>
 <p><strong>MeshCore → Fox hunt a repeater</strong>: pick a repeater and find it by its signal alone. Every packet it transmits (its adverts, the traffic it relays and answers to your pings) moves the scope. If the repeater shares its position, the distance shows once you're within 150 m.</p>
