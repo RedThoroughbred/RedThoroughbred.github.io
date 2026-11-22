@@ -43,8 +43,13 @@
 </div>
 
 <section id="new" class="first">
-<p class="label"><span class="no">New</span>Version 1.1</p>
-<h2>What's new in 1.1</h2>
+<p class="label"><span class="no">New</span>Version 2.0</p>
+<h2>What's new in 2.0</h2>
+<div class="grid">
+<div class="card"><span class="k">RNode</span><h3>A third kind of radio</h3><p>Connect an RNode, a LoRa modem for Reticulum networks, over Bluetooth. See what board it is, set its frequency, bandwidth, spreading factor, coding rate and power, and watch what it hears.</p></div>
+<div class="card"><span class="k">Reticulum · beta</span><h3>Message people on Reticulum</h3><p>Through your RNode, or over the internet through a node you choose, end to end encrypted, with people on Sideband and other LXMF apps. Wildcat runs the official Reticulum and LXMF software, unchanged. It is a beta: no propagation nodes and no stamps yet. It has its own <strong>Reticulum</strong> tab.</p></div>
+</div>
+<h3 style="margin-top:28px">Earlier, in 1.1</h3>
 <div class="grid">
 <div class="card"><span class="k"><span class="dot mt" aria-hidden="true"></span>Meshtastic</span><h3>Each radio keeps its own chats</h3><p>Switch Meshtastic nodes and Messages switches with it. Earlier radios' chats stay on your phone and stay readable, even while a node is disconnected.</p></div>
 <div class="card"><span class="k"><span class="dot mt" aria-hidden="true"></span><span class="dot mc" aria-hidden="true"></span>Both networks</span><h3>Check for firmware updates</h3><p>Tap <strong>Check for updates</strong> and Wildcat compares each node's firmware with the latest official Meshtastic and MeshCore releases, on your iPhone. It only checks when you tap, and nothing about you or your radios is sent.</p></div>
@@ -288,6 +293,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 <div class="narrow">
 <details><summary>What's the difference between Meshtastic and MeshCore?</summary><p>Both are LoRa mesh networks for text messages without cell service. On Meshtastic, every radio helps pass messages along. On MeshCore, the radio you carry never repeats; dedicated repeaters do. The two can't hear each other, which is why Wildcat speaks both. See <a href="#networks">The networks</a> above, or the official sites: <a class="ext" href="https://meshtastic.org/" target="_blank" rel="noopener">meshtastic.org</a> and <a class="ext" href="https://meshcore.io/" target="_blank" rel="noopener">meshcore.io</a>.</p></details>
 <details><summary>Which radios work?</summary><p>Meshtastic nodes with Bluetooth (Heltec, RAK, Seeed, LilyGO and others), and MeshCore nodes running the Companion (Bluetooth) firmware. You can connect one of each at the same time. MeshCore repeaters and room servers have no phone Bluetooth; they appear in your contacts once your node hears them, and you manage them over the air.</p><p>Shopping for one? Each project keeps its own list: <a class="ext" href="https://meshtastic.org/docs/hardware/devices/" target="_blank" rel="noopener">Meshtastic devices</a>, and the boards in the <a class="ext" href="https://meshcore.io/flasher" target="_blank" rel="noopener">MeshCore flasher</a>.</p></details>
+<details><summary>What are RNode and Reticulum?</summary><p>Reticulum is a third kind of mesh network, built around end-to-end encryption, and an RNode is the LoRa modem it uses. Since version 2.0 Wildcat can connect to an RNode and, as a beta, exchange messages with people on Reticulum (for example in the Sideband app). Reticulum can't hear Meshtastic or MeshCore, and the Bridge doesn't cover it. Wildcat includes the Reticulum Network Stack and LXMF by Mark Qvist, unchanged; it is not affiliated with or endorsed by the Reticulum project. Official site: <a class="ext" href="https://reticulum.network/" target="_blank" rel="noopener">reticulum.network</a>.</p></details>
 <details><summary>Do I need a ham radio license?</summary><p>Not in the US. Meshtastic and MeshCore radios there use the license-free 915 MHz band (902–928 MHz). Set your radio to your correct region; Wildcat asks for it when you set up a new Meshtastic node. Outside the US, check your own country's rules.</p></details>
 <details><summary>Is the app free?</summary><p>Yes. There is no account, no subscription and no advertising.</p></details>
 <details><summary>Does it need an account or the internet?</summary><p>No account, and no internet for messages: they go radio to radio over the air, so Wildcat works where there are no signal bars. Maps use Apple Maps, so new map areas load when you have a connection.</p></details>
