@@ -5,8 +5,8 @@
   --bg:#09090b;--s1:#111114;--s2:#17171b;--s3:#1f1f24;
   --line:rgba(255,255,255,.07);--line2:rgba(255,255,255,.13);
   --t1:#ededf0;--t2:#a1a1aa;--t3:#8a8a94;--t4:#6b6b75;
-  --mt:#ffb000;--mc:#3aa0ff;--ok:#3ecf8e;--alert:#ff6b5f;
-  --mt-ink:#ffb000;--mt-big:#ffb000;--mc-ink:#5cb2ff;--ok-ink:#3ecf8e;--alert-ink:#ff8178;
+  --mt:#ffb000;--mc:#3aa0ff;--rt:#a578ff;--ok:#3ecf8e;--alert:#ff6b5f;
+  --mt-ink:#ffb000;--mt-big:#ffb000;--mc-ink:#5cb2ff;--rt-ink:#b48cff;--ok-ink:#3ecf8e;--alert-ink:#ff8178;
   --mt-soft:rgba(255,176,0,.10);--mc-soft:rgba(58,160,255,.11);--ok-soft:rgba(62,207,142,.10);
   --tint:rgba(255,255,255,.03);
   --shadow:0 20px 50px rgba(0,0,0,.55);--shadow-sm:0 12px 30px rgba(0,0,0,.5);
@@ -21,7 +21,7 @@
     --bg:#f7f6f2;--s1:#ffffff;--s2:#f1f0eb;--s3:#e8e7e1;
     --line:rgba(20,20,30,.09);--line2:rgba(20,20,30,.16);
     --t1:#141418;--t2:#4b4b55;--t3:#64646e;--t4:#a3a3ad;
-    --mt-ink:#9a5a00;--mt-big:#c27500;--mc-ink:#0a66c2;--ok-ink:#0f7a4b;--alert-ink:#c2382c;
+    --mt-ink:#9a5a00;--mt-big:#c27500;--mc-ink:#0a66c2;--rt-ink:#6b3fd1;--ok-ink:#0f7a4b;--alert-ink:#c2382c;
     --mt-soft:rgba(255,176,0,.14);--mc-soft:rgba(58,160,255,.12);--ok-soft:rgba(62,207,142,.14);
     --tint:rgba(20,20,30,.025);
     --shadow:0 18px 44px rgba(30,30,50,.20);--shadow-sm:0 10px 26px rgba(30,30,50,.16);
@@ -66,7 +66,7 @@ code,kbd{font:13.5px var(--mono);background:var(--s2);border:1px solid var(--lin
 .label::after{content:"";flex:1;height:1px;background:var(--line)}
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;vertical-align:middle;margin-right:6px;flex:none}
 .dot.mt{background:var(--mt);box-shadow:0 0 10px rgba(255,176,0,.55)}.dot.mc{background:var(--mc);box-shadow:0 0 10px rgba(58,160,255,.55)}.dot.ok{background:var(--ok)}
-.mtc{color:var(--mt-ink)}.mcc{color:var(--mc-ink)}.okc{color:var(--ok-ink)}
+.mtc{color:var(--mt-ink)}.mcc{color:var(--mc-ink)}.rtc{color:var(--rt-ink)}.okc{color:var(--ok-ink)}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;border-radius:11px;padding:11px 16px;border:1px solid var(--line2);background:var(--s1);color:var(--t1);line-height:1.2}
