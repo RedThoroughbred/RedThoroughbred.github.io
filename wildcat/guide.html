@@ -152,7 +152,7 @@
 <ol class="steps">
 <li>Connect your Meshtastic node and your Den.</li>
 <li><strong>Play → Explore → Coverage walk / drive</strong>, and pick a private channel the Den also has.</li>
-<li>Walk or drive. Every 30 seconds (or 60 s or 2 min, your choice) your node sends a beacon <strong>with no location in it</strong>; your phone pins it to where you stood.</li>
+<li>Walk or drive. Every 5 minutes (or 10 or 15, your choice; 5 is the fastest, because the mesh's airtime is shared) your node sends a beacon <strong>with no location in it</strong>; your phone pins it to where you stood.</li>
 <li>Dots: the Den heard you (green strong, amber ok, red weak). Triangles: you heard the Den. Black rings: <strong>dead spots</strong>.</li>
 </ol>
 <p class="tip">Keep Wildcat open while you walk or drive: logging pauses when the phone locks.</p>
@@ -186,10 +186,10 @@
 <ul>
 <li><strong>Create:</strong> Node settings → Channels → <strong>New private channel</strong> (a random 256-bit key).</li>
 <li><strong>Share:</strong> tap the channel, then show the QR code, <strong>Copy link</strong> or <strong>Share link</strong>. <strong>Share all channels as QR</strong> shares the whole set.</li>
-<li><strong>Import:</strong> <strong>Import a Meshtastic channel link or QR</strong> → Scan or Paste → Apply.</li>
+<li><strong>Import:</strong> <strong>Import a Wildcat channel link or QR</strong> → Scan or Paste → Apply.</li>
 </ul>
 <p class="warn"><strong>Frequency rule:</strong> a node's frequency comes from its primary channel's name. Rename the primary and the node moves to a different frequency and stops hearing everyone, unless its <strong>frequency slot</strong> is pinned. Node settings shows the slot; Wildcat's fox links pin it for you.</p>
-<p class="tip">Links and QR codes use the same format as the Meshtastic app, so friends can scan them in either app.</p>
+<p class="tip">Links and QR codes are Wildcat's own (<code>wildcat://channel</code>), so friends scan them in Wildcat.</p>
 <h3>Set up a new node</h3>
 <p>A new node <strong>won't transmit until it has a region</strong>, the legal frequency band for your country.</p>
 <ol class="steps">
@@ -317,7 +317,7 @@
 <div><dt>Hunt channel only</dt><dd>Its only channel, pinned to your mesh's frequency so everyone hears it.</dd></div>
 <div><dt>Low power</dt><dd>10 dBm: walking closer really changes the signal.</dd></div>
 <div><dt>Location hidden</dt><dd>GPS off and no fixed position: hunters can't just read it off the map.</dd></div>
-<div><dt>Heartbeat</dt><dd>Battery and uptime every minute, no location. That's what your radio hears.</dd></div>
+<div><dt>Heartbeat</dt><dd>Battery and uptime once an hour, no location. To hear the fox, ping it: it answers every ping.</dd></div>
 </dl>
 <div class="shots-row"><figure><img src="assets/guide/make-fox.jpg" alt="Make this node the fox: the list of what changes and the hunt channel" width="540" height="1064" loading="lazy"><figcaption>Make this node the fox</figcaption></figure></div>
 <p class="tip">No hunt channel yet? The fox screen can make a new one; share its QR code with hunters.</p>
@@ -498,7 +498,7 @@
 <div><dt>No notifications</dt><dd><strong>Settings → Wildcat Mesh → Notifications</strong>. Wildcat asks once a real node connects.</dd></div>
 <div><dt>Nobody hears me</dt><dd>Meshtastic: is the region set, is transmit enabled, and is the node on the same preset and frequency slot as your mesh (Node settings → Radio)? MeshCore: do frequency, BW, SF and CR match the radios around you?</dd></div>
 <div><dt>Settings didn't save</dt><dd>"The node didn't answer": reconnect and try again. Region and role changes restart the node.</dd></div>
-<div><dt>Can't hear the fox</dt><dd>Is <code>WGHUNT</code> on your node? Is the fox beaconing (a heartbeat every minute)? Is it on the same frequency slot?</dd></div>
+<div><dt>Can't hear the fox</dt><dd>Is <code>WGHUNT</code> on your node? Does the fox answer a ping? Is it on the same frequency slot?</dd></div>
 <div><dt>Bridge not live</dt><dd>Both nodes must be connected, Wildcat must be open, and both chosen channels must be private.</dd></div>
 <div><dt>Den offline</dt><dd>Is Tailscale connected on your phone? Is the Den running?</dd></div>
 </dl>
