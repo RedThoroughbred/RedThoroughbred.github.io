@@ -328,6 +328,18 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 </div>
 </section>
 
+<section id="source">
+<p class="label"><span class="no">12</span>Open source</p>
+<h2>Free software. Read the code.</h2>
+<p class="lede narrow">Wildcat Mesh is free software under the GNU General Public License, version 3 or later. The source of each App Store release is public.</p>
+<div class="grid">
+<div class="card"><span class="k">Source</span><h3>The app and its radio core</h3><p>One repository with the iPhone app and the Swift package that speaks to the radios. <a href="https://github.com/RedThoroughbred/wildcat-mesh">github.com/RedThoroughbred/wildcat-mesh</a></p></div>
+<div class="card"><span class="k">Licence</span><h3>GPL-3.0-or-later</h3><p>With one added permission (GPLv3 section 7) so the app can run the Reticulum stack, which keeps its own licence. <a href="https://github.com/RedThoroughbred/wildcat-mesh/blob/main/LICENSE">LICENSE</a> · <a href="https://github.com/RedThoroughbred/wildcat-mesh/blob/main/LICENSE-EXCEPTION">LICENSE-EXCEPTION</a></p></div>
+<div class="card"><span class="k">Inside</span><h3>What it bundles</h3><p>Reticulum (RNS) and LXMF by Mark Qvist, unmodified, with Python and the libraries they use. Each one's licence is in the app under <strong>About → Open source licences</strong>.</p></div>
+<div class="card"><span class="k">Protocols</span><h3>Written from the wire formats</h3><p>The Meshtastic® and MeshCore support is Wildcat's own code. It contains no Meshtastic source and no .proto files.</p></div>
+</div>
+</section>
+
 <section class="cta" aria-labelledby="cta-h">
 <img class="icon" src="assets/icon.png" alt="" width="72" height="72" loading="lazy">
 <h2 id="cta-h">Grab a radio. Head outside.</h2>
@@ -340,7 +352,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!userPaus
 </main>
 
 <footer>
-<nav class="links" aria-label="Footer"><a href="./">Home</a><a href="https://apps.apple.com/app/id6816781840">App Store</a><a href="guide.html">User guide</a><a href="privacy.html">Privacy policy</a><a href="mailto:redthoroughbreds@gmail.com?subject=Wildcat%20Mesh%20support">Support</a></nav>
+<nav class="links" aria-label="Footer"><a href="./">Home</a><a href="https://apps.apple.com/app/id6816781840">App Store</a><a href="guide.html">User guide</a><a href="privacy.html">Privacy policy</a><a href="#source">Source code</a><a href="mailto:redthoroughbreds@gmail.com?subject=Wildcat%20Mesh%20support">Support</a></nav>
 <p class="made">Made by <a href="../">Seth Egger</a>, an independent developer in Kentucky. Wildcat Mesh is not affiliated with or endorsed by Meshtastic LLC, the Meshtastic project or the MeshCore project.</p>
 <p class="made also">Also by Seth: <a href="../wattbench/">WattBench</a>, a live power meter for the FNIRSI FNB58 USB meter, on your iPhone. DO NOT PURCHASE THE APP IF YOU DO NOT ALREADY HAVE THE FNB58 DEVICE.</p>
 <p class="official">Official project sites: <a class="ext" href="https://meshtastic.org/" target="_blank" rel="noopener"><span class="dot mt" aria-hidden="true"></span>Meshtastic</a> <a class="ext" href="https://meshcore.io/" target="_blank" rel="noopener"><span class="dot mc" aria-hidden="true"></span>MeshCore</a></p>
